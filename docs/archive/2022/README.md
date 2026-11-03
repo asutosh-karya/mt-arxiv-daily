@@ -1,12 +1,10 @@
 ## Archive 2022
-> 912 papers
+> 26 papers
 
 |Keyword|Papers|
 |---|---|
-|[SLAM](./SLAM.md)|304|
-|[SFM](./SFM.md)|54|
-|[Visual Localization](./Visual-Localization.md)|258|
-|[Keypoint Detection](./Keypoint-Detection.md)|76|
-|[Image Matching](./Image-Matching.md)|70|
-|[NeRF](./NeRF.md)|150|
+|[Document-Level MT](./Document-Level-MT.md)|6|
+|[Simultaneous Translation](./Simultaneous-Translation.md)|10|
+|[Domain Adaptation](./Domain-Adaptation.md)|3|
+|[Multimodal MT](./Multimodal-MT.md)|7|
 

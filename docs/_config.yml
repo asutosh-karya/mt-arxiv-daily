@@ -1,6 +1,6 @@
-title: CV Arxiv Daily
-description: Automatically updated computer vision papers from arXiv, grouped by topic
-repo_url: https://github.com/Vincentqyw/cv-arxiv-daily
+title: MT Arxiv Daily
+description: Automatically updated machine translation papers from arXiv, grouped by topic
+repo_url: https://github.com/asutosh-karya/mt-arxiv-daily
 
 # the site uses its own layout (_layouts/default.html), no theme.
 # the archive markdown has no front matter: these github pages default plugins

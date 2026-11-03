@@ -1,11 +1,9 @@
 ## Archive 2021
-> 136 papers
+> 19 papers
 
 |Keyword|Papers|
 |---|---|
-|[SLAM](./SLAM.md)|51|
-|[SFM](./SFM.md)|19|
-|[Visual Localization](./Visual-Localization.md)|14|
-|[Keypoint Detection](./Keypoint-Detection.md)|29|
-|[Image Matching](./Image-Matching.md)|23|
+|[Document-Level MT](./Document-Level-MT.md)|9|
+|[Domain Adaptation](./Domain-Adaptation.md)|2|
+|[Multimodal MT](./Multimodal-MT.md)|8|
 

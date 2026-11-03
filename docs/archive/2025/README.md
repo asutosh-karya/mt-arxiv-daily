@@ -1,12 +1,14 @@
 ## Archive 2025
-> 4693 papers
+> 151 papers
 
 |Keyword|Papers|
 |---|---|
-|[SLAM](./SLAM.md)|507|
-|[SFM](./SFM.md)|647|
-|[Visual Localization](./Visual-Localization.md)|1845|
-|[Keypoint Detection](./Keypoint-Detection.md)|262|
-|[Image Matching](./Image-Matching.md)|1066|
-|[NeRF](./NeRF.md)|366|
+|[Neural MT](./Neural-MT.md)|10|
+|[Multilingual MT](./Multilingual-MT.md)|15|
+|[Low-Resource MT](./Low-Resource-MT.md)|26|
+|[Document-Level MT](./Document-Level-MT.md)|25|
+|[Simultaneous Translation](./Simultaneous-Translation.md)|17|
+|[LLM Translation](./LLM-Translation.md)|28|
+|[Evaluation and Quality Estimation](./Evaluation-and-Quality-Estimation.md)|17|
+|[Multimodal MT](./Multimodal-MT.md)|13|
 

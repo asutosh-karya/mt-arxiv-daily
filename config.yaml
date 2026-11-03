@@ -1,7 +1,7 @@
 # TODO: add papers by configuration file
 base_url: "https://arxiv.paperswithcode.com/api/v0/papers/"
-user_name: "Vincentqyw"
-repo_name: "cv-arxiv-daily"
+user_name: "asutosh-karya"
+repo_name: "mt-arxiv-daily"
 show_authors: True
 show_links: True
 show_badge: True
@@ -9,16 +9,13 @@ max_results: 10
 
 publish_readme: True
 publish_gitpage: True
-publish_wechat: False
 
 # file paths
-json_readme_path: './docs/cv-arxiv-daily.json'
-json_gitpage_path: './docs/cv-arxiv-daily-web.json'
-json_wechat_path: './docs/cv-arxiv-daily-wechat.json'
+json_readme_path: './docs/mt-arxiv-daily.json'
+json_gitpage_path: './docs/mt-arxiv-daily-web.json'
 
 md_readme_path: 'README.md'
 md_gitpage_path: './docs/index.md'
-md_wechat_path: './docs/wechat.md'
 
 # archive: README.md / index.md only keep the latest papers of each keyword
 # (github stops rendering markdown beyond 512 KB), all papers are archived by
@@ -38,34 +35,38 @@ max_code_checks: 300
 max_code_search_minutes: 40
 code_checks_path: './docs/code-checks.json'
 
-# keywords to search, optional "categories" limit the arxiv categories (eg. cs.CV)
-# of one keyword; a top-level "categories" would apply to all keywords
+# keywords to search, optional "categories" limit the arxiv categories (eg. cs.CL)
+# of one keyword; a top-level "categories" applies to all keywords
+categories: ["cs.CL"]
 keywords:
-    "SLAM": 
-        filters: ["SLAM", "Visual Odometry"]
-    "SFM":
-        filters: ["SFM", "Structure from Motion"]
-    "Visual Localization":
-        filters: ["Visual Localization","Camera Localization",
-                  "Camera Re-localisation","Loop Closure Detection",
-                  "visual place recognition","image retrieval"]
-    "Keypoint Detection":
-        filters: ["Keypoint Detection", "Feature Descriptor"]
-    "Image Matching":
-        filters: ["Image Matching", "Keypoint Matching", 
-                  "Line Segment Detection", "Local Feature Matching"]
-    "NeRF":
-        filters: ["NeRF"]
-    "Gaussian Splatting":
-        filters: ["Gaussian Splatting", "3DGS", "2DGS", "4DGS"]
-    "3D Reconstruction":
-        filters: ["VGGT", "DUSt3R", "MASt3R",
-                  "Feed-forward 3D Reconstruction", "Feed-forward Reconstruction",
-                  "Multi-view 3D Reconstruction", "3D Foundation Model"]
-    "World Model":
-        filters: ["World Model", "World Models", "World Simulator"]
-        # "world model" is also a common term in NLP / databases etc., limit the arxiv categories
-        categories: ["cs.CV", "cs.RO", "cs.AI", "cs.LG", "cs.CL"]
-    "VLA and VLN":
-        filters: ["Vision Language Action", "Vision Language Navigation",
-                  "Vision and Language Navigation", "VLN"]
+    "Neural MT":
+        filters: ["Neural Machine Translation", "NMT"]
+    "Multilingual MT":
+        filters: ["Multilingual Machine Translation", "Multilingual NMT",
+                  "Massively Multilingual Translation"]
+    "Low-Resource MT":
+        filters: ["Low-Resource Machine Translation", "Low-Resource Translation",
+                  "Zero-Shot Translation"]
+    "Document-Level MT":
+        filters: ["Document-Level Machine Translation", "Document-Level Translation",
+                  "Context-Aware Machine Translation"]
+    "Speech Translation":
+        filters: ["Speech Translation", "Speech-to-Text Translation",
+                  "End-to-End Speech Translation"]
+        categories: ["cs.CL", "cs.SD", "eess.AS"]
+    "Simultaneous Translation":
+        filters: ["Simultaneous Translation", "Simultaneous Machine Translation",
+                  "Streaming Machine Translation"]
+    "LLM Translation":
+        filters: ["LLM-based Machine Translation",
+                  "Large Language Models for Machine Translation", "LLM Translation"]
+    "Evaluation and Quality Estimation":
+        filters: ["Machine Translation Evaluation", "Translation Quality Estimation",
+                  "Quality Estimation"]
+    "Domain Adaptation":
+        filters: ["Domain Adaptation for Machine Translation",
+                  "Domain Adaptive Machine Translation",
+                  "Terminology-Constrained Translation"]
+    "Multimodal MT":
+        filters: ["Multimodal Machine Translation", "Multimodal Translation",
+                  "Visually Grounded Translation"]

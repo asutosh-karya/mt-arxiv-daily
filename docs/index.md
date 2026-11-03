@@ -2,19 +2,19 @@
 layout: default
 ---
 
-<p class="updated"><span class="dot"></span>Updated on 2026.11.02</p>
+<p class="updated"><span class="dot"></span>Updated on 2026.11.03</p>
 
 <nav class="toc">
-<a href="#slam">SLAM</a>
-<a href="#sfm">SFM</a>
-<a href="#visual-localization">Visual Localization</a>
-<a href="#keypoint-detection">Keypoint Detection</a>
-<a href="#image-matching">Image Matching</a>
-<a href="#nerf">NeRF</a>
-<a href="#gaussian-splatting">Gaussian Splatting</a>
-<a href="#3d-reconstruction">3D Reconstruction</a>
-<a href="#world-model">World Model</a>
-<a href="#vla-and-vln">VLA and VLN</a>
+<a href="#neural-mt">Neural MT</a>
+<a href="#multilingual-mt">Multilingual MT</a>
+<a href="#low-resource-mt">Low-Resource MT</a>
+<a href="#document-level-mt">Document-Level MT</a>
+<a href="#speech-translation">Speech Translation</a>
+<a href="#simultaneous-translation">Simultaneous Translation</a>
+<a href="#llm-translation">LLM Translation</a>
+<a href="#evaluation-and-quality-estimation">Evaluation and Quality Estimation</a>
+<a href="#domain-adaptation">Domain Adaptation</a>
+<a href="#multimodal-mt">Multimodal MT</a>
 <a href="#archive" class="archive">Archive</a>
 </nav>
 
@@ -22,1372 +22,771 @@ layout: default
 
 > All papers, one markdown per year and keyword.
 
-|Year|SLAM|SFM|Visual Localization|Keypoint Detection|Image Matching|NeRF|Gaussian Splatting|3D Reconstruction|World Model|VLA and VLN|
+|Year|Neural MT|Multilingual MT|Low-Resource MT|Document-Level MT|Speech Translation|Simultaneous Translation|LLM Translation|Evaluation and Quality Estimation|Domain Adaptation|Multimodal MT|
 |---|---|---|---|---|---|---|---|---|---|---|
-|[2026](./archive/2026/README.md)|[191](./archive/2026/SLAM.md)|[114](./archive/2026/SFM.md)|[185](./archive/2026/Visual-Localization.md)|[42](./archive/2026/Keypoint-Detection.md)|[62](./archive/2026/Image-Matching.md)|[124](./archive/2026/NeRF.md)|[20](./archive/2026/Gaussian-Splatting.md)|[20](./archive/2026/3D-Reconstruction.md)|[29](./archive/2026/World-Model.md)|[20](./archive/2026/VLA-and-VLN.md)|
-|[2025](./archive/2025/README.md)|[507](./archive/2025/SLAM.md)|[647](./archive/2025/SFM.md)|[1845](./archive/2025/Visual-Localization.md)|[262](./archive/2025/Keypoint-Detection.md)|[1066](./archive/2025/Image-Matching.md)|[366](./archive/2025/NeRF.md)|||||
-|[2024](./archive/2024/README.md)|[317](./archive/2024/SLAM.md)|[163](./archive/2024/SFM.md)|[378](./archive/2024/Visual-Localization.md)|[67](./archive/2024/Keypoint-Detection.md)|[95](./archive/2024/Image-Matching.md)|[693](./archive/2024/NeRF.md)|||||
-|[2023](./archive/2023/README.md)|[79](./archive/2023/SLAM.md)|[75](./archive/2023/SFM.md)|[351](./archive/2023/Visual-Localization.md)|[93](./archive/2023/Keypoint-Detection.md)|[91](./archive/2023/Image-Matching.md)|[583](./archive/2023/NeRF.md)|||||
-|[2022](./archive/2022/README.md)|[304](./archive/2022/SLAM.md)|[54](./archive/2022/SFM.md)|[258](./archive/2022/Visual-Localization.md)|[76](./archive/2022/Keypoint-Detection.md)|[70](./archive/2022/Image-Matching.md)|[150](./archive/2022/NeRF.md)|||||
-|[2021](./archive/2021/README.md)|[51](./archive/2021/SLAM.md)|[19](./archive/2021/SFM.md)|[14](./archive/2021/Visual-Localization.md)|[29](./archive/2021/Keypoint-Detection.md)|[23](./archive/2021/Image-Matching.md)||||||
+|[2026](./archive/2026/README.md)|[67](./archive/2026/Neural-MT.md)|[15](./archive/2026/Multilingual-MT.md)|[29](./archive/2026/Low-Resource-MT.md)|[13](./archive/2026/Document-Level-MT.md)|[77](./archive/2026/Speech-Translation.md)|[10](./archive/2026/Simultaneous-Translation.md)|[42](./archive/2026/LLM-Translation.md)|[56](./archive/2026/Evaluation-and-Quality-Estimation.md)|[1](./archive/2026/Domain-Adaptation.md)|[7](./archive/2026/Multimodal-MT.md)|
+|[2025](./archive/2025/README.md)|[10](./archive/2025/Neural-MT.md)|[15](./archive/2025/Multilingual-MT.md)|[26](./archive/2025/Low-Resource-MT.md)|[25](./archive/2025/Document-Level-MT.md)||[17](./archive/2025/Simultaneous-Translation.md)|[28](./archive/2025/LLM-Translation.md)|[17](./archive/2025/Evaluation-and-Quality-Estimation.md)||[13](./archive/2025/Multimodal-MT.md)|
+|[2024](./archive/2024/README.md)||[33](./archive/2024/Multilingual-MT.md)|[20](./archive/2024/Low-Resource-MT.md)|[13](./archive/2024/Document-Level-MT.md)||[18](./archive/2024/Simultaneous-Translation.md)|[4](./archive/2024/LLM-Translation.md)||[1](./archive/2024/Domain-Adaptation.md)|[6](./archive/2024/Multimodal-MT.md)|
+|[2023](./archive/2023/README.md)||[16](./archive/2023/Multilingual-MT.md)|[4](./archive/2023/Low-Resource-MT.md)|[13](./archive/2023/Document-Level-MT.md)||[21](./archive/2023/Simultaneous-Translation.md)|||[1](./archive/2023/Domain-Adaptation.md)|[11](./archive/2023/Multimodal-MT.md)|
+|[2022](./archive/2022/README.md)||||[6](./archive/2022/Document-Level-MT.md)||[10](./archive/2022/Simultaneous-Translation.md)|||[3](./archive/2022/Domain-Adaptation.md)|[7](./archive/2022/Multimodal-MT.md)|
+|[2021](./archive/2021/README.md)||||[9](./archive/2021/Document-Level-MT.md)|||||[2](./archive/2021/Domain-Adaptation.md)|[8](./archive/2021/Multimodal-MT.md)|
+|[2020](./archive/2020/README.md)|||||||||[2](./archive/2020/Domain-Adaptation.md)|[2](./archive/2020/Multimodal-MT.md)|
+|[2019](./archive/2019/README.md)||||||||||[11](./archive/2019/Multimodal-MT.md)|
+|[2018](./archive/2018/README.md)||||||||||[6](./archive/2018/Multimodal-MT.md)|
+|[2013](./archive/2013/README.md)|||||||||[1](./archive/2013/Domain-Adaptation.md)||
 
-<h2 id="slam">SLAM</h2>
-
-| Publish Date | Title | Authors | PDF | Code |
-|:---------|:-----------------------|:---------|:------|:------|
-|**2026-10-29**|**Smartphone Indoor Localization Enhanced by Hierarchical Multi-Sensor Context Recognition**|Wenhui Feng et.al.|[2610.39691](http://arxiv.org/abs/2610.39691)|<span class="null">—</span>|
-|**2026-10-29**|**UMI-Live for In-The-Wild Bimanual Robotics Data Collection**|Govind Velamoor et.al.|[2610.39385](http://arxiv.org/abs/2610.39385)|<span class="null">—</span>|
-|**2026-10-28**|**SKiD-SLAM: Resource-Aware Distributed Multi-Robot LiDAR SLAM for Planetary Missions with Field Deployments at Analog Sites**|Hogyun Kim et.al.|[2610.38141](http://arxiv.org/abs/2610.38141)|<span class="null">—</span>|
-|**2026-10-27**|**A Stochastic LineseArch Method (SLAM) for Minimizing Expectation Residuals: Weakening Boundedness of Gradient**|Qi Wang et.al.|[2610.37947](http://arxiv.org/abs/2610.37947)|<span class="null">—</span>|
-|**2026-10-27**|**RAVEN: A Unified Active SLAM System for Rapid Autonomous Visual Exploration with Aerial Robots under Localization Uncertainty**|Xinyi Chen et.al.|[2610.37111](http://arxiv.org/abs/2610.37111)|<span class="null">—</span>|
-|**2026-10-27**|**HoloRecon: Incremental Reconstruction of Long-Range Panoramas with Global Consistency**|Zhuoxiao Li et.al.|[2610.36876](http://arxiv.org/abs/2610.36876)|<span class="null">—</span>|
-|**2026-10-27**|**LingGS: Decoupling Feed-Forward Geometry Prediction from Camera Tracking for High-Fidelity Gaussian SLAM**|Da Li et.al.|[2610.36853](http://arxiv.org/abs/2610.36853)|<span class="null">—</span>|
-|**2026-10-27**|**SVIn+: Multi-Modal Framework for Robust Underwater State Estimation using 3D Sonar, Visual-Inertial, Water-Pressure, and DVL**|Chinmay Burgul et.al.|[2610.36454](http://arxiv.org/abs/2610.36454)|<span class="null">—</span>|
-|**2026-10-26**|**SG^2SLAM: Spatial Geometry-Informed 3D Gaussian Splatting SLAM for Monocular Outdoor Navigation**|Ziang Guo et.al.|[2610.36312](http://arxiv.org/abs/2610.36312)|<span class="null">—</span>|
-|**2026-10-26**|**VPR-Space: A Benchmark for Visual Place Recognition in Space Analog Domains**|Richard Fechner et.al.|[2610.35642](http://arxiv.org/abs/2610.35642)|**[link](https://github.com/rfechner/VPR-Space)**|
-|**2026-10-15**|**AVALON: Zero-Shot Indoor Navigation with Human-Seeded Topological Memory**|Jing Xia et.al.|[2610.21586](http://arxiv.org/abs/2610.21586)|<span class="null">—</span>|
-|**2026-10-15**|**CLAD: Keypoint Matching Using Global Line Correspondences**|Masaki Satoh et.al.|[2610.21409](http://arxiv.org/abs/2610.21409)|<span class="null">—</span>|
-|**2026-10-15**|**LIN-SLAM: Lightweight LiDAR--Inertial Neural SLAM for Real-Time Onboard Navigation**|Shiqi Che et.al.|[2610.21199](http://arxiv.org/abs/2610.21199)|<span class="null">—</span>|
-|**2026-10-14**|**Line-Augmented cuVSLAM: Robust Visual Odometry in Low-Texture Environments**|Dara Molloy et.al.|[2610.20958](http://arxiv.org/abs/2610.20958)|<span class="null">—</span>|
-|**2026-10-14**|**Zero-Shot Spoken Language Understanding with SLAM-ASR: What Do Monolingual ASR-Trained Linear Projectors Enable?**|Edwin Arkel Rios et.al.|[2610.20844](http://arxiv.org/abs/2610.20844)|<span class="null">—</span>|
-|**2026-10-14**|**HyperLoop: Hyperspectral-Assisted Loop Closure Detection in 3D-SLAM for Planetary Exploration**|Annie Bhalla et.al.|[2610.19742](http://arxiv.org/abs/2610.19742)|<span class="null">—</span>|
-|**2026-10-14**|**Remember, Revisit, Revise: Scaffold Memory for Long-Horizon 3D Geometry**|Soumick Sarker et.al.|[2610.19674](http://arxiv.org/abs/2610.19674)|**[link](https://github.com/3D-Vision-World/All-3R-SLAM-in-this-Repo)**|
-|**2026-10-13**|**RingNav: Task-Shaped Circular Memory for Visual Heading**|Naitri Rajyaguru et.al.|[2610.19044](http://arxiv.org/abs/2610.19044)|<span class="null">—</span>|
-|**2026-10-13**|**RTISSLAM: In-air Imaging Sonar SLAM using a Robust Pose Graph and Occupancy Grid Mapping**|Jan Steckel et.al.|[2610.18479](http://arxiv.org/abs/2610.18479)|<span class="null">—</span>|
-|**2026-10-13**|**Autonomous 3D Visual-Thermal Inspection for Utility-Scale Solar Farms**|Lachlan Tychsen-Smith et.al.|[2610.17762](http://arxiv.org/abs/2610.17762)|<span class="null">—</span>|
-|**2026-10-08**|**MemReg: Streaming Outdoor LiDAR Point Cloud Registration with Hybrid Memory Buffers**|Jiuming Liu et.al.|[2610.12624](http://arxiv.org/abs/2610.12624)|**[link](https://github.com/IRMVLab/MemReg)**|
-|**2026-10-08**|**RAGNAROK: Radar-Aided Gravity-Normalized Alignment for Robust Open Keyframe-based Radar-Visual-Kinematic-Inertial SLAM**|Hanjun Kim et.al.|[2610.11531](http://arxiv.org/abs/2610.11531)|**[link](https://github.com/hanjun815/RAGNAROK)**|
-|**2026-10-07**|**Argos: Adapt Rich Geometric Priors for Generalizable Online Scene-Change-Detection**|Ruihan Xu et.al.|[2610.10181](http://arxiv.org/abs/2610.10181)|<span class="null">—</span>|
-|**2026-10-07**|**Towards Accurate End-Effector Localization for UMI-Style Robotic Manipulation Teaching**|Junjie Zhang et.al.|[2610.09857](http://arxiv.org/abs/2610.09857)|<span class="null">—</span>|
-|**2026-10-06**|**InterCorrect: Intersection-Aware Correction of Demographic Model Merging for Fair ASR**|Ashley E. Bravo-Bravo et.al.|[2610.08604](http://arxiv.org/abs/2610.08604)|**[link](https://github.com/sunset0917/InterCorrect-Intersection-Aware-Correction-of-Demographic-Model-Merging-for-Fair-ASR)**|
-|**2026-10-06**|**VOMMI: Collecting and Leveraging Portable Demonstrations for Mobile Manipulation**|Yutian Zhang et.al.|[2610.08220](http://arxiv.org/abs/2610.08220)|<span class="null">—</span>|
-|**2026-10-06**|**Image-Space Refraction Correction for Underwater 3D Reconstruction: Warping Flat-Port Views into Pinhole Perspective**|Chelim Lim et.al.|[2610.07788](http://arxiv.org/abs/2610.07788)|<span class="null">—</span>|
-|**2026-10-05**|**RoboCap: A New Platform for Egocentric Robot Learning**|Grounded Superintelligence et.al.|[2610.07217](http://arxiv.org/abs/2610.07217)|**[link](https://github.com/Kilyakus/js-dockview)**|
-|**2026-10-05**|**Stellarators Linking Axisymmetric Mirrors Part 1: Coil Design, MHD Equilibrium, and Physics Metrics**|Rahul Gaur et.al.|[2610.06085](http://arxiv.org/abs/2610.06085)|<span class="null">—</span>|
-|**2026-10-05**|**Human-in-the-Loop Neuro-Symbolic Drift Anticipation for Reliable Visual SLAM**|Junhyun Nam et.al.|[2610.05757](http://arxiv.org/abs/2610.05757)|<span class="null">—</span>|
-|**2026-05-13**|**LEXI-SG: Monocular 3D Scene Graph Mapping with Room-Guided Feed-Forward Reconstruction**|Christina Kassab et.al.|[2605.13741](http://arxiv.org/abs/2605.13741)|**[link](https://github.com/3D-Vision-World/All-3R-SLAM-in-this-Repo)**|
-|**2026-05-12**|**WildPose: A Unified Framework for Robust Pose Estimation in the Wild**|Jianhao Zheng et.al.|[2605.12774](http://arxiv.org/abs/2605.12774)|**[link](https://github.com/GradientSpaces/WildPose)**|
-|**2026-05-11**|**MAGS-SLAM: Monocular Multi-Agent Gaussian Splatting SLAM for Geometrically and Photometrically Consistent Reconstruction**|Zhihao Cao et.al.|[2605.10760](http://arxiv.org/abs/2605.10760)|<span class="null">—</span>|
-|**2026-05-10**|**Above and Below: Heterogeneous Multi-robot SLAM Across Surface and Underwater Domains**|John McConnell et.al.|[2605.09811](http://arxiv.org/abs/2605.09811)|<span class="null">—</span>|
-|**2026-05-08**|**AERO-VIS: Asynchronous Event-based Real-time Onboard Visual-Inertial SLAM**|Yannick Burkhardt et.al.|[2605.07885](http://arxiv.org/abs/2605.07885)|<span class="null">—</span>|
-|**2026-05-07**|**GA3T: A Ground-Aerial Terrain Traversability Dataset for Heterogeneous Robot Teams in Unstructured Environments**|Siwei Cai et.al.|[2605.06478](http://arxiv.org/abs/2605.06478)|<span class="null">—</span>|
-|**2026-05-07**|**Indoor 60 GHz Radio Channel Dataset Enabling Digital Twin Construction**|Davide Scazzoli et.al.|[2605.05824](http://arxiv.org/abs/2605.05824)|<span class="null">—</span>|
-|**2026-05-08**|**SLAM: Structural Linguistic Activation Marking for Language Models**|Fabrice Harel-Canada et.al.|[2605.05443](http://arxiv.org/abs/2605.05443)|<span class="null">—</span>|
-|**2026-05-06**|**A Closed-Form Dual-Barrier CBF Safety Filter for Holonomic Robots on Incrementally Built Occupancy Grid Maps**|Himanshu Paudel et.al.|[2605.05182](http://arxiv.org/abs/2605.05182)|<span class="null">—</span>|
-|**2026-05-06**|**Dr-PoGO: Direct Radar Pose-Graph Optimization**|Cedric Le Gentil et.al.|[2605.04806](http://arxiv.org/abs/2605.04806)|**[link](https://github.com/utiasASRL/dr_pogo)**|
-|**2026-05-07**|**Hardware-Aware Neural Feature Extraction for Resource-Constrained Devices**|Francesco Tosini et.al.|[2605.04282](http://arxiv.org/abs/2605.04282)|<span class="null">—</span>|
-|**2026-05-05**|**Robust Visual SLAM for UAV Navigation in GPS-Denied and Degraded Environments: A Multi-Paradigm Evaluation and Deployment Study**|Prasoon Kumar et.al.|[2605.03678](http://arxiv.org/abs/2605.03678)|<span class="null">—</span>|
-|**2026-05-04**|**DynoSLAM: Dynamic SLAM with Generative Graph Neural Networks for Real-World Social Navigation**|Danil Tokhchukov et.al.|[2605.02759](http://arxiv.org/abs/2605.02759)|**[link](https://github.com/makriot/dynoslam)**|
-|**2026-05-04**|**Multi-User XR Offloading via Massive MIMO: A System-Level Analysis using a Real-Life Dataset**|Love Bárány et.al.|[2605.02631](http://arxiv.org/abs/2605.02631)|<span class="null">—</span>|
-|**2026-05-04**|**Change-Robust Online Spatial-Semantic Topological Mapping**|Jiaming Wang et.al.|[2605.02227](http://arxiv.org/abs/2605.02227)|<span class="null">—</span>|
-|**2026-04-30**|**FreeOcc: Training-Free Embodied Open-Vocabulary Occupancy Prediction**|Zeyu Jiang et.al.|[2604.28115](http://arxiv.org/abs/2604.28115)|<span class="null">—</span>|
-|**2026-04-30**|**Learning-Based Hierarchical Scene Graph Matching for Robot Localization Leveraging Prior Maps**|Nimrod Millenium Ndulue et.al.|[2604.27821](http://arxiv.org/abs/2604.27821)|<span class="null">—</span>|
-|**2026-04-28**|**RADIO-ViPE: Online Tightly Coupled Multi-Modal Fusion for Open-Vocabulary Semantic SLAM in Dynamic Environments**|Zaid Nasser et.al.|[2604.26067](http://arxiv.org/abs/2604.26067)|**[link](https://github.com/be2rlab/RADIO-ViPE)**|
-|**2026-04-28**|**Robust Graph Matching through Semantic Relationship Generation for SLAM**|David Perez-Saura et.al.|[2604.25404](http://arxiv.org/abs/2604.25404)|<span class="null">—</span>|
-|**2026-04-28**|**COMPASS: COmpact Multi-channel Prior-map And Scene Signature for Floor-Plan-Based Visual Localization**|Muhammad Shaheer et.al.|[2604.25388](http://arxiv.org/abs/2604.25388)|<span class="null">—</span>|
-|**2026-04-27**|**Passage-Aware Structural Mapping for RGB-D Visual SLAM**|Ali Tourani et.al.|[2604.24707](http://arxiv.org/abs/2604.24707)|**[link](https://github.com/snt-arg/visual_sgraphs)**|
-|**2026-04-27**|**OpenPodcar2: a robust, ROS2 vehicle for self-driving research**|Rakshit Soni et.al.|[2604.24242](http://arxiv.org/abs/2604.24242)|<span class="null">—</span>|
-|**2026-04-27**|**Event-based SLAM Benchmark for High-Speed Maneuvers**|Sheng Zhong et.al.|[2604.24033](http://arxiv.org/abs/2604.24033)|<span class="null">—</span>|
-|**2026-04-24**|**Railway Artificial Intelligence Learning Benchmark (RAIL-BENCH): A Benchmark Suite for Perception in the Railway Domain**|Annika Bätz et.al.|[2604.22507](http://arxiv.org/abs/2604.22507)|<span class="null">—</span>|
-|**2026-04-24**|**Holo360D: A Large-Scale Real-World Dataset with Continuous Trajectories for Advancing Panoramic 3D Reconstruction and Beyond**|Jing Ou et.al.|[2604.22482](http://arxiv.org/abs/2604.22482)|**[link](https://github.com/Jou719/Holo360D)**|
-|**2026-04-23**|**SLAM as a Stochastic Control Problem with Partial Information: Optimal Solutions and Rigorous Approximations**|Ilir Gusija et.al.|[2604.21693](http://arxiv.org/abs/2604.21693)|<span class="null">—</span>|
-|**2026-04-21**|**SL(C)AMma: Simultaneous Localisation, (Calibration) and Mapping With a Magnetometer Array**|Thomas Edridge et.al.|[2604.19946](http://arxiv.org/abs/2604.19946)|**[link](https://github.com/Tedridge/SL-C-AMma)**|
-|**2026-04-21**|**Super Apriel: One Checkpoint, Many Speeds**|SLAM Labs et.al.|[2604.19877](http://arxiv.org/abs/2604.19877)|**[link](https://github.com/ServiceNow/Fast-LLM)**|
-|**2026-04-21**|**Coherent Direct Multipath SLAM**|Benjamin J. B. Deutschmann et.al.|[2604.19723](http://arxiv.org/abs/2604.19723)|<span class="null">—</span>|
-|**2026-04-20**|**Feasibility of Indoor Frame-Wise Lidar Semantic Segmentation via Distillation from Visual Foundation Model**|Haiyang Wu et.al.|[2604.18831](http://arxiv.org/abs/2604.18831)|<span class="null">—</span>|
-|**2026-04-19**|**CAR-EnKF: A Covariance-Adaptive and Recalibrated Ensemble Kalman Filter Framework**|Shida Jiang et.al.|[2604.17343](http://arxiv.org/abs/2604.17343)|**[link](https://github.com/Shida-Jiang/CAR-EnKF-A-Covariance-Adaptive-and-Recalibrated-Ensemble-Kalman-Filter-Framework)**|
-|**2026-04-17**|**Environment-Adaptive Solid-State LiDAR-Inertial Odometry**|Zhi Zhang et.al.|[2604.15864](http://arxiv.org/abs/2604.15864)|<span class="null">—</span>|
-|**2026-04-17**|**GaussianFlow SLAM: Monocular Gaussian Splatting SLAM Guided by GaussianFlow**|Dong-Uk Seo et.al.|[2604.15612](http://arxiv.org/abs/2604.15612)|**[link](https://github.com/url-kaist/gaussianflow-slam)**|
-|**2026-04-16**|**Dual Pose-Graph Semantic Localization for Vision-Based Autonomous Drone Racing**|David Perez-Saura et.al.|[2604.15168](http://arxiv.org/abs/2604.15168)|<span class="null">—</span>|
-|**2026-04-16**|**CAVERS: Multimodal SLAM Data from a Natural Karstic Cave with Ground Truth Motion Capture**|Giacomo Franchini et.al.|[2604.15052](http://arxiv.org/abs/2604.15052)|**[link](https://github.com/spaceuma/cavers)**|
-|**2026-04-16**|**Keep It CALM: Toward Calibration-Free Kilometer-Level SLAM with Visual Geometry Foundation Models via an Assistant Eye**|Tianjun Zhang et.al.|[2604.14795](http://arxiv.org/abs/2604.14795)|**[link](https://github.com/IRMVLab/CALM)**|
-|**2026-04-16**|**A multi-platform LiDAR dataset for standardized forest inventory measurement at long term ecological monitoring sites**|Michael R. Chang et.al.|[2604.14635](http://arxiv.org/abs/2604.14635)|<span class="null">—</span>|
-|**2026-04-16**|**Geometric Context Transformer for Streaming 3D Reconstruction**|Lin-Zhuo Chen et.al.|[2604.14141](http://arxiv.org/abs/2604.14141)|**[link](https://github.com/robbyant/lingbot-map)**|
-|**2026-04-15**|**UMI-3D: Extending Universal Manipulation Interface from Vision-Limited to 3D Spatial Perception**|Ziming Wang et.al.|[2604.14089](http://arxiv.org/abs/2604.14089)|<span class="null">—</span>|
-|**2026-04-15**|**Uplink Single-Snapshot Frugal SLAM in Phase-Coherent Distributed MIMO Systems**|Yu Ge et.al.|[2604.13807](http://arxiv.org/abs/2604.13807)|<span class="null">—</span>|
-|**2026-04-15**|**RadarSplat-RIO: Indoor Radar-Inertial Odometry with Gaussian Splatting-Based Radar Bundle Adjustment**|Pou-Chun Kung et.al.|[2604.13492](http://arxiv.org/abs/2604.13492)|<span class="null">—</span>|
-|**2026-04-09**|**TinyDEVO: Deep Event-based Visual Odometry on Ultra-low-power Multi-core Microcontrollers**|Alessandro Marchei et.al.|[2604.08060](http://arxiv.org/abs/2604.08060)|<span class="null">—</span>|
-|**2026-04-09**|**MotionScape: A Large-Scale Real-World Highly Dynamic UAV Video Dataset for World Models**|Zile Guo et.al.|[2604.07991](http://arxiv.org/abs/2604.07991)|<span class="null">—</span>|
-|**2026-04-08**|**RoSHI: A Versatile Robot-oriented Suit for Human Data In-the-Wild**|Wenjing Margaret Mao et.al.|[2604.07331](http://arxiv.org/abs/2604.07331)|<span class="null">—</span>|
-|**2026-04-08**|**An RTK-SLAM Dataset for Absolute Accuracy Evaluation in GNSS-Degraded Environments**|Wei Zhang et.al.|[2604.07151](http://arxiv.org/abs/2604.07151)|<span class="null">—</span>|
-|**2026-04-08**|**VGGT-SLAM++**|Avilasha Mandal et.al.|[2604.06830](http://arxiv.org/abs/2604.06830)|<span class="null">—</span>|
-|**2026-04-08**|**Exploring 6D Object Pose Estimation with Deformation**|Zhiqiang Liu et.al.|[2604.06720](http://arxiv.org/abs/2604.06720)|<span class="null">—</span>|
-|**2026-04-08**|**The Theorems of Dr. David Blackwell and Their Contributions to Artificial Intelligence**|Napoleon Paxton et.al.|[2604.06621](http://arxiv.org/abs/2604.06621)|<span class="null">—</span>|
-|**2026-04-06**|**Synchronous Observer Design for Landmark-Inertial SLAM with Magnetometer and Intermittent GNSS Measurements**|Arkadeep Saha et.al.|[2604.05156](http://arxiv.org/abs/2604.05156)|<span class="null">—</span>|
-|**2026-04-06**|**ZeD-MAP: Bundle Adjustment Guided Zero-Shot Depth Maps for Real-Time Aerial Imaging**|Selim Ahmet Iz et.al.|[2604.04667](http://arxiv.org/abs/2604.04667)|<span class="null">—</span>|
-|**2026-04-06**|**WaterSplat-SLAM: Photorealistic Monocular SLAM in Underwater Environment**|Kangxu Wang et.al.|[2604.04642](http://arxiv.org/abs/2604.04642)|<span class="null">—</span>|
-|**2026-04-03**|**An Open-Source LiDAR and Monocular Off-Road Autonomous Navigation Stack**|Rémi Marsal et.al.|[2604.03096](http://arxiv.org/abs/2604.03096)|<span class="null">—</span>|
-|**2026-04-03**|**Flash-Mono: Feed-Forward Accelerated Gaussian Splatting Monocular SLAM**|Zicheng Zhang et.al.|[2604.03092](http://arxiv.org/abs/2604.03092)|<span class="null">—</span>|
-|**2026-04-03**|**VBGS-SLAM: Variational Bayesian Gaussian Splatting Simultaneous Localization and Mapping**|Yuhan Zhu et.al.|[2604.02696](http://arxiv.org/abs/2604.02696)|<span class="null">—</span>|
-|**2026-04-02**|**HyVGGT-VO: Tightly Coupled Hybrid Dense Visual Odometry with Feed-Forward Models**|Junxiang Pan et.al.|[2604.02107](http://arxiv.org/abs/2604.02107)|<span class="null">—</span>|
-|**2026-04-01**|**PanoAir: A Panoramic Visual-Inertial SLAM with Cross-Time Real-World UAV Dataset**|Yiyang Wu et.al.|[2604.00852](http://arxiv.org/abs/2604.00852)|<span class="null">—</span>|
-|**2026-04-01**|**Compact Keyframe-Optimized Multi-Agent Gaussian Splatting SLAM**|Monica M. Q. Li et.al.|[2604.00804](http://arxiv.org/abs/2604.00804)|<span class="null">—</span>|
-|**2026-04-01**|**A Dual-Stream Transformer Architecture for Illumination-Invariant TIR-LiDAR Person Tracking**|Yuki Minase et.al.|[2604.00363](http://arxiv.org/abs/2604.00363)|<span class="null">—</span>|
-|**2026-03-31**|**Semantic Zone-Based Map Management for Stable AI-Integrated Mobile Robots**|Huichang Yun et.al.|[2603.29627](http://arxiv.org/abs/2603.29627)|<span class="null">—</span>|
-|**2026-03-31**|**M2H-MX: Multi-Task Dense Visual Perception for Real-Time Monocular Spatial Understanding**|U. V. B. L. Udugama et.al.|[2603.29236](http://arxiv.org/abs/2603.29236)|<span class="null">—</span>|
-|**2026-03-30**|**A Classification of Heterogeneity in Uncrewed Vehicle Swarms and the Effects of Its Inclusion on Overall Swarm Resilience**|Abhishek Joshi et.al.|[2603.28831](http://arxiv.org/abs/2603.28831)|<span class="null">—</span>|
-|**2026-03-30**|**Ghost-FWL: A Large-Scale Full-Waveform LiDAR Dataset for Ghost Detection and Removal**|Kazuma Ikeda et.al.|[2603.28224](http://arxiv.org/abs/2603.28224)|<span class="null">—</span>|
-|**2026-03-30**|**On the Role of Encoder Depth: Pruning Whisper and LoRA Fine-Tuning in SLAM-ASR**|Ganesh Pavan Kartikeya Bharadwaj Kolluri et.al.|[2603.27981](http://arxiv.org/abs/2603.27981)|<span class="null">—</span>|
-|**2026-03-29**|**GS3LAM: Gaussian Semantic Splatting SLAM**|Linfei Li et.al.|[2603.27781](http://arxiv.org/abs/2603.27781)|<span class="null">—</span>|
-|**2026-03-26**|**Unblur-SLAM: Dense Neural SLAM for Blurry Inputs**|Qi Zhang et.al.|[2603.26810](http://arxiv.org/abs/2603.26810)|<span class="null">—</span>|
-|**2026-03-26**|**Massive Parallel Deep Reinforcement Learning for Active SLAM**|Martín Arce Llobera et.al.|[2603.25834](http://arxiv.org/abs/2603.25834)|<span class="null">—</span>|
-|**2026-03-26**|**Occlusion-Aware Multimodal Beam Prediction and Pose Estimation for mmWave V2I**|Abidemi Orimogunje et.al.|[2603.25799](http://arxiv.org/abs/2603.25799)|<span class="null">—</span>|
-|**2026-03-24**|**Digital Twin Enabled Simultaneous Learning and Modeling for UAV-assisted Secure Communications with Eavesdropping Attacks**|Jieting Yuan et.al.|[2603.22753](http://arxiv.org/abs/2603.22753)|<span class="null">—</span>|
-|**2026-03-24**|**Variable-Resolution Virtual Maps for Autonomous Exploration with Unmanned Surface Vehicles (USVs)**|Ye Li et.al.|[2603.22667](http://arxiv.org/abs/2603.22667)|<span class="null">—</span>|
-|**2026-03-23**|**Image-Conditioned Adaptive Parameter Tuning for Visual Odometry Frontends**|Simone Nascivera et.al.|[2603.21785](http://arxiv.org/abs/2603.21785)|<span class="null">—</span>|
-|**2026-03-22**|**SGAD-SLAM: Splatting Gaussians at Adjusted Depth for Better Radiance Fields in RGBD SLAM**|Pengchong Hu et.al.|[2603.21055](http://arxiv.org/abs/2603.21055)|<span class="null">—</span>|
-|**2026-03-21**|**Implementing Robust M-Estimators with Certifiable Factor Graph Optimization**|Zhexin Xu et.al.|[2603.20932](http://arxiv.org/abs/2603.20932)|<span class="null">—</span>|
-|**2026-03-21**|**ToFormer: Towards Large-scale Scenario Depth Completion for Lightweight ToF Camera**|Juncheng Chen et.al.|[2603.20669](http://arxiv.org/abs/2603.20669)|<span class="null">—</span>|
-|**2026-03-20**|**TRGS-SLAM: IMU-Aided Gaussian Splatting SLAM for Blurry, Rolling Shutter, and Noisy Thermal Images**|Spencer Carmichael et.al.|[2603.20443](http://arxiv.org/abs/2603.20443)|<span class="null">—</span>|
-|**2026-03-23**|**HortiMulti: A Multi-Sensor Dataset for Localisation and Mapping in Horticultural Polytunnels**|Shuoyuan Xu et.al.|[2603.20150](http://arxiv.org/abs/2603.20150)|<span class="null">—</span>|
-|**2026-03-20**|**IUP-Pose: Decoupled Iterative Uncertainty Propagation for Real-time Relative Pose Regression via Implicit Dense Alignment v1**|Jun Wang et.al.|[2603.19625](http://arxiv.org/abs/2603.19625)|<span class="null">—</span>|
-|**2026-03-19**|**DROID-SLAM in the Wild**|Moyang Li et.al.|[2603.19076](http://arxiv.org/abs/2603.19076)|<span class="null">—</span>|
-|**2026-03-19**|**ROFT-VINS: Robust Feature Tracking-based Visual-Inertial State Estimation for Harsh Environment**|Sanghyun Park et.al.|[2603.18746](http://arxiv.org/abs/2603.18746)|<span class="null">—</span>|
-|**2026-03-19**|**Benchmarking Visual Feature Representations for LiDAR-Inertial-Visual Odometry Under Challenging Conditions**|Eunseon Choi et.al.|[2603.18589](http://arxiv.org/abs/2603.18589)|<span class="null">—</span>|
-|**2026-03-18**|**Semantic Segmentation and Depth Estimation for Real-Time Lunar Surface Mapping Using 3D Gaussian Splatting**|Guillem Casadesus Vila et.al.|[2603.18218](http://arxiv.org/abs/2603.18218)|<span class="null">—</span>|
-|**2026-03-18**|**Compressive Structures in the Foreshock of Collisionless Shocks**|Savvas Raptis et.al.|[2603.17882](http://arxiv.org/abs/2603.17882)|<span class="null">—</span>|
-|**2026-03-18**|**OnlineHMR: Video-based Online World-Grounded Human Mesh Recovery**|Yiwen Zhao et.al.|[2603.17355](http://arxiv.org/abs/2603.17355)|<span class="null">—</span>|
-|**2026-03-18**|**Full Stack Navigation, Mapping, and Planning for the Lunar Autonomy Challenge**|Adam Dai et.al.|[2603.17232](http://arxiv.org/abs/2603.17232)|<span class="null">—</span>|
-|**2026-03-18**|**Visual SLAM with DEM Anchoring for Lunar Surface Navigation**|Adam Dai et.al.|[2603.17229](http://arxiv.org/abs/2603.17229)|<span class="null">—</span>|
-|**2026-03-17**|**FastLoop: Parallel Loop Closing with GPU-Acceleration in Visual SLAM**|Soudabeh Mohammadhashemi et.al.|[2603.17201](http://arxiv.org/abs/2603.17201)|<span class="null">—</span>|
-|**2026-03-17**|**SLAM Adversarial Lab: An Extensible Framework for Visual SLAM Robustness Evaluation under Adverse Conditions**|Mohamed Hefny et.al.|[2603.17165](http://arxiv.org/abs/2603.17165)|<span class="null">—</span>|
-|**2026-03-13**|**CMHANet: A Cross-Modal Hybrid Attention Network for Point Cloud Registration**|Dongxu Zhang et.al.|[2603.12721](http://arxiv.org/abs/2603.12721)|<span class="null">—</span>|
-|**2026-03-12**|**Dense Dynamic Scene Reconstruction and Camera Pose Estimation from Multi-View Videos**|Shuo Sun et.al.|[2603.12064](http://arxiv.org/abs/2603.12064)|<span class="null">—</span>|
-|**2026-03-11**|**D-SLAMSpoof: An Environment-Agnostic LiDAR Spoofing Attack using Dynamic Point Cloud Injection**|Rokuto Nagata et.al.|[2603.11365](http://arxiv.org/abs/2603.11365)|<span class="null">—</span>|
-|**2026-03-11**|**MirrorDrift: Actuated Mirror-Based Attacks on LiDAR SLAM**|Rokuto Nagata et.al.|[2603.11364](http://arxiv.org/abs/2603.11364)|<span class="null">—</span>|
-|**2026-03-11**|**Edge-Assisted Multi-Robot Visual-Inertial SLAM with Efficient Communication**|Xin Liu et.al.|[2603.11085](http://arxiv.org/abs/2603.11085)|<span class="null">—</span>|
-|**2026-03-11**|**Semantic Landmark Particle Filter for Robot Localisation in Vineyards**|Rajitha de Silva et.al.|[2603.10847](http://arxiv.org/abs/2603.10847)|<span class="null">—</span>|
-|**2026-03-11**|**Adaptive Manipulation Potential and Haptic Estimation for Tool-Mediated Interaction**|Lin Yang et.al.|[2603.10352](http://arxiv.org/abs/2603.10352)|<span class="null">—</span>|
-|**2026-03-10**|**VarSplat: Uncertainty-aware 3D Gaussian Splatting for Robust RGB-D SLAM**|Anh Thuan Tran et.al.|[2603.09673](http://arxiv.org/abs/2603.09673)|<span class="null">—</span>|
-|**2026-03-12**|**X-GS: An Extensible Open Framework for Perceiving and Thinking via 3D Gaussian Splatting**|Yueen Ma et.al.|[2603.09632](http://arxiv.org/abs/2603.09632)|<span class="null">—</span>|
-|**2026-03-10**|**Cutting the Cord: System Architecture for Low-Cost, GPU-Accelerated Bimanual Mobile Manipulation**|Artemis Shaw et.al.|[2603.09051](http://arxiv.org/abs/2603.09051)|<span class="null">—</span>|
-|**2026-03-09**|**Improving Continual Learning for Gaussian Splatting based Environments Reconstruction on Commercial Off-the-Shelf Edge Devices**|Ivan Zaino et.al.|[2603.08499](http://arxiv.org/abs/2603.08499)|<span class="null">—</span>|
-|**2026-03-09**|**FoMo: A Multi-Season Dataset for Robot Navigation in Forêt Montmorency**|Matěj Boxan et.al.|[2603.08433](http://arxiv.org/abs/2603.08433)|<span class="null">—</span>|
-|**2026-03-09**|**Perception-Aware Communication-Free Multi-UAV Coordination in the Wild**|Manuel Boldrer et.al.|[2603.08379](http://arxiv.org/abs/2603.08379)|<span class="null">—</span>|
-|**2026-03-09**|**Edged USLAM: Edge-Aware Event-Based SLAM with Learning-Based Depth Priors**|Şebnem Sarıözkan et.al.|[2603.08150](http://arxiv.org/abs/2603.08150)|<span class="null">—</span>|
-|**2026-03-07**|**MipSLAM: Alias-Free Gaussian Splatting SLAM**|Yingzhao Li et.al.|[2603.06989](http://arxiv.org/abs/2603.06989)|<span class="null">—</span>|
-|**2026-03-05**|**Loop Closure via Maximal Cliques in 3D LiDAR-Based SLAM**|Javier Laserna et.al.|[2603.05397](http://arxiv.org/abs/2603.05397)|<span class="null">—</span>|
-|**2026-03-06**|**AIM-SLAM: Dense Monocular SLAM via Adaptive and Informative Multi-View Keyframe Prioritization with Foundation Model**|Jinwoo Jeon et.al.|[2603.05097](http://arxiv.org/abs/2603.05097)|<span class="null">—</span>|
-|**2026-03-04**|**HBRB-BoW: A Retrained Bag-of-Words Vocabulary for ORB-SLAM via Hierarchical BRB-KMeans**|Minjae Lee et.al.|[2603.04144](http://arxiv.org/abs/2603.04144)|<span class="null">—</span>|
-|**2026-03-03**|**Probabilistic Occupancy Grid for Radio-Based SLAM**|Xuhong Li et.al.|[2603.03559](http://arxiv.org/abs/2603.03559)|<span class="null">—</span>|
-|**2026-03-03**|**The Dresden Dataset for 4D Reconstruction of Non-Rigid Abdominal Surgical Scenes**|Reuben Docea et.al.|[2603.02985](http://arxiv.org/abs/2603.02985)|<span class="null">—</span>|
-|**2026-02-26**|**Motion-aware Event Suppression for Event Cameras**|Roberto Pellerito et.al.|[2602.23204](http://arxiv.org/abs/2602.23204)|<span class="null">—</span>|
-|**2026-02-26**|**FLIGHT: Fibonacci Lattice-based Inference for Geometric Heading in real-Time**|David Dirnfeld et.al.|[2602.23115](http://arxiv.org/abs/2602.23115)|<span class="null">—</span>|
-|**2026-02-26**|**Sapling-NeRF: Geo-Localised Sapling Reconstruction in Forests for Ecological Monitoring**|Miguel Ángel Muñoz-Bañón et.al.|[2602.22731](http://arxiv.org/abs/2602.22731)|<span class="null">—</span>|
-|**2026-02-25**|**Parallel Continuous-Time Relative Localization with Augmented Clamped Non-Uniform B-Splines**|Jiadong Lu et.al.|[2602.22006](http://arxiv.org/abs/2602.22006)|<span class="null">—</span>|
-|**2026-02-25**|**Dream-SLAM: Dreaming the Unseen for Active SLAM in Dynamic Environments**|Xiangqi Meng et.al.|[2602.21967](http://arxiv.org/abs/2602.21967)|<span class="null">—</span>|
-|**2026-02-25**|**DAGS-SLAM: Dynamic-Aware 3DGS SLAM via Spatiotemporal Motion Probability and Uncertainty-Aware Scheduling**|Li Zhang et.al.|[2602.21644](http://arxiv.org/abs/2602.21644)|<span class="null">—</span>|
-|**2026-02-24**|**LST-SLAM: A Stereo Thermal SLAM System for Kilometer-Scale Dynamic Environments**|Zeyu Jiang et.al.|[2602.20925](http://arxiv.org/abs/2602.20925)|<span class="null">—</span>|
-|**2026-02-24**|**RU4D-SLAM: Reweighting Uncertainty in Gaussian Splatting SLAM for 4D Scene Reconstruction**|Yangfan Zhao et.al.|[2602.20807](http://arxiv.org/abs/2602.20807)|<span class="null">—</span>|
-|**2026-02-25**|**From Pairs to Sequences: Track-Aware Policy Gradients for Keypoint Detection**|Yepeng Liu et.al.|[2602.20630](http://arxiv.org/abs/2602.20630)|<span class="null">—</span>|
-|**2026-02-22**|**OpenVO: Open-World Visual Odometry with Temporal Dynamics Awareness**|Phuc D. A. Nguyen et.al.|[2602.19035](http://arxiv.org/abs/2602.19035)|<span class="null">—</span>|
-|**2026-02-21**|**IRIS-SLAM: Unified Geo-Instance Representations for Robust Semantic Localization and Mapping**|Tingyang Xiao et.al.|[2602.18709](http://arxiv.org/abs/2602.18709)|<span class="null">—</span>|
-|**2026-02-20**|**Have We Mastered Scale in Deep Monocular Visual SLAM? The ScaleMaster Dataset and Benchmark**|Hyoseok Ju et.al.|[2602.18174](http://arxiv.org/abs/2602.18174)|<span class="null">—</span>|
-|**2026-02-20**|**GrandTour: A Legged Robotics Dataset in the Wild for Multi-Modal Perception and State Estimation**|Jonas Frey et.al.|[2602.18164](http://arxiv.org/abs/2602.18164)|<span class="null">—</span>|
-|**2026-02-19**|**Multi-session Localization and Mapping Exploiting Topological Information**|Lorenzo Montano-Olivan et.al.|[2602.17226](http://arxiv.org/abs/2602.17226)|<span class="null">—</span>|
-|**2026-02-19**|**NRGS-SLAM: Monocular Non-Rigid SLAM for Endoscopy via Deformation-Aware 3D Gaussian Splatting**|Jiwei Shan et.al.|[2602.17182](http://arxiv.org/abs/2602.17182)|<span class="null">—</span>|
-|**2026-02-19**|**Cholec80-port: A Geometrically Consistent Trocar Port Segmentation Dataset for Robust Surgical Scene Understanding**|Shunsuke Kikuchi et.al.|[2602.17060](http://arxiv.org/abs/2602.17060)|<span class="null">—</span>|
-|**2026-02-12**|**GSO-SLAM: Bidirectionally Coupled Gaussian Splatting and Direct Visual Odometry**|Jiung Yeon et.al.|[2602.11714](http://arxiv.org/abs/2602.11714)|<span class="null">—</span>|
-|**2026-02-09**|**Thegra: Graph-based SLAM for Thermal Imagery**|Anastasiia Kornilova et.al.|[2602.08531](http://arxiv.org/abs/2602.08531)|<span class="null">—</span>|
-|**2026-02-11**|**Thermal odometry and dense mapping using learned odometry and Gaussian splatting**|Tianhao Zhou et.al.|[2602.07493](http://arxiv.org/abs/2602.07493)|<span class="null">—</span>|
-|**2026-02-06**|**A Consistency-Improved LiDAR-Inertial Bundle Adjustment**|Xinran Li et.al.|[2602.06380](http://arxiv.org/abs/2602.06380)|<span class="null">—</span>|
-|**2026-02-05**|**Geometric Observability Index: An Operator-Theoretic Framework for Per-Feature Sensitivity, Weak Observability, and Dynamic Effects in SE(3) Pose Estimation**|Joe-Mei Feng et.al.|[2602.05582](http://arxiv.org/abs/2602.05582)|<span class="null">—</span>|
-|**2026-02-05**|**VGGT-Motion: Motion-Aware Calibration-Free Monocular SLAM for Long-Range Consistency**|Zhuang Xiong et.al.|[2602.05508](http://arxiv.org/abs/2602.05508)|<span class="null">—</span>|
-|**2026-02-05**|**Feature points evaluation on omnidirectional vision with a photorealistic fisheye sequence -- A report on experiments done in 2014**|Julien Moreau et.al.|[2602.05487](http://arxiv.org/abs/2602.05487)|<span class="null">—</span>|
-|**2026-02-04**|**Towards Next-Generation SLAM: A Survey on 3DGS-SLAM Focusing on Performance, Robustness, and Future Directions**|Li Wang et.al.|[2602.04251](http://arxiv.org/abs/2602.04251)|<span class="null">—</span>|
-|**2026-02-03**|**Beyond the Vehicle: Cooperative Localization by Fusing Point Clouds for GPS-Challenged Urban Scenarios**|Kuo-Yi Chao et.al.|[2602.03908](http://arxiv.org/abs/2602.03908)|<span class="null">—</span>|
-|**2026-02-02**|**Relationship-Aware Hierarchical 3D Scene Graph for Task Reasoning**|Albert Gassol Puigjaner et.al.|[2602.02456](http://arxiv.org/abs/2602.02456)|<span class="null">—</span>|
-|**2026-02-02**|**3D Foundation Model-Based Loop Closing for Decentralized Collaborative SLAM**|Pierre-Yves Lajoie et.al.|[2602.02430](http://arxiv.org/abs/2602.02430)|<span class="null">—</span>|
-|**2026-02-02**|**Mapping-Guided Task Discovery and Allocation for Robotic Inspection of Underwater Structures**|Marina Ruediger et.al.|[2602.02389](http://arxiv.org/abs/2602.02389)|<span class="null">—</span>|
-|**2026-02-02**|**Real-Time Loop Closure Detection in Visual SLAM via NetVLAD and Faiss**|Enguang Fan et.al.|[2602.01673](http://arxiv.org/abs/2602.01673)|<span class="null">—</span>|
-|**2026-01-29**|**IROS: A Dual-Process Architecture for Real-Time VLM-Based Indoor Navigation**|Joonhee Lee et.al.|[2601.21506](http://arxiv.org/abs/2601.21506)|<span class="null">—</span>|
-|**2026-01-28**|**Multi-Robot Decentralized Collaborative SLAM in Planetary Analogue Environments: Dataset, Challenges, and Lessons Learned**|Pierre-Yves Lajoie et.al.|[2601.21063](http://arxiv.org/abs/2601.21063)|<span class="null">—</span>|
-|**2026-01-30**|**VGGT-SLAM 2.0: Real-time Dense Feed-forward Scene Reconstruction**|Dominic Maggio et.al.|[2601.19887](http://arxiv.org/abs/2601.19887)|<span class="null">—</span>|
-|**2026-01-27**|**The S3LI Vulcano Dataset: A Dataset for Multi-Modal SLAM in Unstructured Planetary Environments**|Riccardo Giubilato et.al.|[2601.19557](http://arxiv.org/abs/2601.19557)|<span class="null">—</span>|
-|**2026-01-28**|**Fast Converging 3D Gaussian Splatting for 1-Minute Reconstruction**|Ziyu Zhang et.al.|[2601.19489](http://arxiv.org/abs/2601.19489)|<span class="null">—</span>|
-|**2026-01-26**|**Co-PLNet: A Collaborative Point-Line Network for Prompt-Guided Wireframe Parsing**|Chao Wang et.al.|[2601.18252](http://arxiv.org/abs/2601.18252)|<span class="null">—</span>|
-|**2026-01-22**|**Keyframe-Based Feed-Forward Visual Odometry**|Weichen Dai et.al.|[2601.16020](http://arxiv.org/abs/2601.16020)|<span class="null">—</span>|
-|**2026-01-22**|**Parallelizable Riemannian Alternating Direction Method of Multipliers for Non-convex Pose Graph Optimization**|Xin Chen et.al.|[2601.15684](http://arxiv.org/abs/2601.15684)|<span class="null">—</span>|
-|**2026-01-19**|**Autonomous Navigation at the Nano-Scale: Algorithms, Architectures, and Constraints**|Mahmud S. Zango et.al.|[2601.13252](http://arxiv.org/abs/2601.13252)|<span class="null">—</span>|
-|**2026-01-18**|**R-VoxelMap: Accurate Voxel Mapping with Recursive Plane Fitting for Online LiDAR Odometry**|Haobo Xi et.al.|[2601.12377](http://arxiv.org/abs/2601.12377)|<span class="null">—</span>|
-|**2026-01-16**|**ShapeR: Robust Conditional 3D Shape Generation from Casual Captures**|Yawar Siddiqui et.al.|[2601.11514](http://arxiv.org/abs/2601.11514)|<span class="null">—</span>|
-|**2026-01-20**|**SurfSLAM: Sim-to-Real Underwater Stereo Reconstruction For Real-Time SLAM**|Onur Bagoren et.al.|[2601.10814](http://arxiv.org/abs/2601.10814)|<span class="null">—</span>|
-|**2026-01-14**|**SCE-SLAM: Scale-Consistent Monocular SLAM via Scene Coordinate Embeddings**|Yuchen Wu et.al.|[2601.09665](http://arxiv.org/abs/2601.09665)|<span class="null">—</span>|
-|**2026-01-14**|**Multimodal Signal Processing For Thermo-Visible-Lidar Fusion In Real-time 3D Semantic Mapping**|Jiajun Sun et.al.|[2601.09578](http://arxiv.org/abs/2601.09578)|<span class="null">—</span>|
-|**2026-01-14**|**SLAM-LLM: A Modular, Open-Source Multimodal Large Language Model Framework and Best Practice for Speech, Language, Audio and Music Processing**|Ziyang Ma et.al.|[2601.09385](http://arxiv.org/abs/2601.09385)|<span class="null">—</span>|
-|**2026-01-13**|**Efficient Incremental SLAM via Information-Guided and Selective Optimization**|Reza Arablouei et.al.|[2601.08110](http://arxiv.org/abs/2601.08110)|<span class="null">—</span>|
-|**2026-01-09**|**InsSo3D: Inertial Navigation System and 3D Sonar SLAM for turbid environment inspection**|Simon Archieri et.al.|[2601.05805](http://arxiv.org/abs/2601.05805)|<span class="null">—</span>|
-|**2026-01-09**|**FeatureSLAM: Feature-enriched 3D gaussian splatting SLAM in real time**|Christopher Thirgood et.al.|[2601.05738](http://arxiv.org/abs/2601.05738)|<span class="null">—</span>|
-|**2026-01-08**|**Discrete Fourier Transform-based Point Cloud Compression for Efficient SLAM in Featureless Terrain**|Riku Suzuki et.al.|[2601.04551](http://arxiv.org/abs/2601.04551)|<span class="null">—</span>|
-|**2026-01-08**|**Fast Continuum Robot Shape and External Load State Estimation on SE(3)**|James M. Ferguson et.al.|[2601.04493](http://arxiv.org/abs/2601.04493)|<span class="null">—</span>|
-|**2026-01-06**|**Loop Closure using AnyLoc Visual Place Recognition in DPV-SLAM**|Wenzheng Zhang et.al.|[2601.02723](http://arxiv.org/abs/2601.02723)|<span class="null">—</span>|
-|**2026-01-09**|**360DVO: Deep Visual Odometry for Monocular 360-Degree Camera**|Xiaopeng Guo et.al.|[2601.02309](http://arxiv.org/abs/2601.02309)|<span class="null">—</span>|
-|**2026-01-05**|**Differential Barometric Altimetry for Submeter Vertical Localization and Floor Recognition Indoors**|Yuhang Zhang et.al.|[2601.02184](http://arxiv.org/abs/2601.02184)|<span class="null">—</span>|
-|**2026-01-03**|**VISO: Robust Underwater Visual-Inertial-Sonar SLAM with Photometric Rendering for Dense 3D Reconstruction**|Shu Pan et.al.|[2601.01144](http://arxiv.org/abs/2601.01144)|<span class="null">—</span>|
-|**2025-12-28**|**RGS-SLAM: Robust Gaussian Splatting SLAM with One-Shot Dense Initialization**|Wei-Tse Cheng et.al.|[2601.00705](http://arxiv.org/abs/2601.00705)|<span class="null">—</span>|
-|**2026-01-02**|**Variable Elimination in Hybrid Factor Graphs for Discrete-Continuous Inference & Estimation**|Varun Agrawal et.al.|[2601.00545](http://arxiv.org/abs/2601.00545)|<span class="null">—</span>|
-|**2026-01-01**|**FoundationSLAM: Unleashing the Power of Depth Foundation Models for End-to-End Dense Visual SLAM**|Yuchen Wu et.al.|[2512.25008](http://arxiv.org/abs/2512.25008)|<span class="null">—</span>|
-|**2025-12-27**|**Mesquite MoCap: Democratizing Real-Time Motion Capture with Affordable, Bodyworn IoT Sensors and WebXR SLAM**|Poojan Vanani et.al.|[2512.22690](http://arxiv.org/abs/2512.22690)|<span class="null">—</span>|
-|**2025-12-30**|**Simultaneous Source Separation, Synchronization, Localization and Mapping for 6G Systems**|Alexander Venus et.al.|[2512.22393](http://arxiv.org/abs/2512.22393)|<span class="null">—</span>|
-|**2025-12-25**|**World-Coordinate Human Motion Retargeting via SAM 3D Body**|Zhangzheng Tu et.al.|[2512.21573](http://arxiv.org/abs/2512.21573)|<span class="null">—</span>|
-|**2025-12-25**|**FAR-AVIO: Fast and Robust Schur-Complement Based Acoustic-Visual-Inertial Fusion Odometry with Sensor Calibration**|Hao Wei et.al.|[2512.20355](http://arxiv.org/abs/2512.20355)|<span class="null">—</span>|
-|**2025-12-22**|**Trifocal Tensor and Relative Pose Estimation with Known Vertical Direction**|Tao Li et.al.|[2512.19110](http://arxiv.org/abs/2512.19110)|<span class="null">—</span>|
-|**2025-12-18**|**SNOW: Spatio-Temporal Scene Understanding with World Knowledge for Open-World Embodied Reasoning**|Tin Stribor Sohn et.al.|[2512.16461](http://arxiv.org/abs/2512.16461)|<span class="null">—</span>|
-|**2025-12-17**|**Spatia: Video Generation with Updatable Spatial Memory**|Jinjing Zhao et.al.|[2512.15716](http://arxiv.org/abs/2512.15716)|<span class="null">—</span>|
-|**2025-12-17**|**NAP3D: NeRF Assisted 3D-3D Pose Alignment for Autonomous Vehicles**|Gaurav Bansal et.al.|[2512.15080](http://arxiv.org/abs/2512.15080)|<span class="null">—</span>|
-
-> Showing the latest 200 of 1449 papers, see the [archive](#archive) for all.
-
-<h2 id="sfm">SFM</h2>
+<h2 id="neural-mt">Neural MT</h2>
 
 | Publish Date | Title | Authors | PDF | Code |
 |:---------|:-----------------------|:---------|:------|:------|
-|**2026-10-28**|**Environmental Quenching of Satellite Galaxies out to z~0.4 with GAMA and DEVILS**|Megan Oxland et.al.|[2610.38836](http://arxiv.org/abs/2610.38836)|<span class="null">—</span>|
-|**2026-10-27**|**HoloRecon: Incremental Reconstruction of Long-Range Panoramas with Global Consistency**|Zhuoxiao Li et.al.|[2610.36876](http://arxiv.org/abs/2610.36876)|<span class="null">—</span>|
-|**2026-10-26**|**Synthetic Deformable Tubular Benchmark: A mechanically annotated dataset for evaluating deformable 3D reconstruction**|Íñigo Cirauqui-Viloria et.al.|[2610.35621](http://arxiv.org/abs/2610.35621)|<span class="null">—</span>|
-|**2026-10-27**|**Metric Scale for Insta360 Structure-from-Motion from the Camera's Embedded IMU**|Davide Cuttini et.al.|[2610.35554](http://arxiv.org/abs/2610.35554)|<span class="null">—</span>|
-|**2026-10-26**|**Generative Structure from Motion with Native 3D Diffusion**|Haobin Duan et.al.|[2610.35522](http://arxiv.org/abs/2610.35522)|<span class="null">—</span>|
-|**2026-10-26**|**Learning Scene Coordinate Reconstruction from Unposed Images via Pose Graph Optimization**|Tze Ho Elden Tse et.al.|[2610.35501](http://arxiv.org/abs/2610.35501)|<span class="null">—</span>|
-|**2026-10-26**|**PosePlaner: Denoising Any Feed-Forward Pose Predictor from Pairwise Planar Geometry**|Yihang Chen et.al.|[2610.34845](http://arxiv.org/abs/2610.34845)|<span class="null">—</span>|
-|**2026-10-25**|**No Cones, No Duals: A Fast and Scalable Solver for NRSfM**|Suryansh Kumar et.al.|[2610.34403](http://arxiv.org/abs/2610.34403)|<span class="null">—</span>|
-|**2026-10-23**|**FlexGlue: Sparse-to-Dense Feature Matching and Visual Disambiguation**|Philipp Lindenberger et.al.|[2610.32976](http://arxiv.org/abs/2610.32976)|**[link](https://github.com/cvg/flexglue)**|
-|**2026-10-22**|**MVLoMa: Multi-View Local Feature Matching with Any Geometry Foundation Model**|Xinyang Lu et.al.|[2610.31321](http://arxiv.org/abs/2610.31321)|<span class="null">—</span>|
-|**2026-10-20**|**CrossFit-GS: Out-of-Fold Pose Estimation for COLMAP-Free 3D Gaussian Splatting**|Zijian Wu et.al.|[2610.28190](http://arxiv.org/abs/2610.28190)|<span class="null">—</span>|
-|**2026-10-18**|**Localization and Neural Splatting on the Edge: An FPGA Scene Memory for Robots**|Que Haohua et.al.|[2610.25068](http://arxiv.org/abs/2610.25068)|**[link](https://github.com/WangZhican/physical-ai-serving-radar)**|
-|**2026-10-16**|**Ionic switching between supermagnetic states**|Sumaiyatul Ahsan et.al.|[2610.23829](http://arxiv.org/abs/2610.23829)|<span class="null">—</span>|
-|**2026-10-19**|**RoboCloth: A Large-Scale Real Cloth Material Dataset for Neural Reflectance Reconstruction**|Zhen Li et.al.|[2610.21090](http://arxiv.org/abs/2610.21090)|**[link](https://github.com/theialab/robocloth)**|
-|**2026-10-14**|**Why 3D Reconstruction Breaks Down on Under-Ice AUV Video, and How to Predict It**|Ana-Ştefania Kogălniceanu et.al.|[2610.19993](http://arxiv.org/abs/2610.19993)|<span class="null">—</span>|
-|**2026-10-13**|**Benchmarking 3D Reconstruction for Under-Ice Robotic Perception in Arctic Environments**|Klára Orbán et.al.|[2610.19097](http://arxiv.org/abs/2610.19097)|<span class="null">—</span>|
-|**2026-10-10**|**RootSLAM: Square Root Bundle Adjustment for Visual-Inertial SLAM**|Tomás Santucci et.al.|[2610.15157](http://arxiv.org/abs/2610.15157)|**[link](https://github.com/Everton-Braz/LidarCamera360)**|
-|**2026-10-08**|**When pose graphs are not enough: a failure analysis of pose-graph-based camera estimation for Gaussian splatting**|Senthil Palanisamy et.al.|[2610.14090](http://arxiv.org/abs/2610.14090)|<span class="null">—</span>|
-|**2026-10-08**|**Inflow-driven galaxy evolution - II: A hierarchy in the scaling relations of star-forming galaxies**|Kai Wang et.al.|[2610.12394](http://arxiv.org/abs/2610.12394)|<span class="null">—</span>|
-|**2026-10-06**|**Image-Space Refraction Correction for Underwater 3D Reconstruction: Warping Flat-Port Views into Pinhole Perspective**|Chelim Lim et.al.|[2610.07788](http://arxiv.org/abs/2610.07788)|<span class="null">—</span>|
-|**2026-10-05**|**Structural Foundations of Nonlinear Systems with Unknown Inputs: The UID-Induced Normal Form and Minimal-Sensing Structure-from-Motion**|Agostino Martinelli et.al.|[2610.05939](http://arxiv.org/abs/2610.05939)|<span class="null">—</span>|
-|**2026-10-04**|**Transferable Adversarial Robustness for Speech Foundation Models via Hierarchical Stabilization**|Aref Mousavi et.al.|[2610.05310](http://arxiv.org/abs/2610.05310)|**[link](https://github.com/arefmousavi/hierarchical-robust-sfm)**|
-|**2026-10-01**|**MVDG: Efficient Multi-view 3D Disambiguation on Unconstrained Real-World Images**|Hanyuan Xiao et.al.|[2610.01098](http://arxiv.org/abs/2610.01098)|<span class="null">—</span>|
-|**2026-09-30**|**Introduction to Computer Vision**|Stan Birchfield et.al.|[2609.39627](http://arxiv.org/abs/2609.39627)|**[link](https://github.com/bnvai/OpenCV-Introduction)**|
-|**2026-09-29**|**Beyond Monoscopic Viewing: A Study on 3D Gaussian Splatting Quality in VR**|Shreyas Shivakumara et.al.|[2609.38525](http://arxiv.org/abs/2609.38525)|<span class="null">—</span>|
-|**2026-09-29**|**Prior-Driven Enhancements in 3D Gaussian Splatting: Normals and Depths Regularization**|Gyeonggwan Lee et.al.|[2609.36969](http://arxiv.org/abs/2609.36969)|**[link](https://github.com/gandanlee/pdigs)**|
-|**2026-09-28**|**OTT3R: Multi-View 3D Reconstruction and Fast Dataset Generation at 1% Compute**|Brandon Leblanc et.al.|[2609.36374](http://arxiv.org/abs/2609.36374)|**[link](https://github.com/TheFourthKaramazov/OTT3R)**|
-|**2026-09-28**|**Remote Sensing Sparse-View 3D Gaussian Splatting via Depth Image-Based Rendering**|Jiaming Kang et.al.|[2609.35612](http://arxiv.org/abs/2609.35612)|**[link](https://github.com/kanehub/DIBR-GS)**|
-|**2026-05-14**|**Denoising-GS: Gaussian Splatting with Spatial-aware Denoising**|Qingyuan Zhou et.al.|[2605.14880](http://arxiv.org/abs/2605.14880)|<span class="null">—</span>|
-|**2026-05-14**|**Efficient Dense Matching for Enhanced Gaussian Splatting Using AV1 Motion Vectors**|Julien Zouein et.al.|[2605.14629](http://arxiv.org/abs/2605.14629)|<span class="null">—</span>|
-|**2026-05-12**|**WildPose: A Unified Framework for Robust Pose Estimation in the Wild**|Jianhao Zheng et.al.|[2605.12774](http://arxiv.org/abs/2605.12774)|**[link](https://github.com/GradientSpaces/WildPose)**|
-|**2026-05-12**|**3D Gaussian Splatting for Efficient Retrospective Dynamic Scene Novel View Synthesis with a Standardized Benchmark**|Yunxiao Zhang et.al.|[2605.12437](http://arxiv.org/abs/2605.12437)|<span class="null">—</span>|
-|**2026-05-12**|**Compositional Neural Operators for Multi-Dimensional Fluid Dynamics**|Hamda Hmida et.al.|[2605.11691](http://arxiv.org/abs/2605.11691)|<span class="null">—</span>|
-|**2026-05-11**|**3DReflecNet: A Large-Scale Dataset for 3D Reconstruction of Reflective, Transparent, and Low-Texture Objects**|Zhicheng Liang et.al.|[2605.10204](http://arxiv.org/abs/2605.10204)|<span class="null">—</span>|
-|**2026-05-11**|**BathyFacto: Refraction-Aware Two-Media Neural Radiance Fields for Bathymetry**|Markus Brezovsky et.al.|[2605.10174](http://arxiv.org/abs/2605.10174)|**[link](https://github.com/brz1409/bathyfacto)**|
-|**2026-05-08**|**TriP: A Triangle Puzzle Approach to Robust Translation Averaging**|Zhekai Fan et.al.|[2605.07143](http://arxiv.org/abs/2605.07143)|<span class="null">—</span>|
-|**2026-05-07**|**TriDE: Triangle-Consistent Translation Directions for Global Camera Pose Estimation**|Francisco Chen et.al.|[2605.06889](http://arxiv.org/abs/2605.06889)|<span class="null">—</span>|
-|**2026-05-06**|**egenioussBench: A New Dataset for Geospatial Visual Localisation**|Phillipp Fanta-Jende et.al.|[2605.05351](http://arxiv.org/abs/2605.05351)|**[link](https://github.com/fratopa/egenioussBench)**|
-|**2026-05-05**|**Permutation Routing on Ramanujan Hypergraphs with Applications to Neutral Atom Quantum Architectures**|Joshua M. Courtney et.al.|[2605.02498](http://arxiv.org/abs/2605.02498)|<span class="null">—</span>|
-|**2026-05-03**|**DP-SfM: Dual-Pixel Structure-from-Motion without Scale Ambiguity**|Lilika Makabe et.al.|[2605.01852](http://arxiv.org/abs/2605.01852)|**[link](https://github.com/lilika-makabe/dp-sfm-tpami)**|
-|**2026-05-01**|**PEARLS: Two Distinct Populations of AGN Hosts Moving Between Star Formation and Quiescence**|Gibson B. Bowling et.al.|[2605.00822](http://arxiv.org/abs/2605.00822)|<span class="null">—</span>|
-|**2026-05-01**|**2D-SuGaR: Surface-Aware Gaussian Splatting for Geometrically Accurate Mesh Reconstruction**|Prajwal Gupta C. R. et.al.|[2605.00569](http://arxiv.org/abs/2605.00569)|<span class="null">—</span>|
-|**2026-04-30**|**Alethia: A Foundational Encoder for Voice Deepfakes**|Yi Zhu et.al.|[2605.00251](http://arxiv.org/abs/2605.00251)|<span class="null">—</span>|
-|**2026-04-24**|**SS3D: End2End Self-Supervised 3D from Web Videos**|Marwane Hariat et.al.|[2604.22686](http://arxiv.org/abs/2604.22686)|<span class="null">—</span>|
-|**2026-04-24**|**ArchSym: Detecting 3D-Grounded Architectural Symmetries in the Wild**|Hanyu Chen et.al.|[2604.22202](http://arxiv.org/abs/2604.22202)|<span class="null">—</span>|
-|**2026-04-24**|**GenMatter: Perceiving Physical Objects with Generative Matter Models**|Eric Li et.al.|[2604.22160](http://arxiv.org/abs/2604.22160)|<span class="null">—</span>|
-|**2026-04-28**|**BALTIC: A Benchmark and Cross-Domain Strategy for 3D Reconstruction Across Air and Underwater Domains Under Varying Illumination**|Michele Grimaldi et.al.|[2604.19133](http://arxiv.org/abs/2604.19133)|<span class="null">—</span>|
-|**2026-04-20**|**PCM-NeRF: Probabilistic Camera Modeling for Neural Radiance Fields under Pose Uncertainty**|Shravan Venkatraman et.al.|[2604.17831](http://arxiv.org/abs/2604.17831)|<span class="null">—</span>|
-|**2026-04-17**|**PoInit-of-View: Poisoning Initialization of Views Transfers Across Multiple 3D Reconstruction Systems**|Weijie Wang et.al.|[2604.16540](http://arxiv.org/abs/2604.16540)|<span class="null">—</span>|
-|**2026-04-15**|**Geometrically Consistent Multi-View Scene Generation from Freehand Sketches**|Ahmed Bourouis et.al.|[2604.14302](http://arxiv.org/abs/2604.14302)|<span class="null">—</span>|
-|**2026-04-14**|**PatchPoison: Poisoning Multi-View Datasets to Degrade 3D Reconstruction**|Prajas Wadekar et.al.|[2604.13153](http://arxiv.org/abs/2604.13153)|<span class="null">—</span>|
-|**2026-04-13**|**ReefMapGS: Enabling Large-Scale Underwater Reconstruction by Closing the Loop Between Multimodal SLAM and Gaussian Splatting**|Daniel Yang et.al.|[2604.11992](http://arxiv.org/abs/2604.11992)|<span class="null">—</span>|
-|**2026-04-11**|**A Comparison of Multi-View Stereo Methods for Photogrammetric 3D Reconstruction: From Traditional to Learning-Based Approaches**|Yawen Li et.al.|[2604.10246](http://arxiv.org/abs/2604.10246)|<span class="null">—</span>|
-|**2026-04-09**|**Neutral Hydrogen in the Shapley Supercluster Core I: Environmental Effects on Gas Content and Galaxy Evolution**|L. Gwebushe et.al.|[2604.08402](http://arxiv.org/abs/2604.08402)|<span class="null">—</span>|
-|**2026-04-06**|**LoMa: Local Feature Matching Revisited**|David Nordström et.al.|[2604.04931](http://arxiv.org/abs/2604.04931)|<span class="null">—</span>|
-|**2026-04-02**|**Dynamic Risk Generation for Autonomous Driving: Naturalistic Reconstruction of Vehicle-E-Scooter Interactions**|Abin Mathew et.al.|[2604.02573](http://arxiv.org/abs/2604.02573)|<span class="null">—</span>|
-|**2026-04-02**|**Enhanced Polarization Locking in VCSELs**|Zifeng Yuan et.al.|[2604.01857](http://arxiv.org/abs/2604.01857)|<span class="null">—</span>|
-|**2026-04-01**|**Reliev3R: Relieving Feed-forward Reconstruction from Multi-View Geometric Annotations**|Youyu Chen et.al.|[2604.00548](http://arxiv.org/abs/2604.00548)|<span class="null">—</span>|
-|**2026-03-29**|**MV-RoMa: From Pairwise Matching into Multi-View Track Reconstruction**|Jongmin Lee et.al.|[2603.27542](http://arxiv.org/abs/2603.27542)|<span class="null">—</span>|
-|**2026-03-27**|**Drive-Through 3D Vehicle Exterior Reconstruction via Dynamic-Scene SfM and Distortion-Aware Gaussian Splatting**|Nitin Kulkarni et.al.|[2603.26638](http://arxiv.org/abs/2603.26638)|<span class="null">—</span>|
-|**2026-03-26**|**Pose-Free Omnidirectional Gaussian Splatting for 360-Degree Videos with Consistent Depth Priors**|Chuanqing Zhuang et.al.|[2603.23324](http://arxiv.org/abs/2603.23324)|<span class="null">—</span>|
-|**2026-03-24**|**GTLR-GS: Geometry-Texture Aware LiDAR-Regularized 3D Gaussian Splatting for Realistic Scene Reconstruction**|Yan Fang et.al.|[2603.23192](http://arxiv.org/abs/2603.23192)|<span class="null">—</span>|
-|**2026-04-05**|**Uncertainty Quantification for Distribution-to-Distribution Flow Matching in Scientific Imaging**|Dongxia Wu et.al.|[2603.21717](http://arxiv.org/abs/2603.21717)|<span class="null">—</span>|
-|**2026-03-21**|**The Role and Relationship of Initialization and Densification in 3D Gaussian Splatting**|Ivan Desiatov et.al.|[2603.20714](http://arxiv.org/abs/2603.20714)|<span class="null">—</span>|
-|**2026-03-24**|**GHOST: Ground-projected Hypotheses from Observed Structure-from-Motion Trajectories**|Tomasz Frelek et.al.|[2603.20583](http://arxiv.org/abs/2603.20583)|<span class="null">—</span>|
-|**2026-03-20**|**Benchmarking Efficient & Effective Camera Pose Estimation Strategies for Novel View Synthesis**|Jhacson Meza et.al.|[2603.20428](http://arxiv.org/abs/2603.20428)|<span class="null">—</span>|
-|**2026-03-19**|**Teleological Inference in Structural Causal Models via Intentional Interventions**|Dario Compagno et.al.|[2603.18968](http://arxiv.org/abs/2603.18968)|<span class="null">—</span>|
-|**2026-03-19**|**Pixel-Accurate Epipolar Guided Matching**|Oleksii Nasypanyi et.al.|[2603.18401](http://arxiv.org/abs/2603.18401)|<span class="null">—</span>|
-|**2026-03-17**|**Split-Merge Dynamics for Shapley-Fair Coalition Formation**|Quanyan Zhu et.al.|[2603.17153](http://arxiv.org/abs/2603.17153)|<span class="null">—</span>|
-|**2026-03-14**|**Evaluation of Visual Place Recognition Methods for Image Pair Retrieval in 3D Vision and Robotics**|Dennis Haitz et.al.|[2603.13917](http://arxiv.org/abs/2603.13917)|<span class="null">—</span>|
-|**2026-03-13**|**Self-Flow-Matching assisted Full Waveform Inversion**|Xinquan Huang et.al.|[2603.13425](http://arxiv.org/abs/2603.13425)|<span class="null">—</span>|
-|**2026-03-12**|**Single-View Rolling-Shutter SfM**|Sofía Errázuriz Muñoz et.al.|[2603.11888](http://arxiv.org/abs/2603.11888)|<span class="null">—</span>|
-|**2026-03-11**|**GGPT: Geometry Grounded Point Transformer**|Yutong Chen et.al.|[2603.11174](http://arxiv.org/abs/2603.11174)|<span class="null">—</span>|
-|**2026-03-10**|**Resolved molecular gas and star-formation in massive unquenched spirals : I. UGC 8179**|Romane Cologni et.al.|[2603.09917](http://arxiv.org/abs/2603.09917)|<span class="null">—</span>|
-|**2026-03-09**|**Faster Parametric Submodular Function Minimization by Exploiting Duality**|Swati Gupta et.al.|[2603.08672](http://arxiv.org/abs/2603.08672)|<span class="null">—</span>|
-|**2026-03-09**|**Speed3R: Sparse Feed-forward 3D Reconstruction Models**|Weining Ren et.al.|[2603.08055](http://arxiv.org/abs/2603.08055)|<span class="null">—</span>|
-|**2026-03-04**|**Three-dimensional reconstruction and segmentation of an aggregate stockpile for size and shape analyses**|Erol Tutumluer et.al.|[2603.06684](http://arxiv.org/abs/2603.06684)|<span class="null">—</span>|
-|**2026-03-06**|**Transforming Omnidirectional RGB-LiDAR data into 3D Gaussian Splatting**|Semin Bae et.al.|[2603.06061](http://arxiv.org/abs/2603.06061)|<span class="null">—</span>|
-|**2026-03-06**|**Extremely Metal-Poor Galaxies in DESI DR1: Connections to Galaxies in the Early Universe**|Jipeng Sui et.al.|[2603.05934](http://arxiv.org/abs/2603.05934)|<span class="null">—</span>|
-|**2026-03-05**|**Dark3R: Learning Structure from Motion in the Dark**|Andrew Y Guo et.al.|[2603.05330](http://arxiv.org/abs/2603.05330)|<span class="null">—</span>|
-|**2026-03-05**|**CoIn3D: Revisiting Configuration-Invariant Multi-Camera 3D Object Detection**|Zhaonian Kuang et.al.|[2603.05042](http://arxiv.org/abs/2603.05042)|<span class="null">—</span>|
-|**2026-03-05**|**GloSplat: Joint Pose-Appearance Optimization for Faster and More Accurate 3D Reconstruction**|Tianyu Xiong et.al.|[2603.04847](http://arxiv.org/abs/2603.04847)|<span class="null">—</span>|
-|**2026-03-02**|**The Galaxy Stellar Mass-SFR-Size Relation in EAGLE, TNG100, and Observations**|Jiani Chu et.al.|[2603.01726](http://arxiv.org/abs/2603.01726)|<span class="null">—</span>|
-|**2026-02-28**|**STMI: Segmentation-Guided Token Modulation with Cross-Modal Hypergraph Interaction for Multi-Modal Object Re-Identification**|Xingguo Xu et.al.|[2603.00695](http://arxiv.org/abs/2603.00695)|<span class="null">—</span>|
-|**2026-02-26**|**FLIGHT: Fibonacci Lattice-based Inference for Geometric Heading in real-Time**|David Dirnfeld et.al.|[2602.23115](http://arxiv.org/abs/2602.23115)|<span class="null">—</span>|
-|**2026-02-26**|**QuadSync: Quadrifocal Tensor Synchronization via Tucker Decomposition**|Daniel Miao et.al.|[2602.22639](http://arxiv.org/abs/2602.22639)|<span class="null">—</span>|
-|**2026-02-25**|**Global-Aware Edge Prioritization for Pose Graph Initialization**|Tong Wei et.al.|[2602.21963](http://arxiv.org/abs/2602.21963)|<span class="null">—</span>|
-|**2026-02-25**|**Revisiting the Origin of the Star-Forming Main Sequence Based on a Volume-Limited Sample of ~25,000 Galaxies**|Yang Gao et.al.|[2602.21500](http://arxiv.org/abs/2602.21500)|<span class="null">—</span>|
-|**2026-02-25**|**From Pairs to Sequences: Track-Aware Policy Gradients for Keypoint Detection**|Yepeng Liu et.al.|[2602.20630](http://arxiv.org/abs/2602.20630)|<span class="null">—</span>|
-|**2026-02-24**|**Long-Term Multi-Session 3D Reconstruction Under Substantial Appearance Change**|Beverley Gorry et.al.|[2602.20584](http://arxiv.org/abs/2602.20584)|<span class="null">—</span>|
-|**2026-02-21**|**Marginalized Bundle Adjustment: Multi-View Camera Pose from Monocular Depth Estimates**|Shengjie Zhu et.al.|[2602.18906](http://arxiv.org/abs/2602.18906)|<span class="null">—</span>|
-|**2026-02-19**|**4D Monocular Surgical Reconstruction under Arbitrary Camera Motions**|Jiwei Shan et.al.|[2602.17473](http://arxiv.org/abs/2602.17473)|<span class="null">—</span>|
-|**2026-02-16**|**Time-Archival Camera Virtualization for Sports and Visual Performances**|Yunxiao Zhang et.al.|[2602.15181](http://arxiv.org/abs/2602.15181)|<span class="null">—</span>|
-|**2026-02-16**|**Wrivinder: Towards Spatial Intelligence for Geo-locating Ground Images onto Satellite Imagery**|Chandrakanth Gudavalli et.al.|[2602.14929](http://arxiv.org/abs/2602.14929)|<span class="null">—</span>|
-|**2026-02-15**|**Exploiting Structure-from-Motion for Robust Vision-Based Map Matching for Aircraft Surface Movement**|Daniel Choate et.al.|[2602.14311](http://arxiv.org/abs/2602.14311)|<span class="null">—</span>|
-|**2026-02-14**|**High-fidelity 3D reconstruction for planetary exploration**|Alfonso Martínez-Petersen et.al.|[2602.13909](http://arxiv.org/abs/2602.13909)|<span class="null">—</span>|
-|**2026-02-08**|**Scalable Adaptation of 3D Geometric Foundation Models via Weak Supervision from Internet Video**|Zihui Gao et.al.|[2602.07891](http://arxiv.org/abs/2602.07891)|<span class="null">—</span>|
-|**2026-01-31**|**Gaussian-Constrained LeJEPA Representations for Unsupervised Scene Discovery and Pose Consistency**|Mohsen Mostafa et.al.|[2602.07016](http://arxiv.org/abs/2602.07016)|<span class="null">—</span>|
-|**2026-02-05**|**NVS-HO: A Benchmark for Novel View Synthesis of Handheld Objects**|Musawar Ali et.al.|[2602.05822](http://arxiv.org/abs/2602.05822)|<span class="null">—</span>|
-|**2026-02-05**|**Geometric Observability Index: An Operator-Theoretic Framework for Per-Feature Sensitivity, Weak Observability, and Dynamic Effects in SE(3) Pose Estimation**|Joe-Mei Feng et.al.|[2602.05582](http://arxiv.org/abs/2602.05582)|<span class="null">—</span>|
-|**2026-02-04**|**AGILE: Hand-Object Interaction Reconstruction from Video via Agentic Generation**|Jin-Chuan Shi et.al.|[2602.04672](http://arxiv.org/abs/2602.04672)|<span class="null">—</span>|
-|**2026-02-04**|**SuperPoint-E: local features for 3D reconstruction via tracking adaptation in endoscopy**|O. Leon Barbed et.al.|[2602.04108](http://arxiv.org/abs/2602.04108)|<span class="null">—</span>|
-|**2026-02-03**|**Pi-GS: Sparse-View Gaussian Splatting with Dense π^3 Initialization**|Manuel Hofer et.al.|[2602.03327](http://arxiv.org/abs/2602.03327)|<span class="null">—</span>|
-|**2026-02-03**|**Depth Completion in Unseen Field Robotics Environments Using Extremely Sparse Depth Measurements**|Marco Job et.al.|[2602.03209](http://arxiv.org/abs/2602.03209)|<span class="null">—</span>|
-|**2026-02-12**|**From Implicit Ambiguity to Explicit Solidity: Diagnosing Interior Geometric Degradation in Neural Radiance Fields for Dense 3D Scene Understanding**|Jiangsan Zhao et.al.|[2601.21421](http://arxiv.org/abs/2601.21421)|<span class="null">—</span>|
-|**2026-01-21**|**Minimizing Submodular Functions over Hierarchical Families**|Ryuhei Mizutani et.al.|[2601.14805](http://arxiv.org/abs/2601.14805)|<span class="null">—</span>|
-|**2026-01-20**|**Rig-Aware 3D Reconstruction of Vehicle Undercarriages using Gaussian Splatting**|Nitin Kulkarni et.al.|[2601.14208](http://arxiv.org/abs/2601.14208)|<span class="null">—</span>|
-|**2026-01-25**|**TreeDGS: Aerial Gaussian Splatting for Distant DBH Measurement**|Belal Shaheen et.al.|[2601.12823](http://arxiv.org/abs/2601.12823)|<span class="null">—</span>|
-|**2026-01-18**|**OpenNavMap: Structure-Free Topometric Mapping via Large-Scale Collaborative Localization**|Jianhao Jiao et.al.|[2601.12291](http://arxiv.org/abs/2601.12291)|<span class="null">—</span>|
-|**2026-01-17**|**SupScene: Learning Overlap-Aware Global Descriptor for Unconstrained SfM**|Xulei Shi et.al.|[2601.11930](http://arxiv.org/abs/2601.11930)|<span class="null">—</span>|
-|**2026-01-12**|**CompNO: A Novel Foundation Model approach for solving Partial Differential Equations**|Hamda Hmida et.al.|[2601.07384](http://arxiv.org/abs/2601.07384)|<span class="null">—</span>|
-|**2026-01-11**|**Bridging Attribution and Open-Set Detection using Graph-Augmented Instance Learning in Synthetic Speech**|Mohd Mujtaba Akhtar et.al.|[2601.07064](http://arxiv.org/abs/2601.07064)|<span class="null">—</span>|
-|**2026-01-11**|**SARA: Scene-Aware Reconstruction Accelerator**|Jee Won Lee et.al.|[2601.06831](http://arxiv.org/abs/2601.06831)|<span class="null">—</span>|
-|**2026-01-09**|**InsSo3D: Inertial Navigation System and 3D Sonar SLAM for turbid environment inspection**|Simon Archieri et.al.|[2601.05805](http://arxiv.org/abs/2601.05805)|<span class="null">—</span>|
-|**2025-12-31**|**3D Semantic Segmentation for Post-Disaster Assessment**|Nhut Le et.al.|[2512.24593](http://arxiv.org/abs/2512.24593)|<span class="null">—</span>|
-|**2025-12-11**|**Enhanced Information Security via Wave-Field Selectivity and Structured Wavefront Manipulation**|Yufei Zhao et.al.|[2512.19702](http://arxiv.org/abs/2512.19702)|<span class="null">—</span>|
-|**2025-12-18**|**An evacuation simulator for pedestrian dynamics based on the Social Force Model**|Julián López et.al.|[2512.16887](http://arxiv.org/abs/2512.16887)|<span class="null">—</span>|
-|**2025-12-24**|**Hearing to Translate: The Effectiveness of Speech Modality Integration into LLMs**|Sara Papi et.al.|[2512.16378](http://arxiv.org/abs/2512.16378)|<span class="null">—</span>|
-|**2025-12-17**|**Robust Multi-view Camera Calibration from Dense Matches**|Johannes Hägerlind et.al.|[2512.15608](http://arxiv.org/abs/2512.15608)|<span class="null">—</span>|
-|**2025-12-11**|**3D Blood Pulsation Maps**|Maurice Rohr et.al.|[2512.10517](http://arxiv.org/abs/2512.10517)|<span class="null">—</span>|
-|**2025-12-21**|**Selfi: Self Improving Reconstruction Engine via 3D Geometric Feature Alignment**|Youming Deng et.al.|[2512.08930](http://arxiv.org/abs/2512.08930)|<span class="null">—</span>|
-|**2025-12-08**|**Sparse Variable Projection in Robotic Perception: Exploiting Separable Structure for Efficient Nonlinear Optimization**|Alan Papalia et.al.|[2512.07969](http://arxiv.org/abs/2512.07969)|<span class="null">—</span>|
-|**2025-12-05**|**The Dynamic Prior: Understanding 3D Structures for Casual Dynamic Videos**|Zhuoyuan Wu et.al.|[2512.05398](http://arxiv.org/abs/2512.05398)|<span class="null">—</span>|
-|**2025-12-05**|**PoolNet: Deep Learning for 2D to 3D Video Process Validation**|Sanchit Kaul et.al.|[2512.05362](http://arxiv.org/abs/2512.05362)|<span class="null">—</span>|
-|**2025-12-04**|**Deep infant brain segmentation from multi-contrast MRI**|Malte Hoffmann et.al.|[2512.05114](http://arxiv.org/abs/2512.05114)|<span class="null">—</span>|
-|**2025-12-04**|**QKAN-LSTM: Quantum-inspired Kolmogorov-Arnold Long Short-term Memory**|Yu-Chao Hsu et.al.|[2512.05049](http://arxiv.org/abs/2512.05049)|<span class="null">—</span>|
-|**2025-12-04**|**Geometric Data Science**|Olga D Anosova et.al.|[2512.05040](http://arxiv.org/abs/2512.05040)|<span class="null">—</span>|
-|**2025-12-04**|**Internal superfluid response and torque evolution in the giant glitch of PSR J1718-3718**|Peng Liu et.al.|[2512.04972](http://arxiv.org/abs/2512.04972)|<span class="null">—</span>|
-|**2025-12-04**|**Canonical Rough Path over Tempered Fractional Brownian Motion: Existence, Construction, and Applications**|Atef Lechiheb et.al.|[2512.04646](http://arxiv.org/abs/2512.04646)|<span class="null">—</span>|
-|**2025-12-04**|**Refaçade: Editing Object with Given Reference Texture**|Youze Huang et.al.|[2512.04534](http://arxiv.org/abs/2512.04534)|<span class="null">—</span>|
-|**2025-12-04**|**Development of a 15-Degree-of-Freedom Bionic Hand with Cable-Driven Transmission and Distributed Actuation**|Haoqi Han et.al.|[2512.04399](http://arxiv.org/abs/2512.04399)|<span class="null">—</span>|
-|**2025-12-03**|**Gamma-from-Mono: Road-Relative, Metric, Self-Supervised Monocular Geometry for Vehicular Applications**|Gasser Elazab et.al.|[2512.04303](http://arxiv.org/abs/2512.04303)|<span class="null">—</span>|
-|**2025-12-03**|**Emergent Outlier View Rejection in Visual Geometry Grounded Transformers**|Jisang Han et.al.|[2512.04012](http://arxiv.org/abs/2512.04012)|<span class="null">—</span>|
-|**2025-12-03**|**DirectDrag: High-Fidelity, Mask-Free, Prompt-Free Drag-based Image Editing via Readout-Guided Feature Alignment**|Sheng-Hao Liao et.al.|[2512.03981](http://arxiv.org/abs/2512.03981)|<span class="null">—</span>|
-|**2025-12-02**|**Comparing Unsupervised and Supervised Semantic Speech Tokens: A Case Study of Child ASR**|Mohan Shi et.al.|[2512.03301](http://arxiv.org/abs/2512.03301)|<span class="null">—</span>|
-|**2025-12-02**|**On-the-fly Feedback SfM: Online Explore-and-Exploit UAV Photogrammetry with Incremental Mesh Quality-Aware Indicator and Predictive Path Planning**|Liyuan Lou et.al.|[2512.02375](http://arxiv.org/abs/2512.02375)|<span class="null">—</span>|
-|**2025-11-28**|**GLOW: Global Illumination-Aware Inverse Rendering of Indoor Scenes Captured with Dynamic Co-Located Light & Camera**|Jiaye Wu et.al.|[2511.22857](http://arxiv.org/abs/2511.22857)|<span class="null">—</span>|
-|**2025-11-26**|**TraceGen: World Modeling in 3D Trace Space Enables Learning from Cross-Embodiment Videos**|Seungjae Lee et.al.|[2511.21690](http://arxiv.org/abs/2511.21690)|<span class="null">—</span>|
-|**2025-11-26**|**UAVLight: A Benchmark for Illumination-Robust 3D Reconstruction in Unmanned Aerial Vehicle (UAV) Scenes**|Kang Du et.al.|[2511.21565](http://arxiv.org/abs/2511.21565)|<span class="null">—</span>|
-|**2025-11-26**|**From Observation to Action: Latent Action-based Primitive Segmentation for VLA Pre-training in Industrial Settings**|Jiajie Zhang et.al.|[2511.21428](http://arxiv.org/abs/2511.21428)|<span class="null">—</span>|
-|**2025-11-26**|**DeepRFTv2: Kernel-level Learning for Image Deblurring**|Xintian Mao et.al.|[2511.21132](http://arxiv.org/abs/2511.21132)|<span class="null">—</span>|
-|**2025-11-25**|**Hund-projected Kanamori model: an effective description of Hund's metals near the Mott insulating regime**|Johan Carlström et.al.|[2511.20788](http://arxiv.org/abs/2511.20788)|<span class="null">—</span>|
-|**2025-11-25**|**From Observations to Simulations: A Neural-Network Approach to Intracluster Medium Kinematics**|E. Gatuzz et.al.|[2511.20755](http://arxiv.org/abs/2511.20755)|<span class="null">—</span>|
-|**2025-11-25**|**Diverse Video Generation with Determinantal Point Process-Guided Policy Optimization**|Tahira Kazimi et.al.|[2511.20647](http://arxiv.org/abs/2511.20647)|<span class="null">—</span>|
-|**2025-11-25**|**Dance Style Classification using Laban-Inspired and Frequency-Domain Motion Features**|Ben Hamscher et.al.|[2511.20469](http://arxiv.org/abs/2511.20469)|<span class="null">—</span>|
-|**2025-11-25**|**AMB3R: Accurate Feed-forward Metric-scale 3D Reconstruction with Backend**|Hengyi Wang et.al.|[2511.20343](http://arxiv.org/abs/2511.20343)|<span class="null">—</span>|
-|**2025-11-25**|**Stochastic Dynamics of Skyrmions on a Racetrack: Impact of Equilibrium and Nonequilibrium Noise**|Anton V. Hlushchenko et.al.|[2511.20287](http://arxiv.org/abs/2511.20287)|<span class="null">—</span>|
-|**2025-11-24**|**Dynamic Multi-Species Bird Soundscape Generation with Acoustic Patterning and 3D Spatialization**|Ellie L. Zhang et.al.|[2511.19275](http://arxiv.org/abs/2511.19275)|<span class="null">—</span>|
-|**2025-11-24**|**A Deep-Learning-Based Framework for Focal Mechanism Determination and Its Application to the 2022 Luding Earthquake Sequence**|Ziye Yu et.al.|[2511.19185](http://arxiv.org/abs/2511.19185)|<span class="null">—</span>|
-|**2025-11-24**|**MetroGS: Efficient and Stable Reconstruction of Geometrically Accurate High-Fidelity Large-Scale Scenes**|Kehua Chen et.al.|[2511.19172](http://arxiv.org/abs/2511.19172)|<span class="null">—</span>|
-|**2025-11-24**|**The variability of blazars throughout the electromagnetic spectrum**|Claudia M. Raiteri et.al.|[2511.18975](http://arxiv.org/abs/2511.18975)|<span class="null">—</span>|
-|**2025-11-24**|**MagicWorld: Interactive Geometry-driven Video World Exploration**|Guangyuan Li et.al.|[2511.18886](http://arxiv.org/abs/2511.18886)|<span class="null">—</span>|
-|**2025-11-24**|**STCDiT: Spatio-Temporally Consistent Diffusion Transformer for High-Quality Video Super-Resolution**|Junyang Chen et.al.|[2511.18786](http://arxiv.org/abs/2511.18786)|<span class="null">—</span>|
-|**2025-11-24**|**On the role of fractional Brownian motion in models of chemotaxis and stochastic gradient ascent**|Gustavo Cornejo-Olea et.al.|[2511.18745](http://arxiv.org/abs/2511.18745)|<span class="null">—</span>|
-|**2025-11-23**|**C3Po: Cross-View Cross-Modality Correspondence by Pointmap Prediction**|Kuan Wei Huang et.al.|[2511.18559](http://arxiv.org/abs/2511.18559)|<span class="null">—</span>|
-|**2025-11-23**|**Non-Symplectic Deformations of Geometric Quantisation**|Kerr Maxwell et.al.|[2511.18549](http://arxiv.org/abs/2511.18549)|<span class="null">—</span>|
-|**2025-11-23**|**Zero-Shot Video Deraining with Video Diffusion Models**|Tuomas Varanka et.al.|[2511.18537](http://arxiv.org/abs/2511.18537)|<span class="null">—</span>|
-|**2025-11-23**|**Expanding the Workspace of Electromagnetic Navigation Systems Using Dynamic Feedback for Single- and Multi-agent Control**|Jasan Zughaibi et.al.|[2511.18486](http://arxiv.org/abs/2511.18486)|<span class="null">—</span>|
-|**2025-11-23**|**Escape from end-pinching in Herschel-Bulkley ligaments**|Shu Yang et.al.|[2511.18388](http://arxiv.org/abs/2511.18388)|<span class="null">—</span>|
-|**2025-11-23**|**EgoVITA: Learning to Plan and Verify for Egocentric Video Reasoning**|Yogesh Kulkarni et.al.|[2511.18242](http://arxiv.org/abs/2511.18242)|<span class="null">—</span>|
-|**2025-11-22**|**MotionDuet: Dual-Conditioned 3D Human Motion Generation with Video-Regularized Text Learning**|Yi-Yang Zhang et.al.|[2511.18209](http://arxiv.org/abs/2511.18209)|<span class="null">—</span>|
-|**2025-11-22**|**A Unified Multi-Dynamics Framework for Perception-Oriented Modeling in Tendon-Driven Continuum Robots**|Ibrahim Alsarraj et.al.|[2511.18088](http://arxiv.org/abs/2511.18088)|<span class="null">—</span>|
-|**2025-11-22**|**Plan-X: Instruct Video Generation via Semantic Planning**|Lun Huang et.al.|[2511.17986](http://arxiv.org/abs/2511.17986)|<span class="null">—</span>|
-|**2025-11-22**|**Dynamic Slowdown and Spatial Correlations in Viscous Silica Melt: Perspectives from Dynamic Disorder**|Shubham Kumar et.al.|[2511.17887](http://arxiv.org/abs/2511.17887)|<span class="null">—</span>|
-|**2025-11-21**|**Lane-Frame Quantum Multimodal Driving Forecasts for the Trajectory of Autonomous Vehicles**|Navneet Singh et.al.|[2511.17675](http://arxiv.org/abs/2511.17675)|<span class="null">—</span>|
-|**2025-11-18**|**Unified Low-Light Traffic Image Enhancement via Multi-Stage Illumination Recovery and Adaptive Noise Suppression**|Siddiqua Namrah et.al.|[2511.17612](http://arxiv.org/abs/2511.17612)|<span class="null">—</span>|
-|**2025-10-24**|**RadioMapMotion: A Dataset and Baseline for Proactive Spatio-Temporal Radio Environment Prediction**|Honggang Jia et.al.|[2511.17526](http://arxiv.org/abs/2511.17526)|<span class="null">—</span>|
-|**2025-11-21**|**TRAO Survey of the Nearby Filamentary Molecular Clouds, the Universal Nursery of Stars (TRAO-FUNS). IV. Filaments and Dense Cores in the W40 and Serpens South Regions of Aquila**|Satyajeet Moharana et.al.|[2511.16978](http://arxiv.org/abs/2511.16978)|<span class="null">—</span>|
-|**2025-11-21**|**One Walk is All You Need: Data-Efficient 3D RF Scene Reconstruction with Human Movements**|Yiheng Bian et.al.|[2511.16966](http://arxiv.org/abs/2511.16966)|<span class="null">—</span>|
-|**2025-11-20**|**TriDiff-4D: Fast 4D Generation through Diffusion-based Triplane Re-posing**|Eddie Pokming Sheung et.al.|[2511.16662](http://arxiv.org/abs/2511.16662)|<span class="null">—</span>|
-|**2025-11-20**|**Flow and Depth Assisted Video Prediction with Latent Transformer**|Eliyas Suleyman et.al.|[2511.16484](http://arxiv.org/abs/2511.16484)|<span class="null">—</span>|
-|**2025-11-20**|**Two Epochs of VLBI Observations of 8 KISSR Seyfert & LINER Galaxies: Suggestions of Fast and Filamentary Outflows**|Preeti Kharb et.al.|[2511.16159](http://arxiv.org/abs/2511.16159)|<span class="null">—</span>|
-|**2025-11-19**|**MambaIO: Global-Coordinate Inertial Odometry for Pedestrians via Multi-Scale Frequency-Decoupled Modeling**|Shanshan Zhang et.al.|[2511.15645](http://arxiv.org/abs/2511.15645)|<span class="null">—</span>|
-|**2025-11-19**|**Covariant Measures of Non-Markovianity in Curved Spacetime**|Tushar Waghmare et.al.|[2511.15365](http://arxiv.org/abs/2511.15365)|<span class="null">—</span>|
-|**2025-11-19**|**Generating Natural-Language Surgical Feedback: From Structured Representation to Domain-Grounded Evaluation**|Firdavs Nasriddinov et.al.|[2511.15159](http://arxiv.org/abs/2511.15159)|<span class="null">—</span>|
-|**2025-11-19**|**SceneEdited: A City-Scale Benchmark for 3D HD Map Updating via Image-Guided Change Detection**|Chun-Jung Lin et.al.|[2511.15153](http://arxiv.org/abs/2511.15153)|<span class="null">—</span>|
-|**2025-11-18**|**Gaussian See, Gaussian Do: Semantic 3D Motion Transfer from Multiview Video**|Yarin Bekor et.al.|[2511.14848](http://arxiv.org/abs/2511.14848)|<span class="null">—</span>|
-|**2025-11-18**|**Blur-Robust Detection via Feature Restoration: An End-to-End Framework for Prior-Guided Infrared UAV Target Detection**|Xiaolin Wang et.al.|[2511.14371](http://arxiv.org/abs/2511.14371)|<span class="null">—</span>|
-|**2025-11-18**|**Hubble Space Telescope proper motions of Large Magellanic Cloud star clusters -- II. Kinematic structure of young and intermediate-age clusters**|F. Niederhofer et.al.|[2511.14351](http://arxiv.org/abs/2511.14351)|<span class="null">—</span>|
-|**2025-11-18**|**Vortex stability in pseudo-Hermitian theories**|R. A. Battye et.al.|[2511.14300](http://arxiv.org/abs/2511.14300)|<span class="null">—</span>|
-|**2025-11-18**|**Model-Based Clustering of Football Event Sequences: A Marked Spatio-Temporal Point Process Mixture Approach**|Koffi Amezouwui et.al.|[2511.14297](http://arxiv.org/abs/2511.14297)|<span class="null">—</span>|
-|**2025-11-18**|**Newborn jet in the symbiotic system R Aquarii**|T. Liimets et.al.|[2511.14243](http://arxiv.org/abs/2511.14243)|<span class="null">—</span>|
-|**2025-11-18**|**FreeMusco: Motion-Free Learning of Latent Control for Morphology-Adaptive Locomotion in Musculoskeletal Characters**|Minkwan Kim et.al.|[2511.14205](http://arxiv.org/abs/2511.14205)|<span class="null">—</span>|
-|**2025-11-18**|**AsyncVLA: Asynchronous Flow Matching for Vision-Language-Action Models**|Yuhua Jiang et.al.|[2511.14148](http://arxiv.org/abs/2511.14148)|<span class="null">—</span>|
-|**2025-11-17**|**B2F: End-to-End Body-to-Face Motion Generation with Style Reference**|Bokyung Jang et.al.|[2511.13988](http://arxiv.org/abs/2511.13988)|<span class="null">—</span>|
-|**2025-11-17**|**Enabling Real-Time Volumetric Imaging in Interventional Radiology Suits via a Deep Learning Framework Robust to C-arm Tilt**|Fawazilla Utomo et.al.|[2511.13980](http://arxiv.org/abs/2511.13980)|<span class="null">—</span>|
-|**2025-11-17**|**Ultrafast electron diffractive imaging of the dissociation of pre-excited molecules**|Yanwei Xiong et.al.|[2511.13479](http://arxiv.org/abs/2511.13479)|<span class="null">—</span>|
-|**2025-11-17**|**An Automated Framework for Analyzing Structural Evolution in On-the-fly Non-adiabatic Molecular Dynamics Using Autoencoder and Multiple Molecular Descriptors**|Hangxu Liu et.al.|[2511.13364](http://arxiv.org/abs/2511.13364)|<span class="null">—</span>|
-|**2025-11-17**|**The Spontaneous Genesis of Solar Prominence Structures Driven by Supergranulation in Three-Dimensional Simulations**|Huanxin Chen et.al.|[2511.13252](http://arxiv.org/abs/2511.13252)|<span class="null">—</span>|
-|**2025-11-17**|**Infrared photometry and CaT spectroscopy of the most metal-poor in-situ globular cluster VVV-CL001**|W. Haro Moya et.al.|[2511.13161](http://arxiv.org/abs/2511.13161)|<span class="null">—</span>|
-|**2025-11-16**|**Kagome metals**|Domenico Di Sante et.al.|[2511.12731](http://arxiv.org/abs/2511.12731)|<span class="null">—</span>|
-|**2025-11-16**|**Examining Turbulence in Galactic Molecular Clouds - II: Continuity of Turbulence Cascading in a Portion of the Local Arm**|Yuehui Ma et.al.|[2511.12418](http://arxiv.org/abs/2511.12418)|<span class="null">—</span>|
-|**2025-11-16**|**Towards Rotation-only Imaging Geometry: Rotation Estimation**|Xinrui Li et.al.|[2511.12415](http://arxiv.org/abs/2511.12415)|<span class="null">—</span>|
-|**2025-11-14**|**Free3D: 3D Human Motion Emerges from Single-View 2D Supervision**|Sheng Liu et.al.|[2511.11368](http://arxiv.org/abs/2511.11368)|<span class="null">—</span>|
-|**2025-11-14**|**YCB-Ev SD: Synthetic event-vision dataset for 6DoF object pose estimation**|Pavel Rojtberg et.al.|[2511.11344](http://arxiv.org/abs/2511.11344)|<span class="null">—</span>|
-|**2025-11-14**|**The Spatial Evolution of Star Clusters in NGC 628 with JWST**|Anne S. M. Buckner et.al.|[2511.11115](http://arxiv.org/abs/2511.11115)|<span class="null">—</span>|
-|**2025-11-14**|**Discovery of an X-ray bridge between the comma-shaped gas and the main cluster in MCXC J0157.4-0550**|Chong Yang et.al.|[2511.10968](http://arxiv.org/abs/2511.10968)|<span class="null">—</span>|
-|**2025-11-14**|**DEFT-LLM: Disentangled Expert Feature Tuning for Micro-Expression Recognition**|Ren Zhang et.al.|[2511.10948](http://arxiv.org/abs/2511.10948)|<span class="null">—</span>|
-|**2025-11-14**|**A High-Precision Dynamical Model of Callisto: Incorporating Rotation Effects within Multi-Layer Internal Structure Models**|Kai Huang et.al.|[2511.10929](http://arxiv.org/abs/2511.10929)|<span class="null">—</span>|
-|**2025-11-14**|**Collaborative Multi-Robot Non-Prehensile Manipulation via Flow-Matching Co-Generation**|Yorai Shaoul et.al.|[2511.10874](http://arxiv.org/abs/2511.10874)|<span class="null">—</span>|
+|**2026-10-28**|**Cross Lingual Abstractive Summarization for Marathi**|Asang Dani et.al.|[2610.38267](http://arxiv.org/abs/2610.38267)|<span class="null">—</span>|
+|**2026-10-23**|**EDWARD-NMT: Elastic Dimensions With Adaptive Routing and Dual-consistency for Neural Machine Translation**|Edward Nguyen et.al.|[2610.32115](http://arxiv.org/abs/2610.32115)|<span class="null">—</span>|
+|**2026-10-21**|**Climbing the Ladder: Automating Data Pipelines and Reproducing Baselines in Low-Resource Settings**|Donato Meoli et.al.|[2610.30374](http://arxiv.org/abs/2610.30374)|<span class="null">—</span>|
+|**2026-10-15**|**Unfragmenting Nawatl NMT: Single-Variant Specialization for Masewalkopa**|Luis A. Mercado-Campos et.al.|[2610.22110](http://arxiv.org/abs/2610.22110)|<span class="null">—</span>|
+|**2026-10-08**|**Fact over Fiction: Detection of Pathological Hallucinations in Sinhala-to-English Neural Machine Translation**|Navam Obeysekara et.al.|[2610.11389](http://arxiv.org/abs/2610.11389)|<span class="null">—</span>|
+|**2026-10-04**|**Investigating Model Compression for Neural Machine Translation in the Biomedical Domain**|Maria Zafar et.al.|[2610.07032](http://arxiv.org/abs/2610.07032)|<span class="null">—</span>|
+|**2026-08-26**|**Benchmarking Arabic--Russian Machine Translation: A Comparison of Fine-tuned NMT and Few-shot LLMs under Rich Morphology and Low Lexical Overlap**|Mullosharaf K. Arabov et.al.|[2609.29559](http://arxiv.org/abs/2609.29559)|<span class="null">—</span>|
+|**2026-09-23**|**COILD: An Indic-Centric Parallel Corpus and Benchmark for Machine Translation Across Indian Languages**|Kshetrimayum Boynao Singh et.al.|[2609.28826](http://arxiv.org/abs/2609.28826)|<span class="null">—</span>|
+|**2026-09-03**|**Translation as a Decision Space: A Multi-Agent Perspective on Low-Resource Dialect Generation**|Hasan Alkhder et.al.|[2609.04048](http://arxiv.org/abs/2609.04048)|<span class="null">—</span>|
+|**2026-09-29**|**Quit While You're Ahead: Quit for Efficient Candidate Generation in Machine Translation Reranking**|Guangyu Chen et.al.|[2609.00588](http://arxiv.org/abs/2609.00588)|<span class="null">—</span>|
+|**2026-08-18**|**The Null Token Knows: Reducing Message-Free Hallucination in ASR and NMT**|Kirill Borodin et.al.|[2608.15940](http://arxiv.org/abs/2608.15940)|<span class="null">—</span>|
+|**2026-09-01**|**Unified Multi-Dialectal Neural Machine Translation for Bangla Using the Dwadash Benchmark Corpus**|Rakib Ullah et.al.|[2608.12018](http://arxiv.org/abs/2608.12018)|<span class="null">—</span>|
+|**2026-08-09**|**Mitigating Gender Bias in English to Romanian Machine Translation**|Ioana Grigore et.al.|[2608.08606](http://arxiv.org/abs/2608.08606)|<span class="null">—</span>|
+|**2026-08-07**|**Embedding Initialization for Unseen Low-resource Languages in Multilingual NMT: A Case Study on Limbum-English Translation**|Samiratu Ntohsi et.al.|[2608.07629](http://arxiv.org/abs/2608.07629)|<span class="null">—</span>|
+|**2026-08-04**|**Efficient Multilingual Neural Machine Translation via Corpus-Driven Vocabulary Pruning: An English-Arabic Case Study**|Ahmed Amine Aliane et.al.|[2608.03480](http://arxiv.org/abs/2608.03480)|<span class="null">—</span>|
+|**2026-05-14**|**TabletCraft: Bridging a 4,000-Year Cultural Gap with Bidirectional Akkadian NMT and Cuneiform Rendering**|Zhaohui Wang et.al.|[2608.02609](http://arxiv.org/abs/2608.02609)|<span class="null">—</span>|
+|**2026-07-28**|**Systematic Analysis of Large Language Models and Transformer-Based Machine Translation for English-Tamil and Tamil-English Across Diverse Datasets**|Sriharshaa S et.al.|[2607.24515](http://arxiv.org/abs/2607.24515)|<span class="null">—</span>|
+|**2026-07-24**|**Biomedical Machine Translation for Low-Resource Arabic-Script Languages via Cross-Lingual Transfer and LoRA Adapter Merging**|Abdullah Alabdullah et.al.|[2607.22300](http://arxiv.org/abs/2607.22300)|<span class="null">—</span>|
+|**2026-07-21**|**The Price of Reasoning: Cost-Quality Tradeoffs in Reinforcement Learning for Neural Machine Translation**|Michael Jungo et.al.|[2607.19226](http://arxiv.org/abs/2607.19226)|<span class="null">—</span>|
+|**2026-07-21**|**Reasoning Before Translation: Enhancing Legal Machine Translation with Structured Reasoning**|Aixiu An et.al.|[2607.19181](http://arxiv.org/abs/2607.19181)|**[link](https://github.com/aixiuxiuxiu/Legal-MT-SFT-RL)**|
+|**2026-09-22**|**MetaHOPE: A Metaphor-Oriented Evaluation Framework for Analysing MT and LLM Translation Errors**|Jiahui Liang et.al.|[2607.00848](http://arxiv.org/abs/2607.00848)|**[link](https://github.com/Jiahui84/MetaHOPE)**|
+|**2026-06-27**|**Structure-Preserving Document Translation via Multi-Stage LLM Pipeline: A Case Study in Marathi**|Manasi Waghe et.al.|[2606.28796](http://arxiv.org/abs/2606.28796)|<span class="null">—</span>|
+|**2026-07-25**|**Neural Machine Translation for Low-Resource Tangkhul--English**|Chormi Zimik Vashai et.al.|[2606.25365](http://arxiv.org/abs/2606.25365)|<span class="null">—</span>|
+|**2026-10-29**|**QuechuaTok: Morphological Boundary Accuracy as a Necessary Metric for Tokenizer Evaluation in Agglutinative Low-Resource Languages**|Maria Contreras et.al.|[2606.23943](http://arxiv.org/abs/2606.23943)|<span class="null">—</span>|
+|**2026-06-11**|**Layer-Resolved Optimal Transport for Hallucination Detection in NMT and Abstractive Summarization**|Mariia Onyshchuk et.al.|[2606.13216](http://arxiv.org/abs/2606.13216)|<span class="null">—</span>|
+|**2026-06-11**|**PiDA: Phonetically-Informed Data Augmentation for Robust Vietnamese Speech Translation**|Giang Son Nguyen et.al.|[2606.12911](http://arxiv.org/abs/2606.12911)|<span class="null">—</span>|
+|**2026-06-10**|**Lius: Translation Model Based Instructional Lingustic Using Continual Instruction Tuning In Kupang Malay**|Joanito Agili Lopo et.al.|[2606.11786](http://arxiv.org/abs/2606.11786)|<span class="null">—</span>|
+|**2026-06-08**|**Data Synthesis and Parameter-Efficient Fine-Tuning for Low-Resource NMT: A Case Study on Q'eqchi' Mayan**|Alexander Chulzhanov et.al.|[2606.09767](http://arxiv.org/abs/2606.09767)|<span class="null">—</span>|
+|**2026-05-29**|**Translation Analytics for Freelancers II: Benchmarking Local LLMs for Confidential Translation Workflows**|Yuri Balashov et.al.|[2605.31452](http://arxiv.org/abs/2605.31452)|<span class="null">—</span>|
+|**2026-05-26**|**BhashaSetu: A Data-Centric Approach to Low-Resource Machine Translation**|Param Thakkar et.al.|[2605.27050](http://arxiv.org/abs/2605.27050)|<span class="null">—</span>|
+|**2026-05-25**|**Testing the Deliteralization Hypothesis in Human and Machine Translation**|Malik Marmonier et.al.|[2605.25686](http://arxiv.org/abs/2605.25686)|<span class="null">—</span>|
+|**2026-10-23**|**Translators as Invisible Teachers of AI: Copyright, Translation Memory, and the Political Economy of Linguistic Data**|Masaru Yamada et.al.|[2605.24842](http://arxiv.org/abs/2605.24842)|<span class="null">—</span>|
+|**2026-05-20**|**Metaphors in Literary Post-Editing: Opening Pandora's Box?**|Aletta G. Dorst et.al.|[2605.21178](http://arxiv.org/abs/2605.21178)|<span class="null">—</span>|
+|**2026-05-20**|**Enhancing Scientific Discourse: Machine Translation for the Scientific Domain**|Dimitris Roussis et.al.|[2605.20912](http://arxiv.org/abs/2605.20912)|<span class="null">—</span>|
+|**2026-05-18**|**Ancient Greek to Modern Greek Machine Translation: A Novel Benchmark and Fine-Tuning Experiments on LLMs and NMT Models**|Spyridon Mavromatis et.al.|[2605.18504](http://arxiv.org/abs/2605.18504)|<span class="null">—</span>|
+|**2026-05-14**|**AI-assisted cultural heritage dissemination: Comparing NMT and glossary-augmented LLM translation in rock art documents**|Vicent Briva-Iglesias et.al.|[2605.14679](http://arxiv.org/abs/2605.14679)|<span class="null">—</span>|
+|**2026-05-11**|**Evolving Knowledge Distillation for Lightweight Neural Machine Translation**|Xuewen Zhang et.al.|[2605.09924](http://arxiv.org/abs/2605.09924)|**[link](https://github.com/agi-content-generation/EKD)**|
+|**2026-05-08**|**Data Contamination in Neural Hieroglyphic Translation: A Reproducibility Study**|Ammar Toutou et.al.|[2605.07453](http://arxiv.org/abs/2605.07453)|<span class="null">—</span>|
+|**2026-05-05**|**The Impact of Vocabulary Overlaps on Knowledge Transfer in Multilingual Machine Translation**|Oona Itkonen et.al.|[2605.04196](http://arxiv.org/abs/2605.04196)|<span class="null">—</span>|
+|**2026-04-29**|**Text Style Transfer with Machine Translation for Graphic Designs**|Deergh Singh Budhauria et.al.|[2604.26361](http://arxiv.org/abs/2604.26361)|<span class="null">—</span>|
+|**2026-08-02**|**Backtranslation Augmented Direct Preference Optimization for Neural Machine Translation**|Mehrdad Ghassabi et.al.|[2604.25702](http://arxiv.org/abs/2604.25702)|<span class="null">—</span>|
+|**2026-03-28**|**Towards High-Quality Machine Translation for Kokborok: A Low-Resource Tibeto-Burman Language of Northeast India**|Badal Nyalang et.al.|[2604.19778](http://arxiv.org/abs/2604.19778)|<span class="null">—</span>|
+|**2026-04-16**|**Fabricator or dynamic translator?**|Lisa Vasileva et.al.|[2604.15165](http://arxiv.org/abs/2604.15165)|<span class="null">—</span>|
+|**2026-04-06**|**MERIT: Multilingual Expert-Reward Informed Tuning for Chinese-Centric Low-Resource Machine Translation**|Zhixiang Lu et.al.|[2604.04839](http://arxiv.org/abs/2604.04839)|<span class="null">—</span>|
+|**2026-03-30**|**Top-down string-to-dependency Neural Machine Translation**|Shuhei Kondo et.al.|[2603.27938](http://arxiv.org/abs/2603.27938)|<span class="null">—</span>|
+|**2026-03-17**|**Ensemble Self-Training for Unsupervised Machine Translation**|Ido Aharon et.al.|[2603.17087](http://arxiv.org/abs/2603.17087)|<span class="null">—</span>|
+|**2026-03-16**|**Bidirectional Chinese and English Passive Sentences Dataset for Machine Translation**|Xinyue Ma et.al.|[2603.15227](http://arxiv.org/abs/2603.15227)|<span class="null">—</span>|
+|**2026-03-16**|**Developing an English-Efik Corpus and Machine Translation System for Digitization Inclusion**|Offiong Bassey Edet et.al.|[2603.14873](http://arxiv.org/abs/2603.14873)|<span class="null">—</span>|
+|**2026-03-11**|**Evaluating Explainable AI Attribution Methods in Neural Machine Translation via Attention-Guided Knowledge Distillation**|Aria Nourbakhsh et.al.|[2603.11342](http://arxiv.org/abs/2603.11342)|<span class="null">—</span>|
+|**2026-03-14**|**MultiGraSCCo: A Multilingual Anonymization Benchmark with Annotations of Personal Identifiers**|Ibrahim Baroud et.al.|[2603.08879](http://arxiv.org/abs/2603.08879)|<span class="null">—</span>|
+|**2026-02-27**|**Universal Conceptual Structure in Neural Translation: Probing NLLB-200's Multilingual Geometry**|Kyle Elliott Mathewson et.al.|[2603.02258](http://arxiv.org/abs/2603.02258)|**[link](https://github.com/kylemathewson/InterpretCognates)**|
+|**2026-03-02**|**Mitigating Structural Noise in Low-Resource S2TT: An Optimized Cascaded Nepali-English Pipeline with Punctuation Restoration**|Tangsang Chongbang et.al.|[2602.21647](http://arxiv.org/abs/2602.21647)|<span class="null">—</span>|
+|**2026-02-25**|**Enhancing Multilingual Embeddings via Multi-Way Parallel Text Alignment**|Barah Fazili et.al.|[2602.21543](http://arxiv.org/abs/2602.21543)|<span class="null">—</span>|
+|**2026-02-19**|**Evaluating Extremely Low-Resource Machine Translation: A Comparative Study of ChrF++ and BLEU Metrics**|Sanjeev Kumar et.al.|[2602.17425](http://arxiv.org/abs/2602.17425)|<span class="null">—</span>|
+|**2026-02-19**|**Representation Collapse in Machine Translation Through the Lens of Angular Dispersion**|Evgeniia Tokarchuk et.al.|[2602.17287](http://arxiv.org/abs/2602.17287)|<span class="null">—</span>|
+|**2026-02-09**|**SinFoS: A Parallel Dataset for Translating Sinhala Figures of Speech**|Johan Sofalas et.al.|[2602.09866](http://arxiv.org/abs/2602.09866)|<span class="null">—</span>|
+|**2026-02-10**|**Unsupervised Cross-Lingual Part-of-Speech Tagging with Monolingual Corpora Only**|Jianyu Zheng et.al.|[2602.09366](http://arxiv.org/abs/2602.09366)|<span class="null">—</span>|
+|**2026-02-04**|**Data Kernel Perspective Space Performance Guarantees for Synthetic Data from Transformer Models**|Michael Browder et.al.|[2602.05106](http://arxiv.org/abs/2602.05106)|<span class="null">—</span>|
+|**2026-06-13**|**RASST: Retrieval-Augmented Simultaneous Speech Translation**|Jiaxuan Luo et.al.|[2601.22777](http://arxiv.org/abs/2601.22777)|<span class="null">—</span>|
+|**2026-01-27**|**Leveraging Sentence-oriented Augmentation and Transformer-Based Architecture for Vietnamese-Bahnaric Translation**|Tan Sang Nguyen et.al.|[2601.19124](http://arxiv.org/abs/2601.19124)|<span class="null">—</span>|
+|**2026-02-16**|**Context Volume Drives Performance: Tackling Domain Shift in Extremely Low-Resource Translation via RAG**|David Samuel Setiawan et.al.|[2601.09982](http://arxiv.org/abs/2601.09982)|<span class="null">—</span>|
+|**2026-02-13**|**Assessing and Improving Punctuation Robustness in English-Marathi Machine Translation**|Kaustubh Shivshankar Shejole et.al.|[2601.09725](http://arxiv.org/abs/2601.09725)|**[link](https://github.com/KaustubhShejole/Viram_Marathi)**|
+|**2026-01-09**|**A Rising Tide Lifts All Boats: MTQE Rewards for Idioms Improve General Translation Quality**|Ishika Agarwal et.al.|[2601.06307](http://arxiv.org/abs/2601.06307)|<span class="null">—</span>|
+|**2026-01-10**|**Improving Indigenous Language Machine Translation with Synthetic Data and Language-Specific Preprocessing**|Aashish Dhawan et.al.|[2601.03135](http://arxiv.org/abs/2601.03135)|<span class="null">—</span>|
+|**2025-12-17**|**An Empirical Study on Chinese Character Decomposition in Multiword Expression-Aware Neural Machine Translation**|Lifeng Han et.al.|[2512.15556](http://arxiv.org/abs/2512.15556)|<span class="null">—</span>|
+|**2025-12-10**|**Efficient Continual Learning in Neural Machine Translation: A Low-Rank Adaptation Approach**|Salvador Carrión et.al.|[2512.09910](http://arxiv.org/abs/2512.09910)|<span class="null">—</span>|
+|**2026-03-04**|**What Triggers my Model? Contrastive Explanations Inform Gender Choices by Translation Models**|Janiça Hackenbuchner et.al.|[2512.08440](http://arxiv.org/abs/2512.08440)|<span class="null">—</span>|
+|**2025-11-21**|**LangMark: A Multilingual Dataset for Automatic Post-Editing**|Diego Velazquez et.al.|[2511.17153](http://arxiv.org/abs/2511.17153)|<span class="null">—</span>|
+|**2025-11-15**|**Exploring Parameter-Efficient Fine-Tuning and Backtranslation for the WMT 25 General Translation Task**|Felipe Fujita et.al.|[2511.12109](http://arxiv.org/abs/2511.12109)|<span class="null">—</span>|
+|**2025-11-07**|**It Takes Two: A Dual Stage Approach for Terminology-Aware Translation**|Akshat Singh Jaswal et.al.|[2511.07461](http://arxiv.org/abs/2511.07461)|**[link](https://github.com/akshat-sj/duterm)**|
+|**2025-11-01**|**Leveraging the Cross-Domain & Cross-Linguistic Corpus for Low Resource NMT: A Case Study On Bhili-Hindi-English Parallel Corpus**|Pooja Singh et.al.|[2511.00486](http://arxiv.org/abs/2511.00486)|<span class="null">—</span>|
+|**2025-10-31**|**POSESTITCH-SLT: Linguistically Inspired Pose-Stitching for End-to-End Sign Language Translation**|Abhinav Joshi et.al.|[2511.00270](http://arxiv.org/abs/2511.00270)|<span class="null">—</span>|
+|**2025-10-21**|**SemiAdapt and SemiLoRA: Efficient Domain Adaptation for Transformer-based Low-Resource Language Translation with a Case Study on Irish**|Josh McGiff et.al.|[2510.18725](http://arxiv.org/abs/2510.18725)|<span class="null">—</span>|
+|**2025-10-20**|**Lingua Custodi's participation at the WMT 2025 Terminology shared task**|Jingshu Liu et.al.|[2510.17504](http://arxiv.org/abs/2510.17504)|<span class="null">—</span>|
+|**2026-09-03**|**Evaluating Large Language Models on Urdu Idioms**|Muhammad Farmal Khan et.al.|[2510.17460](http://arxiv.org/abs/2510.17460)|<span class="null">—</span>|
+|**2026-03-18**|**From Binary to Bilingual: How the National Weather Service is Using Artificial Intelligence to Develop a Comprehensive Translation Program**|Joseph E. Trujillo-Falcon et.al.|[2510.14369](http://arxiv.org/abs/2510.14369)|<span class="null">—</span>|
+|**2025-10-10**|**Quality Estimation Reranking for Document-Level Translation**|Krzysztof Mrozinski et.al.|[2510.08870](http://arxiv.org/abs/2510.08870)|<span class="null">—</span>|
 
-> Showing the latest 200 of 1072 papers, see the [archive](#archive) for all.
-
-<h2 id="visual-localization">Visual Localization</h2>
+<h2 id="multilingual-mt">Multilingual MT</h2>
 
 | Publish Date | Title | Authors | PDF | Code |
 |:---------|:-----------------------|:---------|:------|:------|
-|**2026-10-29**|**FDSML: Formula-Driven Supervised Metric Learning with Parameter-Aware Triplet Loss**|Hina Otake et.al.|[2610.39423](http://arxiv.org/abs/2610.39423)|**[link](https://github.com/ShineiArakawa/fdsml)**|
-|**2026-10-27**|**What Constitutes Food Similarity? Visual Representations and Retrieval in Indian Cuisine**|Saransh Kumar Gupta et.al.|[2610.37867](http://arxiv.org/abs/2610.37867)|<span class="null">—</span>|
-|**2026-10-27**|**RAVEN: A Unified Active SLAM System for Rapid Autonomous Visual Exploration with Aerial Robots under Localization Uncertainty**|Xinyi Chen et.al.|[2610.37111](http://arxiv.org/abs/2610.37111)|<span class="null">—</span>|
-|**2026-10-26**|**VPR-Space: A Benchmark for Visual Place Recognition in Space Analog Domains**|Richard Fechner et.al.|[2610.35642](http://arxiv.org/abs/2610.35642)|**[link](https://github.com/rfechner/VPR-Space)**|
-|**2026-10-24**|**AV-FABLE: Audio-Visual Manipulation Forensics in Long-Form Videos**|Yuesheng Huang et.al.|[2610.33413](http://arxiv.org/abs/2610.33413)|<span class="null">—</span>|
-|**2026-10-23**|**FlexGlue: Sparse-to-Dense Feature Matching and Visual Disambiguation**|Philipp Lindenberger et.al.|[2610.32976](http://arxiv.org/abs/2610.32976)|**[link](https://github.com/cvg/flexglue)**|
-|**2026-10-23**|**From Perception to Pixels: Human-Derived Visually Distinct Colors for Improved Dominant Color Extraction**|Uldana Shyndali et.al.|[2610.32473](http://arxiv.org/abs/2610.32473)|<span class="null">—</span>|
-|**2026-10-23**|**GeoLEON-CLIP: Graph-Anchored Multimodal Contrastive Learning for Geographic Region Representation**|Radoslaw Malek et.al.|[2610.32311](http://arxiv.org/abs/2610.32311)|<span class="null">—</span>|
-|**2026-10-23**|**Guided Zero-Shot Anomaly Explanation for Anonymized Crowd Video Monitoring: Context, Categorization, and Spatial Localization**|Mulugeta Weldezgina Asres et.al.|[2610.32073](http://arxiv.org/abs/2610.32073)|**[link](https://github.com/muleina/XAVAD)**|
-|**2026-10-22**|**MVLoMa: Multi-View Local Feature Matching with Any Geometry Foundation Model**|Xinyang Lu et.al.|[2610.31321](http://arxiv.org/abs/2610.31321)|<span class="null">—</span>|
-|**2026-10-08**|**Learning Which Correspondences to Trust: Confidence-Weighted Event-Camera Localization in LiDAR Maps**|Panagiotis Kiousis et.al.|[2610.11967](http://arxiv.org/abs/2610.11967)|**[link](https://github.com/panagiotisq/CELL)**|
-|**2026-10-08**|**SatFix: Absolute Visual Localization of UAVs in Satellite Maps from a Single Oblique Image**|Jiarui Zeng et.al.|[2610.11049](http://arxiv.org/abs/2610.11049)|<span class="null">—</span>|
-|**2026-10-07**|**Region-Aware CLS Token Augmentation for Fine-Grained Image Retrieval**|Ian de Holanda Cavalcanti Bezerra et.al.|[2610.10991](http://arxiv.org/abs/2610.10991)|**[link](https://github.com/IdhcbIan/Augmenting_CLS_with_ROI_tokens)**|
-|**2026-10-07**|**Fast and Robust Teach-and-Repeat Navigation Using MixVPR Visual Place Recognition***|Václav Truhlařík et.al.|[2610.09631](http://arxiv.org/abs/2610.09631)|<span class="null">—</span>|
-|**2026-10-05**|**What Words Keep of a Place: Zero-Shot Language Reasoning for Cross-View Geo-Localization**|Ayesh Abu Lehyeh et.al.|[2610.07269](http://arxiv.org/abs/2610.07269)|**[link](https://github.com/AyeshAbuLehyeh/GeoLingual)**|
-|**2026-10-05**|**Conditional Flow Matching for Transport Between Markov Processes**|Syamantak Kumar et.al.|[2610.07229](http://arxiv.org/abs/2610.07229)|<span class="null">—</span>|
-|**2026-10-05**|**NeuroCBIR: A Fast and Accurate Image Retrieval System for Whole-Brain and Region-Specific MRI**|Felix Nieto-del-Amor et.al.|[2610.06502](http://arxiv.org/abs/2610.06502)|**[link](https://github.com/minnelab/NeuroCBIR)**|
-|**2026-10-05**|**From Transformation to Target State: Rethinking Query Representation for Zero-Shot Composed Image Retrieval**|Yihe Zhao et.al.|[2610.05993](http://arxiv.org/abs/2610.05993)|<span class="null">—</span>|
-|**2026-10-02**|**Less Decoder is More Encoder: Geometric Representation Learning from Novel View Synthesis**|Keerthi Kaashyap et.al.|[2610.03717](http://arxiv.org/abs/2610.03717)|<span class="null">—</span>|
-|**2026-10-01**|**MVDG: Efficient Multi-view 3D Disambiguation on Unconstrained Real-World Images**|Hanyuan Xiao et.al.|[2610.01098](http://arxiv.org/abs/2610.01098)|<span class="null">—</span>|
-|**2026-05-14**|**Do Composed Image Retrieval Benchmarks Require Multimodal Composition?**|Matteo Attimonelli et.al.|[2605.14787](http://arxiv.org/abs/2605.14787)|<span class="null">—</span>|
-|**2026-05-13**|**Same Image, Different Meanings: Toward Retrieval of Context-Dependent Meanings**|Ayuto Tsutsumi et.al.|[2605.12905](http://arxiv.org/abs/2605.12905)|<span class="null">—</span>|
-|**2026-05-12**|**PoseCompass: Intelligent Synthetic Pose Selection for Visual Localization**|Yanan Zhou et.al.|[2605.12144](http://arxiv.org/abs/2605.12144)|<span class="null">—</span>|
-|**2026-05-12**|**Logit-Attention Divergence: Mitigating Position Bias in Multi-Image Retrieval via Attention-Guided Calibration**|Mingtao Xian et.al.|[2605.11591](http://arxiv.org/abs/2605.11591)|**[link](https://github.com/brightXian/LAD)**|
-|**2026-05-11**|**BGG: Bridging the Geometric Gap between Cross-View images by Vision Foundation Model Adaptation for Geo-Localization**|Wei Wang et.al.|[2605.10345](http://arxiv.org/abs/2605.10345)|<span class="null">—</span>|
-|**2026-05-11**|**Hystar: Hypernetwork-driven Style-adaptive Retrieval via Dynamic SVD Modulation**|Yujia Cai et.al.|[2605.10009](http://arxiv.org/abs/2605.10009)|<span class="null">—</span>|
-|**2026-05-11**|**Learning to Align Generative Appearance Priors for Fine-grained Image Retrieval**|Shijie Wang et.al.|[2605.09859](http://arxiv.org/abs/2605.09859)|<span class="null">—</span>|
-|**2026-05-08**|**CapCLIP: A Vision-Language Representation Alignment Approach for Wireless Capsule Endoscopy Analysis**|Haroon Wahab et.al.|[2605.08493](http://arxiv.org/abs/2605.08493)|<span class="null">—</span>|
-|**2026-05-08**|**Decoupling Endpoint and Semantic Transition Learning for Zero-Shot Composed Image Retrieval**|Mingyu Liu et.al.|[2605.08389](http://arxiv.org/abs/2605.08389)|<span class="null">—</span>|
-|**2026-05-08**|**Disambiguating 2D-3D Correspondences in Gaussian Splatting-based Feature Fields for Visual Localization**|Miso Lee et.al.|[2605.07351](http://arxiv.org/abs/2605.07351)|**[link](https://github.com/misoleekr/SplitGS-Loc)**|
-|**2026-05-08**|**Zero-Shot Satellite Image Retrieval through Joint Embeddings: Application to Crisis Response**|James Walsh et.al.|[2605.05405](http://arxiv.org/abs/2605.05405)|<span class="null">—</span>|
-|**2026-05-06**|**Open-SAT: LLM-Guided Query Embedding Refinement for Open-Vocabulary Object Retrieval in Satellite Imagery**|Md Adnan Arefeen et.al.|[2605.05344](http://arxiv.org/abs/2605.05344)|<span class="null">—</span>|
-|**2026-05-06**|**MIRAGE: Retrieval and Generation of Multimodal Images and Texts for Medical Education**|Miguel Diaz Benito et.al.|[2605.04772](http://arxiv.org/abs/2605.04772)|<span class="null">—</span>|
-|**2026-05-06**|**ULF-Loc: Unbiased Landmark Feature for Robust Visual Localization with 3D Gaussian Splatting**|Yingdong Gu et.al.|[2605.04730](http://arxiv.org/abs/2605.04730)|<span class="null">—</span>|
-|**2026-05-06**|**Multi-Level Bidirectional Biomimetic Learning for EEG-Based Visual Decoding**|Jingtao Liu et.al.|[2605.04680](http://arxiv.org/abs/2605.04680)|<span class="null">—</span>|
-|**2026-05-04**|**AlbumFill: Album-Guided Reasoning and Retrieval for Personalized Image Completion**|Yu-Ju Tsai et.al.|[2605.02892](http://arxiv.org/abs/2605.02892)|<span class="null">—</span>|
-|**2026-05-04**|**StableMind: Source-Free Cross-Subject fMRI Decoding with Regularized Adaptation**|Jintao Guo et.al.|[2605.02586](http://arxiv.org/abs/2605.02586)|**[link](https://github.com/lingeringlight/StableMind)**|
-|**2026-05-04**|**Rethinking Electro-Optical Vision Foundation Models for Remote Sensing Retrieval: A Controlled Comparison with Generalist VFM**|Hyobin Park et.al.|[2605.02283](http://arxiv.org/abs/2605.02283)|<span class="null">—</span>|
-|**2026-05-02**|**X-ray dark-field imaging from intensity flow: A Fokker-Planck approach to grating interferometry**|Samantha J. Alloo et.al.|[2605.01265](http://arxiv.org/abs/2605.01265)|<span class="null">—</span>|
-|**2026-04-28**|**Validation of Whole-Slide Foundation Models for Image Retrieval in TCGA Data**|Tianhao Lei et.al.|[2605.00902](http://arxiv.org/abs/2605.00902)|<span class="null">—</span>|
-|**2026-05-01**|**Depth-Guided Privacy-Preserving Visual Localization Using 3D Sphere Clouds**|Heejoon Moon et.al.|[2605.00562](http://arxiv.org/abs/2605.00562)|<span class="null">—</span>|
-|**2026-05-01**|**MSACT: Multistage Spatial Alignment for Stable Low-Latency Fine Manipulation**|Xianbo Cai et.al.|[2605.00475](http://arxiv.org/abs/2605.00475)|<span class="null">—</span>|
-|**2026-05-01**|**SIMON: Saliency-aware Integrative Multi-view Object-centric Neural Decoding**|YuSheng Lin et.al.|[2605.00401](http://arxiv.org/abs/2605.00401)|**[link](https://github.com/simonlink666/SIMON)**|
-|**2026-04-29**|**AirZoo: A Unified Large-Scale Dataset for Grounding Aerial Geometric 3D Vision**|Xiaoya Cheng et.al.|[2604.26567](http://arxiv.org/abs/2604.26567)|<span class="null">—</span>|
-|**2026-04-29**|**3D-LENS: A 3D Lifting-based Elevated Novel-view Synthesis method for Single-View Aerial-Ground Re-Identification**|William Grolleau et.al.|[2604.26520](http://arxiv.org/abs/2604.26520)|**[link](https://github.com/TurtleSmoke/3D-LENS)**|
-|**2026-04-28**|**COMPASS: COmpact Multi-channel Prior-map And Scene Signature for Floor-Plan-Based Visual Localization**|Muhammad Shaheer et.al.|[2604.25388](http://arxiv.org/abs/2604.25388)|<span class="null">—</span>|
-|**2026-04-27**|**Geometric Analysis of Self-Supervised Vision Representations for Semantic Image Retrieval**|Esteban Rodríguez-Betancourt et.al.|[2604.24469](http://arxiv.org/abs/2604.24469)|<span class="null">—</span>|
-|**2026-04-24**|**Region Matters: Efficient and Reliable Region-Aware Visual Place Recognition**|Shunpeng Chen et.al.|[2604.22390](http://arxiv.org/abs/2604.22390)|**[link](https://github.com/chenshunpeng/FoL)**|
-|**2026-04-24**|**Revisiting Geometric Obfuscation with Dual Convergent Lines for Privacy-Preserving Image Queries in Visual Localization**|Jeonggon Kim et.al.|[2604.22310](http://arxiv.org/abs/2604.22310)|<span class="null">—</span>|
-|**2026-04-24**|**TEMA: Anchor the Image, Follow the Text for Multi-Modification Composed Image Retrieval**|Zixu Li et.al.|[2604.21806](http://arxiv.org/abs/2604.21806)|**[link](https://github.com/lee-zixu/ACL26-TEMA)**|
-|**2026-04-22**|**ConeSep: Cone-based Robust Noise-Unlearning Compositional Network for Composed Image Retrieval**|Zixu Li et.al.|[2604.20358](http://arxiv.org/abs/2604.20358)|<span class="null">—</span>|
-|**2026-04-22**|**UniCVR: From Alignment to Reranking for Unified Zero-Shot Composed Visual Retrieval**|Haokun Wen et.al.|[2604.20318](http://arxiv.org/abs/2604.20318)|<span class="null">—</span>|
-|**2026-04-21**|**SL(C)AMma: Simultaneous Localisation, (Calibration) and Mapping With a Magnetometer Array**|Thomas Edridge et.al.|[2604.19946](http://arxiv.org/abs/2604.19946)|**[link](https://github.com/Tedridge/SL-C-AMma)**|
-|**2026-04-22**|**Air-Know: Arbiter-Calibrated Knowledge-Internalizing Robust Network for Composed Image Retrieval**|Zhiheng Fu et.al.|[2604.19386](http://arxiv.org/abs/2604.19386)|<span class="null">—</span>|
-|**2026-04-20**|**T-REN: Learning Text-Aligned Region Tokens Improves Dense Vision-Language Alignment and Scalability**|Savya Khosla et.al.|[2604.18573](http://arxiv.org/abs/2604.18573)|**[link](https://github.com/savya08/T-REN)**|
-|**2026-04-20**|**INTENT: Invariance and Discrimination-aware Noise Mitigation for Robust Composed Image Retrieval**|Zhiwei Chen et.al.|[2604.18051](http://arxiv.org/abs/2604.18051)|<span class="null">—</span>|
-|**2026-04-20**|**HABIT: Chrono-Synergia Robust Progressive Learning Framework for Composed Image Retrieval**|Zixu Li et.al.|[2604.18037](http://arxiv.org/abs/2604.18037)|**[link](https://github.com/Lee-zixu/HABIT)**|
-|**2026-04-20**|**Brain-Inspired Capture: Evidence-Driven Neuromimetic Perceptual Simulation for Visual Decoding**|Feixue Shao et.al.|[2604.17927](http://arxiv.org/abs/2604.17927)|**[link](https://github.com/flysnow1024/BI-Cap)**|
-|**2026-04-20**|**ReTrack: Evidence-Driven Dual-Stream Directional Anchor Calibration Network for Composed Video Retrieval**|Zixu Li et.al.|[2604.17898](http://arxiv.org/abs/2604.17898)|**[link](https://github.com/Lee-zixu/ReTrack)**|
-|**2026-04-18**|**mEOL: Training-Free Instruction-Guided Multimodal Embedder for Vector Graphics and Image Retrieval**|Kyeong Seon Kim et.al.|[2604.17054](http://arxiv.org/abs/2604.17054)|<span class="null">—</span>|
-|**2026-04-18**|**KIRA: Knowledge-Intensive Image Retrieval and Reasoning Architecture for Specialized Visual Domains**|Parthaw Goswami et.al.|[2604.16915](http://arxiv.org/abs/2604.16915)|<span class="null">—</span>|
-|**2026-04-17**|**Where Do Vision-Language Models Fail? World Scale Analysis for Image Geolocalization**|Siddhant Bharadwaj et.al.|[2604.16248](http://arxiv.org/abs/2604.16248)|<span class="null">—</span>|
-|**2026-04-17**|**Continual Hand-Eye Calibration for Open-world Robotic Manipulation**|Fazeng Li et.al.|[2604.15814](http://arxiv.org/abs/2604.15814)|<span class="null">—</span>|
-|**2026-04-17**|**Sketch and Text Synergy: Fusing Structural Contours and Descriptive Attributes for Fine-Grained Image Retrieval**|Siyuan Wang et.al.|[2604.15735](http://arxiv.org/abs/2604.15735)|<span class="null">—</span>|
-|**2026-04-16**|**G-MIXER: Geodesic Mixup-based Implicit Semantic Expansion and Explicit Semantic Re-ranking for Zero-Shot Composed Image Retrieval**|Jiyoung Lim et.al.|[2604.14710](http://arxiv.org/abs/2604.14710)|**[link](https://github.com/maya0395/gmixer)**|
-|**2026-04-15**|**SceneGlue: Scene-Aware Transformer for Feature Matching without Scene-Level Annotation**|Songlin Du et.al.|[2604.13941](http://arxiv.org/abs/2604.13941)|<span class="null">—</span>|
-|**2026-04-14**|**Indexing Multimodal Language Models for Large-scale Image Retrieval**|Bahey Tharwat et.al.|[2604.13268](http://arxiv.org/abs/2604.13268)|<span class="null">—</span>|
-|**2026-04-14**|**A Sanity Check on Composed Image Retrieval**|Yikun Liu et.al.|[2604.12904](http://arxiv.org/abs/2604.12904)|<span class="null">—</span>|
-|**2026-04-14**|**VidTAG: Temporally Aligned Video to GPS Geolocalization with Denoising Sequence Prediction at a Global Scale**|Parth Parag Kulkarni et.al.|[2604.12159](http://arxiv.org/abs/2604.12159)|<span class="null">—</span>|
-|**2026-04-09**|**Bag of Bags: Adaptive Visual Vocabularies for Genizah Join Image Retrieval**|Sharva Gogawale et.al.|[2604.08138](http://arxiv.org/abs/2604.08138)|<span class="null">—</span>|
-|**2026-04-09**|**SearchAD: Large-Scale Rare Image Retrieval Dataset for Autonomous Driving**|Felix Embacher et.al.|[2604.08008](http://arxiv.org/abs/2604.08008)|<span class="null">—</span>|
-|**2026-04-09**|**Learning to Search: A Decision-Based Agent for Knowledge-Based Visual Question Answering**|Zhuohong Chen et.al.|[2604.07146](http://arxiv.org/abs/2604.07146)|<span class="null">—</span>|
-|**2026-04-08**|**VGGT-SLAM++**|Avilasha Mandal et.al.|[2604.06830](http://arxiv.org/abs/2604.06830)|<span class="null">—</span>|
-|**2026-04-06**|**CraterBench-R: Instance-Level Crater Retrieval for Planetary Scale**|Jichao Fang et.al.|[2604.06245](http://arxiv.org/abs/2604.06245)|<span class="null">—</span>|
-|**2026-04-07**|**Stealthy and Adjustable Text-Guided Backdoor Attacks on Multimodal Pretrained Models**|Yiyang Zhang et.al.|[2604.05809](http://arxiv.org/abs/2604.05809)|<span class="null">—</span>|
-|**2026-04-07**|**WRF4CIR: Weight-Regularized Fine-Tuning Network for Composed Image Retrieval**|Yizhuo Xu et.al.|[2604.05583](http://arxiv.org/abs/2604.05583)|<span class="null">—</span>|
-|**2026-04-07**|**LSGS-Loc: Towards Robust 3DGS-Based Visual Localization for Large-Scale UAV Scenarios**|Xiang Zhang et.al.|[2604.05402](http://arxiv.org/abs/2604.05402)|<span class="null">—</span>|
-|**2026-04-07**|**Beyond Semantic Search: Towards Referential Anchoring in Composed Image Retrieval**|Yuxin Yang et.al.|[2604.05393](http://arxiv.org/abs/2604.05393)|<span class="null">—</span>|
-|**2026-04-06**|**MPTF-Net: Multi-view Pyramid Transformer Fusion Network for LiDAR-based Place Recognition**|Shuyuan Li et.al.|[2604.04513](http://arxiv.org/abs/2604.04513)|<span class="null">—</span>|
-|**2026-03-31**|**MELT: Improve Composed Image Retrieval via the Modification Frequentation-Rarity Balance Network**|Guozhi Qiu et.al.|[2603.29291](http://arxiv.org/abs/2603.29291)|<span class="null">—</span>|
-|**2026-03-29**|**RHO: Robust Holistic OSM-Based Metric Cross-View Geo-Localization**|Junwei Zheng et.al.|[2603.27758](http://arxiv.org/abs/2603.27758)|<span class="null">—</span>|
-|**2026-03-29**|**NeedleDB: A Generative-AI Based System for Accurate and Efficient Image Retrieval using Complex Natural Language Queries**|Mahdi Erfanian et.al.|[2603.27464](http://arxiv.org/abs/2603.27464)|<span class="null">—</span>|
-|**2026-03-27**|**Beyond MACs: Hardware Efficient Architecture Design for Vision Backbones**|Moritz Nottebaum et.al.|[2603.26551](http://arxiv.org/abs/2603.26551)|<span class="null">—</span>|
-|**2026-03-27**|**HINT: Composed Image Retrieval with Dual-path Compositional Contextualized Network**|Mingyu Zhang et.al.|[2603.26341](http://arxiv.org/abs/2603.26341)|<span class="null">—</span>|
-|**2026-03-27**|**4DRaL: Bridging 4D Radar with LiDAR for Place Recognition using Knowledge Distillation**|Ningyuan Huang et.al.|[2603.26206](http://arxiv.org/abs/2603.26206)|<span class="null">—</span>|
-|**2026-03-26**|**Few Shots Text to Image Retrieval: New Benchmarking Dataset and Optimization Methods**|Ofer Idan et.al.|[2603.25891](http://arxiv.org/abs/2603.25891)|<span class="null">—</span>|
-|**2026-03-26**|**Just Zoom In: Cross-View Geo-Localization via Autoregressive Zooming**|Yunus Talha Erzurumlu et.al.|[2603.25686](http://arxiv.org/abs/2603.25686)|<span class="null">—</span>|
-|**2026-03-26**|**On-Demand Instructional Material Providing Agent Based on MLLM for Tutoring Support**|Takumi Kato et.al.|[2603.25195](http://arxiv.org/abs/2603.25195)|<span class="null">—</span>|
-|**2026-03-28**|**TIGeR: A Unified Framework for Time, Images and Geo-location Retrieval**|David G. Shatwell et.al.|[2603.24749](http://arxiv.org/abs/2603.24749)|<span class="null">—</span>|
-|**2026-03-24**|**Sparse Autoencoders for Interpretable Medical Image Representation Learning**|Philipp Wesp et.al.|[2603.23794](http://arxiv.org/abs/2603.23794)|<span class="null">—</span>|
-|**2026-03-24**|**ARGENT: Adaptive Hierarchical Image-Text Representations**|Chuong Huynh et.al.|[2603.23311](http://arxiv.org/abs/2603.23311)|<span class="null">—</span>|
-|**2026-03-24**|**Retrieval-Guided Photovoltaic Inventory Estimation from Satellite Imagery for Distribution Grid Planning**|Muhao Guo et.al.|[2603.22856](http://arxiv.org/abs/2603.22856)|<span class="null">—</span>|
-|**2026-03-24**|**SOUPLE: Enhancing Audio-Visual Localization and Segmentation with Learnable Prompt Contexts**|Khanh Binh Nguyen et.al.|[2603.22732](http://arxiv.org/abs/2603.22732)|<span class="null">—</span>|
-|**2026-03-24**|**HyFI: Hyperbolic Feature Interpolation for Brain-Vision Alignment**|Sangmin Jo et.al.|[2603.22721](http://arxiv.org/abs/2603.22721)|<span class="null">—</span>|
-|**2026-03-23**|**ADaFuSE: Adaptive Diffusion-generated Image and Text Fusion for Interactive Text-to-Image Retrieval**|Zhuocheng Zhang et.al.|[2603.21886](http://arxiv.org/abs/2603.21886)|<span class="null">—</span>|
-|**2026-03-21**|**SATTC: Structure-Aware Label-Free Test-Time Calibration for Cross-Subject EEG-to-Image Retrieval**|Qunjie Huang et.al.|[2603.20738](http://arxiv.org/abs/2603.20738)|<span class="null">—</span>|
-|**2026-03-21**|**A Multihead Continual Learning Framework for Fine-Grained Fashion Image Retrieval with Contrastive Learning and Exponential Moving Average Distillation**|Ling Xiao et.al.|[2603.20648](http://arxiv.org/abs/2603.20648)|<span class="null">—</span>|
-|**2026-03-20**|**IsoCLIP: Decomposing CLIP Projectors for Efficient Intra-modal Alignment**|Simone Magistri et.al.|[2603.19862](http://arxiv.org/abs/2603.19862)|<span class="null">—</span>|
-|**2026-03-20**|**IUP-Pose: Decoupled Iterative Uncertainty Propagation for Real-time Relative Pose Regression via Implicit Dense Alignment v1**|Jun Wang et.al.|[2603.19625](http://arxiv.org/abs/2603.19625)|<span class="null">—</span>|
-|**2026-03-18**|**MCoT-MVS: Multi-level Vision Selection by Multi-modal Chain-of-Thought Reasoning for Composed Image Retrieval**|Xuri Ge et.al.|[2603.17360](http://arxiv.org/abs/2603.17360)|<span class="null">—</span>|
-|**2026-03-17**|**Visual Product Search Benchmark**|Karthik Sulthanpete Govindappa et.al.|[2603.17186](http://arxiv.org/abs/2603.17186)|<span class="null">—</span>|
-|**2026-03-17**|**Retrieving Counterfactuals Improves Visual In-Context Learning**|Guangzhi Xiong et.al.|[2603.16737](http://arxiv.org/abs/2603.16737)|<span class="null">—</span>|
-|**2026-03-17**|**HMAR: Hierarchical Modality-Aware Expert and Dynamic Routing Medical Image Retrieval Architecture**|Aojie Yuan et.al.|[2603.16679](http://arxiv.org/abs/2603.16679)|<span class="null">—</span>|
-|**2026-03-17**|**Rethinking Pose Refinement in 3D Gaussian Splatting under Pose Prior and Geometric Uncertainty**|Mangyu Kong et.al.|[2603.16538](http://arxiv.org/abs/2603.16538)|<span class="null">—</span>|
-|**2026-03-18**|**VisBrowse-Bench: Benchmarking Visual-Native Search for Multimodal Browsing Agents**|Zhengbo Zhang et.al.|[2603.16289](http://arxiv.org/abs/2603.16289)|<span class="null">—</span>|
-|**2026-03-14**|**Evaluation of Visual Place Recognition Methods for Image Pair Retrieval in 3D Vision and Robotics**|Dennis Haitz et.al.|[2603.13917](http://arxiv.org/abs/2603.13917)|<span class="null">—</span>|
-|**2026-03-14**|**Sky2Ground: A Benchmark for Site Modeling under Varying Altitude**|Zengyan Wang et.al.|[2603.13740](http://arxiv.org/abs/2603.13740)|<span class="null">—</span>|
-|**2026-03-13**|**A Closed-Form Solution for Debiasing Vision-Language Models with Utility Guarantees Across Modalities and Tasks**|Tangzheng Lian et.al.|[2603.12998](http://arxiv.org/abs/2603.12998)|<span class="null">—</span>|
-|**2026-03-13**|**Text-Phase Synergy Network with Dual Priors for Unsupervised Cross-Domain Image Retrieval**|Jing Yang et.al.|[2603.12711](http://arxiv.org/abs/2603.12711)|<span class="null">—</span>|
-|**2026-03-13**|**CM-Bench: A Comprehensive Cross-Modal Feature Matching Benchmark Bridging Visible and Infrared Images**|Liangzheng Sun et.al.|[2603.12690](http://arxiv.org/abs/2603.12690)|<span class="null">—</span>|
-|**2026-03-12**|**FBCIR: Balancing Cross-Modal Focuses in Composed Image Retrieval**|Chenchen Zhao et.al.|[2603.11520](http://arxiv.org/abs/2603.11520)|<span class="null">—</span>|
-|**2026-03-12**|**Efficient Cross-View Localization in 6G Space-Air-Ground Integrated Network**|Min Hao et.al.|[2603.11398](http://arxiv.org/abs/2603.11398)|<span class="null">—</span>|
-|**2026-03-10**|**Composed Vision-Language Retrieval for Skin Cancer Case Search via Joint Alignment of Global and Local Representations**|Yuheng Wang et.al.|[2603.09108](http://arxiv.org/abs/2603.09108)|<span class="null">—</span>|
-|**2026-03-09**|**$L^3$ :Scene-agnostic Visual Localization in the Wild**|Yu Zhang et.al.|[2603.07937](http://arxiv.org/abs/2603.07937)|<span class="null">—</span>|
-|**2026-03-08**|**QdaVPR: A novel query-based domain-agnostic model for visual place recognition**|Shanshan Wan et.al.|[2603.07414](http://arxiv.org/abs/2603.07414)|<span class="null">—</span>|
-|**2026-03-06**|**T2Nav Algebraic Topology Aware Temporal Graph Memory and Loop Detection for ZeroShot Visual Navigation**|Quang-Anh N. D. et.al.|[2603.06918](http://arxiv.org/abs/2603.06918)|<span class="null">—</span>|
-|**2026-03-06**|**EventGeM: Global-to-Local Feature Matching for Event-Based Visual Place Recognition**|Adam D. Hines et.al.|[2603.05807](http://arxiv.org/abs/2603.05807)|<span class="null">—</span>|
-|**2026-03-06**|**Visual Words Meet BM25: Sparse Auto-Encoder Visual Word Scoring for Image Retrieval**|Donghoon Han et.al.|[2603.05781](http://arxiv.org/abs/2603.05781)|<span class="null">—</span>|
-|**2026-03-05**|**Loop Closure via Maximal Cliques in 3D LiDAR-Based SLAM**|Javier Laserna et.al.|[2603.05397](http://arxiv.org/abs/2603.05397)|<span class="null">—</span>|
-|**2026-03-04**|**PinPoint: Evaluation of Composed Image Retrieval with Explicit Negatives, Multi-Image Queries, and Paraphrase Testing**|Rohan Mahadev et.al.|[2603.04598](http://arxiv.org/abs/2603.04598)|<span class="null">—</span>|
-|**2026-03-04**|**SSR: A Generic Framework for Text-Aided Map Compression for Localization**|Mohammad Omama et.al.|[2603.04272](http://arxiv.org/abs/2603.04272)|<span class="null">—</span>|
-|**2026-03-04**|**Long-Term Visual Localization in Dynamic Benthic Environments: A Dataset, Footprint-Based Ground Truth, and Visual Place Recognition Benchmark**|Martin Kvisvik Larsen et.al.|[2603.04056](http://arxiv.org/abs/2603.04056)|<span class="null">—</span>|
-|**2026-02-26**|**VGG-T $^3$ : Offline Feed-Forward 3D Reconstruction at Scale**|Sven Elflein et.al.|[2602.23361](http://arxiv.org/abs/2602.23361)|<span class="null">—</span>|
-|**2026-02-26**|**WISER: Wider Search, Deeper Thinking, and Adaptive Fusion for Training-Free Zero-Shot Composed Image Retrieval**|Tianyue Wang et.al.|[2602.23029](http://arxiv.org/abs/2602.23029)|<span class="null">—</span>|
-|**2026-02-26**|**Autoregressive Visual Decoding from EEG Signals**|Sicheng Dai et.al.|[2602.22555](http://arxiv.org/abs/2602.22555)|<span class="null">—</span>|
-|**2026-02-26**|**Pix2Key: Controllable Open-Vocabulary Retrieval with Semantic Decomposition and Self-Supervised Visual Dictionary Learning**|Guoyizhe Wei et.al.|[2602.22510](http://arxiv.org/abs/2602.22510)|<span class="null">—</span>|
-|**2026-02-25**|**Global-Aware Edge Prioritization for Pose Graph Initialization**|Tong Wei et.al.|[2602.21963](http://arxiv.org/abs/2602.21963)|<span class="null">—</span>|
-|**2026-02-25**|**Automatic Map Density Selection for Locally-Performant Visual Place Recognition**|Somayeh Hussaini et.al.|[2602.21473](http://arxiv.org/abs/2602.21473)|<span class="null">—</span>|
-|**2026-02-24**|**Seeing Through Words: Controlling Visual Retrieval Quality with Language Models**|Jianglin Lu et.al.|[2602.21175](http://arxiv.org/abs/2602.21175)|<span class="null">—</span>|
-|**2026-02-24**|**LST-SLAM: A Stereo Thermal SLAM System for Kilometer-Scale Dynamic Environments**|Zeyu Jiang et.al.|[2602.20925](http://arxiv.org/abs/2602.20925)|<span class="null">—</span>|
-|**2026-02-24**|**Long-Term Multi-Session 3D Reconstruction Under Substantial Appearance Change**|Beverley Gorry et.al.|[2602.20584](http://arxiv.org/abs/2602.20584)|<span class="null">—</span>|
-|**2026-02-23**|**Unlocking Multimodal Document Intelligence: From Current Triumphs to Future Frontiers of Visual Document Retrieval**|Yibo Yan et.al.|[2602.19961](http://arxiv.org/abs/2602.19961)|<span class="null">—</span>|
-|**2026-02-23**|**VGGT-MPR: VGGT-Enhanced Multimodal Place Recognition in Autonomous Driving Environments**|Jingyi Xu et.al.|[2602.19735](http://arxiv.org/abs/2602.19735)|<span class="null">—</span>|
-|**2026-02-23**|**Evaluating the Impact of Data Anonymization on Image Retrieval**|Marvin Chen et.al.|[2602.19641](http://arxiv.org/abs/2602.19641)|<span class="null">—</span>|
-|**2026-02-22**|**Knowledge-aware Visual Question Generation for Remote Sensing Images**|Siran Li et.al.|[2602.19224](http://arxiv.org/abs/2602.19224)|<span class="null">—</span>|
-|**2026-02-22**|**Questions beyond Pixels: Integrating Commonsense Knowledge in Visual Question Generation for Remote Sensing**|Siran Li et.al.|[2602.19217](http://arxiv.org/abs/2602.19217)|<span class="null">—</span>|
-|**2026-02-21**|**IRIS-SLAM: Unified Geo-Instance Representations for Robust Semantic Localization and Mapping**|Tingyang Xiao et.al.|[2602.18709](http://arxiv.org/abs/2602.18709)|<span class="null">—</span>|
-|**2026-02-19**|**VQPP: Video Query Performance Prediction Benchmark**|Adrian Catalin Lutu et.al.|[2602.17814](http://arxiv.org/abs/2602.17814)|<span class="null">—</span>|
-|**2026-02-12**|**DiffPlace: Street View Generation via Place-Controllable Diffusion Model Enhancing Place Recognition**|Ji Li et.al.|[2602.11875](http://arxiv.org/abs/2602.11875)|<span class="null">—</span>|
-|**2026-02-12**|**Arbitrary Ratio Feature Compression via Next Token Prediction**|Yufan Liu et.al.|[2602.11494](http://arxiv.org/abs/2602.11494)|<span class="null">—</span>|
-|**2026-02-11**|**DeepImageSearch: Benchmarking Multimodal Agents for Context-Aware Image Retrieval in Visual Histories**|Chenlong Deng et.al.|[2602.10809](http://arxiv.org/abs/2602.10809)|<span class="null">—</span>|
-|**2026-02-09**|**OSCAR: Optimization-Steered Agentic Planning for Composed Image Retrieval**|Teng Wang et.al.|[2602.08603](http://arxiv.org/abs/2602.08603)|<span class="null">—</span>|
-|**2026-02-09**|**A Sketch+Text Composed Image Retrieval Dataset for Thangka**|Jinyu Xu et.al.|[2602.08411](http://arxiv.org/abs/2602.08411)|<span class="null">—</span>|
-|**2026-02-09**|**UrbanGraphEmbeddings: Learning and Evaluating Spatially Grounded Multimodal Embeddings for Urban Science**|Jie Zhang et.al.|[2602.08342](http://arxiv.org/abs/2602.08342)|<span class="null">—</span>|
-|**2026-02-10**|**WristMIR: Coarse-to-Fine Region-Aware Retrieval of Pediatric Wrist Radiographs with Radiology Report-Driven Learning**|Mert Sonmezer et.al.|[2602.07872](http://arxiv.org/abs/2602.07872)|<span class="null">—</span>|
-|**2026-02-04**|**SAR-RAG: ATR Visual Question Answering by Semantic Search, Retrieval, and MLLM Generation**|David F. Ramirez et.al.|[2602.04712](http://arxiv.org/abs/2602.04712)|<span class="null">—</span>|
-|**2026-02-05**|**SDR-CIR: Semantic Debias Retrieval Framework for Training-Free Zero-Shot Composed Image Retrieval**|Yi Sun et.al.|[2602.04451](http://arxiv.org/abs/2602.04451)|<span class="null">—</span>|
-|**2026-02-04**|**Quantile Transfer for Reliable Operating Point Selection in Visual Place Recognition**|Dhyey Manish Rajani et.al.|[2602.04401](http://arxiv.org/abs/2602.04401)|<span class="null">—</span>|
-|**2026-02-04**|**Beyond Static Cropping: Layer-Adaptive Visual Localization and Decoding Enhancement**|Zipeng Zhu et.al.|[2602.04304](http://arxiv.org/abs/2602.04304)|<span class="null">—</span>|
-|**2026-02-03**|**LaVPR: Benchmarking Language and Vision for Place Recognition**|Ofer Idan et.al.|[2602.03253](http://arxiv.org/abs/2602.03253)|<span class="null">—</span>|
-|**2026-02-03**|**ObjEmbed: Towards Universal Multimodal Object Embeddings**|Shenghao Fu et.al.|[2602.01753](http://arxiv.org/abs/2602.01753)|<span class="null">—</span>|
-|**2026-02-02**|**Real-Time Loop Closure Detection in Visual SLAM via NetVLAD and Faiss**|Enguang Fan et.al.|[2602.01673](http://arxiv.org/abs/2602.01673)|<span class="null">—</span>|
-|**2026-02-02**|**ReCALL: Recalibrating Capability Degradation for MLLM-based Composed Image Retrieval**|Tianyu Yang et.al.|[2602.01639](http://arxiv.org/abs/2602.01639)|<span class="null">—</span>|
-|**2026-02-01**|**Interacted Planes Reveal 3D Line Mapping**|Zeran Ke et.al.|[2602.01296](http://arxiv.org/abs/2602.01296)|<span class="null">—</span>|
-|**2026-02-04**|**Invariance on Manifolds: Understanding Robust Visual Representations for Place Recognition**|Jintao Cheng et.al.|[2602.00841](http://arxiv.org/abs/2602.00841)|<span class="null">—</span>|
-|**2026-01-29**|**Variance & Greediness: A comparative study of metric-learning losses**|Donghuo Zeng et.al.|[2601.21450](http://arxiv.org/abs/2601.21450)|<span class="null">—</span>|
-|**2026-01-28**|**When Vision Meets Texts in Listwise Reranking**|Hongyi Cai et.al.|[2601.20623](http://arxiv.org/abs/2601.20623)|<span class="null">—</span>|
-|**2026-01-28**|**Eliminating Hallucination in Diffusion-Augmented Interactive Text-to-Image Retrieval**|Zhuocheng Zhang et.al.|[2601.20391](http://arxiv.org/abs/2601.20391)|<span class="null">—</span>|
-|**2026-01-27**|**VGGT-SLAM 2.0: Real time Dense Feed-forward Scene Reconstruction**|Dominic Maggio et.al.|[2601.19887](http://arxiv.org/abs/2601.19887)|<span class="null">—</span>|
-|**2026-01-27**|**Pixel-Grounded Retrieval for Knowledgeable Large Multimodal Models**|Jeonghwan Kim et.al.|[2601.19060](http://arxiv.org/abs/2601.19060)|<span class="null">—</span>|
-|**2026-01-23**|**X-Aligner: Composed Visual Retrieval without the Bells and Whistles**|Yuqian Zheng et.al.|[2601.16582](http://arxiv.org/abs/2601.16582)|<span class="null">—</span>|
-|**2026-01-22**|**Rethinking Composed Image Retrieval Evaluation: A Fine-Grained Benchmark from Image Editing**|Tingyu Song et.al.|[2601.16125](http://arxiv.org/abs/2601.16125)|<span class="null">—</span>|
-|**2026-01-21**|**Unified Multimodal and Multilingual Retrieval via Multi-Task Learning with NLU Integration**|Xinyuan Zhang et.al.|[2601.14714](http://arxiv.org/abs/2601.14714)|<span class="null">—</span>|
-|**2026-01-21**|**LookBench: A Live and Holistic Open Benchmark for Fashion Image Retrieval**|Chao Gao et.al.|[2601.14706](http://arxiv.org/abs/2601.14706)|<span class="null">—</span>|
-|**2026-01-20**|**XR: Cross-Modal Agents for Composed Image Retrieval**|Zhongyu Yang et.al.|[2601.14245](http://arxiv.org/abs/2601.14245)|<span class="null">—</span>|
-|**2026-01-20**|**Fine-Grained Zero-Shot Composed Image Retrieval with Complementary Visual-Semantic Integration**|Yongcong Ye et.al.|[2601.14060](http://arxiv.org/abs/2601.14060)|<span class="null">—</span>|
-|**2026-01-20**|**Glance-or-Gaze: Incentivizing LMMs to Adaptively Focus Search via Reinforcement Learning**|Hongbo Bai et.al.|[2601.13942](http://arxiv.org/abs/2601.13942)|<span class="null">—</span>|
-|**2026-01-19**|**DC-VLAQ: Query-Residual Aggregation for Robust Visual Place Recognition**|Hanyu Zhu et.al.|[2601.12729](http://arxiv.org/abs/2601.12729)|<span class="null">—</span>|
-|**2026-01-17**|**SupScene: Learning Overlap-Aware Global Descriptor for Unconstrained SfM**|Xulei Shi et.al.|[2601.11930](http://arxiv.org/abs/2601.11930)|<span class="null">—</span>|
-|**2026-01-22**|**Heterogeneous Uncertainty-Guided Composed Image Retrieval with Fine-Grained Probabilistic Learning**|Haomiao Tang et.al.|[2601.11393](http://arxiv.org/abs/2601.11393)|<span class="null">—</span>|
-|**2026-01-16**|**Simple Models, Rich Representations: Visual Decoding from Primate Intracortical Neural Signals**|Matteo Ciferri et.al.|[2601.11108](http://arxiv.org/abs/2601.11108)|<span class="null">—</span>|
-|**2026-01-15**|**Multilingual-To-Multimodal (M2M): Unlocking New Languages with Monolingual Text**|Piyush Singh Pasi et.al.|[2601.10096](http://arxiv.org/abs/2601.10096)|<span class="null">—</span>|
-|**2026-01-14**|**UniHash: Unifying Pointwise and Pairwise Hashing Paradigms for Seen and Unseen Category Retrieval**|Xiaoxu Ma et.al.|[2601.09828](http://arxiv.org/abs/2601.09828)|<span class="null">—</span>|
-|**2026-01-14**|**Hybrid guided variational autoencoder for visual place recognition**|Ni Wang et.al.|[2601.09248](http://arxiv.org/abs/2601.09248)|<span class="null">—</span>|
-|**2026-01-13**|**Keyframe-based Dense Mapping with the Graph of View-Dependent Local Maps**|Krzysztof Zielinski et.al.|[2601.08520](http://arxiv.org/abs/2601.08520)|<span class="null">—</span>|
-|**2026-01-13**|**Enhancing Image Quality Assessment Ability of LMMs via Retrieval-Augmented Generation**|Kang Fu et.al.|[2601.08311](http://arxiv.org/abs/2601.08311)|<span class="null">—</span>|
-|**2026-01-13**|**Ground What You See: Hallucination-Resistant MLLMs via Caption Feedback, Diversity-Aware Sampling, and Conflict Regularization**|Miao Pan et.al.|[2601.06224](http://arxiv.org/abs/2601.06224)|<span class="null">—</span>|
-|**2026-01-08**|**Multi-task Cross-modal Learning for Chest X-ray Image Retrieval**|Zhaohui Liang et.al.|[2601.05399](http://arxiv.org/abs/2601.05399)|<span class="null">—</span>|
-|**2026-01-07**|**ImLoc: Revisiting Visual Localization with Image-based Representation**|Xudong Jiang et.al.|[2601.04185](http://arxiv.org/abs/2601.04185)|<span class="null">—</span>|
-|**2026-01-07**|**CSMCIR: CoT-Enhanced Symmetric Alignment with Memory Bank for Composed Image Retrieval**|Zhipeng Qian et.al.|[2601.03728](http://arxiv.org/abs/2601.03728)|<span class="null">—</span>|
-|**2026-01-07**|**BREATH-VL: Vision-Language-Guided 6-DoF Bronchoscopy Localization via Semantic-Geometric Fusion**|Qingyao Tian et.al.|[2601.03713](http://arxiv.org/abs/2601.03713)|<span class="null">—</span>|
-|**2026-01-07**|**HOLO: Homography-Guided Pose Estimator Network for Fine-Grained Visual Localization on SD Maps**|Xuchang Zhong et.al.|[2601.02730](http://arxiv.org/abs/2601.02730)|<span class="null">—</span>|
-|**2026-01-06**|**Loop Closure using AnyLoc Visual Place Recognition in DPV-SLAM**|Wenzheng Zhang et.al.|[2601.02723](http://arxiv.org/abs/2601.02723)|<span class="null">—</span>|
-|**2026-01-07**|**Comparative Analysis of Binarization Methods For Medical Image Hashing On Odir Dataset**|Nedim Muzoglu et.al.|[2601.02564](http://arxiv.org/abs/2601.02564)|<span class="null">—</span>|
-|**2026-01-05**|**Vision-Language Reasoning for Geolocalization: A Reinforcement Learning Approach**|Biao Wu et.al.|[2601.00388](http://arxiv.org/abs/2601.00388)|<span class="null">—</span>|
-|**2025-12-31**|**OCP-LS: An Efficient Algorithm for Visual Localization**|Jindi Zhong et.al.|[2512.24552](http://arxiv.org/abs/2512.24552)|<span class="null">—</span>|
-|**2025-12-30**|**Geometric Multi-Session Map Merging with Learned Local Descriptors**|Yanlong Ma et.al.|[2512.24384](http://arxiv.org/abs/2512.24384)|<span class="null">—</span>|
-|**2025-12-29**|**Learning to Feel the Future: DreamTacVLA for Contact-Rich Manipulation**|Guo Ye et.al.|[2512.23864](http://arxiv.org/abs/2512.23864)|<span class="null">—</span>|
-|**2025-12-29**|**MindWatcher: Toward Smarter Multimodal Tool-Integrated Reasoning**|Jiawei Chen et.al.|[2512.23412](http://arxiv.org/abs/2512.23412)|<span class="null">—</span>|
-|**2025-12-29**|**Anomaly Detection by Effectively Leveraging Synthetic Images**|Sungho Kang et.al.|[2512.23227](http://arxiv.org/abs/2512.23227)|<span class="null">—</span>|
-|**2025-12-26**|**Reloc-VGGT: Visual Re-localization with Geometry Grounded Transformer**|Tianchen Deng et.al.|[2512.21883](http://arxiv.org/abs/2512.21883)|<span class="null">—</span>|
-|**2025-12-24**|**Leveraging Lightweight Entity Extraction for Scalable Event-Based Image Retrieval**|Dao Sy Duy Minh et.al.|[2512.21221](http://arxiv.org/abs/2512.21221)|<span class="null">—</span>|
-|**2025-12-28**|**UniPR-3D: Towards Universal Visual Place Recognition with Visual Geometry Grounded Transformer**|Tianchen Deng et.al.|[2512.21078](http://arxiv.org/abs/2512.21078)|<span class="null">—</span>|
-|**2025-12-23**|**Soft Filtering: Guiding Zero-shot Composed Image Retrieval with Prescriptive and Proscriptive Constraints**|Youjin Jung et.al.|[2512.20781](http://arxiv.org/abs/2512.20781)|<span class="null">—</span>|
-|**2025-12-23**|**Towards Natural Language-Based Document Image Retrieval: New Dataset and Benchmark**|Hao Guo et.al.|[2512.20174](http://arxiv.org/abs/2512.20174)|<span class="null">—</span>|
-|**2025-12-22**|**Beyond CLIP: Knowledge-Enhanced Multimodal Transformers for Cross-Modal Alignment in Diabetic Retinopathy Diagnosis**|Argha Kamal Samanta et.al.|[2512.19663](http://arxiv.org/abs/2512.19663)|<span class="null">—</span>|
-|**2025-12-22**|**Finer-Personalization Rank: Fine-Grained Retrieval Examines Identity Preservation for Personalized Generation**|Connor Kilrain et.al.|[2512.19026](http://arxiv.org/abs/2512.19026)|<span class="null">—</span>|
-|**2025-12-21**|**Text2Graph VPR: A Text-to-Graph Expert System for Explainable Place Recognition in Changing Environments**|Saeideh Yousefzadeh et.al.|[2512.18613](http://arxiv.org/abs/2512.18613)|<span class="null">—</span>|
-|**2025-12-20**|**Through the PRISm: Importance-Aware Scene Graphs for Image Retrieval**|Dimitrios Georgoulopoulos et.al.|[2512.18407](http://arxiv.org/abs/2512.18407)|<span class="null">—</span>|
-|**2025-12-19**|**Robust Scene Coordinate Regression via Geometrically-Consistent Global Descriptors**|Son Tung Nguyen et.al.|[2512.17226](http://arxiv.org/abs/2512.17226)|<span class="null">—</span>|
+|**2026-10-21**|**Climbing the Ladder: Automating Data Pipelines and Reproducing Baselines in Low-Resource Settings**|Donato Meoli et.al.|[2610.30374](http://arxiv.org/abs/2610.30374)|<span class="null">—</span>|
+|**2026-09-23**|**COILD: An Indic-Centric Parallel Corpus and Benchmark for Machine Translation Across Indian Languages**|Kshetrimayum Boynao Singh et.al.|[2609.28826](http://arxiv.org/abs/2609.28826)|<span class="null">—</span>|
+|**2026-08-24**|**Statistical Machine Translation Systems of English-Pnar Language Pair : Some Insights of the Emperical Study**|Edawanbiang Dhar Surmila Thokchom et.al.|[2608.23120](http://arxiv.org/abs/2608.23120)|<span class="null">—</span>|
+|**2026-08-12**|**Reference-Free Post-Training of Open Large Language Models for Multilingual Machine Translation**|Chris Han et.al.|[2608.10812](http://arxiv.org/abs/2608.10812)|**[link](https://github.com/xiaomi-research/gemmax)**|
+|**2026-08-07**|**Embedding Initialization for Unseen Low-resource Languages in Multilingual NMT: A Case Study on Limbum-English Translation**|Samiratu Ntohsi et.al.|[2608.07629](http://arxiv.org/abs/2608.07629)|<span class="null">—</span>|
+|**2026-05-23**|**Mix-MoE: Improving Multilingual Machine Translation of Large Language Models through Mixed MoEs**|Bo Li et.al.|[2605.24681](http://arxiv.org/abs/2605.24681)|<span class="null">—</span>|
+|**2026-05-05**|**The Impact of Vocabulary Overlaps on Knowledge Transfer in Multilingual Machine Translation**|Oona Itkonen et.al.|[2605.04196](http://arxiv.org/abs/2605.04196)|<span class="null">—</span>|
+|**2026-09-03**|**One Model to Translate Them All? A Journey to Mount Doom for Multilingual Model Merging**|Baban Gain et.al.|[2604.02881](http://arxiv.org/abs/2604.02881)|**[link](https://github.com/babangain/mt-model-merging)**|
+|**2026-07-20**|**Scaling Model and Data for Multilingual Machine Translation with Open Large Language Models**|Yuzhe Shang et.al.|[2602.11961](http://arxiv.org/abs/2602.11961)|**[link](https://github.com/xiaomi-research/gemmax)**|
+|**2026-02-03**|**Assessing the Impact of Typological Features on Multilingual Machine Translation in the Age of Large Language Models**|Vitalii Hirak et.al.|[2602.03551](http://arxiv.org/abs/2602.03551)|<span class="null">—</span>|
+|**2026-04-17**|**CLewR: Curriculum Learning with Restarts for Machine Translation Preference Learning**|Alexandra Dragomir et.al.|[2601.05858](http://arxiv.org/abs/2601.05858)|**[link](https://github.com/alexandra-dragomir/CLewR)**|
+|**2026-01-07**|**Analyzing and Improving Cross-lingual Knowledge Transfer for Machine Translation**|David Stap et.al.|[2601.04036](http://arxiv.org/abs/2601.04036)|<span class="null">—</span>|
+|**2025-12-04**|**AdiBhashaa: A Community-Curated Benchmark for Machine Translation into Indian Tribal Languages**|Pooja Singh et.al.|[2512.04765](http://arxiv.org/abs/2512.04765)|<span class="null">—</span>|
+|**2026-04-24**|**NiuTrans.LMT: Toward Inclusive and Scalable Multilingual Machine Translation with LLMs**|Yingfeng Luo et.al.|[2511.07003](http://arxiv.org/abs/2511.07003)|**[link](https://github.com/NiuTrans/LMT)**|
+|**2025-11-04**|**The Analysis of Lexical Errors in Machine Translation from English into Romanian**|Angela Stamatie et.al.|[2511.02587](http://arxiv.org/abs/2511.02587)|<span class="null">—</span>|
+|**2026-08-28**|**Transformer-Encoder Trees for Efficient Multilingual Machine Translation and Speech Translation**|Yiwen Guan et.al.|[2509.17930](http://arxiv.org/abs/2509.17930)|<span class="null">—</span>|
+|**2025-09-05**|**PRIM: Towards Practical In-Image Multilingual Machine Translation**|Yanzhi Tian et.al.|[2509.05146](http://arxiv.org/abs/2509.05146)|**[link](https://github.com/BITHLP/PRIM)**|
+|**2025-08-28**|**Languages Still Left Behind: Toward a Better Multilingual Machine Translation Benchmark**|Chihiro Taguchi et.al.|[2508.20511](http://arxiv.org/abs/2508.20511)|**[link](https://github.com/ctaguchi/LSLB)**|
+|**2026-01-07**|**ILID: Native Script Language Identification for Indian Languages**|Yash Ingle et.al.|[2507.11832](http://arxiv.org/abs/2507.11832)|**[link](https://github.com/yashingle-ai/TextLangDetect)**|
+|**2025-05-28**|**Compensating for Data with Reasoning: Low-Resource Machine Translation with LLMs**|Samuel Frontull et.al.|[2505.22293](http://arxiv.org/abs/2505.22293)|<span class="null">—</span>|
+|**2025-05-20**|**FuxiMT: Sparsifying Large Language Models for Chinese-Centric Multilingual Machine Translation**|Shaolin Zhu et.al.|[2505.14256](http://arxiv.org/abs/2505.14256)|<span class="null">—</span>|
+|**2025-05-14**|**Multilingual Machine Translation with Quantum Encoder Decoder Attention-based Convolutional Variational Circuits**|Subrit Dikshit et.al.|[2505.09407](http://arxiv.org/abs/2505.09407)|<span class="null">—</span>|
+|**2025-02-17**|**Evaluating o1-Like LLMs: Unlocking Reasoning for Translation through Comprehensive Analysis**|Andong Chen et.al.|[2502.11544](http://arxiv.org/abs/2502.11544)|<span class="null">—</span>|
+|**2025-02-16**|**Asymmetric Conflict and Synergy in Post-training for LLM-based Multilingual Machine Translation**|Tong Zheng et.al.|[2502.11223](http://arxiv.org/abs/2502.11223)|<span class="null">—</span>|
+|**2025-02-06**|**Multilingual Non-Autoregressive Machine Translation without Knowledge Distillation**|Chenyang Huang et.al.|[2502.04537](http://arxiv.org/abs/2502.04537)|<span class="null">—</span>|
+|**2025-02-24**|**Multilingual Machine Translation with Open Large Language Models at Practical Scale: An Empirical Study**|Menglong Cui et.al.|[2502.02481](http://arxiv.org/abs/2502.02481)|<span class="null">—</span>|
+|**2024-11-22**|**SwissADT: An Audio Description Translation System for Swiss Languages**|Lukas Fischer et.al.|[2411.14967](http://arxiv.org/abs/2411.14967)|<span class="null">—</span>|
+|**2024-11-10**|**CULL-MT: Compression Using Language and Layer pruning for Machine Translation**|Pedram Rostami et.al.|[2411.06506](http://arxiv.org/abs/2411.06506)|<span class="null">—</span>|
+|**2024-11-05**|**Predictor-Corrector Enhanced Transformers with Exponential Moving Average Coefficient Learning**|Bei Li et.al.|[2411.03042](http://arxiv.org/abs/2411.03042)|<span class="null">—</span>|
+|**2024-10-17**|**NLIP_Lab-IITH Multilingual MT System for WAT24 MT Shared Task**|Maharaj Brahma et.al.|[2410.13443](http://arxiv.org/abs/2410.13443)|**[link](https://github.com/maharajbrahma/WAT2024-MultiIndicMT)**|
+|**2024-10-15**|**PMMT: Preference Alignment in Multilingual Machine Translation via LLM Distillation**|Shuqiao Sun et.al.|[2410.11410](http://arxiv.org/abs/2410.11410)|<span class="null">—</span>|
+|**2025-06-02**|**Optimizing the Training Schedule of Multilingual NMT using Reinforcement Learning**|Alexis Allemann et.al.|[2410.06118](http://arxiv.org/abs/2410.06118)|<span class="null">—</span>|
+|**2024-10-05**|**Can the Variation of Model Weights be used as a Criterion for Self-Paced Multilingual NMT?**|Àlex R. Atrio et.al.|[2410.04147](http://arxiv.org/abs/2410.04147)|<span class="null">—</span>|
+|**2024-09-23**|**Scaling Laws of Decoder-Only Models on the Multilingual Machine Translation Task**|Gaëtan Caillaut et.al.|[2409.15051](http://arxiv.org/abs/2409.15051)|<span class="null">—</span>|
+|**2024-09-12**|**Machine Translation with Large Language Models: Decoder Only vs. Encoder-Decoder**|Abhinav P. M. et.al.|[2409.13747](http://arxiv.org/abs/2409.13747)|<span class="null">—</span>|
+|**2024-08-29**|**IKUN for WMT24 General MT Task: LLMs Are here for Multilingual Machine Translation**|Baohao Liao et.al.|[2408.11512](http://arxiv.org/abs/2408.11512)|<span class="null">—</span>|
+|**2024-08-11**|**Language-Informed Beam Search Decoding for Multilingual Machine Translation**|Yilin Yang et.al.|[2408.05738](http://arxiv.org/abs/2408.05738)|<span class="null">—</span>|
+|**2024-10-20**|**Machine Translation Hallucination Detection for Low and High Resource Languages using Large Language Models**|Kenza Benkirane et.al.|[2407.16470](http://arxiv.org/abs/2407.16470)|**[link](https://github.com/kenza-ily/mt_hallucination_detection)**|
+|**2024-06-26**|**How Good are LLMs at Relation Extraction under Low-Resource Scenario? Comprehensive Evaluation**|Dawulie Jinensibieke et.al.|[2406.11162](http://arxiv.org/abs/2406.11162)|<span class="null">—</span>|
+|**2024-06-11**|**Paying More Attention to Source Context: Mitigating Unfaithful Translations from Large Language Model**|Hongbin Zhang et.al.|[2406.07036](http://arxiv.org/abs/2406.07036)|<span class="null">—</span>|
+|**2024-05-30**|**How Multilingual Are Large Language Models Fine-Tuned for Translation?**|Aquia Richburg et.al.|[2405.20512](http://arxiv.org/abs/2405.20512)|<span class="null">—</span>|
+|**2024-10-04**|**Fine-Tuning Large Language Models to Translate: Will a Touch of Noisy Data in Misaligned Languages Suffice?**|Dawei Zhu et.al.|[2404.14122](http://arxiv.org/abs/2404.14122)|<span class="null">—</span>|
+|**2024-04-17**|**Neuron Specialization: Leveraging intrinsic task modularity for multilingual machine translation**|Shaomu Tan et.al.|[2404.11201](http://arxiv.org/abs/2404.11201)|<span class="null">—</span>|
+|**2024-04-03**|**Backdoor Attack on Multilingual Machine Translation**|Jun Wang et.al.|[2404.02393](http://arxiv.org/abs/2404.02393)|<span class="null">—</span>|
+|**2024-03-28**|**A Tulu Resource for Machine Translation**|Manu Narayanan et.al.|[2403.19142](http://arxiv.org/abs/2403.19142)|**[link](https://github.com/manunarayanan/Tulu-NMT)**|
+|**2024-03-11**|**ACT-MNMT Auto-Constriction Turning for Multilingual Neural Machine Translation**|Shaojie Dai et.al.|[2403.06745](http://arxiv.org/abs/2403.06745)|<span class="null">—</span>|
+|**2024-04-12**|**UMBCLU at SemEval-2024 Task 1A and 1C: Semantic Textual Relatedness with and without machine translation**|Shubhashis Roy Dipta et.al.|[2402.12730](http://arxiv.org/abs/2402.12730)|**[link](https://github.com/dipta007/SemEval24-Task8)**|
+|**2024-02-01**|**Disentangling the Roles of Target-Side Transfer and Regularization in Multilingual Machine Translation**|Yan Meng et.al.|[2402.01772](http://arxiv.org/abs/2402.01772)|<span class="null">—</span>|
+|**2024-01-29**|**MultiMUC: Multilingual Template Filling on MUC-4**|William Gantt et.al.|[2401.16209](http://arxiv.org/abs/2401.16209)|<span class="null">—</span>|
+|**2024-01-29**|**Non-Fluent Synthetic Target-Language Data Improve Neural Machine Translation**|Víctor M. Sánchez-Cartagena et.al.|[2401.16086](http://arxiv.org/abs/2401.16086)|<span class="null">—</span>|
+|**2024-02-26**|**How Far Can 100 Samples Go? Unlocking Overall Zero-Shot Multilingual Translation via Tiny Multi-Parallel Data**|Di Wu et.al.|[2401.12413](http://arxiv.org/abs/2401.12413)|<span class="null">—</span>|
+|**2025-04-18**|**Only Send What You Need: Learning to Communicate Efficiently in Federated Multilingual Machine Translation**|Yun-Wei Chu et.al.|[2401.07456](http://arxiv.org/abs/2401.07456)|<span class="null">—</span>|
+|**2025-05-28**|**Machine Translation Models are Zero-Shot Detectors of Translation Direction**|Michelle Wastl et.al.|[2401.06769](http://arxiv.org/abs/2401.06769)|**[link](https://github.com/ZurichNLP/translation-direction-detection)**|
+|**2024-02-07**|**Towards Boosting Many-to-Many Multilingual Machine Translation with Large Language Models**|Pengzhi Gao et.al.|[2401.05861](http://arxiv.org/abs/2401.05861)|**[link](https://github.com/gpengzhi/CrossConST-LLM)**|
+|**2024-04-23**|**AfriMTE and AfriCOMET: Enhancing COMET to Embrace Under-resourced African Languages**|Jiayi Wang et.al.|[2311.09828](http://arxiv.org/abs/2311.09828)|<span class="null">—</span>|
+|**2025-11-29**|**Extending Multilingual Machine Translation through Imitation Learning**|Wen Lai et.al.|[2311.08538](http://arxiv.org/abs/2311.08538)|<span class="null">—</span>|
+|**2024-04-28**|**Investigating Multi-Pivot Ensembling with Massively Multilingual Machine Translation Models**|Alireza Mohammadshahi et.al.|[2311.07439](http://arxiv.org/abs/2311.07439)|**[link](https://github.com/zurichnlp/multipivotnmt)**|
+|**2023-11-12**|**Simple and Effective Input Reformulations for Translation**|Brian Yu et.al.|[2311.06696](http://arxiv.org/abs/2311.06696)|**[link](https://github.com/bri25yu/LanguageModelExperimentation)**|
+|**2023-11-11**|**Added Toxicity Mitigation at Inference Time for Multimodal and Massively Multilingual Translation**|Marta R. Costa-jussà et.al.|[2311.06532](http://arxiv.org/abs/2311.06532)|<span class="null">—</span>|
+|**2023-10-25**|**CUNI Submission to MRL 2023 Shared Task on Multi-lingual Multi-task Information Retrieval**|Jindřich Helcl et.al.|[2310.16528](http://arxiv.org/abs/2310.16528)|<span class="null">—</span>|
+|**2023-10-21**|**Code-Switching with Word Senses for Pretraining in Neural Machine Translation**|Vivek Iyer et.al.|[2310.14050](http://arxiv.org/abs/2310.14050)|<span class="null">—</span>|
+|**2024-05-19**|**Direct Neural Machine Translation with Task-level Mixture of Experts models**|Isidora Chara Tourni et.al.|[2310.12236](http://arxiv.org/abs/2310.12236)|<span class="null">—</span>|
+|**2023-10-15**|**UvA-MT's Participation in the WMT23 General Translation Shared Task**|Di Wu et.al.|[2310.09946](http://arxiv.org/abs/2310.09946)|<span class="null">—</span>|
+|**2024-01-24**|**How Transferable are Attribute Controllers on Pretrained Multilingual Translation Models?**|Danni Liu et.al.|[2309.08565](http://arxiv.org/abs/2309.08565)|**[link](https://github.com/dannigt/attribute-controller-transfer)**|
+|**2023-09-09**|**MADLAD-400: A Multilingual And Document-Level Large Audited Dataset**|Sneha Kudugunta et.al.|[2309.04662](http://arxiv.org/abs/2309.04662)|<span class="null">—</span>|
+|**2024-04-16**|**Gender-specific Machine Translation with Large Language Models**|Eduardo Sánchez et.al.|[2309.03175](http://arxiv.org/abs/2309.03175)|<span class="null">—</span>|
+|**2023-10-24**|**Task-Based MoE for Multitask Multilingual Machine Translation**|Hai Pham et.al.|[2308.15772](http://arxiv.org/abs/2308.15772)|<span class="null">—</span>|
+|**2023-06-12**|**Learning Multilingual Sentence Representations with Cross-lingual Consistency Regularization**|Pengzhi Gao et.al.|[2306.06919](http://arxiv.org/abs/2306.06919)|<span class="null">—</span>|
+|**2023-05-26**|**Gender Lost In Translation: How Bridging The Gap Between Languages Affects Gender Bias in Zero-Shot Multilingual Translation**|Lena Cabrera et.al.|[2305.16935](http://arxiv.org/abs/2305.16935)|<span class="null">—</span>|
+|**2023-07-07**|**Code-Switched Text Synthesis in Unseen Language Pairs**|I-Hung Hsu et.al.|[2305.16724](http://arxiv.org/abs/2305.16724)|<span class="null">—</span>|
+|**2023-05-25**|**Towards Higher Pareto Frontier in Multilingual Machine Translation**|Yichong Huang et.al.|[2305.15718](http://arxiv.org/abs/2305.15718)|<span class="null">—</span>|
+|**2023-10-24**|**Multilingual Pixel Representations for Translation and Effective Cross-lingual Transfer**|Elizabeth Salesky et.al.|[2305.14280](http://arxiv.org/abs/2305.14280)|<span class="null">—</span>|
+|**2024-03-26**|**Exploring Representational Disparities Between Multilingual and Bilingual Translation Models**|Neha Verma et.al.|[2305.14230](http://arxiv.org/abs/2305.14230)|<span class="null">—</span>|
+|**2024-01-20**|**Beyond Shared Vocabulary: Increasing Representational Word Similarities across Languages for Multilingual Machine Translation**|Di Wu et.al.|[2305.14189](http://arxiv.org/abs/2305.14189)|<span class="null">—</span>|
+|**2024-03-30**|**When Does Monolingual Data Help Multilingual Translation: The Role of Domain and Model Scale**|Christos Baziotis et.al.|[2305.14124](http://arxiv.org/abs/2305.14124)|<span class="null">—</span>|
+|**2023-05-24**|**One-stop Training of Multiple Capacity Models**|Lan Jiang et.al.|[2305.14066](http://arxiv.org/abs/2305.14066)|<span class="null">—</span>|
+|**2023-11-10**|**Target-Agnostic Gender-Aware Contrastive Learning for Mitigating Bias in Multilingual Machine Translation**|Minwoo Lee et.al.|[2305.14016](http://arxiv.org/abs/2305.14016)|**[link](https://github.com/minwhoo/gacl)**|
+|**2023-10-22**|**Condensing Multilingual Knowledge with Lightweight Language-Specific Modules**|Haoran Xu et.al.|[2305.13993](http://arxiv.org/abs/2305.13993)|<span class="null">—</span>|
+|**2023-10-24**|**Mitigating Data Imbalance and Representation Degeneration in Multilingual Machine Translation**|Wen Lai et.al.|[2305.12786](http://arxiv.org/abs/2305.12786)|**[link](https://github.com/lavine-lmu/Bi-ACL)**|
 
-> Showing the latest 200 of 3031 papers, see the [archive](#archive) for all.
-
-<h2 id="keypoint-detection">Keypoint Detection</h2>
+<h2 id="low-resource-mt">Low-Resource MT</h2>
 
 | Publish Date | Title | Authors | PDF | Code |
 |:---------|:-----------------------|:---------|:------|:------|
-|**2026-10-29**|**InfantNet: A Large Scale Dataset for Infant Body Pose and Shape Estimation**|Zhipeng Hui et.al.|[2610.40467](http://arxiv.org/abs/2610.40467)|<span class="null">—</span>|
-|**2026-10-15**|**Teaching DINOv3 About Partial 3D Geometry: A Self-Supervised Geometry-Aware Approach**|Viktoria Ehm et.al.|[2610.21802](http://arxiv.org/abs/2610.21802)|<span class="null">—</span>|
-|**2026-10-12**|**Towards Complementary Keypoint Detection via Mixture of Detectors**|Xiaoyong Lu et.al.|[2610.16762](http://arxiv.org/abs/2610.16762)|<span class="null">—</span>|
-|**2026-10-07**|**MorphCL: Morphological Contrastive Learning for Inertial-based Human Activity Recognition**|Marius Bock et.al.|[2610.10245](http://arxiv.org/abs/2610.10245)|<span class="null">—</span>|
-|**2026-10-05**|**Toward Reliable Infant Pose Estimation: A Training-Dynamics Approach to Noisy Annotation Detection**|Emanuele Cardinale et.al.|[2610.06423](http://arxiv.org/abs/2610.06423)|<span class="null">—</span>|
-|**2026-09-30**|**AHMAD: Adaptive Hybrid Multi-task Vision Learning with Assisted Distillation for Keypoint Detection**|Mohammad Mahdi et.al.|[2609.35490](http://arxiv.org/abs/2609.35490)|<span class="null">—</span>|
-|**2026-09-06**|**Radiation, Rotation and Scale Invariant Feature Descriptor for Multimodal Image Matching**|Yuanxin Ye et.al.|[2609.06343](http://arxiv.org/abs/2609.06343)|**[link](https://github.com/yeyuanxin110/RRSI)**|
-|**2026-09-09**|**Phase-Aware Spatial-Frequency Fusion for Few-Shot Fine-Grained Image Classification**|Ruiling Liu et.al.|[2609.03829](http://arxiv.org/abs/2609.03829)|<span class="null">—</span>|
-|**2026-08-31**|**CrossFeat: Bridging Imaging Modalities in Feature Descriptor Space**|Paul Schneider et.al.|[2609.00272](http://arxiv.org/abs/2609.00272)|<span class="null">—</span>|
-|**2026-09-23**|**Effective Graph and Rank-based Contextual Embeddings for Textual and Multimedia Data**|Thiago César Castilho Almeida et.al.|[2608.29001](http://arxiv.org/abs/2608.29001)|**[link](https://github.com/thcastilho/interpretable-embeddings)**|
-|**2026-08-27**|**SSMB: Self-Supervised Local Feature Detection under Motion Blur**|Zhenjun Zhao et.al.|[2608.27181](http://arxiv.org/abs/2608.27181)|<span class="null">—</span>|
-|**2026-08-20**|**Gravity-aware partially calibrated absolute pose estimation from affine- or rotation-covariant features**|Marcus Valtonen Örnhag et.al.|[2608.20056](http://arxiv.org/abs/2608.20056)|<span class="null">—</span>|
-|**2026-08-20**|**Unified and Efficient Point-Line Local Features**|François Costa et.al.|[2608.19894](http://arxiv.org/abs/2608.19894)|**[link](https://github.com/francois141/upal)**|
-|**2026-05-12**|**Fast and Accurate Prediction of Lattice Thermal Conductivity via Machine Learning Surrogates**|Zeyu Wang et.al.|[2605.11610](http://arxiv.org/abs/2605.11610)|**[link](https://github.com/dannyzekunren/Dataset_thermoconductivity_pred)**|
-|**2026-04-29**|**Featurising Pixels from Dynamic 3D Scenes with Linear In-Context Learners**|Nikita Araslanov et.al.|[2604.26488](http://arxiv.org/abs/2604.26488)|<span class="null">—</span>|
-|**2026-04-25**|**Keypoint-based Dynamic Object 6-DoF Pose Tracking via Event Camera**|Zhe Wang et.al.|[2604.23387](http://arxiv.org/abs/2604.23387)|<span class="null">—</span>|
-|**2026-04-23**|**EdgeFormer: local patch-based edge detection transformer on point clouds**|Yifei Xie et.al.|[2604.21387](http://arxiv.org/abs/2604.21387)|<span class="null">—</span>|
-|**2026-04-19**|**HyKey: Hyperspectral Keypoint Detection and Matching in Minimally Invasive Surgery**|Alexander Saikia et.al.|[2604.17446](http://arxiv.org/abs/2604.17446)|**[link](https://github.com/alexsaikia/HyKey-Hyperspectral-Keypoint-Detection)**|
-|**2026-04-18**|**Adaptive receptive field-based spatial-frequency feature reconstruction network for few-shot fine-grained image classification**|Linyue Zhang et.al.|[2604.16936](http://arxiv.org/abs/2604.16936)|**[link](https://github.com/ICL-SUST/ARF-SFR-Net)**|
-|**2026-04-17**|**PoInit-of-View: Poisoning Initialization of Views Transfers Across Multiple 3D Reconstruction Systems**|Weijie Wang et.al.|[2604.16540](http://arxiv.org/abs/2604.16540)|<span class="null">—</span>|
-|**2026-04-15**|**SceneGlue: Scene-Aware Transformer for Feature Matching without Scene-Level Annotation**|Songlin Du et.al.|[2604.13941](http://arxiv.org/abs/2604.13941)|<span class="null">—</span>|
-|**2026-04-14**|**Utilizing Inpainting for Keypoint Detection for Vision-Based Control of Robotic Manipulators**|Sreejani Chatterjee et.al.|[2604.13309](http://arxiv.org/abs/2604.13309)|<span class="null">—</span>|
-|**2026-04-10**|**Multi-task Just Recognizable Difference for Video Coding for Machines: Database, Model, and Coding Application**|Junqi Liu et.al.|[2604.09421](http://arxiv.org/abs/2604.09421)|<span class="null">—</span>|
-|**2026-04-08**|**Mathematical Analysis of Image Matching Techniques**|Oleh Samoilenko et.al.|[2604.07574](http://arxiv.org/abs/2604.07574)|<span class="null">—</span>|
-|**2026-04-03**|**ViBA: Implicit Bundle Adjustment with Geometric and Temporal Consistency for Robust Visual Matching**|Xiaoji Niu et.al.|[2604.03377](http://arxiv.org/abs/2604.03377)|<span class="null">—</span>|
-|**2026-03-26**|**Towards Comprehensive Real-Time Scene Understanding in Ophthalmic Surgery through Multimodal Image Fusion**|Nikolo Rohrmoser et.al.|[2603.25555](http://arxiv.org/abs/2603.25555)|<span class="null">—</span>|
-|**2026-03-25**|**Instrument-Splatting++: Towards Controllable Surgical Instrument Digital Twin Using Gaussian Splatting**|Shuojue Yang et.al.|[2603.22792](http://arxiv.org/abs/2603.22792)|<span class="null">—</span>|
-|**2026-03-20**|**Physics-aware neural networks enable robust and full atomic structure determination via low-dose atomic electron tomography**|Yao Zhang et.al.|[2603.19942](http://arxiv.org/abs/2603.19942)|<span class="null">—</span>|
-|**2026-03-13**|**Semantic Aware Feature Extraction for Enhanced 3D Reconstruction**|Ronald Nap et.al.|[2603.13556](http://arxiv.org/abs/2603.13556)|<span class="null">—</span>|
-|**2026-03-05**|**From Decoupled to Coupled: Robustness Verification for Learning-based Keypoint Detection with Joint Specifications**|Xusheng Luo et.al.|[2603.05604](http://arxiv.org/abs/2603.05604)|<span class="null">—</span>|
-|**2026-03-04**|**Yolo-Key-6D: Single Stage Monocular 6D Pose Estimation with Keypoint Enhancements**|Kemal Alperen Çetiner et.al.|[2603.03879](http://arxiv.org/abs/2603.03879)|<span class="null">—</span>|
-|**2026-02-25**|**UNet-Based Keypoint Regression for 3D Cone Localization in Autonomous Racing**|Mariia Baidachna et.al.|[2602.21904](http://arxiv.org/abs/2602.21904)|<span class="null">—</span>|
-|**2026-03-03**|**From Pairs to Sequences: Track-Aware Policy Gradients for Keypoint Detection**|Yepeng Liu et.al.|[2602.20630](http://arxiv.org/abs/2602.20630)|<span class="null">—</span>|
-|**2026-02-20**|**Morphological Addressing of Identity Basins in Text-to-Image Diffusion Models**|Andrew Fraser et.al.|[2602.18533](http://arxiv.org/abs/2602.18533)|<span class="null">—</span>|
-|**2026-02-17**|**SAM 3D Body: Robust Full-Body Human Mesh Recovery**|Xitong Yang et.al.|[2602.15989](http://arxiv.org/abs/2602.15989)|<span class="null">—</span>|
-|**2026-02-15**|**Differential pose optimization in descriptor space -- Combining Geometric and Photometric Methods for Motion Estimation**|Andreas L. Teigen et.al.|[2602.14297](http://arxiv.org/abs/2602.14297)|<span class="null">—</span>|
-|**2026-02-25**|**Perception-Control Coupled Visual Servoing for Textureless Objects Using Keypoint-Based EKF**|Allen Tao et.al.|[2602.06834](http://arxiv.org/abs/2602.06834)|<span class="null">—</span>|
-|**2026-02-05**|**DroneKey++: A Size Prior-free Method and New Benchmark for Drone 3D Pose Estimation from Sequential Images**|Seo-Bin Hwang et.al.|[2602.06211](http://arxiv.org/abs/2602.06211)|<span class="null">—</span>|
-|**2026-01-22**|**Coarse-to-Fine Non-rigid Multi-modal Image Registration for Historical Panel Paintings based on Crack Structures**|Aline Sindel et.al.|[2601.16348](http://arxiv.org/abs/2601.16348)|<span class="null">—</span>|
-|**2026-01-21**|**ZENITH: Automated Gradient Norm Informed Stochastic Optimization**|Dhrubo Saha et.al.|[2601.15212](http://arxiv.org/abs/2601.15212)|<span class="null">—</span>|
-|**2026-01-02**|**UnrealPose: Leveraging Game Engine Kinematics for Large-Scale Synthetic Human Pose Data**|Joshua Kawaguchi et.al.|[2601.00991](http://arxiv.org/abs/2601.00991)|<span class="null">—</span>|
-|**2025-12-31**|**GenZ: Foundational models as latent variable generators within traditional statistical models**|Marko Jojic et.al.|[2512.24834](http://arxiv.org/abs/2512.24834)|<span class="null">—</span>|
-|**2026-01-11**|**BLANKET: Anonymizing Faces in Infant Video Recordings**|Ditmar Hadera et.al.|[2512.15542](http://arxiv.org/abs/2512.15542)|<span class="null">—</span>|
-|**2025-12-17**|**Off The Grid: Detection of Primitives for Feed-Forward 3D Gaussian Splatting**|Arthur Moreau et.al.|[2512.15508](http://arxiv.org/abs/2512.15508)|<span class="null">—</span>|
-|**2025-12-15**|**JoVA: Unified Multimodal Learning for Joint Video-Audio Generation**|Xiaohu Huang et.al.|[2512.13677](http://arxiv.org/abs/2512.13677)|<span class="null">—</span>|
-|**2025-12-16**|**UnCageNet: Tracking and Pose Estimation of Caged Animal**|Sayak Dutta et.al.|[2512.07712](http://arxiv.org/abs/2512.07712)|<span class="null">—</span>|
-|**2025-12-03**|**Inference-time Stochastic Refinement of GRU-Normalizing Flow for Real-time Video Motion Transfer**|Tasmiah Haque et.al.|[2512.04282](http://arxiv.org/abs/2512.04282)|<span class="null">—</span>|
-|**2025-12-03**|**Leveraging topological data analysis to estimate bone strength from micro-CT as a surrogate for advanced imaging**|John Rick Manzanares et.al.|[2512.03880](http://arxiv.org/abs/2512.03880)|<span class="null">—</span>|
-|**2025-12-03**|**DINO-RotateMatch: A Rotation-Aware Deep Framework for Robust Image Matching in Large-Scale 3D Reconstruction**|Kaichen Zhang et.al.|[2512.03715](http://arxiv.org/abs/2512.03715)|<span class="null">—</span>|
-|**2025-12-03**|**A Novel Approach to Tomato Harvesting Using a Hybrid Gripper with Semantic Segmentation and Keypoint Detection**|Shahid Ansari et.al.|[2512.03684](http://arxiv.org/abs/2512.03684)|<span class="null">—</span>|
-|**2025-12-03**|**Linking Aneurysmal Geometry and Hemodynamics Using Computational Fluid Dynamics**|Spyridon C. Katsoudas et.al.|[2512.03660](http://arxiv.org/abs/2512.03660)|<span class="null">—</span>|
-|**2025-12-03**|**Memory-Guided Point Cloud Completion for Dental Reconstruction**|Jianan Sun et.al.|[2512.03598](http://arxiv.org/abs/2512.03598)|<span class="null">—</span>|
-|**2025-12-02**|**Exploring Definitions of Quality and Diversity in Sonic Measurement Spaces**|Björn Þór Jónsson et.al.|[2512.02783](http://arxiv.org/abs/2512.02783)|<span class="null">—</span>|
-|**2025-12-01**|**Depth Matching Method Based on ShapeDTW for Oil-Based Mud Imager**|Fengfeng Li et.al.|[2512.01611](http://arxiv.org/abs/2512.01611)|<span class="null">—</span>|
-|**2025-12-01**|**Non-Markovian dynamics in ice nucleation**|Pablo Montero de Hijes et.al.|[2512.01479](http://arxiv.org/abs/2512.01479)|<span class="null">—</span>|
-|**2025-11-30**|**LAHNet: Local Attentive Hashing Network for Point Cloud Registration**|Wentao Qu et.al.|[2512.00927](http://arxiv.org/abs/2512.00927)|<span class="null">—</span>|
-|**2025-11-27**|**3D Affordance Keypoint Detection for Robotic Manipulation**|Zhiyang Liu et.al.|[2511.22195](http://arxiv.org/abs/2511.22195)|<span class="null">—</span>|
-|**2025-11-26**|**Uncertainty Quantification for Visual Object Pose Estimation**|Lorenzo Shaikewitz et.al.|[2511.21666](http://arxiv.org/abs/2511.21666)|<span class="null">—</span>|
-|**2025-11-26**|**Semantic-Enhanced Feature Matching with Learnable Geometric Verification for Cross-Modal Neuron Registration**|Wenwei Li et.al.|[2511.21452](http://arxiv.org/abs/2511.21452)|<span class="null">—</span>|
-|**2025-11-26**|**BUSTR: Breast Ultrasound Text Reporting with a Descriptor-Aware Vision-Language Model**|Rawa Mohammed et.al.|[2511.20956](http://arxiv.org/abs/2511.20956)|<span class="null">—</span>|
-|**2025-11-25**|**Dance Style Classification using Laban-Inspired and Frequency-Domain Motion Features**|Ben Hamscher et.al.|[2511.20469](http://arxiv.org/abs/2511.20469)|<span class="null">—</span>|
-|**2025-11-25**|**Uplifting Table Tennis: A Robust, Real-World Application for 3D Trajectory and Spin Estimation**|Daniel Kienzle et.al.|[2511.20250](http://arxiv.org/abs/2511.20250)|<span class="null">—</span>|
-|**2025-11-21**|**Teager-Kaiser Energy Methods For EEG Feature Extraction In Biomedical Applications**|Ioanna Chourdaki et.al.|[2511.17164](http://arxiv.org/abs/2511.17164)|<span class="null">—</span>|
-|**2025-11-21**|**Exploring the added value of pretherapeutic MR descriptors in predicting breast cancer pathologic complete response to neoadjuvant chemotherapy**|Caroline Malhaire et.al.|[2511.17158](http://arxiv.org/abs/2511.17158)|<span class="null">—</span>|
-|**2025-11-20**|**PySERA: Open-Source Standardized Python Library for Automated, Scalable, and Reproducible Handcrafted and Deep Radiomics**|Mohammad R. Salmanpour et.al.|[2511.15963](http://arxiv.org/abs/2511.15963)|<span class="null">—</span>|
-|**2025-11-23**|**Simultaneous Localization and 3D-Semi Dense Mapping for Micro Drones Using Monocular Camera and Inertial Sensors**|Jeryes Danial et.al.|[2511.14335](http://arxiv.org/abs/2511.14335)|<span class="null">—</span>|
-|**2025-11-19**|**Orion: A Unified Visual Agent for Multimodal Perception, Advanced Visual Reasoning and Execution**|N Dinesh Reddy et.al.|[2511.14210](http://arxiv.org/abs/2511.14210)|<span class="null">—</span>|
-|**2025-11-18**|**$A^2$GC: $A$symmetric $A$ ggregation with Geometric Constraints for Locally Aggregated Descriptors**|Zhenyu Li et.al.|[2511.14109](http://arxiv.org/abs/2511.14109)|<span class="null">—</span>|
-|**2025-11-17**|**Classification of Aortic Shape with Topographical Pair Correlation Functions**|Cooper Bruno et.al.|[2511.13960](http://arxiv.org/abs/2511.13960)|<span class="null">—</span>|
-|**2025-11-17**|**End-to-End Multi-Person Pose Estimation with Pose-Aware Video Transformer**|Yonghui Yu et.al.|[2511.13208](http://arxiv.org/abs/2511.13208)|<span class="null">—</span>|
-|**2025-11-17**|**THIR: Topological Histopathological Image Retrieval**|Zahra Tabatabaei et.al.|[2511.13170](http://arxiv.org/abs/2511.13170)|<span class="null">—</span>|
-|**2025-11-17**|**SOMA: Feature Gradient Enhanced Affine-Flow Matching for SAR-Optical Registration**|Haodong Wang et.al.|[2511.13168](http://arxiv.org/abs/2511.13168)|<span class="null">—</span>|
-|**2025-11-15**|**Multimodal RGB-HSI Feature Fusion with Patient-Aware Incremental Heuristic Meta-Learning for Oral Lesion Classification**|Rupam Mukherjee et.al.|[2511.12268](http://arxiv.org/abs/2511.12268)|<span class="null">—</span>|
-|**2025-11-15**|**AURA: Development and Validation of an Augmented Unplanned Removal Alert System using Synthetic ICU Videos**|Junhyuk Seo et.al.|[2511.12241](http://arxiv.org/abs/2511.12241)|<span class="null">—</span>|
-|**2025-11-14**|**Interpretable descriptors enable prediction of hydrogen-based superconductors at moderate pressures**|Jiawei Chen et.al.|[2511.11284](http://arxiv.org/abs/2511.11284)|<span class="null">—</span>|
-|**2025-11-12**|**A thermoinformational framework for the description of neuropsychological systems**|George-Rafael Domenikos et.al.|[2511.09506](http://arxiv.org/abs/2511.09506)|<span class="null">—</span>|
-|**2025-11-12**|**Hydrogen permeability prediction in palladium alloys and virtual screening of B2-phase stabilized Pd(100-x-y)CuxMy ternary alloys using machine learning**|Eric Kolor et.al.|[2511.09245](http://arxiv.org/abs/2511.09245)|<span class="null">—</span>|
-|**2025-11-11**|**Enhancing Rotation-Invariant 3D Learning with Global Pose Awareness and Attention Mechanisms**|Jiaxun Guo et.al.|[2511.08833](http://arxiv.org/abs/2511.08833)|<span class="null">—</span>|
-|**2025-11-10**|**Semi-distributed Cross-modal Air-Ground Relative Localization**|Weining Lu et.al.|[2511.06749](http://arxiv.org/abs/2511.06749)|<span class="null">—</span>|
-|**2025-11-09**|**DiffusionUavLoc: Visually Prompted Diffusion for Cross-View UAV Localization**|Tao Liu et.al.|[2511.06422](http://arxiv.org/abs/2511.06422)|<span class="null">—</span>|
-|**2025-11-08**|**Towards Implicit Aggregation: Robust Image Representation for Place Recognition in the Transformer Era**|Feng Lu et.al.|[2511.06024](http://arxiv.org/abs/2511.06024)|<span class="null">—</span>|
-|**2025-11-15**|**Hybrid second-order gradient histogram based global low-rank sparse regression for robust face recognition**|Hongxia Li et.al.|[2511.05893](http://arxiv.org/abs/2511.05893)|<span class="null">—</span>|
-|**2025-11-07**|**From Quantum Annealing to Alloy Discovery: Towards Accelerated Design of High-Entropy Alloys**|Diego Ibarra-Hoyos et.al.|[2511.05750](http://arxiv.org/abs/2511.05750)|<span class="null">—</span>|
-|**2025-11-07**|**Multi-modal Loop Closure Detection with Foundation Models in Severely Unstructured Environments**|Laura Alejandra Encinar Gonzalez et.al.|[2511.05404](http://arxiv.org/abs/2511.05404)|<span class="null">—</span>|
-|**2025-11-06**|**Covariance Descriptors Meet General Vision Encoders: Riemannian Deep Learning for Medical Image Classification**|Josef Mayr et.al.|[2511.04190](http://arxiv.org/abs/2511.04190)|<span class="null">—</span>|
-|**2025-11-06**|**Automated Tennis Player and Ball Tracking with Court Keypoints Detection (Hawk Eye System)**|Venkata Manikanta Desu et.al.|[2511.04126](http://arxiv.org/abs/2511.04126)|<span class="null">—</span>|
-|**2025-11-06**|**TXL Fusion: A Hybrid Machine Learning Framework Integrating Chemical Heuristics and Large Language Models for Topological Materials Discovery**|Arif Ullah et.al.|[2511.04068](http://arxiv.org/abs/2511.04068)|<span class="null">—</span>|
-|**2025-11-06**|**Simple 3D Pose Features Support Human and Machine Social Scene Understanding**|Wenshuo Qin et.al.|[2511.03988](http://arxiv.org/abs/2511.03988)|<span class="null">—</span>|
-|**2025-11-06**|**On Predicting Sociodemographics from Mobility Signals**|Ekin Uğurel et.al.|[2511.03924](http://arxiv.org/abs/2511.03924)|<span class="null">—</span>|
-|**2025-11-09**|**QAGT-MLP: An Attention-Based Graph Transformer for Small and Large-Scale Quantum Error Mitigation**|Seyed Mohamad Ali Tousi et.al.|[2511.03119](http://arxiv.org/abs/2511.03119)|<span class="null">—</span>|
-|**2025-11-03**|**Edge Irregularity Strength: A Complementary Descriptor to Topological Indices in QSPR and QSAR Studies**|U. Vijaya Chandra Kumar et.al.|[2511.01949](http://arxiv.org/abs/2511.01949)|<span class="null">—</span>|
-|**2025-11-01**|**Delta-learned force fields for nonbonded interactions: Addressing the strength mismatch between covalent-nonbonded interaction for global models**|Leonardo Cázares-Trejo et.al.|[2511.01913](http://arxiv.org/abs/2511.01913)|<span class="null">—</span>|
-|**2025-11-03**|**Derivative-Aligned Anticipation of Forbush Decreases from Entropy and Fractal Markers**|Juan D. Perez-Navarro et.al.|[2511.01506](http://arxiv.org/abs/2511.01506)|<span class="null">—</span>|
-|**2025-11-02**|**Integrating Visual and X-Ray Machine Learning Features in the Study of Paintings by Goya**|Hassan Ugail et.al.|[2511.01000](http://arxiv.org/abs/2511.01000)|<span class="null">—</span>|
-|**2025-10-31**|**Dynamic Model Selection for Trajectory Prediction via Pairwise Ranking and Meta-Features**|Lu Bowen et.al.|[2511.00126](http://arxiv.org/abs/2511.00126)|<span class="null">—</span>|
-|**2025-10-19**|**Matrix Phylogeny: Compact Spectral Fingerprints for Trap-Robust Preconditioner Selection**|Jinwoo Baek et.al.|[2511.00012](http://arxiv.org/abs/2511.00012)|<span class="null">—</span>|
-|**2025-10-31**|**A Hybrid Deep Learning and Forensic Approach for Robust Deepfake Detection**|Sales Aribe et.al.|[2510.27392](http://arxiv.org/abs/2510.27392)|<span class="null">—</span>|
-|**2025-10-30**|**Stability and Dynamics of Sn-based Halide Perovskites: Insights from MACE-MP-0 and Molecular Dynamics Simulations**|Thiago Puccinelli et.al.|[2510.26998](http://arxiv.org/abs/2510.26998)|<span class="null">—</span>|
-|**2025-10-30**|**Applications of Machine Learning in Polymer Materials: Property Prediction, Material Design, and Systematic Processes**|Hongtao Guo Shuai Li Shu Li et.al.|[2510.26100](http://arxiv.org/abs/2510.26100)|<span class="null">—</span>|
-|**2025-10-29**|**Breast Cancer VLMs: Clinically Practical Vision-Language Train-Inference Models**|Shunjie-Fabian Zheng et.al.|[2510.25051](http://arxiv.org/abs/2510.25051)|<span class="null">—</span>|
-|**2025-10-28**|**Towards actionable hypotension prediction -- predicting catecholamine therapy initiation in the intensive care unit**|Richard Koebe et.al.|[2510.24287](http://arxiv.org/abs/2510.24287)|<span class="null">—</span>|
-|**2025-10-27**|**Improving Predictions of Molecular Properties with Graph Featurisation and Heterogeneous Ensemble Models**|Michael L. Parker et.al.|[2510.23428](http://arxiv.org/abs/2510.23428)|<span class="null">—</span>|
-|**2025-10-26**|**Mesoscopic Modeling of High-Density Carbon Nanotube Films for Memristive Device Applications**|Yvelin Giret et.al.|[2510.22623](http://arxiv.org/abs/2510.22623)|<span class="null">—</span>|
-|**2025-10-26**|**Cross-Species Transfer Learning in Agricultural AI: Evaluating ZebraPose Adaptation for Dairy Cattle Pose Estimation**|Mackenzie Tapp et.al.|[2510.22618](http://arxiv.org/abs/2510.22618)|<span class="null">—</span>|
-|**2025-10-25**|**SemiETPicker: Fast and Label-Efficient Particle Picking for CryoET Tomography Using Semi-Supervised Learning**|Linhan Wang et.al.|[2510.22454](http://arxiv.org/abs/2510.22454)|<span class="null">—</span>|
-|**2025-10-23**|**An interpretable molecular descriptor for machine learning predictions in atmospheric science**|Linus Lind et.al.|[2510.20465](http://arxiv.org/abs/2510.20465)|<span class="null">—</span>|
-|**2025-10-23**|**Tri-Modal Severity Fused Diagnosis across Depression and Post-traumatic Stress Disorders**|Filippo Cenacchi et.al.|[2510.20239](http://arxiv.org/abs/2510.20239)|<span class="null">—</span>|
-|**2025-10-22**|**MATLAB-Simulated Dataset for Automatic Modulation Classification in Wireless Fading Channels**|M. M. Sadman Shafi et.al.|[2510.19985](http://arxiv.org/abs/2510.19985)|<span class="null">—</span>|
-|**2025-10-22**|**Advancing Drug Development Through Strategic Cell Line and Compound Selection Using Drug Response Profiles**|Abbi Abdel-Rehim et.al.|[2510.19874](http://arxiv.org/abs/2510.19874)|<span class="null">—</span>|
-|**2025-11-24**|**Interpretable machine learning for cardiogram-based biometrics**|Ilija Tanasković et.al.|[2510.19775](http://arxiv.org/abs/2510.19775)|<span class="null">—</span>|
-|**2025-10-21**|**GBlobs: Local LiDAR Geometry for Improved Sensor Placement Generalization**|Dušan Malić et.al.|[2510.18539](http://arxiv.org/abs/2510.18539)|<span class="null">—</span>|
-|**2025-10-20**|**Graph-Based Light-Curve Features for Robust Transient Classification**|Jesús D. Petro-Ramos et.al.|[2510.17721](http://arxiv.org/abs/2510.17721)|<span class="null">—</span>|
-|**2025-10-21**|**DeepDetect: Learning All-in-One Dense Keypoints**|Shaharyar Ahmed Khan Tareen et.al.|[2510.17422](http://arxiv.org/abs/2510.17422)|<span class="null">—</span>|
-|**2025-10-20**|**Enhanced Fish Freshness Classification with Incremental Handcrafted Feature Fusion**|Phi-Hung Hoang et.al.|[2510.17145](http://arxiv.org/abs/2510.17145)|<span class="null">—</span>|
-|**2025-09-09**|**BREATH: A Bio-Radar Embodied Agent for Tonal and Human-Aware Diffusion Music Generation**|Yunzhe Wang et.al.|[2510.15895](http://arxiv.org/abs/2510.15895)|<span class="null">—</span>|
-|**2025-10-17**|**Integrating Product Coefficients for Improved 3D LiDAR Data Classification (Part II)**|Patricia Medina et.al.|[2510.15219](http://arxiv.org/abs/2510.15219)|<span class="null">—</span>|
-|**2025-10-16**|**Leveraging Neural Descriptor Fields for Learning Contact-Aware Dynamic Recovery**|Fan Yang et.al.|[2510.14768](http://arxiv.org/abs/2510.14768)|<span class="null">—</span>|
-|**2025-10-16**|**Talking Points: Describing and Localizing Pixels**|Matan Rusanovsky et.al.|[2510.14583](http://arxiv.org/abs/2510.14583)|<span class="null">—</span>|
-|**2025-10-16**|**Big Data Approaches to Bovine Bioacoustics: A FAIR-Compliant Dataset and Scalable ML Framework for Precision Livestock Welfare**|Mayuri Kate et.al.|[2510.14443](http://arxiv.org/abs/2510.14443)|<span class="null">—</span>|
-|**2025-10-15**|**EPIPTrack: Rethinking Prompt Modeling with Explicit and Implicit Prompts for Multi-Object Tracking**|Yukuan Zhang et.al.|[2510.13235](http://arxiv.org/abs/2510.13235)|<span class="null">—</span>|
-|**2025-10-13**|**Multiview Manifold Evidential Fusion for PolSAR Image Classification**|Junfei Shi et.al.|[2510.11171](http://arxiv.org/abs/2510.11171)|<span class="null">—</span>|
-|**2025-10-13**|**Topological Landscapes of the BSM Higgs Sector**|Jyotiranjan Beuria et.al.|[2510.10900](http://arxiv.org/abs/2510.10900)|<span class="null">—</span>|
-|**2025-10-04**|**Enhanced Urban Traffic Management Using CCTV Surveillance Videos and Multi-Source Data Current State Prediction and Frequent Episode Mining**|Shaharyar Alam Ansari et.al.|[2510.09644](http://arxiv.org/abs/2510.09644)|<span class="null">—</span>|
-|**2025-10-10**|**Visual Anomaly Detection for Reliable Robotic Implantation of Flexible Microelectrode Array**|Yitong Chen et.al.|[2510.09071](http://arxiv.org/abs/2510.09071)|<span class="null">—</span>|
-|**2025-10-10**|**HandEval: Taking the First Step Towards Hand Quality Evaluation in Generated Images**|Zichuan Wang et.al.|[2510.08978](http://arxiv.org/abs/2510.08978)|<span class="null">—</span>|
-|**2025-10-09**|**Data-driven multifidelity and multiscale topology optimization based on phasor-based evolutionary de-homogenization**|Shuzhi Xu et.al.|[2510.08830](http://arxiv.org/abs/2510.08830)|<span class="null">—</span>|
-|**2025-10-08**|**Learning to predict superconductivity**|Omri Lesser et.al.|[2510.07373](http://arxiv.org/abs/2510.07373)|<span class="null">—</span>|
-|**2025-10-08**|**Adapting Quantum Machine Learning for Energy Dissociation of Bonds**|Swathi Chandrasekhar et.al.|[2510.06563](http://arxiv.org/abs/2510.06563)|<span class="null">—</span>|
-|**2025-10-07**|**PolyGraph Discrepancy: a classifier-based metric for graph generation**|Markus Krimmel et.al.|[2510.06122](http://arxiv.org/abs/2510.06122)|<span class="null">—</span>|
-|**2025-10-07**|**A Hierarchical Geometry-guided Transformer for Histological Subtyping of Primary Liver Cancer**|Anwen Lu et.al.|[2510.05657](http://arxiv.org/abs/2510.05657)|<span class="null">—</span>|
-|**2025-10-06**|**On the sensitivity of different galaxy properties to warm dark matter**|Belén Costanza et.al.|[2510.05037](http://arxiv.org/abs/2510.05037)|<span class="null">—</span>|
-|**2025-10-06**|**Human Behavior Atlas: Benchmarking Unified Psychological and Social Behavior Understanding**|Keane Ong et.al.|[2510.04899](http://arxiv.org/abs/2510.04899)|<span class="null">—</span>|
-|**2025-11-03**|**Detailed Aerial Mapping of Photovoltaic Power Plants Through Semantically Significant Keypoints**|Viktor Kozák et.al.|[2510.04840](http://arxiv.org/abs/2510.04840)|<span class="null">—</span>|
-|**2025-10-06**|**Bond-Centered Molecular Fingerprint Derivatives: A BBBP Dataset Study**|Guillaume Godin et.al.|[2510.04837](http://arxiv.org/abs/2510.04837)|<span class="null">—</span>|
-|**2025-10-03**|**Efficient Surgical Robotic Instrument Pose Reconstruction in Real World Conditions Using Unified Feature Detection**|Zekai Liang et.al.|[2510.03532](http://arxiv.org/abs/2510.03532)|<span class="null">—</span>|
-|**2025-10-02**|**PRESOL: a web-based computational setting for feature-based flare forecasting**|Chiara Curletto et.al.|[2510.01799](http://arxiv.org/abs/2510.01799)|<span class="null">—</span>|
-|**2025-10-01**|**GeoGraph: Geometric and Graph-based Ensemble Descriptors for Intrinsically Disordered Proteins**|Eoin Quinn et.al.|[2510.00774](http://arxiv.org/abs/2510.00774)|<span class="null">—</span>|
-|**2025-10-01**|**Rethinking Wine Tasting for Chinese Consumers: A Service Design Approach Enhanced by Multimodal Personalization**|Xinyang Shan et.al.|[2510.00583](http://arxiv.org/abs/2510.00583)|<span class="null">—</span>|
-|**2025-09-30**|**Enhancing Certifiable Semantic Robustness via Robust Pruning of Deep Neural Networks**|Hanjiang Hu et.al.|[2510.00083](http://arxiv.org/abs/2510.00083)|<span class="null">—</span>|
-|**2025-09-13**|**Unpacking Musical Symbolism in Online Communities: Content-Based and Network-Centric Approaches**|Kajwan Ziaoddini et.al.|[2510.00006](http://arxiv.org/abs/2510.00006)|<span class="null">—</span>|
-|**2025-09-30**|**Hy-Facial: Hybrid Feature Extraction by Dimensionality Reduction Methods for Enhanced Facial Expression Classification**|Xinjin Li et.al.|[2509.26614](http://arxiv.org/abs/2509.26614)|<span class="null">—</span>|
-|**2025-09-30**|**Predicting Penalty Kick Direction Using Multi-Modal Deep Learning with Pose-Guided Attention**|Pasindu Ranasinghe et.al.|[2509.26088](http://arxiv.org/abs/2509.26088)|<span class="null">—</span>|
-|**2025-09-30**|**SAGE: Spatial-visual Adaptive Graph Exploration for Visual Place Recognition**|Shunpeng Chen et.al.|[2509.25723](http://arxiv.org/abs/2509.25723)|<span class="null">—</span>|
-|**2025-09-30**|**YOLO26: Key Architectural Enhancements and Performance Benchmarking for Real-Time Object Detection**|Ranjan Sapkota et.al.|[2509.25164](http://arxiv.org/abs/2509.25164)|<span class="null">—</span>|
-|**2025-09-27**|**LiDAR-based Human Activity Recognition through Laplacian Spectral Analysis**|Sasan Sharifipour et.al.|[2509.23255](http://arxiv.org/abs/2509.23255)|<span class="null">—</span>|
-|**2025-09-27**|**On the Sheafification of Higher-Order Message Passing**|Jacob Hume et.al.|[2509.23020](http://arxiv.org/abs/2509.23020)|<span class="null">—</span>|
-|**2025-09-26**|**Hierarchical Representation Matching for CLIP-based Class-Incremental Learning**|Zhen-Hao Wen et.al.|[2509.22645](http://arxiv.org/abs/2509.22645)|<span class="null">—</span>|
-|**2025-09-26**|**PANICL: Mitigating Over-Reliance on Single Prompt in Visual In-Context Learning**|Jiahao Zhang et.al.|[2509.21926](http://arxiv.org/abs/2509.21926)|<span class="null">—</span>|
-|**2025-09-19**|**Improving Autism Detection with Multimodal Behavioral Analysis**|William Saakyan et.al.|[2509.21352](http://arxiv.org/abs/2509.21352)|<span class="null">—</span>|
-|**2025-09-06**|**Interpretable Spectral Features Predict Conductivity in Self-Driving Doped Conjugated Polymer Labs**|Ankush Kumar Mishra et.al.|[2509.21330](http://arxiv.org/abs/2509.21330)|<span class="null">—</span>|
-|**2025-09-25**|**Dense Semantic Matching with VGGT Prior**|Songlin Yang et.al.|[2509.21263](http://arxiv.org/abs/2509.21263)|<span class="null">—</span>|
-|**2025-09-25**|**Fast-SEnSeI: Lightweight Sensor-Independent Cloud Masking for On-board Multispectral Sensors**|Jan Kněžík et.al.|[2509.20991](http://arxiv.org/abs/2509.20991)|<span class="null">—</span>|
-|**2025-09-24**|**Probing Invisible Decay of $Z^\prime$ at Muon Collider with Topological Data Analysis and Machine Learning**|Jyotiranjan Beuria et.al.|[2509.19756](http://arxiv.org/abs/2509.19756)|<span class="null">—</span>|
-|**2025-09-22**|**Hybrid Pipeline SWD Detection in Long-Term EEG Signals**|Antonio Quintero Rincon et.al.|[2509.19387](http://arxiv.org/abs/2509.19387)|<span class="null">—</span>|
-|**2025-09-23**|**Graph-Radiomic Learning (GrRAiL) Descriptor to Characterize Imaging Heterogeneity in Confounding Tumor Pathologies**|Dheerendranath Battalapalli et.al.|[2509.19258](http://arxiv.org/abs/2509.19258)|<span class="null">—</span>|
-|**2025-09-23**|**Category-Level Object Shape and Pose Estimation in Less Than a Millisecond**|Lorenzo Shaikewitz et.al.|[2509.18979](http://arxiv.org/abs/2509.18979)|<span class="null">—</span>|
-|**2025-10-12**|**A Comparative Study of Different Edit Distance-Based Methods for Feature Tracking using Merge Trees on Time-Varying Scalar Fields**|Son Le Thanh et.al.|[2509.17974](http://arxiv.org/abs/2509.17974)|<span class="null">—</span>|
-|**2025-09-22**|**A $^2$M$^2$ -Net: Adaptively Aligned Multi-Scale Moment for Few-Shot Action Recognition**|Zilin Gao et.al.|[2509.17638](http://arxiv.org/abs/2509.17638)|<span class="null">—</span>|
-|**2025-09-22**|**Predicting the Curie Temperature of Magnetic Materials with Machine Learning: Descriptor Engineering, Graph Neural Networks, and the Role of Curated Data**|Akram Abedi Orang et.al.|[2509.17464](http://arxiv.org/abs/2509.17464)|<span class="null">—</span>|
-|**2025-09-20**|**Feature Selection via Graph Topology Inference for Soundscape Emotion Recognition**|Samuel Rey et.al.|[2509.16760](http://arxiv.org/abs/2509.16760)|<span class="null">—</span>|
-|**2025-09-20**|**Person Identification from Egocentric Human-Object Interactions using 3D Hand Pose**|Muhammad Hamza et.al.|[2509.16557](http://arxiv.org/abs/2509.16557)|<span class="null">—</span>|
-|**2025-09-19**|**Accurate Thyroid Cancer Classification using a Novel Binary Pattern Driven Local Discrete Cosine Transform Descriptor**|Saurabh Saini et.al.|[2509.16382](http://arxiv.org/abs/2509.16382)|<span class="null">—</span>|
-|**2025-09-19**|**EMPEROR: Efficient Moment-Preserving Representation of Distributions**|Xinran Liu et.al.|[2509.16379](http://arxiv.org/abs/2509.16379)|<span class="null">—</span>|
-|**2025-09-17**|**Motional representation; the ability to predict odor characters using molecular vibrations**|Yuki Harada et.al.|[2509.16245](http://arxiv.org/abs/2509.16245)|<span class="null">—</span>|
-|**2025-09-11**|**An Open Dataset for Temperature Modelling in Machine Tools**|C. Coelho et.al.|[2509.16222](http://arxiv.org/abs/2509.16222)|<span class="null">—</span>|
-|**2025-09-18**|**Mapping Microstructure: Manifold Construction for Accelerated Materials Exploration**|Simon A. Mason et.al.|[2509.15022](http://arxiv.org/abs/2509.15022)|<span class="null">—</span>|
-|**2025-09-17**|**Bridging the Synthetic-Real Gap: Supervised Domain Adaptation for Robust Spacecraft 6-DoF Pose Estimation**|Inder Pal Singh et.al.|[2509.13792](http://arxiv.org/abs/2509.13792)|<span class="null">—</span>|
-|**2025-09-16**|**Semantic-Enhanced Cross-Modal Place Recognition for Robust Robot Localization**|Yujia Lin et.al.|[2509.13474](http://arxiv.org/abs/2509.13474)|<span class="null">—</span>|
-|**2025-09-15**|**From Orthomosaics to Raw UAV Imagery: Enhancing Palm Detection and Crown-Center Localization**|Rongkun Zhu et.al.|[2509.12400](http://arxiv.org/abs/2509.12400)|<span class="null">—</span>|
-|**2025-09-14**|**GraphDerm: Fusing Imaging, Physical Scale, and Metadata in a Population-Graph Classifier for Dermoscopic Lesions**|Mehdi Yousefzadeh et.al.|[2509.12277](http://arxiv.org/abs/2509.12277)|<span class="null">—</span>|
-|**2025-09-15**|**Descriptor and Graph-based Molecular Representations in Prediction of Copolymer Properties Using Machine Learning**|Elaheh Kazemi-Khasragh et.al.|[2509.11874](http://arxiv.org/abs/2509.11874)|<span class="null">—</span>|
-|**2025-09-15**|**Bridging the Gap Between Sparsity and Redundancy: A Dual-Decoding Framework with Global Context for Map Inference**|Yudong Shen et.al.|[2509.11731](http://arxiv.org/abs/2509.11731)|<span class="null">—</span>|
-|**2025-10-13**|**Adapting and Evaluating Multimodal Large Language Models for Adolescent Idiopathic Scoliosis Self-Management: A Divide and Conquer Framework**|Zhaolong Wu et.al.|[2509.11645](http://arxiv.org/abs/2509.11645)|<span class="null">—</span>|
-|**2025-09-14**|**PersonaX: Multimodal Datasets with LLM-Inferred Behavior Traits**|Loka Li et.al.|[2509.11362](http://arxiv.org/abs/2509.11362)|<span class="null">—</span>|
-|**2025-09-13**|**Optimal message passing for molecular prediction is simple, attentive and spatial**|Alma C. Castaneda-Leautaud et.al.|[2509.10871](http://arxiv.org/abs/2509.10871)|<span class="null">—</span>|
-|**2025-09-20**|**Elemental Frequency-Based Supervised Classification Approach for the Search of Novel Topological Materials**|Zodinpuia Ralte et.al.|[2509.09978](http://arxiv.org/abs/2509.09978)|<span class="null">—</span>|
-|**2025-09-29**|**Loc $^2$ : Interpretable Cross-View Localization via Depth-Lifted Local Feature Matching**|Zimin Xia et.al.|[2509.09792](http://arxiv.org/abs/2509.09792)|<span class="null">—</span>|
-|**2025-09-11**|**S-BEVLoc: BEV-based Self-supervised Framework for Large-scale LiDAR Global Localization**|Chenghao Zhang et.al.|[2509.09110](http://arxiv.org/abs/2509.09110)|<span class="null">—</span>|
-|**2025-09-10**|**Computational Imaging for Enhanced Computer Vision**|Humera Shaikh et.al.|[2509.08712](http://arxiv.org/abs/2509.08712)|<span class="null">—</span>|
-|**2025-09-03**|**BodyWave: Egocentric Body Tracking using mmWave Radars on an MR Headset**|Yin Li et.al.|[2509.07995](http://arxiv.org/abs/2509.07995)|<span class="null">—</span>|
-|**2025-09-02**|**STROKEVISION-BENCH: A Multimodal Video And 2D Pose Benchmark For Tracking Stroke Recovery**|David Robinson et.al.|[2509.07994](http://arxiv.org/abs/2509.07994)|<span class="null">—</span>|
-|**2025-09-09**|**Spectrotemporal Feature Extraction in EHG Signals and Tocograms for Enhanced Preterm Birth Prediction**|Senith Jayakody et.al.|[2509.07432](http://arxiv.org/abs/2509.07432)|<span class="null">—</span>|
-|**2025-09-08**|**The First Voice Timbre Attribute Detection Challenge**|Liping Chen et.al.|[2509.06635](http://arxiv.org/abs/2509.06635)|<span class="null">—</span>|
-|**2025-09-05**|**Towards an Accurate and Effective Robot Vision (The Problem of Topological Localization for Mobile Robots)**|Emanuela Boros et.al.|[2509.04948](http://arxiv.org/abs/2509.04948)|<span class="null">—</span>|
-|**2025-09-05**|**Towards Ontology-Based Descriptions of Conversations with Qualitatively-Defined Concepts**|Barbara Gendron et.al.|[2509.04926](http://arxiv.org/abs/2509.04926)|<span class="null">—</span>|
-|**2025-09-04**|**Quantum-Enhanced Multi-Task Learning with Learnable Weighting for Pharmacokinetic and Toxicity Prediction**|Han Zhang et.al.|[2509.04601](http://arxiv.org/abs/2509.04601)|<span class="null">—</span>|
-|**2025-09-04**|**Reactive In-Air Clothing Manipulation with Confidence-Aware Dense Correspondence and Visuotactile Affordance**|Neha Sunil et.al.|[2509.03889](http://arxiv.org/abs/2509.03889)|<span class="null">—</span>|
-|**2025-09-05**|**Combining feature-based approaches with graph neural networks and symbolic regression for synergistic performance and interpretability**|Rogério Almeida Gouvêa et.al.|[2509.03547](http://arxiv.org/abs/2509.03547)|<span class="null">—</span>|
-|**2025-09-03**|**TRELLIS-Enhanced Surface Features for Comprehensive Intracranial Aneurysm Analysis**|Clément Hervé et.al.|[2509.03095](http://arxiv.org/abs/2509.03095)|<span class="null">—</span>|
-|**2025-09-02**|**SALAD -- Semantics-Aware Logical Anomaly Detection**|Matic Fučka et.al.|[2509.02101](http://arxiv.org/abs/2509.02101)|<span class="null">—</span>|
-|**2025-08-31**|**Pose as Clinical Prior: Learning Dual Representations for Scoliosis Screening**|Zirui Zhou et.al.|[2509.00872](http://arxiv.org/abs/2509.00872)|<span class="null">—</span>|
-|**2025-08-31**|**Cepstrum-Based Texture Features for Melanoma Detection**|Keith Miller et.al.|[2509.00669](http://arxiv.org/abs/2509.00669)|<span class="null">—</span>|
-|**2025-08-29**|**Maybe you don't need a U-Net: convolutional feature upsampling for materials micrograph segmentation**|Ronan Docherty et.al.|[2508.21529](http://arxiv.org/abs/2508.21529)|<span class="null">—</span>|
-|**2025-08-25**|**ImmunoAI: Accelerated Antibody Discovery Using Gradient-Boosted Machine Learning with Thermodynamic-Hydrodynamic Descriptors and 3D Geometric Interface Topology**|Shawnak Shivakumar et.al.|[2508.21082](http://arxiv.org/abs/2508.21082)|<span class="null">—</span>|
-|**2025-08-28**|**Estimating 2D Keypoints of Surgical Tools Using Vision-Language Models with Low-Rank Adaptation**|Krit Duangprom et.al.|[2508.20830](http://arxiv.org/abs/2508.20830)|<span class="null">—</span>|
-|**2025-08-27**|**TopoBind: Multi-Modal Prediction of Antibody-Antigen Binding Free Energy via Sequence Embeddings and Structural Topology**|Ciyuan Yu et.al.|[2508.19632](http://arxiv.org/abs/2508.19632)|<span class="null">—</span>|
-|**2025-08-26**|**Dual Enhancement on 3D Vision-Language Perception for Monocular 3D Visual Grounding**|Yuzhen Li et.al.|[2508.19165](http://arxiv.org/abs/2508.19165)|<span class="null">—</span>|
-|**2025-08-30**|**A Novel Deep Hybrid Framework with Ensemble-Based Feature Optimization for Robust Real-Time Human Activity Recognition**|Wasi Ullah et.al.|[2508.18695](http://arxiv.org/abs/2508.18695)|<span class="null">—</span>|
-|**2025-08-25**|**Camera Pose Refinement via 3D Gaussian Splatting**|Lulu Hao et.al.|[2508.17876](http://arxiv.org/abs/2508.17876)|<span class="null">—</span>|
-|**2025-08-25**|**DroneKey: Drone 3D Pose Estimation in Image Sequences using Gated Key-representation and Pose-adaptive Learning**|Seo-Bin Hwang et.al.|[2508.17746](http://arxiv.org/abs/2508.17746)|<span class="null">—</span>|
+|**2026-10-29**|**Mobilizing the Archive: Bitext Extraction at Scale from Archival Documents for Extremely Low-resource Languages**|Chutong Meng et.al.|[2610.40233](http://arxiv.org/abs/2610.40233)|<span class="null">—</span>|
+|**2026-10-17**|**GLOSS-MT: Controllable Low-Resource Machine Translation with an Editable Dictionary**|Mich-Seth Owusu et.al.|[2610.24730](http://arxiv.org/abs/2610.24730)|**[link](https://github.com/GhanaOpenAI/gloss-mt)**|
+|**2026-10-26**|**Back-Translation Still Matters: Leveraging Monolingual Data for Low-Resource Machine Translation with LLMs**|Divyanshu Bathla et.al.|[2610.18818](http://arxiv.org/abs/2610.18818)|<span class="null">—</span>|
+|**2026-09-03**|**Translation as a Decision Space: A Multi-Agent Perspective on Low-Resource Dialect Generation**|Hasan Alkhder et.al.|[2609.04048](http://arxiv.org/abs/2609.04048)|<span class="null">—</span>|
+|**2026-08-26**|**TranslatePsy-AfriSLM: High-Quality Data Scaling For Low-Resource Machine Translation**|Milan Gritta et.al.|[2608.18655](http://arxiv.org/abs/2608.18655)|<span class="null">—</span>|
+|**2026-07-31**|**Cross-Lingual Transfer for Machine Translation in Turkic Languages**|Omer Burak Cinar et.al.|[2607.29355](http://arxiv.org/abs/2607.29355)|<span class="null">—</span>|
+|**2026-09-10**|**A Factorial Study of Synthetic Data Generation for Low-Resource Machine Translation using Grammar Books**|Varun Ghat Ravikumar et.al.|[2607.22376](http://arxiv.org/abs/2607.22376)|<span class="null">—</span>|
+|**2026-07-25**|**Neural Machine Translation for Low-Resource Tangkhul--English**|Chormi Zimik Vashai et.al.|[2606.25365](http://arxiv.org/abs/2606.25365)|<span class="null">—</span>|
+|**2026-08-29**|**Reasoning over Grammar: Can Synthetic Linguistic Reasoning Traces Enhance Low-Resource Machine Translation?**|Renhao Pei et.al.|[2606.03782](http://arxiv.org/abs/2606.03782)|**[link](https://github.com/OLAResearch/LingReason)**|
+|**2026-05-26**|**BhashaSetu: A Data-Centric Approach to Low-Resource Machine Translation**|Param Thakkar et.al.|[2605.27050](http://arxiv.org/abs/2605.27050)|<span class="null">—</span>|
+|**2026-05-14**|**Context Training with Active Information Seeking**|Zeyu Huang et.al.|[2605.13050](http://arxiv.org/abs/2605.13050)|<span class="null">—</span>|
+|**2026-05-08**|**Why do Large Language Models Fail in Low-resource Translation? Unraveling the Token Dynamics of Large Language Models for Machine Translation**|Shenbin Qian et.al.|[2605.07533](http://arxiv.org/abs/2605.07533)|<span class="null">—</span>|
+|**2026-05-05**|**Nsanku: Evaluating Zero-Shot Translation Performance of LLMs for Ghanaian Languages**|Stephen E. Moore et.al.|[2605.04208](http://arxiv.org/abs/2605.04208)|<span class="null">—</span>|
+|**2026-05-26**|**Syntax as a Rosetta Stone: Universal Dependencies for In-Context Coptic Translation**|Abhishek Purushothama et.al.|[2604.18758](http://arxiv.org/abs/2604.18758)|<span class="null">—</span>|
+|**2026-04-06**|**MERIT: Multilingual Expert-Reward Informed Tuning for Chinese-Centric Low-Resource Machine Translation**|Zhixiang Lu et.al.|[2604.04839](http://arxiv.org/abs/2604.04839)|<span class="null">—</span>|
+|**2026-08-27**|**Translation Asymmetry in LLMs as a Data Augmentation Factor: A Case Study for 6 Romansh Language Varieties**|Jannis Vamvas et.al.|[2603.25489](http://arxiv.org/abs/2603.25489)|<span class="null">—</span>|
+|**2026-03-26**|**Translation or Recitation? Calibrating Evaluation Scores for Machine Translation of Extremely Low-Resource Languages**|Danlu Chen et.al.|[2603.25222](http://arxiv.org/abs/2603.25222)|<span class="null">—</span>|
+|**2026-03-18**|**Pretrained Multilingual Transformers Reveal Quantitative Distance Between Human Languages**|Yue Zhao et.al.|[2603.17912](http://arxiv.org/abs/2603.17912)|<span class="null">—</span>|
+|**2026-03-17**|**Can Linguistically Related Languages Guide LLM Translation in Low-Resource Settings?**|Aishwarya Ramasethu et.al.|[2603.16660](http://arxiv.org/abs/2603.16660)|<span class="null">—</span>|
+|**2026-03-13**|**Mending the Holes: Mitigating Reward Hacking in Reinforcement Learning for Multilingual Translation**|Yifeng Liu et.al.|[2603.13045](http://arxiv.org/abs/2603.13045)|**[link](https://github.com/LeiLiLab/WALAR)**|
+|**2026-02-19**|**Evaluating Extremely Low-Resource Machine Translation: A Comparative Study of ChrF++ and BLEU Metrics**|Sanjeev Kumar et.al.|[2602.17425](http://arxiv.org/abs/2602.17425)|<span class="null">—</span>|
+|**2026-02-04**|**Beyond Many-Shot Translation: Scaling In-Context Demonstrations For Low-Resource Machine Translation**|Luis Frentzen Salim et.al.|[2602.04764](http://arxiv.org/abs/2602.04764)|<span class="null">—</span>|
+|**2026-01-27**|**Reflective Translation: Improving Low-Resource Machine Translation via Structured Self-Reflection**|Nicholas Cheng et.al.|[2601.19871](http://arxiv.org/abs/2601.19871)|**[link](https://github.com/Nickcheng123/reflective-translation-mt)**|
+|**2026-03-17**|**Improving Low-Resource Machine Translation via Round-Trip Reinforcement Learning**|Ahmed Attia et.al.|[2601.12535](http://arxiv.org/abs/2601.12535)|**[link](https://github.com/Copticoder/MT-via-Round-Trip-RL)**|
+|**2026-02-16**|**Context Volume Drives Performance: Tackling Domain Shift in Extremely Low-Resource Translation via RAG**|David Samuel Setiawan et.al.|[2601.09982](http://arxiv.org/abs/2601.09982)|<span class="null">—</span>|
+|**2026-03-11**|**Get away with less: Need of source side data curation to build parallel corpus for low resource Machine Translation**|Saumitra Yadav et.al.|[2601.08629](http://arxiv.org/abs/2601.08629)|<span class="null">—</span>|
+|**2026-01-07**|**Analyzing and Improving Cross-lingual Knowledge Transfer for Machine Translation**|David Stap et.al.|[2601.04036](http://arxiv.org/abs/2601.04036)|<span class="null">—</span>|
+|**2025-12-17**|**Yes-MT's Submission to the Low-Resource Indic Language Translation Shared Task in WMT 2024**|Yash Bhaskar et.al.|[2512.15226](http://arxiv.org/abs/2512.15226)|<span class="null">—</span>|
+|**2026-03-31**|**POTSA: A Cross-Lingual Speech Alignment Framework for Speech-to-Text Translation**|Xuanchen Li et.al.|[2511.09232](http://arxiv.org/abs/2511.09232)|<span class="null">—</span>|
+|**2025-11-01**|**Leveraging the Cross-Domain & Cross-Linguistic Corpus for Low Resource NMT: A Case Study On Bhili-Hindi-English Parallel Corpus**|Pooja Singh et.al.|[2511.00486](http://arxiv.org/abs/2511.00486)|<span class="null">—</span>|
+|**2025-10-29**|**Pretraining Strategies using Monolingual and Parallel Data for Low-Resource Machine Translation**|Idriss Nguepi Nguefack et.al.|[2510.25116](http://arxiv.org/abs/2510.25116)|<span class="null">—</span>|
+|**2025-12-10**|**TRepLiNa: Layer-wise CKA+REPINA Alignment Improves Low-Resource Machine Translation in Aya-23 8B**|Toshiki Nakai et.al.|[2510.06249](http://arxiv.org/abs/2510.06249)|<span class="null">—</span>|
+|**2025-09-15**|**A comparison of pipelines for the translation of a low resource language based on transformers**|Chiara Bonfanti et.al.|[2509.12514](http://arxiv.org/abs/2509.12514)|<span class="null">—</span>|
+|**2025-08-26**|**Improving Low-Resource Translation with Dictionary-Guided Fine-Tuning and RL: A Spanish-to-Wayuunaiki Study**|Manuel Mosquera et.al.|[2508.19481](http://arxiv.org/abs/2508.19481)|<span class="null">—</span>|
+|**2025-08-12**|**TopXGen: Topic-Diverse Parallel Data Generation for Low-Resource Machine Translation**|Armel Zebaze et.al.|[2508.08680](http://arxiv.org/abs/2508.08680)|**[link](https://github.com/ArmelRandy/topxgen)**|
+|**2025-08-08**|**Testing the Limits of Machine Translation from One Book**|Jonathan Shaw et.al.|[2508.06665](http://arxiv.org/abs/2508.06665)|<span class="null">—</span>|
+|**2025-06-12**|**The Saturation Point of Backtranslation in High Quality Low Resource English Gujarati Machine Translation**|Arwa Arif et.al.|[2506.21566](http://arxiv.org/abs/2506.21566)|<span class="null">—</span>|
+|**2025-05-30**|**Limited-Resource Adapters Are Regularizers, Not Linguists**|Marcell Fekete et.al.|[2505.24525](http://arxiv.org/abs/2505.24525)|<span class="null">—</span>|
+|**2025-05-28**|**Compensating for Data with Reasoning: Low-Resource Machine Translation with LLMs**|Samuel Frontull et.al.|[2505.22293](http://arxiv.org/abs/2505.22293)|<span class="null">—</span>|
+|**2025-05-24**|**TULUN: Transparent and Adaptable Low-resource Machine Translation**|Raphaël Merx et.al.|[2505.18683](http://arxiv.org/abs/2505.18683)|<span class="null">—</span>|
+|**2025-05-21**|**Pivot Language for Low-Resource Machine Translation**|Abhimanyu Talwar et.al.|[2505.14553](http://arxiv.org/abs/2505.14553)|<span class="null">—</span>|
+|**2025-09-22**|**Scaling Low-Resource MT via Synthetic Data Generation with LLMs**|Ona de Gibert et.al.|[2505.14423](http://arxiv.org/abs/2505.14423)|<span class="null">—</span>|
+|**2025-05-20**|**FuxiMT: Sparsifying Large Language Models for Chinese-Centric Multilingual Machine Translation**|Shaolin Zhu et.al.|[2505.14256](http://arxiv.org/abs/2505.14256)|<span class="null">—</span>|
+|**2025-05-18**|**LLM-Based Evaluation of Low-Resource Machine Translation: A Reference-less Dialect Guided Approach with a Refined Sylheti-English Benchmark**|Md. Atiqur Rahman et.al.|[2505.12273](http://arxiv.org/abs/2505.12273)|**[link](https://github.com/180041123-Atiq/MTEonLowResourceLanguage)**|
+|**2026-01-12**|**Bridging the Linguistic Divide: A Survey on Leveraging Large Language Models for Machine Translation**|Baban Gain et.al.|[2504.01919](http://arxiv.org/abs/2504.01919)|<span class="null">—</span>|
+|**2025-03-28**|**Beyond Vanilla Fine-Tuning: Leveraging Multistage, Multilingual, and Domain-Specific Methods for Low-Resource Machine Translation**|Sarubi Thillainathan et.al.|[2503.22582](http://arxiv.org/abs/2503.22582)|<span class="null">—</span>|
+|**2025-03-25**|**Low-resource Machine Translation for Code-switched Kazakh-Russian Language Pair**|Maksim Borisov et.al.|[2503.20007](http://arxiv.org/abs/2503.20007)|<span class="null">—</span>|
+|**2025-03-06**|**Compositional Translation: A Novel LLM-based Approach for Low-resource Machine Translation**|Armel Zebaze et.al.|[2503.04554](http://arxiv.org/abs/2503.04554)|**[link](https://github.com/ArmelRandy/compositional-translation)**|
+|**2025-08-29**|**Improving Low-Resource Machine Translation via Cross-Linguistic Transfer from Typologically Similar High-Resource Languages**|Saughmon Boujkian et.al.|[2501.00045](http://arxiv.org/abs/2501.00045)|<span class="null">—</span>|
+|**2025-06-01**|**Towards Neural No-Resource Language Translation: A Comparative Evaluation of Approaches**|Madhavendra Thakur et.al.|[2412.20584](http://arxiv.org/abs/2412.20584)|<span class="null">—</span>|
+|**2024-12-03**|**Improving Language Transfer Capability of Decoder-only Architecture in Multilingual Neural Machine Translation**|Zhi Qu et.al.|[2412.02101](http://arxiv.org/abs/2412.02101)|<span class="null">—</span>|
+|**2025-04-02**|**Low-resource Machine Translation: what for? who for? An observational study on a dedicated Tetun language translation service**|Raphael Merx et.al.|[2411.12262](http://arxiv.org/abs/2411.12262)|<span class="null">—</span>|
+|**2024-11-15**|**On the Shortcut Learning in Multilingual Neural Machine Translation**|Wenxuan Wang et.al.|[2411.10581](http://arxiv.org/abs/2411.10581)|<span class="null">—</span>|
+|**2025-01-07**|**Dialectal and Low-Resource Machine Translation for Aromanian**|Alexandru-Iulius Jerpelea et.al.|[2410.17728](http://arxiv.org/abs/2410.17728)|<span class="null">—</span>|
+|**2024-10-07**|**Neural machine translation system for Lezgian, Russian and Azerbaijani languages**|Alidar Asvarov et.al.|[2410.05472](http://arxiv.org/abs/2410.05472)|**[link](https://github.com/Alidar40/lez-rus-azj-translator)**|
+|**2025-11-10**|**Mufu: Multilingual Fused Learning for Low-Resource Translation with LLM**|Zheng Wei Lim et.al.|[2409.13949](http://arxiv.org/abs/2409.13949)|<span class="null">—</span>|
+|**2024-09-06**|**Open Language Data Initiative: Advancing Low-Resource Machine Translation for Karakalpak**|Mukhammadsaid Mamasaidov et.al.|[2409.04269](http://arxiv.org/abs/2409.04269)|<span class="null">—</span>|
+|**2024-09-04**|**A Data Selection Approach for Enhancing Low Resource Machine Translation Using Cross-Lingual Sentence Representations**|Nidhi Kowtal et.al.|[2409.02712](http://arxiv.org/abs/2409.02712)|<span class="null">—</span>|
+|**2024-10-03**|**Quality or Quantity? On Data Scale and Diversity in Adapting Large Language Models for Low-Resource Translation**|Vivek Iyer et.al.|[2408.12780](http://arxiv.org/abs/2408.12780)|<span class="null">—</span>|
+|**2024-08-05**|**Decoupled Vocabulary Learning Enables Zero-Shot Translation from Unseen Languages**|Carlos Mullov et.al.|[2408.02290](http://arxiv.org/abs/2408.02290)|<span class="null">—</span>|
+|**2024-08-02**|**Improving Multilingual Neural Machine Translation by Utilizing Semantic and Linguistic Features**|Mengyu Bu et.al.|[2408.01394](http://arxiv.org/abs/2408.01394)|**[link](https://github.com/ictnlp/SemLing-MNMT)**|
+|**2024-08-01**|**In-Context Example Selection via Similarity Search Improves Low-Resource Machine Translation**|Armel Zebaze et.al.|[2408.00397](http://arxiv.org/abs/2408.00397)|**[link](https://github.com/ArmelRandy/ICL-MT)**|
+|**2024-10-24**|**Shortcomings of LLMs for Low-Resource Translation: Retrieval and Understanding are Both the Problem**|Sara Court et.al.|[2406.15625](http://arxiv.org/abs/2406.15625)|<span class="null">—</span>|
+|**2024-06-19**|**How effective is Multi-source pivoting for Translation of Low Resource Indian Languages?**|Pranav Gaikwad et.al.|[2406.13332](http://arxiv.org/abs/2406.13332)|<span class="null">—</span>|
+|**2024-12-20**|**Low-Resource Machine Translation through the Lens of Personalized Federated Learning**|Viktor Moskvoretskii et.al.|[2406.12564](http://arxiv.org/abs/2406.12564)|**[link](https://github.com/VityaVitalich/MeritOpt)**|
+|**2025-04-08**|**Languages Transferred Within the Encoder: On Representation Transfer in Zero-Shot Multilingual Translation**|Zhi Qu et.al.|[2406.08092](http://arxiv.org/abs/2406.08092)|**[link](https://github.com/zhiqu22/ZeroTrans)**|
+|**2024-06-06**|**LCS: A Language Converter Strategy for Zero-Shot Neural Machine Translation**|Zengkui Sun et.al.|[2406.02876](http://arxiv.org/abs/2406.02876)|**[link](https://github.com/Acerkoo/LCS)**|
+|**2024-04-22**|**From LLM to NMT: Advancing Low-Resource Machine Translation with Claude**|Maxim Enis et.al.|[2404.13813](http://arxiv.org/abs/2404.13813)|<span class="null">—</span>|
+|**2024-04-07**|**Low-Resource Machine Translation through Retrieval-Augmented LLM Prompting: A Study on the Mambai Language**|Raphaël Merx et.al.|[2404.04809](http://arxiv.org/abs/2404.04809)|<span class="null">—</span>|
+|**2024-06-18**|**Pointer-Generator Networks for Low-Resource Machine Translation: Don't Copy That!**|Niyati Bafna et.al.|[2403.10963](http://arxiv.org/abs/2403.10963)|<span class="null">—</span>|
+|**2025-02-05**|**EBBS: An Ensemble with Bi-Level Beam Search for Zero-Shot Machine Translation**|Yuqiao Wen et.al.|[2403.00144](http://arxiv.org/abs/2403.00144)|<span class="null">—</span>|
+|**2024-02-07**|**Improving Cross-Domain Low-Resource Text Generation through LLM Post-Editing: A Programmer-Interpreter Approach**|Zhuang Li et.al.|[2402.04609](http://arxiv.org/abs/2402.04609)|<span class="null">—</span>|
+|**2024-02-26**|**How Far Can 100 Samples Go? Unlocking Overall Zero-Shot Multilingual Translation via Tiny Multi-Parallel Data**|Di Wu et.al.|[2401.12413](http://arxiv.org/abs/2401.12413)|<span class="null">—</span>|
+|**2024-02-07**|**Towards Boosting Many-to-Many Multilingual Machine Translation with Large Language Models**|Pengzhi Gao et.al.|[2401.05861](http://arxiv.org/abs/2401.05861)|**[link](https://github.com/gpengzhi/CrossConST-LLM)**|
+|**2023-12-20**|**Fine-tuning Large Language Models for Adaptive Machine Translation**|Yasmin Moslem et.al.|[2312.12740](http://arxiv.org/abs/2312.12740)|**[link](https://github.com/ymoslem/Adaptive-MT-LLM-Fine-tuning)**|
+|**2023-12-13**|**Beyond English: Evaluating LLMs for Arabic Grammatical Error Correction**|Sang Yun Kwon et.al.|[2312.08400](http://arxiv.org/abs/2312.08400)|<span class="null">—</span>|
+|**2024-04-28**|**Investigating Multi-Pivot Ensembling with Massively Multilingual Machine Translation Models**|Alireza Mohammadshahi et.al.|[2311.07439](http://arxiv.org/abs/2311.07439)|**[link](https://github.com/zurichnlp/multipivotnmt)**|
+|**2023-11-09**|**Unsupervised Translation Quality Estimation Exploiting Synthetic Data and Pre-trained Multilingual Encoder**|Yuto Kuroda et.al.|[2311.05117](http://arxiv.org/abs/2311.05117)|<span class="null">—</span>|
+|**2023-11-04**|**Narrowing the Gap between Zero- and Few-shot Machine Translation by Matching Styles**|Weiting Tan et.al.|[2311.02310](http://arxiv.org/abs/2311.02310)|<span class="null">—</span>|
 
-> Showing the latest 200 of 569 papers, see the [archive](#archive) for all.
-
-<h2 id="image-matching">Image Matching</h2>
+<h2 id="document-level-mt">Document-Level MT</h2>
 
 | Publish Date | Title | Authors | PDF | Code |
 |:---------|:-----------------------|:---------|:------|:------|
-|**2026-10-29**|**Luggage re-identification: A study of strategies towards a real-world application**|Quentin Dhôte et.al.|[2610.40643](http://arxiv.org/abs/2610.40643)|<span class="null">—</span>|
-|**2026-10-29**|**Comprehensive empirical evaluation of feature extractors in computer vision**|Murat Isik et.al.|[2610.39551](http://arxiv.org/abs/2610.39551)|<span class="null">—</span>|
-|**2026-10-28**|**Aligning Misaligned Benchmarks for Single-View Novel View Synthesis**|Yang-Che Tseng et.al.|[2610.38349](http://arxiv.org/abs/2610.38349)|<span class="null">—</span>|
-|**2026-10-23**|**ACVA-Bench: Beyond Prompt Following in Abstract Concept Visualization Ability for Text-to-Image Models**|Mengyan Wang et.al.|[2610.32058](http://arxiv.org/abs/2610.32058)|<span class="null">—</span>|
-|**2026-10-22**|**MVLoMa: Multi-View Local Feature Matching with Any Geometry Foundation Model**|Xinyang Lu et.al.|[2610.31321](http://arxiv.org/abs/2610.31321)|<span class="null">—</span>|
-|**2026-10-22**|**HimmBO: High-Dimensional Interactive Model-Merging Bayesian Optimization for Image Generation**|Jinyuan Mao et.al.|[2610.30875](http://arxiv.org/abs/2610.30875)|<span class="null">—</span>|
-|**2026-10-28**|**WovenAnchor Matcher: Specialized Intra- and Inter-Image Context Modeling for Feature Matching**|Zhiyang Li et.al.|[2610.30799](http://arxiv.org/abs/2610.30799)|**[link](https://github.com/mmaiLab/WovenAnchorMatcher)**|
-|**2026-10-18**|**LateMatch: Breaking the Interaction Bottleneck via Cacheable Matching for Efficient Visual Localization**|Mohammad Omama et.al.|[2610.25358](http://arxiv.org/abs/2610.25358)|<span class="null">—</span>|
-|**2026-10-16**|**DinoMUSE: A DINOv2-guided Framework for Unsupervised Lateral Motion Estimation in Ultrasound Elastography**|Xiyao Meng et.al.|[2610.24020](http://arxiv.org/abs/2610.24020)|<span class="null">—</span>|
-|**2026-10-15**|**CLAD: Keypoint Matching Using Global Line Correspondences**|Masaki Satoh et.al.|[2610.21409](http://arxiv.org/abs/2610.21409)|<span class="null">—</span>|
-|**2026-10-12**|**The Value of Being Wrong: Self-Mined Visual In-Context Learning from Errors**|Shu Zhao et.al.|[2610.16977](http://arxiv.org/abs/2610.16977)|<span class="null">—</span>|
-|**2026-10-09**|**Efficient Confidence-Aware Densification for 3DGS**|Manuel Hofer et.al.|[2610.13541](http://arxiv.org/abs/2610.13541)|<span class="null">—</span>|
-|**2026-10-05**|**WildMatch: Weakly Supervised Image Matcher Adaptation for Wildlife Re-Identification**|Turhan Can Kargin et.al.|[2610.07384](http://arxiv.org/abs/2610.07384)|**[link](https://github.com/turhancan97/WildMatch)**|
-|**2026-10-02**|**Geometry-Aligned Semantic Matching for Cross-Modal Planar Image Registration**|Zhiwei Wang et.al.|[2610.03167](http://arxiv.org/abs/2610.03167)|<span class="null">—</span>|
-|**2026-09-30**|**EPIC: Epipolar-Consistent 360° Immersive Stereo Video Generation**|Debabrata Mandal et.al.|[2609.38689](http://arxiv.org/abs/2609.38689)|<span class="null">—</span>|
-|**2026-09-30**|**RBF-GNN: Rational Basis Functions for Pseudo-Coordinate based Graph Convolutions**|Paweł Batorski et.al.|[2609.37015](http://arxiv.org/abs/2609.37015)|**[link](https://github.com/pawelswoboda/RationalBasisCNN)**|
-|**2026-09-29**|**UltraMatch: Transport Path Routing for Ultra-Fast and Memory-Efficient Image Matching**|Jiajun Le et.al.|[2609.36980](http://arxiv.org/abs/2609.36980)|**[link](https://github.com/JiajunLe/UltraMatch)**|
-|**2026-09-25**|**Facial classification Using Hybrid Quantum Machine Learning**|Roshan Babu Bandlapalli et.al.|[2609.31915](http://arxiv.org/abs/2609.31915)|<span class="null">—</span>|
-|**2026-09-15**|**Co-occurrence-Aware Quadratic Assignment for Local Feature Matching in Simultaneous Localization and Mapping**|Yutaka Yamada et.al.|[2609.17905](http://arxiv.org/abs/2609.17905)|<span class="null">—</span>|
-|**2026-09-08**|**RoMa- $Ω$ : What Feed-Forward 3D Models Know About Image Matching**|David Nordström et.al.|[2609.09507](http://arxiv.org/abs/2609.09507)|**[link](https://github.com/davnords/RoMa-Omega)**|
-|**2026-09-06**|**Back to the Feature: Zero-Shot 6DoF Pose Estimation via Dense Local Features**|Ali Rafiaei et.al.|[2609.06726](http://arxiv.org/abs/2609.06726)|<span class="null">—</span>|
-|**2026-05-11**|**3DReflecNet: A Large-Scale Dataset for 3D Reconstruction of Reflective, Transparent, and Low-Texture Objects**|Zhicheng Liang et.al.|[2605.10204](http://arxiv.org/abs/2605.10204)|<span class="null">—</span>|
-|**2026-05-06**|**Creative Robot Tool Use by Counterfactual Reasoning**|M. Tuluhan Akbulut et.al.|[2605.05411](http://arxiv.org/abs/2605.05411)|<span class="null">—</span>|
-|**2026-05-02**|**SIFT-VTON: Geometric Correspondence Supervision on Cross-Attention for Virtual Try-On**|Kosuke Takemoto et.al.|[2605.01296](http://arxiv.org/abs/2605.01296)|**[link](https://github.com/takesukeDS/SIFT-VTON)**|
-|**2026-05-01**|**TrueEBSD in MTEX: automatic image matching for correlative microscopy applications**|Vivian Tong et.al.|[2605.00703](http://arxiv.org/abs/2605.00703)|**[link](https://github.com/vtvivian/mtex-trueEbsd)**|
-|**2026-04-28**|**GeoSearch: Augmenting Worldwide Geolocalization with Web-Scale Reverse Image Search and Image Matching**|Tung-Duong Le-Duc et.al.|[2604.25390](http://arxiv.org/abs/2604.25390)|<span class="null">—</span>|
-|**2026-04-26**|**Deploy DINO with Many-to-Many Association**|Haodong Jiang et.al.|[2604.23670](http://arxiv.org/abs/2604.23670)|**[link](https://github.com/LIAS-CUHKSZ/preserve_then_resolve)**|
-|**2026-04-24**|**ArchSym: Detecting 3D-Grounded Architectural Symmetries in the Wild**|Hanyu Chen et.al.|[2604.22202](http://arxiv.org/abs/2604.22202)|<span class="null">—</span>|
-|**2026-04-22**|**MAPRPose: Mask-Aware Proposal and Amodal Refinement for Multi-Object 6D Pose Estimation**|Yang Luo et.al.|[2604.20650](http://arxiv.org/abs/2604.20650)|<span class="null">—</span>|
-|**2026-04-17**|**Where Do Vision-Language Models Fail? World Scale Analysis for Image Geolocalization**|Siddhant Bharadwaj et.al.|[2604.16248](http://arxiv.org/abs/2604.16248)|<span class="null">—</span>|
-|**2026-04-15**|**SceneGlue: Scene-Aware Transformer for Feature Matching without Scene-Level Annotation**|Songlin Du et.al.|[2604.13941](http://arxiv.org/abs/2604.13941)|<span class="null">—</span>|
-|**2026-04-13**|**Who Handles Orientation? Investigating Invariance in Feature Matching**|David Nordström et.al.|[2604.11809](http://arxiv.org/abs/2604.11809)|<span class="null">—</span>|
-|**2026-04-11**|**DeepShapeMatchingKit: Accelerated Functional Map Solver and Shape Matching Pipelines Revisited**|Yizheng Xie et.al.|[2604.10377](http://arxiv.org/abs/2604.10377)|<span class="null">—</span>|
-|**2026-04-14**|**Are Pretrained Image Matchers Good Enough for SAR-Optical Satellite Registration?**|Isaac Corley et.al.|[2604.10217](http://arxiv.org/abs/2604.10217)|<span class="null">—</span>|
-|**2026-04-08**|**Mathematical Analysis of Image Matching Techniques**|Oleh Samoilenko et.al.|[2604.07574](http://arxiv.org/abs/2604.07574)|<span class="null">—</span>|
-|**2026-04-08**|**Improving Local Feature Matching by Entropy-inspired Scale Adaptability and Flow-endowed Local Consistency**|Ke Jin et.al.|[2604.06713](http://arxiv.org/abs/2604.06713)|<span class="null">—</span>|
-|**2026-04-06**|**LoMa: Local Feature Matching Revisited**|David Nordström et.al.|[2604.04931](http://arxiv.org/abs/2604.04931)|<span class="null">—</span>|
-|**2026-03-30**|**AffordMatcher: Affordance Learning in 3D Scenes from Visual Signifiers**|Nghia Vu et.al.|[2603.27970](http://arxiv.org/abs/2603.27970)|<span class="null">—</span>|
-|**2026-03-23**|**EpiMask: Leveraging Epipolar Distance Based Masks in Cross-Attention for Satellite Image Matching**|Rahul Deshmukh et.al.|[2603.21463](http://arxiv.org/abs/2603.21463)|<span class="null">—</span>|
-|**2026-03-20**|**Benchmarking Efficient & Effective Camera Pose Estimation Strategies for Novel View Synthesis**|Jhacson Meza et.al.|[2603.20428](http://arxiv.org/abs/2603.20428)|<span class="null">—</span>|
-|**2026-03-19**|**Pixel-Accurate Epipolar Guided Matching**|Oleksii Nasypanyi et.al.|[2603.18401](http://arxiv.org/abs/2603.18401)|<span class="null">—</span>|
-|**2026-03-13**|**CM-Bench: A Comprehensive Cross-Modal Feature Matching Benchmark Bridging Visible and Infrared Images**|Liangzheng Sun et.al.|[2603.12690](http://arxiv.org/abs/2603.12690)|<span class="null">—</span>|
-|**2026-03-26**|**Enhancing Cross-View UAV Geolocalization via LVLM-Driven Relational Modeling**|Bowen Liu et.al.|[2603.08063](http://arxiv.org/abs/2603.08063)|<span class="null">—</span>|
-|**2026-03-09**|**Speed3R: Sparse Feed-forward 3D Reconstruction Models**|Weining Ren et.al.|[2603.08055](http://arxiv.org/abs/2603.08055)|<span class="null">—</span>|
-|**2026-03-06**|**EventGeM: Global-to-Local Feature Matching for Event-Based Visual Place Recognition**|Adam D. Hines et.al.|[2603.05807](http://arxiv.org/abs/2603.05807)|<span class="null">—</span>|
-|**2026-02-27**|**No Calibration, No Depth, No Problem: Cross-Sensor View Synthesis with 3D Consistency**|Cho-Ying Wu et.al.|[2602.23559](http://arxiv.org/abs/2602.23559)|<span class="null">—</span>|
-|**2026-02-26**|**FlowFixer: Towards Detail-Preserving Subject-Driven Generation**|Jinyoung Jun et.al.|[2602.21402](http://arxiv.org/abs/2602.21402)|<span class="null">—</span>|
-|**2026-02-23**|**Generative 6D Pose Estimation via Conditional Flow Matching**|Amir Hamza et.al.|[2602.19719](http://arxiv.org/abs/2602.19719)|<span class="null">—</span>|
-|**2026-02-13**|**Matching of SAR and optical images based on transformation to shared modality**|Alexey Borisov et.al.|[2602.12515](http://arxiv.org/abs/2602.12515)|<span class="null">—</span>|
-|**2026-03-12**|**Understanding and Optimizing Attention-Based Sparse Matching for Diverse Local Features**|Qiang Wang et.al.|[2602.08430](http://arxiv.org/abs/2602.08430)|<span class="null">—</span>|
-|**2026-01-31**|**Gaussian-Constrained LeJEPA Representations for Unsupervised Scene Discovery and Pose Consistency**|Mohsen Mostafa et.al.|[2602.07016](http://arxiv.org/abs/2602.07016)|<span class="null">—</span>|
-|**2026-02-05**|**SOMA-1M: A Large-Scale SAR-Optical Multi-resolution Alignment Dataset for Multi-Task Remote Sensing**|Peihao Wu et.al.|[2602.05480](http://arxiv.org/abs/2602.05480)|<span class="null">—</span>|
-|**2026-02-04**|**Quantile Transfer for Reliable Operating Point Selection in Visual Place Recognition**|Dhyey Manish Rajani et.al.|[2602.04401](http://arxiv.org/abs/2602.04401)|<span class="null">—</span>|
-|**2026-01-19**|**A Streamlined Attention-Based Network for Descriptor Extraction**|Mattia D'Urso et.al.|[2601.13126](http://arxiv.org/abs/2601.13126)|<span class="null">—</span>|
-|**2026-01-18**|**XRefine: Attention-Guided Keypoint Match Refinement**|Jan Fabian Schmid et.al.|[2601.12530](http://arxiv.org/abs/2601.12530)|<span class="null">—</span>|
-|**2026-02-03**|**Detecting 3D Line Segments for 6DoF Pose Estimation with Limited Data**|Matej Mok et.al.|[2601.12090](http://arxiv.org/abs/2601.12090)|<span class="null">—</span>|
-|**2026-01-17**|**SupScene: Learning Overlap-Aware Global Descriptor for Unconstrained SfM**|Xulei Shi et.al.|[2601.11930](http://arxiv.org/abs/2601.11930)|<span class="null">—</span>|
-|**2026-01-14**|**CLIDD: Cross-Layer Independent Deformable Description for Efficient and Discriminative Local Feature Representation**|Haodi Yao et.al.|[2601.09230](http://arxiv.org/abs/2601.09230)|<span class="null">—</span>|
-|**2026-01-13**|**Near-perfect photo-ID of the Hula painted frog with zero-shot deep local-feature matching**|Maayan Yesharim et.al.|[2601.08798](http://arxiv.org/abs/2601.08798)|<span class="null">—</span>|
-|**2026-01-13**|**Second-order Gaussian directional derivative representations for image high-resolution corner detection**|Dongbo Xie et.al.|[2601.08182](http://arxiv.org/abs/2601.08182)|<span class="null">—</span>|
-|**2026-01-09**|**Stationaere Kurven auf endlichdimensionalen Mannigfaltigkeiten**|Tobias Starke et.al.|[2601.05695](http://arxiv.org/abs/2601.05695)|<span class="null">—</span>|
-|**2026-01-05**|**Exact Clique Number Manipulation via Edge Interdiction**|Yi Zhou et.al.|[2601.01869](http://arxiv.org/abs/2601.01869)|<span class="null">—</span>|
-|**2025-12-31**|**Quantum Visual Word Sense Disambiguation: Unraveling Ambiguities Through Quantum Inference Model**|Wenbo Qiao et.al.|[2512.24687](http://arxiv.org/abs/2512.24687)|<span class="null">—</span>|
-|**2025-12-24**|**VisRes Bench: On Evaluating the Visual Reasoning Capabilities of VLMs**|Brigitta Malagurski Törtei et.al.|[2512.21194](http://arxiv.org/abs/2512.21194)|<span class="null">—</span>|
-|**2025-12-20**|**Analog Quantum Image Representation with Qubit-Frugal Encoding**|Vikrant Sharma et.al.|[2512.18451](http://arxiv.org/abs/2512.18451)|<span class="null">—</span>|
-|**2025-12-17**|**The Perceptual Observatory Characterizing Robustness and Grounding in MLLMs**|Tejas Anvekar et.al.|[2512.15949](http://arxiv.org/abs/2512.15949)|<span class="null">—</span>|
-|**2025-12-11**|**Self-Supervised Contrastive Embedding Adaptation for Endoscopic Image Matching**|Alberto Rota et.al.|[2512.10379](http://arxiv.org/abs/2512.10379)|<span class="null">—</span>|
-|**2025-12-14**|**MotionEdit: Benchmarking and Learning Motion-Centric Image Editing**|Yixin Wan et.al.|[2512.10284](http://arxiv.org/abs/2512.10284)|<span class="null">—</span>|
-|**2025-12-04**|**Value Gradient Guidance for Flow Matching Alignment**|Zhen Liu et.al.|[2512.05116](http://arxiv.org/abs/2512.05116)|<span class="null">—</span>|
-|**2025-12-04**|**Deep infant brain segmentation from multi-contrast MRI**|Malte Hoffmann et.al.|[2512.05114](http://arxiv.org/abs/2512.05114)|<span class="null">—</span>|
-|**2025-12-04**|**Deep Forcing: Training-Free Long Video Generation with Deep Sink and Participative Compression**|Jung Yi et.al.|[2512.05081](http://arxiv.org/abs/2512.05081)|<span class="null">—</span>|
-|**2025-12-04**|**Improving Posterior Inference of Galaxy Properties with Image-Based Conditional Flow Matching**|Mikaeel Yunus et.al.|[2512.05078](http://arxiv.org/abs/2512.05078)|<span class="null">—</span>|
-|**2025-12-04**|**Generative Neural Video Compression via Video Diffusion Prior**|Qi Mao et.al.|[2512.05016](http://arxiv.org/abs/2512.05016)|<span class="null">—</span>|
-|**2025-12-04**|**Environment-Aware Channel Inference via Cross-Modal Flow: From Multimodal Sensing to Wireless Channels**|Guangming Liang et.al.|[2512.04966](http://arxiv.org/abs/2512.04966)|<span class="null">—</span>|
-|**2025-12-04**|**LatentFM: A Latent Flow Matching Approach for Generative Medical Image Segmentation**|Huynh Trinh Ngoc et.al.|[2512.04821](http://arxiv.org/abs/2512.04821)|<span class="null">—</span>|
-|**2025-12-04**|**Unveiling gravitational waves from core-collapse supernovae with MUSE**|Alessandro Veutro et.al.|[2512.04804](http://arxiv.org/abs/2512.04804)|<span class="null">—</span>|
-|**2025-12-04**|**Live Avatar: Streaming Real-time Audio-Driven Avatar Generation with Infinite Length**|Yubo Huang et.al.|[2512.04677](http://arxiv.org/abs/2512.04677)|<span class="null">—</span>|
-|**2025-12-04**|**Spectral micro-CT for quantitative analysis of calcification in fibrocartilage**|Vittoria Mazzini et.al.|[2512.04662](http://arxiv.org/abs/2512.04662)|<span class="null">—</span>|
-|**2025-12-03**|**DINO-RotateMatch: A Rotation-Aware Deep Framework for Robust Image Matching in Large-Scale 3D Reconstruction**|Kaichen Zhang et.al.|[2512.03715](http://arxiv.org/abs/2512.03715)|<span class="null">—</span>|
-|**2025-11-26**|**Fast 3D Ultrasound Localization Microscopy via Projection-based Processing Framework**|Jingke Zhang et.al.|[2511.21647](http://arxiv.org/abs/2511.21647)|<span class="null">—</span>|
-|**2025-11-26**|**MoGAN: Improving Motion Quality in Video Diffusion via Few-Step Motion Adversarial Post-Training**|Haotian Xue et.al.|[2511.21592](http://arxiv.org/abs/2511.21592)|<span class="null">—</span>|
-|**2025-11-26**|**Semantic-Enhanced Feature Matching with Learnable Geometric Verification for Cross-Modal Neuron Registration**|Wenwei Li et.al.|[2511.21452](http://arxiv.org/abs/2511.21452)|<span class="null">—</span>|
-|**2025-11-26**|**TSGM: Regular and Irregular Time-series Generation using Score-based Generative Models**|Haksoo Lim et.al.|[2511.21335](http://arxiv.org/abs/2511.21335)|<span class="null">—</span>|
-|**2025-11-26**|**Unlocking Zero-shot Potential of Semi-dense Image Matching via Gaussian Splatting**|Juncheng Chen et.al.|[2511.21265](http://arxiv.org/abs/2511.21265)|<span class="null">—</span>|
-|**2025-11-26**|**From Diffusion to One-Step Generation: A Comparative Study of Flow-Based Models with Application to Image Inpainting**|Umang Agarwal et.al.|[2511.21215](http://arxiv.org/abs/2511.21215)|<span class="null">—</span>|
-|**2025-11-26**|**Transformer Driven Visual Servoing and Dual Arm Impedance Control for Fabric Texture Matching**|Fuyuki Tokuda et.al.|[2511.21203](http://arxiv.org/abs/2511.21203)|<span class="null">—</span>|
-|**2025-11-26**|**Beyond Patch Aggregation: 3-Pass Pyramid Indexing for Vision-Enhanced Document Retrieval**|Anup Roy et.al.|[2511.21121](http://arxiv.org/abs/2511.21121)|<span class="null">—</span>|
-|**2025-11-26**|**CLRecogEye : Curriculum Learning towards exploiting convolution features for Dynamic Iris Recognition**|Geetanjali Sharma et.al.|[2511.21097](http://arxiv.org/abs/2511.21097)|<span class="null">—</span>|
-|**2025-11-26**|**Deep Parameter Interpolation for Scalar Conditioning**|Chicago Y. Park et.al.|[2511.21028](http://arxiv.org/abs/2511.21028)|<span class="null">—</span>|
-|**2025-11-24**|**Breaking the Likelihood-Quality Trade-off in Diffusion Models by Merging Pretrained Experts**|Yasin Esfandiari et.al.|[2511.19434](http://arxiv.org/abs/2511.19434)|<span class="null">—</span>|
-|**2025-11-24**|**Efficiency vs. Fidelity: A Comparative Analysis of Diffusion Probabilistic Models and Flow Matching on Low-Resource Hardware**|Srishti Gupta et.al.|[2511.19379](http://arxiv.org/abs/2511.19379)|<span class="null">—</span>|
-|**2025-11-24**|**DeCo: Frequency-Decoupled Pixel Diffusion for End-to-End Image Generation**|Zehong Ma et.al.|[2511.19365](http://arxiv.org/abs/2511.19365)|<span class="null">—</span>|
-|**2025-11-24**|**BideDPO: Conditional Image Generation with Simultaneous Text and Condition Alignment**|Dewei Zhou et.al.|[2511.19268](http://arxiv.org/abs/2511.19268)|<span class="null">—</span>|
-|**2025-11-24**|**DEAP-3DSAM: Decoder Enhanced and Auto Prompt SAM for 3D Medical Image Segmentation**|Fangda Chen et.al.|[2511.19071](http://arxiv.org/abs/2511.19071)|<span class="null">—</span>|
-|**2025-11-24**|**Machine Learning Based Identification of Solar Disk and Plages in Kodaikanal Solar Observatory Historical Suncharts**|Dibya Kirti Mishra et.al.|[2511.19040](http://arxiv.org/abs/2511.19040)|<span class="null">—</span>|
-|**2025-11-24**|**VeCoR - Velocity Contrastive Regularization for Flow Matching**|Zong-Wei Hong et.al.|[2511.18942](http://arxiv.org/abs/2511.18942)|<span class="null">—</span>|
-|**2025-11-24**|**FlowSteer: Guiding Few-Step Image Synthesis with Authentic Trajectories**|Lei Ke et.al.|[2511.18834](http://arxiv.org/abs/2511.18834)|<span class="null">—</span>|
-|**2025-11-24**|**VideoCompressa: Data-Efficient Video Understanding via Joint Temporal Compression and Spatial Reconstruction**|Shaobo Wang et.al.|[2511.18831](http://arxiv.org/abs/2511.18831)|<span class="null">—</span>|
-|**2025-11-24**|**NI-Tex: Non-isometric Image-based Garment Texture Generation**|Hui Shan et.al.|[2511.18765](http://arxiv.org/abs/2511.18765)|<span class="null">—</span>|
-|**2025-11-24**|**On the Appropriateness of Linear Stress Recovery in Biomechanical Analysis of Abdominal Aortic Aneurysm**|Alastair Catlin et.al.|[2511.18741](http://arxiv.org/abs/2511.18741)|<span class="null">—</span>|
-|**2025-11-24**|**Inverse Rendering for High-Genus Surface Meshes from Multi-View Images**|Xiang Gao et.al.|[2511.18680](http://arxiv.org/abs/2511.18680)|<span class="null">—</span>|
-|**2025-11-24**|**A Theory-Inspired Framework for Few-Shot Cross-Modal Sketch Person Re-Identification**|Yunpeng Gong et.al.|[2511.18677](http://arxiv.org/abs/2511.18677)|<span class="null">—</span>|
-|**2025-11-23**|**From Simulations to Surveys: Domain Adaptation for Galaxy Observations**|Kaley Brauer et.al.|[2511.18590](http://arxiv.org/abs/2511.18590)|<span class="null">—</span>|
-|**2025-11-23**|**Transforming Conditional Density Estimation Into a Single Nonparametric Regression Task**|Alexander G. Reisach et.al.|[2511.18530](http://arxiv.org/abs/2511.18530)|<span class="null">—</span>|
-|**2025-11-23**|**CHIPS: Efficient CLIP Adaptation via Curvature-aware Hybrid Influence-based Data Selection**|Xinlin Zhuang et.al.|[2511.18519](http://arxiv.org/abs/2511.18519)|<span class="null">—</span>|
-|**2025-11-23**|**MimiCAT: Mimic with Correspondence-Aware Cascade-Transformer for Category-Free 3D Pose Transfer**|Zenghao Chai et.al.|[2511.18370](http://arxiv.org/abs/2511.18370)|<span class="null">—</span>|
-|**2025-11-23**|**DiVE-k: Differential Visual Reasoning for Fine-grained Image Recognition**|Raja Kumar et.al.|[2511.18305](http://arxiv.org/abs/2511.18305)|<span class="null">—</span>|
-|**2025-11-23**|**Uni-DAD: Unified Distillation and Adaptation of Diffusion Models for Few-step Few-shot Image Generation**|Yara Bahram et.al.|[2511.18281](http://arxiv.org/abs/2511.18281)|<span class="null">—</span>|
-|**2025-11-23**|**MammothModa2: A Unified AR-Diffusion Framework for Multimodal Understanding and Generation**|Tao Shen et.al.|[2511.18262](http://arxiv.org/abs/2511.18262)|<span class="null">—</span>|
-|**2025-11-22**|**AFT: Appearance-Based Feature Tracking for Markerless and Training-Free Shape Reconstruction of Soft Robots**|Shangyuan Yuan et.al.|[2511.18215](http://arxiv.org/abs/2511.18215)|<span class="null">—</span>|
-|**2025-11-22**|**Early Lung Cancer Diagnosis from Virtual Follow-up LDCT Generation via Correlational Autoencoder and Latent Flow Matching**|Yutong Wu et.al.|[2511.18185](http://arxiv.org/abs/2511.18185)|<span class="null">—</span>|
-|**2025-11-22**|**Matching-Based Few-Shot Semantic Segmentation Models Are Interpretable by Design**|Pasquale De Marinis et.al.|[2511.18163](http://arxiv.org/abs/2511.18163)|<span class="null">—</span>|
-|**2025-11-22**|**Video4Edit: Viewing Image Editing as a Degenerate Temporal Process**|Xiaofan Li et.al.|[2511.18131](http://arxiv.org/abs/2511.18131)|<span class="null">—</span>|
-|**2025-11-22**|**AdaPerceiver: Transformers with Adaptive Width, Depth, and Tokens**|Purvish Jajal et.al.|[2511.18105](http://arxiv.org/abs/2511.18105)|<span class="null">—</span>|
-|**2025-11-22**|**VK-Det: Visual Knowledge Guided Prototype Learning for Open-Vocabulary Aerial Object Detection**|Jianhang Yao et.al.|[2511.18075](http://arxiv.org/abs/2511.18075)|<span class="null">—</span>|
-|**2025-11-22**|**UltraFlux: Data-Model Co-Design for High-quality Native 4K Text-to-Image Generation across Diverse Aspect Ratios**|Tian Ye et.al.|[2511.18050](http://arxiv.org/abs/2511.18050)|<span class="null">—</span>|
-|**2025-11-22**|**Divergence-Minimization for Latent-Structure Models: Monotone Operators, Contraction Guarantees, and Robust Inference**|Lei Li et.al.|[2511.17974](http://arxiv.org/abs/2511.17974)|<span class="null">—</span>|
-|**2025-11-22**|**V2X-RECT: An Efficient V2X Trajectory Prediction Framework via Redundant Interaction Filtering and Tracking Error Correction**|Xiangyan Kong et.al.|[2511.17941](http://arxiv.org/abs/2511.17941)|<span class="null">—</span>|
-|**2025-11-21**|**Attention Guided Alignment in Efficient Vision-Language Models**|Shweta Mahajan et.al.|[2511.17793](http://arxiv.org/abs/2511.17793)|<span class="null">—</span>|
-|**2025-11-21**|**The Optical Evolution of the Tycho Supernova Remnant over Three Decades**|P. Frank Winkler et.al.|[2511.17763](http://arxiv.org/abs/2511.17763)|<span class="null">—</span>|
-|**2025-12-26**|**SPIDER: Spatial Image CorresponDence Estimator for Robust Calibration**|Zhimin Shao et.al.|[2511.17750](http://arxiv.org/abs/2511.17750)|<span class="null">—</span>|
-|**2025-11-21**|**M3-Bench: Multi-Modal, Multi-Hop, Multi-Threaded Tool-Using MLLM Agent Benchmark**|Yang Zhou et.al.|[2511.17729](http://arxiv.org/abs/2511.17729)|<span class="null">—</span>|
-|**2025-11-20**|**Fluid Grey 2: How Well Does Generative Adversarial Network Learn Deeper Topology Structure in Architecture That Matches Images?**|Yayan Qiu et.al.|[2511.17643](http://arxiv.org/abs/2511.17643)|<span class="null">—</span>|
-|**2025-11-21**|**SMILE: A Composite Lexical-Semantic Metric for Question-Answering Evaluation**|Shrikant Kendre et.al.|[2511.17432](http://arxiv.org/abs/2511.17432)|<span class="null">—</span>|
-|**2025-11-21**|**SPEAR-1: Scaling Beyond Robot Demonstrations via 3D Understanding**|Nikolay Nikolov et.al.|[2511.17411](http://arxiv.org/abs/2511.17411)|<span class="null">—</span>|
-|**2025-11-21**|**ATAC: Augmentation-Based Test-Time Adversarial Correction for CLIP**|Linxiang Su et.al.|[2511.17362](http://arxiv.org/abs/2511.17362)|<span class="null">—</span>|
-|**2025-11-21**|**NoPe-NeRF++: Local-to-Global Optimization of NeRF with No Pose Prior**|Dongbo Shi et.al.|[2511.17322](http://arxiv.org/abs/2511.17322)|<span class="null">—</span>|
-|**2025-11-21**|**Angular clustering and bias of photometric quasars in the Kilo-Degree Survey Data Release 4**|Anjitha John William et.al.|[2511.17311](http://arxiv.org/abs/2511.17311)|<span class="null">—</span>|
-|**2025-11-21**|**MuM: Multi-View Masked Image Modeling for 3D Vision**|David Nordström et.al.|[2511.17309](http://arxiv.org/abs/2511.17309)|<span class="null">—</span>|
-|**2025-11-21**|**UI-Styler: Ultrasound Image Style Transfer with Class-Aware Prompts for Cross-Device Diagnosis Using a Frozen Black-Box Inference Network**|Nhat-Tuong Do-Tran et.al.|[2511.17155](http://arxiv.org/abs/2511.17155)|<span class="null">—</span>|
-|**2025-11-21**|**Towards Generative Design Using Optimal Transport for Shape Exploration and Solution Field Interpolation**|Sergio Torregrosa et.al.|[2511.17111](http://arxiv.org/abs/2511.17111)|<span class="null">—</span>|
-|**2025-11-21**|**Neighbor GRPO: Contrastive ODE Policy Optimization Aligns Flow Models**|Dailan He et.al.|[2511.16955](http://arxiv.org/abs/2511.16955)|<span class="null">—</span>|
-|**2025-11-20**|**Stable diffusion models reveal a persisting human and AI gap in visual creativity**|Silvia Rondini et.al.|[2511.16814](http://arxiv.org/abs/2511.16814)|<span class="null">—</span>|
-|**2025-11-20**|**SAM 3: Segment Anything with Concepts**|Nicolas Carion et.al.|[2511.16719](http://arxiv.org/abs/2511.16719)|<span class="null">—</span>|
-|**2025-11-20**|**A Machine Learning-Driven Solution for Denoising Inertial Confinement Fusion Images**|Asya Y. Akkus et.al.|[2511.16717](http://arxiv.org/abs/2511.16717)|<span class="null">—</span>|
-|**2025-11-20**|**Dataset Distillation for Pre-Trained Self-Supervised Vision Models**|George Cazenavette et.al.|[2511.16674](http://arxiv.org/abs/2511.16674)|<span class="null">—</span>|
-|**2025-11-20**|**NutriScreener: Retrieval-Augmented Multi-Pose Graph Attention Network for Malnourishment Screening**|Misaal Khan et.al.|[2511.16566](http://arxiv.org/abs/2511.16566)|<span class="null">—</span>|
-|**2025-11-20**|**Saving Foundation Flow-Matching Priors for Inverse Problems**|Yuxiang Wan et.al.|[2511.16520](http://arxiv.org/abs/2511.16520)|<span class="null">—</span>|
-|**2025-11-20**|**Beyond Visual Cues: Leveraging General Semantics as Support for Few-Shot Segmentation**|Jin Wang et.al.|[2511.16435](http://arxiv.org/abs/2511.16435)|<span class="null">—</span>|
-|**2025-11-20**|**DetailSemNet: Elevating Signature Verification through Detail-Semantic Integration**|Meng-Cheng Shih et.al.|[2511.16364](http://arxiv.org/abs/2511.16364)|<span class="null">—</span>|
-|**2025-11-20**|**CRISTAL: Real-time Camera Registration in Static LiDAR Scans using Neural Rendering**|Joni Vanherck et.al.|[2511.16349](http://arxiv.org/abs/2511.16349)|<span class="null">—</span>|
-|**2025-11-20**|**A pilot VLBI study of the SQUAB quasar sample featuring multiple Gaia detections**|Yingkang Zhang et.al.|[2511.16206](http://arxiv.org/abs/2511.16206)|<span class="null">—</span>|
-|**2025-11-20**|**PySERA: Open-Source Standardized Python Library for Automated, Scalable, and Reproducible Handcrafted and Deep Radiomics**|Mohammad R. Salmanpour et.al.|[2511.15963](http://arxiv.org/abs/2511.15963)|<span class="null">—</span>|
-|**2025-11-21**|**The MeerKAT Fornax Survey VI. The collapse of the galaxy HI Mass Function in Fornax**|D. Kleiner et.al.|[2511.15795](http://arxiv.org/abs/2511.15795)|<span class="null">—</span>|
-|**2025-11-20**|**RoMa v2: Harder Better Faster Denser Feature Matching**|Johan Edstedt et.al.|[2511.15706](http://arxiv.org/abs/2511.15706)|<span class="null">—</span>|
-|**2025-11-19**|**What Your Features Reveal: Data-Efficient Black-Box Feature Inversion Attack for Split DNNs**|Zhihan Ren et.al.|[2511.15316](http://arxiv.org/abs/2511.15316)|<span class="null">—</span>|
-|**2025-11-19**|**Magnetic signal scan imaging system based on giant magnetoimpedance (GMI) differential sensor**|Tao Yang et.al.|[2511.15209](http://arxiv.org/abs/2511.15209)|<span class="null">—</span>|
-|**2025-11-19**|**BokehFlow: Depth-Free Controllable Bokeh Rendering via Flow Matching**|Yachuan Huang et.al.|[2511.15066](http://arxiv.org/abs/2511.15066)|<span class="null">—</span>|
-|**2025-11-19**|**Computer Vision Modeling of the Development of Geometric and Numerical Concepts in Humans**|Zekun Wang et.al.|[2511.15029](http://arxiv.org/abs/2511.15029)|<span class="null">—</span>|
-|**2025-11-18**|**LFreeDA: Label-Free Drift Adaptation for Windows Malware Detection**|Adrian Shuai Li et.al.|[2511.14963](http://arxiv.org/abs/2511.14963)|<span class="null">—</span>|
-|**2025-11-18**|**FlowRoI A Fast Optical Flow Driven Region of Interest Extraction Framework for High-Throughput Image Compression in Immune Cell Migration Analysis**|Xiaowei Xu et.al.|[2511.14419](http://arxiv.org/abs/2511.14419)|<span class="null">—</span>|
-|**2025-11-18**|**Cranio-ID: Graph-Based Craniofacial Identification via Automatic Landmark Annotation in 2D Multi-View X-rays**|Ravi Shankar Prasad et.al.|[2511.14411](http://arxiv.org/abs/2511.14411)|<span class="null">—</span>|
-|**2025-11-18**|**Dental3R: Geometry-Aware Pairing for Intraoral 3D Reconstruction from Sparse-View Photographs**|Yiyi Miao et.al.|[2511.14315](http://arxiv.org/abs/2511.14315)|<span class="null">—</span>|
-|**2025-11-18**|**NeuralBoneReg: A Novel Self-Supervised Method for Robust and Accurate Multi-Modal Bone Surface Registration**|Luohong Wu et.al.|[2511.14286](http://arxiv.org/abs/2511.14286)|<span class="null">—</span>|
-|**2025-11-18**|**EBind: a practical approach to space binding**|Jim Broadbent et.al.|[2511.14229](http://arxiv.org/abs/2511.14229)|<span class="null">—</span>|
-|**2025-11-24**|**InstantViR: Real-Time Video Inverse Problem Solver with Distilled Diffusion Prior**|Weimin Bai et.al.|[2511.14208](http://arxiv.org/abs/2511.14208)|<span class="null">—</span>|
-|**2025-11-18**|**iGaussian: Real-Time Camera Pose Estimation via Feed-Forward 3D Gaussian Splatting Inversion**|Hao Wang et.al.|[2511.14149](http://arxiv.org/abs/2511.14149)|<span class="null">—</span>|
-|**2025-11-18**|**$A^2$GC: $A$symmetric $A$ ggregation with Geometric Constraints for Locally Aggregated Descriptors**|Zhenyu Li et.al.|[2511.14109](http://arxiv.org/abs/2511.14109)|<span class="null">—</span>|
-|**2025-11-18**|**SMGeo: Cross-View Object Geo-Localization with Grid-Level Mixture-of-Experts**|Fan Zhang et.al.|[2511.14093](http://arxiv.org/abs/2511.14093)|<span class="null">—</span>|
-|**2025-11-18**|**The CHASM-SWPC Dataset for Coronal Hole Detection & Analysis**|Cutter Beck et.al.|[2511.14044](http://arxiv.org/abs/2511.14044)|<span class="null">—</span>|
-|**2025-11-17**|**FusionFM: All-in-One Multi-Modal Image Fusion with Flow Matching**|Huayi Zhu et.al.|[2511.13794](http://arxiv.org/abs/2511.13794)|<span class="null">—</span>|
-|**2025-11-17**|**Language-Guided Invariance Probing of Vision-Language Models**|Jae Joong Lee et.al.|[2511.13494](http://arxiv.org/abs/2511.13494)|<span class="null">—</span>|
-|**2025-11-17**|**PDRs4All XX. Haute Couture: Spectral stitching of JWST MIRI-IFU cubes with matrix completion**|Amélie Canin et.al.|[2511.13377](http://arxiv.org/abs/2511.13377)|<span class="null">—</span>|
-|**2025-11-17**|**Semi-Supervised Multi-Task Learning for Interpretable Quality As- sessment of Fundus Images**|Lucas Gabriel Telesco et.al.|[2511.13353](http://arxiv.org/abs/2511.13353)|<span class="null">—</span>|
-|**2025-11-17**|**Referring Camouflaged Object Detection With Multi-Context Overlapped Windows Cross-Attention**|Yu Wen et.al.|[2511.13249](http://arxiv.org/abs/2511.13249)|<span class="null">—</span>|
-|**2025-11-17**|**GenTract: Generative Global Tractography**|Alec Sargood et.al.|[2511.13183](http://arxiv.org/abs/2511.13183)|<span class="null">—</span>|
-|**2025-11-17**|**THIR: Topological Histopathological Image Retrieval**|Zahra Tabatabaei et.al.|[2511.13170](http://arxiv.org/abs/2511.13170)|<span class="null">—</span>|
-|**2025-11-17**|**SOMA: Feature Gradient Enhanced Affine-Flow Matching for SAR-Optical Registration**|Haodong Wang et.al.|[2511.13168](http://arxiv.org/abs/2511.13168)|<span class="null">—</span>|
-|**2025-11-17**|**CapeNext: Rethinking and refining dynamic support information for category-agnostic pose estimation**|Yu Zhu et.al.|[2511.13102](http://arxiv.org/abs/2511.13102)|<span class="null">—</span>|
-|**2025-11-17**|**SplatSearch: Instance Image Goal Navigation for Mobile Robots using 3D Gaussian Splatting and Diffusion Models**|Siddarth Narasimhan et.al.|[2511.12972](http://arxiv.org/abs/2511.12972)|<span class="null">—</span>|
-|**2025-11-17**|**Functional Mean Flow in Hilbert Space**|Zhiqi Li et.al.|[2511.12898](http://arxiv.org/abs/2511.12898)|<span class="null">—</span>|
-|**2025-11-19**|**Towards High-Consistency Embodied World Model with Multi-View Trajectory Videos**|Taiyi Su et.al.|[2511.12882](http://arxiv.org/abs/2511.12882)|<span class="null">—</span>|
-|**2025-11-16**|**Physics-Constrained Adaptive Neural Networks Enable Real-Time Semiconductor Manufacturing Optimization with Minimal Training Data**|Rubén Darío Guerrero et.al.|[2511.12788](http://arxiv.org/abs/2511.12788)|<span class="null">—</span>|
-|**2025-11-16**|**Lightweight Optimal-Transport Harmonization on Edge Devices**|Maria Larchenko et.al.|[2511.12785](http://arxiv.org/abs/2511.12785)|<span class="null">—</span>|
-|**2025-11-16**|**SAGE: Saliency-Guided Contrastive Embeddings**|Colton R. Crum et.al.|[2511.12744](http://arxiv.org/abs/2511.12744)|<span class="null">—</span>|
-|**2025-11-16**|**ProxyPrints: From Database Breach to Spoof, A Plug-and-Play Defense for Biometric Systems**|Yaniv Hacmon et.al.|[2511.12739](http://arxiv.org/abs/2511.12739)|<span class="null">—</span>|
-|**2025-11-16**|**From Images to Physics: Probabilistic Inference of Galaxy Parameters and Emission Lines via VAE & Normalizing Flows**|Adiba Amira Siddiqa et.al.|[2511.12737](http://arxiv.org/abs/2511.12737)|<span class="null">—</span>|
-|**2025-11-16**|**Predicting upcoming visual features during eye movements yields scene representations aligned with human visual cortex**|Sushrut Thorat et.al.|[2511.12715](http://arxiv.org/abs/2511.12715)|<span class="null">—</span>|
-|**2025-11-23**|**Uni-MoE-2.0-Omni: Scaling Language-Centric Omnimodal Large Model with Advanced MoE, Training and Data**|Yunxin Li et.al.|[2511.12609](http://arxiv.org/abs/2511.12609)|<span class="null">—</span>|
-|**2025-11-18**|**Fine-Grained Representation for Lane Topology Reasoning**|Guoqing Xu et.al.|[2511.12590](http://arxiv.org/abs/2511.12590)|<span class="null">—</span>|
-|**2025-11-15**|**Calibrated Decomposition of Aleatoric and Epistemic Uncertainty in Deep Features for Inference-Time Adaptation**|Divake Kumar et.al.|[2511.12389](http://arxiv.org/abs/2511.12389)|<span class="null">—</span>|
-|**2025-11-15**|**Fast Reasoning Segmentation for Images and Videos**|Yiqing Shen et.al.|[2511.12368](http://arxiv.org/abs/2511.12368)|<span class="null">—</span>|
-|**2025-11-15**|**SpaceVLM: Sub-Space Modeling of Negation in Vision-Language Models**|Sepehr Kazemi Ranjbar et.al.|[2511.12331](http://arxiv.org/abs/2511.12331)|<span class="null">—</span>|
-|**2025-11-15**|**Mixture of States: Routing Token-Level Dynamics for Multimodal Generation**|Haozhe Liu et.al.|[2511.12207](http://arxiv.org/abs/2511.12207)|<span class="null">—</span>|
-|**2025-11-15**|**Understanding InfoNCE: Transition Probability Matrix Induced Feature Clustering**|Ge Cheng et.al.|[2511.12180](http://arxiv.org/abs/2511.12180)|<span class="null">—</span>|
-|**2025-11-15**|**Volumetric Ultrasound via 3D Null Subtraction Imaging with Circular and Spiral Apertures**|Bingze Dai et.al.|[2511.12126](http://arxiv.org/abs/2511.12126)|<span class="null">—</span>|
-|**2025-11-15**|**UniABG: Unified Adversarial View Bridging and Graph Correspondence for Unsupervised Cross-View Geo-Localization**|Cuiqun Chen et.al.|[2511.12054](http://arxiv.org/abs/2511.12054)|<span class="null">—</span>|
-|**2025-11-15**|**Look As You Think: Unifying Reasoning and Visual Evidence Attribution for Verifiable Document RAG via Reinforcement Learning**|Shuochen Liu et.al.|[2511.12003](http://arxiv.org/abs/2511.12003)|<span class="null">—</span>|
-|**2025-11-13**|**Toward bilipshiz geometric models**|Yonatan Sverdlov et.al.|[2511.11735](http://arxiv.org/abs/2511.11735)|<span class="null">—</span>|
-|**2025-11-13**|**Optimizing Input of Denoising Score Matching is Biased Towards Higher Score Norm**|Tongda Xu et.al.|[2511.11727](http://arxiv.org/abs/2511.11727)|<span class="null">—</span>|
-|**2025-11-12**|**Simple Vision-Language Math Reasoning via Rendered Text**|Matvey Skripkin et.al.|[2511.11704](http://arxiv.org/abs/2511.11704)|<span class="null">—</span>|
-|**2025-11-14**|**Bridging Hidden States in Vision-Language Models**|Benjamin Fein-Ashley et.al.|[2511.11526](http://arxiv.org/abs/2511.11526)|<span class="null">—</span>|
-|**2025-11-18**|**CVChess: A Deep Learning Framework for Converting Chessboard Images to Forsyth-Edwards Notation**|Luthira Abeykoon et.al.|[2511.11522](http://arxiv.org/abs/2511.11522)|<span class="null">—</span>|
-|**2025-11-14**|**Hi-DREAM: Brain Inspired Hierarchical Diffusion for fMRI Reconstruction via ROI Encoder and visuAl Mapping**|Guowei Zhang et.al.|[2511.11437](http://arxiv.org/abs/2511.11437)|<span class="null">—</span>|
-|**2025-11-14**|**The Persistence of Cultural Memory: Investigating Multimodal Iconicity in Diffusion Models**|Maria-Teresa De Rosa Palmini et.al.|[2511.11435](http://arxiv.org/abs/2511.11435)|<span class="null">—</span>|
-|**2025-11-14**|**Shrinking the Teacher: An Adaptive Teaching Paradigm for Asymmetric EEG-Vision Alignment**|Lukun Wu et.al.|[2511.11422](http://arxiv.org/abs/2511.11422)|<span class="null">—</span>|
-|**2025-11-14**|**Robust inverse material design with physical guarantees using the Voigt-Reuss Net**|Sanath Keshav et.al.|[2511.11388](http://arxiv.org/abs/2511.11388)|<span class="null">—</span>|
-|**2025-11-17**|**Arcee: Differentiable Recurrent State Chain for Generative Vision Modeling with Mamba SSMs**|Jitesh Chavan et.al.|[2511.11243](http://arxiv.org/abs/2511.11243)|<span class="null">—</span>|
-|**2025-11-21**|**Parameter-Efficient MoE LoRA for Few-Shot Multi-Style Editing**|Cong Cao et.al.|[2511.11236](http://arxiv.org/abs/2511.11236)|<span class="null">—</span>|
-|**2025-11-14**|**Evaluating Latent Generative Paradigms for High-Fidelity 3D Shape Completion from a Single Depth Image**|Matthias Humt et.al.|[2511.11074](http://arxiv.org/abs/2511.11074)|<span class="null">—</span>|
+|**2026-10-14**|**Retrieve What Helps, Only When It Helps: Agentic Reinforcement Learning for Selective Retrieval-Augmented Machine Translation**|Shijun Li et.al.|[2610.19528](http://arxiv.org/abs/2610.19528)|<span class="null">—</span>|
+|**2026-09-23**|**Scaling Attention Head Analysis via Gradient-Based Attribution in Context-Aware Machine Translation**|Paweł Mąka et.al.|[2609.28117](http://arxiv.org/abs/2609.28117)|<span class="null">—</span>|
+|**2026-09-11**|**Doc2FRC: Length-Consistent Document-Level Machine Translation via Fixed-Range Chunking**|Xiaotian Wang et.al.|[2609.12674](http://arxiv.org/abs/2609.12674)|<span class="null">—</span>|
+|**2026-09-05**|**The Blindness of Document-Level Translation Evaluation**|Ahrii Kim et.al.|[2609.05949](http://arxiv.org/abs/2609.05949)|<span class="null">—</span>|
+|**2026-08-21**|**Scaling Unsupervised Word Alignment to Documents via Structural Constraints**|Michelle Wastl et.al.|[2608.21023](http://arxiv.org/abs/2608.21023)|<span class="null">—</span>|
+|**2026-06-18**|**CzechDocs: A Multiway Parallel Dataset of Formatted Documents for Minority Languages in Czechia**|Josef Jon et.al.|[2606.20212](http://arxiv.org/abs/2606.20212)|<span class="null">—</span>|
+|**2026-06-02**|**G^2C-MT: Graph-Guided Context Selection for Document-Level Machine Translation**|Baijun Ji et.al.|[2606.03078](http://arxiv.org/abs/2606.03078)|<span class="null">—</span>|
+|**2026-05-28**|**Loong: A Human-Like Long Document Translation Agent with Observe-and-Act Adaptive Context Selection**|Yutong Wang et.al.|[2605.30274](http://arxiv.org/abs/2605.30274)|**[link](https://github.com/YutongWang1216/LoongDocMT)**|
+|**2026-09-04**|**Cross-Preference Learning for Sentence-Level and Context-Aware Machine Translation**|Ying Li et.al.|[2603.25183](http://arxiv.org/abs/2603.25183)|<span class="null">—</span>|
+|**2026-03-23**|**Enhancing Document-Level Machine Translation via Filtered Synthetic Corpora and Two-Stage LLM Adaptation**|Ireh Kim et.al.|[2603.22186](http://arxiv.org/abs/2603.22186)|<span class="null">—</span>|
+|**2026-03-04**|**Hindsight Quality Prediction Experiments in Multi-Candidate Human-Post-Edited Machine Translation**|Malik Marmonier et.al.|[2603.04083](http://arxiv.org/abs/2603.04083)|<span class="null">—</span>|
+|**2026-06-23**|**AfriqueLLM: How Data Mixing and Model Architecture Impact Continued Pre-training for African Languages**|Hao Yu et.al.|[2601.06395](http://arxiv.org/abs/2601.06395)|**[link](https://github.com/McGill-NLP/AfriqueLLM)**|
+|**2025-10-10**|**Quality Estimation Reranking for Document-Level Translation**|Krzysztof Mrozinski et.al.|[2510.08870](http://arxiv.org/abs/2510.08870)|<span class="null">—</span>|
+|**2025-10-09**|**ChatGPT as a Translation Engine: A Case Study on Japanese-English**|Vincent Michael Sutanto et.al.|[2510.08042](http://arxiv.org/abs/2510.08042)|<span class="null">—</span>|
+|**2025-09-17**|**You Are What You Train: Effects of Data Composition on Training Context-aware Machine Translation Models**|Paweł Mąka et.al.|[2509.14031](http://arxiv.org/abs/2509.14031)|<span class="null">—</span>|
+|**2025-09-04**|**Align-then-Slide: A complete evaluation framework for Ultra-Long Document-Level Machine Translation**|Jiaxin Guo et.al.|[2509.03809](http://arxiv.org/abs/2509.03809)|<span class="null">—</span>|
+|**2025-10-06**|**OpenWHO: A Document-Level Parallel Corpus for Health Translation in Low-Resource Languages**|Raphaël Merx et.al.|[2508.16048](http://arxiv.org/abs/2508.16048)|<span class="null">—</span>|
+|**2025-09-29**|**DocHPLT: A Massively Multilingual Document-Level Translation Dataset**|Dayyán O'Brien et.al.|[2508.13079](http://arxiv.org/abs/2508.13079)|<span class="null">—</span>|
+|**2025-07-04**|**GRAFT: A Graph-based Flow-aware Agentic Framework for Document-level Machine Translation**|Himanshu Dutta et.al.|[2507.03311](http://arxiv.org/abs/2507.03311)|<span class="null">—</span>|
+|**2025-06-09**|**Beyond the Sentence: A Survey on Context-Aware Machine Translation with Large Language Models**|Ramakrishna Appicharla et.al.|[2506.07583](http://arxiv.org/abs/2506.07583)|<span class="null">—</span>|
+|**2025-05-29**|**Document-Level Text Generation with Minimum Bayes Risk Decoding using Optimal Transport**|Yuu Jinnai et.al.|[2505.23078](http://arxiv.org/abs/2505.23078)|**[link](https://github.com/jinnaiyuu/mbr-optimal-transport)**|
+|**2025-04-21**|**Automatic Evaluation Metrics for Document-level Translation: Overview, Challenges and Trends**|Jiaxin GUO et.al.|[2504.14804](http://arxiv.org/abs/2504.14804)|<span class="null">—</span>|
+|**2025-08-28**|**Multilingual Contextualization of Large Language Models for Document-Level Machine Translation**|Miguel Moura Ramos et.al.|[2504.12140](http://arxiv.org/abs/2504.12140)|<span class="null">—</span>|
+|**2025-04-08**|**Two Intermediate Translations Are Better Than One: Fine-tuning LLMs for Document-level Translation Refinement**|Yichen Dong et.al.|[2504.05614](http://arxiv.org/abs/2504.05614)|<span class="null">—</span>|
+|**2025-04-07**|**DoCIA: An Online Document-Level Context Incorporation Agent for Speech Translation**|Xinglin Lyu et.al.|[2504.05122](http://arxiv.org/abs/2504.05122)|<span class="null">—</span>|
+|**2025-03-15**|**Improving LLM-based Document-level Machine Translation with Multi-Knowledge Fusion**|Bin Liu et.al.|[2503.12152](http://arxiv.org/abs/2503.12152)|<span class="null">—</span>|
+|**2025-03-13**|**Source-primed Multi-turn Conversation Helps Large Language Models Translate Documents**|Hanxu Hu et.al.|[2503.10494](http://arxiv.org/abs/2503.10494)|<span class="null">—</span>|
+|**2025-03-14**|**New Trends for Modern Machine Translation with Large Reasoning Models**|Sinuo Liu et.al.|[2503.10351](http://arxiv.org/abs/2503.10351)|<span class="null">—</span>|
+|**2025-02-05**|**DOLFIN -- Document-Level Financial test set for Machine Translation**|Mariam Nakhlé et.al.|[2502.03053](http://arxiv.org/abs/2502.03053)|<span class="null">—</span>|
+|**2025-01-15**|**Doc-Guided Sent2Sent++: A Sent2Sent++ Agent with Doc-Guided memory for Document-level Machine Translation**|Jiaxin Guo et.al.|[2501.08523](http://arxiv.org/abs/2501.08523)|<span class="null">—</span>|
+|**2025-10-13**|**AFRIDOC-MT: Document-level MT Corpus for African Languages**|Jesujoba O. Alabi et.al.|[2501.06374](http://arxiv.org/abs/2501.06374)|**[link](https://github.com/masakhane-io/afridoc-mt)**|
+|**2026-09-12**|**Balancing Global Quality and Pronoun-Specific Feedback for Context-Aware Machine Translation**|Harshit Dhankhar et.al.|[2501.03008](http://arxiv.org/abs/2501.03008)|**[link](https://github.com/Harshit2807161/ProNMT)**|
+|**2025-04-28**|**Investigating Length Issues in Document-level Machine Translation**|Ziqian Peng et.al.|[2412.17592](http://arxiv.org/abs/2412.17592)|<span class="null">—</span>|
+|**2024-12-15**|**Analyzing the Attention Heads for Pronoun Disambiguation in Context-aware Machine Translation Models**|Paweł Mąka et.al.|[2412.11187](http://arxiv.org/abs/2412.11187)|<span class="null">—</span>|
+|**2025-11-10**|**Pralekha: Cross-Lingual Document Alignment for Indic Languages**|Sanjay Suryanarayanan et.al.|[2411.19096](http://arxiv.org/abs/2411.19096)|**[link](https://github.com/AI4Bharat/Pralekha)**|
+|**2025-04-20**|**Fine-Grained and Multi-Dimensional Metrics for Document-Level Machine Translation**|Yirong Sun et.al.|[2410.20941](http://arxiv.org/abs/2410.20941)|**[link](https://github.com/EIT-NLP/BLEUless_DocMT)**|
+|**2025-02-14**|**Context-Aware or Context-Insensitive? Assessing LLMs' Performance in Document-Level Translation**|Wafaa Mohammed et.al.|[2410.14391](http://arxiv.org/abs/2410.14391)|<span class="null">—</span>|
+|**2025-03-05**|**DelTA: An Online Document-Level Translation Agent Based on Multi-Level Memory**|Yutong Wang et.al.|[2410.08143](http://arxiv.org/abs/2410.08143)|**[link](https://github.com/YutongWang1216/DocMTAgent)**|
+|**2025-02-09**|**Towards Inducing Long-Context Abilities in Multilingual Neural Machine Translation Models**|Varun Gumma et.al.|[2408.11382](http://arxiv.org/abs/2408.11382)|<span class="null">—</span>|
+|**2024-07-12**|**Towards Chapter-to-Chapter Context-Aware Literary Translation via Large Language Models**|Linghao Jin et.al.|[2407.08978](http://arxiv.org/abs/2407.08978)|<span class="null">—</span>|
+|**2024-06-12**|**M3T: A New Benchmark Dataset for Multi-Modal Document-Level Machine Translation**|Benjamin Hsu et.al.|[2406.08255](http://arxiv.org/abs/2406.08255)|**[link](https://github.com/amazon-science/m3t-multi-modal-translation-bench)**|
+|**2024-06-11**|**Efficiently Exploring Large Language Models for Document-Level Machine Translation with In-context Learning**|Menglong Cui et.al.|[2406.07081](http://arxiv.org/abs/2406.07081)|<span class="null">—</span>|
+|**2024-06-06**|**Recovering document annotations for sentence-level bitext**|Rachel Wicks et.al.|[2406.03869](http://arxiv.org/abs/2406.03869)|<span class="null">—</span>|
+|**2024-08-06**|**The Fine-Tuning Paradox: Boosting Translation Quality Without Sacrificing LLM Abilities**|David Stap et.al.|[2405.20089](http://arxiv.org/abs/2405.20089)|**[link](https://github.com/amazon-science/idioms-incontext-mt)**|
+|**2024-04-30**|**Context-Aware Machine Translation with Source Coreference Explanation**|Huy Hien Vu et.al.|[2404.19505](http://arxiv.org/abs/2404.19505)|**[link](https://github.com/hienvuhuy/transcoref)**|
+|**2024-02-02**|**Sequence Shortening for Context-Aware Machine Translation**|Paweł Mąka et.al.|[2402.01416](http://arxiv.org/abs/2402.01416)|<span class="null">—</span>|
+|**2024-02-02**|**On Measuring Context Utilization in Document-Level MT Systems**|Wafaa Mohammed et.al.|[2402.01404](http://arxiv.org/abs/2402.01404)|<span class="null">—</span>|
+|**2024-01-16**|**Enhancing Document-level Translation of Large Language Model via Translation Mixed-instructions**|Yachao Li et.al.|[2401.08088](http://arxiv.org/abs/2401.08088)|<span class="null">—</span>|
+|**2024-10-11**|**Adapting Large Language Models for Document-Level Machine Translation**|Minghao Wu et.al.|[2401.06468](http://arxiv.org/abs/2401.06468)|<span class="null">—</span>|
+|**2023-11-04**|**Identifying Context-Dependent Translations for Evaluation Set Production**|Rachel Wicks et.al.|[2311.02321](http://arxiv.org/abs/2311.02321)|<span class="null">—</span>|
+|**2024-03-18**|**Contextual Refinement of Translations: Large Language Models for Sentence and Document-Level Post-Editing**|Sai Koneru et.al.|[2310.14855](http://arxiv.org/abs/2310.14855)|<span class="null">—</span>|
+|**2024-03-13**|**Quantifying the Plausibility of Context Reliance in Neural Machine Translation**|Gabriele Sarti et.al.|[2310.01188](http://arxiv.org/abs/2310.01188)|**[link](https://github.com/gsarti/pecore)**|
+|**2023-06-08**|**Improving Long Context Document-Level Machine Translation**|Christian Herold et.al.|[2306.05183](http://arxiv.org/abs/2306.05183)|<span class="null">—</span>|
+|**2023-06-08**|**On Search Strategies for Document-Level Neural Machine Translation**|Christian Herold et.al.|[2306.05116](http://arxiv.org/abs/2306.05116)|<span class="null">—</span>|
+|**2023-10-23**|**Challenges in Context-Aware Neural Machine Translation**|Linghao Jin et.al.|[2305.13751](http://arxiv.org/abs/2305.13751)|<span class="null">—</span>|
+|**2023-12-09**|**Non-Autoregressive Document-Level Machine Translation**|Guangsheng Bao et.al.|[2305.12878](http://arxiv.org/abs/2305.12878)|**[link](https://github.com/baoguangsheng/nat-on-doc)**|
+|**2023-05-18**|**Discourse Centric Evaluation of Machine Translation with a Densely Annotated Parallel Corpus**|Yuchen Eleanor Jiang et.al.|[2305.11142](http://arxiv.org/abs/2305.11142)|<span class="null">—</span>|
+|**2023-06-04**|**Target-Side Augmentation for Document-Level Machine Translation**|Guangsheng Bao et.al.|[2305.04505](http://arxiv.org/abs/2305.04505)|**[link](https://github.com/baoguangsheng/target-side-augmentation)**|
+|**2023-04-20**|**Exploring Paracrawl for Document-level Neural Machine Translation**|Yusser Al Ghussin et.al.|[2304.10216](http://arxiv.org/abs/2304.10216)|<span class="null">—</span>|
+|**2023-10-24**|**Document-Level Machine Translation with Large Language Models**|Longyue Wang et.al.|[2304.02210](http://arxiv.org/abs/2304.02210)|**[link](https://github.com/longyuewangdcu/Document-MT-LLM)**|
+|**2023-02-18**|**How Good Are GPT Models at Machine Translation? A Comprehensive Evaluation**|Amr Hendy et.al.|[2302.09210](http://arxiv.org/abs/2302.09210)|<span class="null">—</span>|
+|**2023-01-17**|**HanoiT: Enhancing Context-aware Translation via Selective Context**|Jian Yang et.al.|[2301.06825](http://arxiv.org/abs/2301.06825)|<span class="null">—</span>|
+|**2023-05-13**|**Advancing Multilingual Pre-training: TRIP Triangular Document-level Pre-training for Multilingual Language Models**|Hongyuan Lu et.al.|[2212.07752](http://arxiv.org/abs/2212.07752)|<span class="null">—</span>|
+|**2022-10-26**|**A Bilingual Parallel Corpus with Discourse Annotations**|Yuchen Eleanor Jiang et.al.|[2210.14667](http://arxiv.org/abs/2210.14667)|<span class="null">—</span>|
+|**2022-10-16**|**Modeling Context With Linear Attention for Scalable Document-Level Translation**|Zhaofeng Wu et.al.|[2210.08431](http://arxiv.org/abs/2210.08431)|**[link](https://github.com/zhaofengwu/rfa-doc-mt)**|
+|**2023-02-06**|**DiscoScore: Evaluating Text Generation with BERT and Discourse Coherence**|Wei Zhao et.al.|[2201.11176](http://arxiv.org/abs/2201.11176)|**[link](https://github.com/AIPHES/DiscoScore)**|
+|**2022-01-05**|**SMDT: Selective Memory-Augmented Neural Document Translation**|Xu Zhang et.al.|[2201.01631](http://arxiv.org/abs/2201.01631)|<span class="null">—</span>|
+|**2022-05-17**|**Multilingual Document-Level Translation Enables Zero-Shot Transfer From Sentences to Documents**|Biao Zhang et.al.|[2109.10341](http://arxiv.org/abs/2109.10341)|<span class="null">—</span>|
+|**2021-09-13**|**Contrastive Learning for Context-aware Neural Machine TranslationUsing Coreference Information**|Yongkeun Hwang et.al.|[2109.05712](http://arxiv.org/abs/2109.05712)|<span class="null">—</span>|
+|**2021-09-07**|**Revisiting Context Choices for Context-aware Machine Translation**|Matīss Rikters et.al.|[2109.02995](http://arxiv.org/abs/2109.02995)|<span class="null">—</span>|
+|**2021-05-31**|**Transfer Learning for Sequence Generation: from Single-source to Multi-source**|Xuancheng Huang et.al.|[2105.14809](http://arxiv.org/abs/2105.14809)|<span class="null">—</span>|
+|**2021-05-31**|**G-Transformer for Document-level Machine Translation**|Guangsheng Bao et.al.|[2105.14761](http://arxiv.org/abs/2105.14761)|<span class="null">—</span>|
+|**2021-08-07**|**Do Context-Aware Translation Models Pay the Right Attention?**|Kayo Yin et.al.|[2105.06977](http://arxiv.org/abs/2105.06977)|<span class="null">—</span>|
+|**2021-06-02**|**Measuring and Increasing Context Usage in Context-Aware Machine Translation**|Patrick Fernandes et.al.|[2105.03482](http://arxiv.org/abs/2105.03482)|<span class="null">—</span>|
+|**2022-02-07**|**Sentence Alignment with Parallel Documents Facilitates Biomedical Machine Translation**|Shengxuan Luo et.al.|[2104.08588](http://arxiv.org/abs/2104.08588)|<span class="null">—</span>|
+|**2021-10-07**|**Context-Adaptive Document-Level Neural Machine Translation**|Linlin Zhang et.al.|[2104.08259](http://arxiv.org/abs/2104.08259)|<span class="null">—</span>|
+|**2021-09-16**|**Hierarchical Learning for Generation with Long Source Sequences**|Tobias Rohde et.al.|[2104.07545](http://arxiv.org/abs/2104.07545)|<span class="null">—</span>|
+|**2022-07-05**|**BlonDe: An Automatic Evaluation Metric for Document-level Machine Translation**|Yuchen Eleanor Jiang et.al.|[2103.11878](http://arxiv.org/abs/2103.11878)|**[link](https://github.com/christian3141/blonde)**|
+|**2021-02-11**|**Towards Personalised and Document-level Machine Translation of Dialogue**|Sebastian T. Vincent et.al.|[2102.10979](http://arxiv.org/abs/2102.10979)|<span class="null">—</span>|
 
-> Showing the latest 200 of 1407 papers, see the [archive](#archive) for all.
-
-<h2 id="nerf">NeRF</h2>
+<h2 id="speech-translation">Speech Translation</h2>
 
 | Publish Date | Title | Authors | PDF | Code |
 |:---------|:-----------------------|:---------|:------|:------|
-|**2026-10-26**|**DimFlow: Bidirectional Grid-Expert Learning for Dynamic Gaussian Reconstruction**|Gabriel Adineera et.al.|[2610.34952](http://arxiv.org/abs/2610.34952)|<span class="null">—</span>|
-|**2026-10-22**|**MVLoMa: Multi-View Local Feature Matching with Any Geometry Foundation Model**|Xinyang Lu et.al.|[2610.31321](http://arxiv.org/abs/2610.31321)|<span class="null">—</span>|
-|**2026-10-22**|**GSHeadRelight: Fast Relightability for 3D Gaussian Head Synthesis**|Henglei Lv et.al.|[2610.30619](http://arxiv.org/abs/2610.30619)|<span class="null">—</span>|
-|**2026-10-21**|**SplatLab: Autonomous Scientific Discovery for 3DGS Research**|Seemandhar Jain et.al.|[2610.30468](http://arxiv.org/abs/2610.30468)|**[link](https://github.com/seemandhar/SplatLab)**|
-|**2026-10-21**|**AutoPhyX: Automatic Text-Condition Physics Property Generation**|Bei Huang et.al.|[2610.29517](http://arxiv.org/abs/2610.29517)|<span class="null">—</span>|
-|**2026-10-21**|**Progressive Permutation Alignment with Temperature-Controlled Spectral Sharpening**|Yuta Horioka et.al.|[2610.29396](http://arxiv.org/abs/2610.29396)|<span class="null">—</span>|
-|**2026-10-21**|**DriftNeRF: Cross-Ray Density Drifting for Sparse-View Neural Radiance Fields**|Juntang Wang et.al.|[2610.29106](http://arxiv.org/abs/2610.29106)|<span class="null">—</span>|
-|**2026-10-20**|**Geometry Regularization for Vanilla NeRF via Self-Supervised Cross-Ray Consistency**|Zongji Wang et.al.|[2610.27776](http://arxiv.org/abs/2610.27776)|<span class="null">—</span>|
-|**2026-10-19**|**NeRF-Inspired Neural Fields for 3D Super-resolution of Reacting-Flows**|Dakshaka Vishwajith Amarathunga et.al.|[2610.27284](http://arxiv.org/abs/2610.27284)|<span class="null">—</span>|
-|**2026-10-19**|**RxGS: Relightable Gaussian Stylization via BRDF Decomposition**|Wanrong Hong et.al.|[2610.25681](http://arxiv.org/abs/2610.25681)|<span class="null">—</span>|
-|**2026-10-09**|**Gaussian Splatting with Reflections Guided by What is Seen**|Yiming Liang et.al.|[2610.13757](http://arxiv.org/abs/2610.13757)|<span class="null">—</span>|
-|**2026-10-08**|**OX-NeRF: 3D X-ray Tomography Reconstruction from Sparse Views Using Implicit Neural Representation**|Thomas Welsch et.al.|[2610.11547](http://arxiv.org/abs/2610.11547)|<span class="null">—</span>|
-|**2026-10-08**|**3DTexMOR: 3D Gaussian Multi-Object Removal via Texture-Space Inpainting**|Kunxin Guang et.al.|[2610.11198](http://arxiv.org/abs/2610.11198)|<span class="null">—</span>|
-|**2026-10-07**|**PCAsplat: Gaussian Splatting with Local PCA Regularization**|Vitor Matias et.al.|[2610.11011](http://arxiv.org/abs/2610.11011)|<span class="null">—</span>|
-|**2026-10-07**|**NeRFifyMesh: Optimizing Neural Radiance Fields from Textured Meshes for Robotics Scene Building**|Nillan Nimal et.al.|[2610.10387](http://arxiv.org/abs/2610.10387)|<span class="null">—</span>|
-|**2026-10-07**|**TileSkipper: Region-Adaptive Tile Pruning for 3D Gaussian Splatting**|Jingxing Li et.al.|[2610.09343](http://arxiv.org/abs/2610.09343)|<span class="null">—</span>|
-|**2026-10-05**|**When the Rule-Maker Runs the World Championship: Late Patches and Procedural Accountability in League of Legends**|Haewoon Kwak et.al.|[2610.07427](http://arxiv.org/abs/2610.07427)|<span class="null">—</span>|
-|**2026-10-05**|**MoonGS: High-quality Representation of the Lunar Surface via Gaussian Splatting Using Robust Depth Features from Image Pairs**|Yun Jiang et.al.|[2610.07110](http://arxiv.org/abs/2610.07110)|**[link](https://github.com/InRobots/MoonBlender)**|
-|**2026-10-02**|**VCURF: Virtual Camera-based Uncertainty of Radiance Fields**|Liyan Chen et.al.|[2610.04076](http://arxiv.org/abs/2610.04076)|<span class="null">—</span>|
-|**2026-10-02**|**PocketSplat: Mobile Gaussian Reconstruction via World-Space Latent Allocatio**|Wenzhi Guo et.al.|[2610.03192](http://arxiv.org/abs/2610.03192)|<span class="null">—</span>|
-|**2026-05-14**|**Efficient Dense Matching for Enhanced Gaussian Splatting Using AV1 Motion Vectors**|Julien Zouein et.al.|[2605.14629](http://arxiv.org/abs/2605.14629)|<span class="null">—</span>|
-|**2026-05-13**|**GuardMarkGS: Unified Ownership Tracing and Edit Deterrence for 3D Gaussian Splatting**|Utae Jeong et.al.|[2605.12919](http://arxiv.org/abs/2605.12919)|<span class="null">—</span>|
-|**2026-05-12**|**3D Gaussian Splatting for Efficient Retrospective Dynamic Scene Novel View Synthesis with a Standardized Benchmark**|Yunxiao Zhang et.al.|[2605.12437](http://arxiv.org/abs/2605.12437)|<span class="null">—</span>|
-|**2026-05-11**|**Predicting 3D structure by latent posterior sampling**|Azmi Haider et.al.|[2605.10830](http://arxiv.org/abs/2605.10830)|<span class="null">—</span>|
-|**2026-05-12**|**DySurface: Consistent 4D Surface Reconstruction via Bridging Explicit Gaussians and Implicit Functions**|Minje Kim et.al.|[2605.10360](http://arxiv.org/abs/2605.10360)|**[link](https://github.com/yunminjin2/DySurface)**|
-|**2026-05-10**|**Low-Cost Neural Radiance Fields**|Alice Huang et.al.|[2605.09312](http://arxiv.org/abs/2605.09312)|<span class="null">—</span>|
-|**2026-05-06**|**Low-Cost Stereo Vision for Robust 3D Positioning of Thin Radiata Pine Branches in Autonomous Drone Pruning**|Yida Lin et.al.|[2605.08213](http://arxiv.org/abs/2605.08213)|<span class="null">—</span>|
-|**2026-05-08**|**PropSplat: Map-Free RF Field Reconstruction via 3D Gaussian Propagation Splatting**|William Bjorndahl et.al.|[2605.08035](http://arxiv.org/abs/2605.08035)|<span class="null">—</span>|
-|**2026-05-08**|**High-Fidelity Surface Splatting-Based 3D Reconstruction from Multi-View Images**|Nandhana Sunil et.al.|[2605.07254](http://arxiv.org/abs/2605.07254)|<span class="null">—</span>|
-|**2026-05-08**|**AsyncEvGS: Asynchronous Event-Assisted Gaussian Splatting for Handheld Motion-Blurred Scenes**|Jun Dai et.al.|[2605.07192](http://arxiv.org/abs/2605.07192)|<span class="null">—</span>|
-|**2026-05-04**|**HumanSplatHMR: Closing the Loop Between Human Mesh Recovery and Gaussian Splatting Avatar**|Yeheng Zong et.al.|[2605.02784](http://arxiv.org/abs/2605.02784)|<span class="null">—</span>|
-|**2026-05-03**|**GETA-3DGS: Automatic Joint Structured Pruning and Quantization for 3D Gaussian Splatting**|Baobing Zhang et.al.|[2605.02086](http://arxiv.org/abs/2605.02086)|<span class="null">—</span>|
-|**2026-05-01**|**GOR-IS: 3D Gaussian Object Removal in the Intrinsic Space**|Yonghao Zhao et.al.|[2605.00498](http://arxiv.org/abs/2605.00498)|<span class="null">—</span>|
-|**2026-05-01**|**Beyond Heuristics: Learnable Density Control for 3D Gaussian Splatting**|Zhenhua Ning et.al.|[2605.00408](http://arxiv.org/abs/2605.00408)|**[link](https://github.com/AaronNZH/LeGS)**|
-|**2026-04-30**|**RayFormer: Modeling Inter- and Intra-Ray Similarity for NeRF-Based Video Snapshot Compressive Imaging**|Yubo Dong et.al.|[2604.27702](http://arxiv.org/abs/2604.27702)|<span class="null">—</span>|
-|**2026-05-04**|**Safe Navigation using Neural Radiance Fields via Reachable Sets**|Omanshu Thapliyal et.al.|[2604.26899](http://arxiv.org/abs/2604.26899)|<span class="null">—</span>|
-|**2026-04-17**|**Planar Gaussian Splatting with Bilinear Spatial Transformer for Wireless Radiance Field Reconstruction**|Jinghan Zhang et.al.|[2604.25945](http://arxiv.org/abs/2604.25945)|<span class="null">—</span>|
-|**2026-04-27**|**Multivariate Gaussian NeRF for Wide Field-of-View Ultrasound Reconstruction**|Patris Valera et.al.|[2604.24187](http://arxiv.org/abs/2604.24187)|<span class="null">—</span>|
-|**2026-04-23**|**DualSplat: Robust 3D Gaussian Splatting via Pseudo-Mask Bootstrapping from Reconstruction Failures**|Xu Wang et.al.|[2604.21631](http://arxiv.org/abs/2604.21631)|<span class="null">—</span>|
-|**2026-04-21**|**OT-UVGS: Revisiting UV Mapping for Gaussian Splatting as a Capacity Allocation Problem**|Byunghyun Kim et.al.|[2604.19127](http://arxiv.org/abs/2604.19127)|<span class="null">—</span>|
-|**2026-04-20**|**A Comparative Evaluation of Geometric Accuracy in NeRF and Gaussian Splatting**|Mikolaj Zielinski et.al.|[2604.18205](http://arxiv.org/abs/2604.18205)|<span class="null">—</span>|
-|**2026-04-20**|**MU-GeNeRF: Multi-view Uncertainty-guided Generalizable Neural Radiance Fields for Distractor-aware Scene**|Wenjie Mu et.al.|[2604.17965](http://arxiv.org/abs/2604.17965)|<span class="null">—</span>|
-|**2026-04-20**|**PCM-NeRF: Probabilistic Camera Modeling for Neural Radiance Fields under Pose Uncertainty**|Shravan Venkatraman et.al.|[2604.17831](http://arxiv.org/abs/2604.17831)|<span class="null">—</span>|
-|**2026-04-29**|**Incoherent Deformation, Not Capacity: Diagnosing and Mitigating Overfitting in Dynamic Gaussian Splatting**|Ahmad Droby et.al.|[2604.16747](http://arxiv.org/abs/2604.16747)|<span class="null">—</span>|
-|**2026-04-17**|**PoInit-of-View: Poisoning Initialization of Views Transfers Across Multiple 3D Reconstruction Systems**|Weijie Wang et.al.|[2604.16540](http://arxiv.org/abs/2604.16540)|<span class="null">—</span>|
-|**2026-04-12**|**Positioning radiata pine branches requiring pruning by drone stereo vision**|Yida Lin et.al.|[2604.16480](http://arxiv.org/abs/2604.16480)|<span class="null">—</span>|
-|**2026-04-17**|**Hybrid Latents: Geometry-Appearance-Aware Surfel Splatting**|Neel Kelkar et.al.|[2604.14928](http://arxiv.org/abs/2604.14928)|<span class="null">—</span>|
-|**2026-04-16**|**NG-GS: NeRF-Guided 3D Gaussian Splatting Segmentation**|Yi He et.al.|[2604.14706](http://arxiv.org/abs/2604.14706)|**[link](https://github.com/BJTU-KD3D/NG-GS)**|
-|**2026-04-14**|**PatchPoison: Poisoning Multi-View Datasets to Degrade 3D Reconstruction**|Prajas Wadekar et.al.|[2604.13153](http://arxiv.org/abs/2604.13153)|<span class="null">—</span>|
-|**2026-04-13**|**A Geometric Algebra-informed NeRF Framework for Generalizable Wireless Channel Prediction**|Jingzhou Shen et.al.|[2604.11983](http://arxiv.org/abs/2604.11983)|<span class="null">—</span>|
-|**2026-04-13**|**Fast-SegSim: Real-Time Open-Vocabulary Segmentation for Robotics in Simulation**|Xuan Yu et.al.|[2604.10951](http://arxiv.org/abs/2604.10951)|<span class="null">—</span>|
-|**2026-04-07**|**3DTurboQuant: Training-Free Near-Optimal Quantization for 3D Reconstruction Models**|Jae Joong Lee et.al.|[2604.05366](http://arxiv.org/abs/2604.05366)|<span class="null">—</span>|
-|**2026-04-03**|**Factorized Multi-Resolution HashGrid for Efficient Neural Radiance Fields: Execution on Edge-Devices**|Kim Jun-Seong et.al.|[2604.02836](http://arxiv.org/abs/2604.02836)|<span class="null">—</span>|
-|**2026-04-06**|**GEMM-GS: Accelerating 3D Gaussian Splatting on Tensor Cores with GEMM-Compatible Blending**|Haomin Li et.al.|[2604.02120](http://arxiv.org/abs/2604.02120)|<span class="null">—</span>|
-|**2026-03-30**|**SVGS: Single-View to 3D Object Editing via Gaussian Splatting**|Pengcheng Xue et.al.|[2603.28126](http://arxiv.org/abs/2603.28126)|<span class="null">—</span>|
-|**2026-03-30**|**To View Transform or Not to View Transform: NeRF-based Pre-training Perspective**|Hyeonjun Jeong et.al.|[2603.28090](http://arxiv.org/abs/2603.28090)|<span class="null">—</span>|
-|**2026-03-30**|**Few TensoRF: Enhance the Few-shot on Tensorial Radiance Fields**|Thanh-Hai Le et.al.|[2603.25008](http://arxiv.org/abs/2603.25008)|<span class="null">—</span>|
-|**2026-03-24**|**UniQueR: Unified Query-based Feedforward 3D Reconstruction**|Chensheng Peng et.al.|[2603.22851](http://arxiv.org/abs/2603.22851)|<span class="null">—</span>|
-|**2026-03-23**|**SatGeo-NeRF: Geometrically Regularized NeRF for Satellite Imagery**|Valentin Wagner et.al.|[2603.21931](http://arxiv.org/abs/2603.21931)|<span class="null">—</span>|
-|**2026-03-23**|**RefracGS: Novel View Synthesis Through Refractive Water Surfaces with 3D Gaussian Ray Tracing**|Yiming Shao et.al.|[2603.21695](http://arxiv.org/abs/2603.21695)|<span class="null">—</span>|
-|**2026-03-27**|**FluidGaussian: Propagating Simulation-Based Uncertainty Toward Functionally-Intelligent 3D Reconstruction**|Yuqiu Liu et.al.|[2603.21356](http://arxiv.org/abs/2603.21356)|<span class="null">—</span>|
-|**2026-03-28**|**EmoTaG: Emotion-Aware Talking Head Synthesis on Gaussian Splatting with Few-Shot Personalization**|Haolan Xu et.al.|[2603.21332](http://arxiv.org/abs/2603.21332)|<span class="null">—</span>|
-|**2026-03-21**|**GaussianPile: A Unified Sparse Gaussian Splatting Framework for Slice-based Volumetric Reconstruction**|Di Kong et.al.|[2603.20611](http://arxiv.org/abs/2603.20611)|<span class="null">—</span>|
-|**2026-03-20**|**Benchmarking Efficient & Effective Camera Pose Estimation Strategies for Novel View Synthesis**|Jhacson Meza et.al.|[2603.20428](http://arxiv.org/abs/2603.20428)|<span class="null">—</span>|
-|**2026-03-20**|**Generalizable NGP-SR: Generalizable Neural Radiance Fields Super-Resolution via Neural Graph Primitives**|Wanqi Yuan et.al.|[2603.20128](http://arxiv.org/abs/2603.20128)|<span class="null">—</span>|
-|**2026-03-26**|**3D Gaussian Splatting with Self-Constrained Priors for High Fidelity Surface Reconstruction**|Takeshi Noda et.al.|[2603.19682](http://arxiv.org/abs/2603.19682)|<span class="null">—</span>|
-|**2026-03-18**|**Fast and Generalizable NeRF Architecture Selection for Satellite Scene Reconstruction**|Devjyoti Chakraborty et.al.|[2603.18306](http://arxiv.org/abs/2603.18306)|<span class="null">—</span>|
-|**2026-03-18**|**Neural Radiance Maps for Extraterrestrial Navigation and Path Planning**|Adam Dai et.al.|[2603.17236](http://arxiv.org/abs/2603.17236)|<span class="null">—</span>|
-|**2026-03-16**|**E2EGS: Event-to-Edge Gaussian Splatting for Pose-Free 3D Reconstruction**|Yunsoo Kim et.al.|[2603.14684](http://arxiv.org/abs/2603.14684)|<span class="null">—</span>|
-|**2026-03-13**|**Spectral-Geometric Neural Fields for Pose-Free LiDAR View Synthesis**|Yinuo Jiang et.al.|[2603.12903](http://arxiv.org/abs/2603.12903)|<span class="null">—</span>|
-|**2026-03-13**|**Catalyst4D: High-Fidelity 3D-to-4D Scene Editing via Dynamic Propagation**|Shifeng Chen et.al.|[2603.12766](http://arxiv.org/abs/2603.12766)|<span class="null">—</span>|
-|**2026-03-13**|**Node-RF: Learning Generalized Continuous Space-Time Scene Dynamics with Neural ODE-based NeRFs**|Hiran Sarkar et.al.|[2603.12078](http://arxiv.org/abs/2603.12078)|<span class="null">—</span>|
-|**2026-03-10**|**DenoiseSplat: Feed-Forward Gaussian Splatting for Noisy 3D Scene Reconstruction**|Fuzhen Jiang et.al.|[2603.09291](http://arxiv.org/abs/2603.09291)|<span class="null">—</span>|
-|**2026-03-10**|**Speeding Up the Learning of 3D Gaussians with Much Shorter Gaussian Lists**|Jiaqi Liu et.al.|[2603.09277](http://arxiv.org/abs/2603.09277)|<span class="null">—</span>|
-|**2026-03-09**|**SkipGS: Post-Densification Backward Skipping for Efficient 3DGS Training**|Jingxing Li et.al.|[2603.08997](http://arxiv.org/abs/2603.08997)|<span class="null">—</span>|
-|**2026-03-09**|**Fast Low-light Enhancement and Deblurring for 3D Dark Scenes**|Feng Zhang et.al.|[2603.08133](http://arxiv.org/abs/2603.08133)|<span class="null">—</span>|
-|**2026-03-07**|**Virtual Intraoperative CT (viCT): Sequential Anatomic Updates for Modeling Tissue Resection Throughout Endoscopic Sinus Surgery**|Nicole M. Gunderson et.al.|[2603.06956](http://arxiv.org/abs/2603.06956)|<span class="null">—</span>|
-|**2026-03-06**|**FTSplat: Feed-forward Triangle Splatting Network**|Xiong Jinlin et.al.|[2603.05932](http://arxiv.org/abs/2603.05932)|<span class="null">—</span>|
-|**2026-03-05**|**Towards 3D Scene Understanding of Gas Plumes in LWIR Hyperspectral Images Using Neural Radiance Fields**|Scout Jarman et.al.|[2603.05473](http://arxiv.org/abs/2603.05473)|<span class="null">—</span>|
-|**2026-03-05**|**GloSplat: Joint Pose-Appearance Optimization for Faster and More Accurate 3D Reconstruction**|Tianyu Xiong et.al.|[2603.04847](http://arxiv.org/abs/2603.04847)|<span class="null">—</span>|
-|**2026-03-03**|**R3GW: Relightable 3D Gaussians for Outdoor Scenes in the Wild**|Margherita Lea Corona et.al.|[2603.02801](http://arxiv.org/abs/2603.02801)|<span class="null">—</span>|
-|**2026-03-03**|**Neural Electromagnetic Fields for High-Resolution Material Parameter Reconstruction**|Zhe Chen et.al.|[2603.02582](http://arxiv.org/abs/2603.02582)|<span class="null">—</span>|
-|**2026-03-02**|**Tiny-DroNeRF: Tiny Neural Radiance Fields aboard Federated Learning-enabled Nano-drones**|Ilenia Carboni et.al.|[2603.01850](http://arxiv.org/abs/2603.01850)|<span class="null">—</span>|
-|**2026-02-28**|**NERFIFY: A Multi-Agent Framework for Turning NeRF Papers into Code**|Seemandhar Jain et.al.|[2603.00805](http://arxiv.org/abs/2603.00805)|<span class="null">—</span>|
-|**2026-03-05**|**DiffusionHarmonizer: Bridging Neural Reconstruction and Photorealistic Simulation with Online Diffusion Enhancer**|Yuxuan Zhang et.al.|[2602.24096](http://arxiv.org/abs/2602.24096)|<span class="null">—</span>|
-|**2026-02-26**|**Sapling-NeRF: Geo-Localised Sapling Reconstruction in Forests for Ecological Monitoring**|Miguel Ángel Muñoz-Bañón et.al.|[2602.22731](http://arxiv.org/abs/2602.22731)|<span class="null">—</span>|
-|**2026-02-25**|**Lie Flow: Video Dynamic Fields Modeling and Predicting with Lie Algebra as Geometric Physics Principle**|Weidong Qiao et.al.|[2602.21645](http://arxiv.org/abs/2602.21645)|<span class="null">—</span>|
-|**2026-02-26**|**Event-Aided Sharp Radiance Field Reconstruction for Fast-Flying Drones**|Rong Zou et.al.|[2602.21101](http://arxiv.org/abs/2602.21101)|<span class="null">—</span>|
-|**2026-02-24**|**Monocular Endoscopic Tissue 3D Reconstruction with Multi-Level Geometry Regularization**|Yangsen Chen et.al.|[2602.20718](http://arxiv.org/abs/2602.20718)|<span class="null">—</span>|
-|**2026-02-23**|**Large-scale Photorealistic Outdoor 3D Scene Reconstruction from UAV Imagery Using Gaussian Splatting Techniques**|Christos Maikos et.al.|[2602.20342](http://arxiv.org/abs/2602.20342)|<span class="null">—</span>|
-|**2026-02-23**|**Augmented Radiance Field: A General Framework for Enhanced Gaussian Splatting**|Yixin Yang et.al.|[2602.19916](http://arxiv.org/abs/2602.19916)|<span class="null">—</span>|
-|**2026-02-21**|**PhysConvex: Physics-Informed 3D Dynamic Convex Radiance Fields for Reconstruction and Simulation**|Dan Wang et.al.|[2602.18886](http://arxiv.org/abs/2602.18886)|<span class="null">—</span>|
-|**2026-02-20**|**Unifying Color and Lightness Correction with View-Adaptive Curve Adjustment for Robust 3D Novel View Synthesis**|Ziteng Cui et.al.|[2602.18322](http://arxiv.org/abs/2602.18322)|<span class="null">—</span>|
-|**2026-02-18**|**HS-3D-NeRF: 3D Surface and Hyperspectral Reconstruction From Stationary Hyperspectral Images Using Multi-Channel NeRFs**|Kibon Ku et.al.|[2602.16950](http://arxiv.org/abs/2602.16950)|<span class="null">—</span>|
-|**2026-02-18**|**Subtractive Modulative Network with Learnable Periodic Activations**|Tiou Wang et.al.|[2602.16337](http://arxiv.org/abs/2602.16337)|<span class="null">—</span>|
-|**2026-02-14**|**High-fidelity 3D reconstruction for planetary exploration**|Alfonso Martínez-Petersen et.al.|[2602.13909](http://arxiv.org/abs/2602.13909)|<span class="null">—</span>|
-|**2026-02-14**|**Nighttime Autonomous Driving Scene Reconstruction with Physically-Based Gaussian Splatting**|Tae-Kyeong Kim et.al.|[2602.13549](http://arxiv.org/abs/2602.13549)|<span class="null">—</span>|
-|**2026-02-08**|**Dynamic Black-hole Emission Tomography with Physics-informed Neural Fields**|Berthy T. Feng et.al.|[2602.08029](http://arxiv.org/abs/2602.08029)|<span class="null">—</span>|
-|**2026-02-08**|**Deepfake Synthesis vs. Detection: An Uneven Contest**|Md. Tarek Hasan et.al.|[2602.07986](http://arxiv.org/abs/2602.07986)|<span class="null">—</span>|
-|**2026-02-05**|**NVS-HO: A Benchmark for Novel View Synthesis of Handheld Objects**|Musawar Ali et.al.|[2602.05822](http://arxiv.org/abs/2602.05822)|<span class="null">—</span>|
-|**2026-02-05**|**NeVStereo: A NeRF-Driven NVS-Stereo Architecture for High-Fidelity 3D Tasks**|Pengcheng Chen et.al.|[2602.05423](http://arxiv.org/abs/2602.05423)|<span class="null">—</span>|
-|**2026-02-03**|**Beyond Cropping and Rotation: Automated Evolution of Powerful Task-Specific Augmentations with Generative Models**|Judah Goldfeder et.al.|[2602.03123](http://arxiv.org/abs/2602.03123)|<span class="null">—</span>|
-|**2026-01-30**|**EAG-PT: Emission-Aware Gaussians and Path Tracing for Indoor Scene Reconstruction and Editing**|Xijie Yang et.al.|[2601.23065](http://arxiv.org/abs/2601.23065)|<span class="null">—</span>|
-|**2026-02-02**|**Under-Canopy Terrain Reconstruction in Dense Forests Using RGB Imaging and Neural 3D Reconstruction**|Refael Sheffer et.al.|[2601.22861](http://arxiv.org/abs/2601.22861)|<span class="null">—</span>|
-|**2026-01-30**|**Diachronic Stereo Matching for Multi-Date Satellite Imagery**|Elías Masquil et.al.|[2601.22808](http://arxiv.org/abs/2601.22808)|<span class="null">—</span>|
-|**2026-02-12**|**From Implicit Ambiguity to Explicit Solidity: Diagnosing Interior Geometric Degradation in Neural Radiance Fields for Dense 3D Scene Understanding**|Jiangsan Zhao et.al.|[2601.21421](http://arxiv.org/abs/2601.21421)|<span class="null">—</span>|
-|**2026-01-29**|**Lightweight High-Fidelity Low-Bitrate Talking Face Compression for 3D Video Conference**|Jianglong Li et.al.|[2601.21269](http://arxiv.org/abs/2601.21269)|<span class="null">—</span>|
-|**2026-01-27**|**WaterClear-GS: Optical-Aware Gaussian Splatting for Underwater Reconstruction and Restoration**|Xinrui Zhang et.al.|[2601.19753](http://arxiv.org/abs/2601.19753)|<span class="null">—</span>|
-|**2026-01-27**|**Bridging Visual and Wireless Sensing: A Unified Radiation Field for 3D Radio Map Construction**|Chaozheng Wen et.al.|[2601.19216](http://arxiv.org/abs/2601.19216)|<span class="null">—</span>|
-|**2026-01-26**|**Audio-Driven Talking Face Generation with Blink Embedding and Hash Grid Landmarks Encoding**|Yuhui Zhang et.al.|[2601.18849](http://arxiv.org/abs/2601.18849)|<span class="null">—</span>|
-|**2026-01-25**|**MV-SAM: Multi-view Promptable Segmentation using Pointmap Guidance**|Yoonwoo Jeong et.al.|[2601.17866](http://arxiv.org/abs/2601.17866)|<span class="null">—</span>|
-|**2026-01-24**|**NeRF-MIR: Towards High-Quality Restoration of Masked Images with Neural Radiance Fields**|Xianliang Huang et.al.|[2601.17350](http://arxiv.org/abs/2601.17350)|<span class="null">—</span>|
-|**2026-01-23**|**Multi-View Consistent Wound Segmentation With Neural Fields**|Remi Chierchia et.al.|[2601.16487](http://arxiv.org/abs/2601.16487)|<span class="null">—</span>|
-|**2026-01-21**|**Seeing through Light and Darkness: Sensor-Physics Grounded Deblurring HDR NeRF from Single-Exposure Images and Events**|Yunshan Qi et.al.|[2601.15475](http://arxiv.org/abs/2601.15475)|<span class="null">—</span>|
-|**2026-01-21**|**GAT-NeRF: Geometry-Aware-Transformer Enhanced Neural Radiance Fields for High-Fidelity 4D Facial Avatars**|Zhe Chang et.al.|[2601.14875](http://arxiv.org/abs/2601.14875)|<span class="null">—</span>|
-|**2026-01-21**|**POTR: Post-Training 3DGS Compression**|Bert Ramlot et.al.|[2601.14821](http://arxiv.org/abs/2601.14821)|<span class="null">—</span>|
-|**2026-01-19**|**TreeDGS: Aerial Gaussian Splatting for Distant DBH Measurement**|Belal Shaheen et.al.|[2601.12823](http://arxiv.org/abs/2601.12823)|<span class="null">—</span>|
-|**2026-01-10**|**HOSC: A Periodic Activation with Saturation Control for High-Fidelity Implicit Neural Representations**|Michal Jan Wlodarczyk et.al.|[2601.07870](http://arxiv.org/abs/2601.07870)|<span class="null">—</span>|
-|**2026-01-08**|**QNeRF: Neural Radiance Fields on a Simulated Gate-Based Quantum Computer**|Daniele Lizzio Bosco et.al.|[2601.05250](http://arxiv.org/abs/2601.05250)|<span class="null">—</span>|
-|**2026-01-08**|**DivAS: Interactive 3D Segmentation of NeRFs via Depth-Weighted Voxel Aggregation**|Ayush Pande et.al.|[2601.04860](http://arxiv.org/abs/2601.04860)|<span class="null">—</span>|
-|**2026-01-11**|**Radiant Foam Rendering on a Graph Processor**|Zulkhuu Tuya et.al.|[2601.04382](http://arxiv.org/abs/2601.04382)|<span class="null">—</span>|
-|**2026-01-15**|**Bayesian Monocular Depth Refinement via Neural Radiance Fields**|Arun Muthukkumar et.al.|[2601.03869](http://arxiv.org/abs/2601.03869)|<span class="null">—</span>|
-|**2026-01-04**|**EdgeNeRF: Edge-Guided Regularization for Neural Radiance Fields from Sparse Views**|Weiqi Yu et.al.|[2601.01431](http://arxiv.org/abs/2601.01431)|<span class="null">—</span>|
-|**2026-01-01**|**CropNeRF: A Neural Radiance Field-Based Framework for Crop Counting**|Md Ahmed Al Muzaddid et.al.|[2601.00207](http://arxiv.org/abs/2601.00207)|<span class="null">—</span>|
-|**2025-12-20**|**Neural Brain Fields: A NeRF-Inspired Approach for Generating Nonexistent EEG Electrodes**|Shahar Ain Kedem et.al.|[2601.00012](http://arxiv.org/abs/2601.00012)|<span class="null">—</span>|
-|**2025-12-31**|**UniC-Lift: Unified 3D Instance Segmentation via Contrastive Learning**|Ankit Dhiman et.al.|[2512.24763](http://arxiv.org/abs/2512.24763)|<span class="null">—</span>|
-|**2025-12-25**|**ShinyNeRF: Digitizing Anisotropic Appearance in Neural Radiance Fields**|Albert Barreiro et.al.|[2512.21692](http://arxiv.org/abs/2512.21692)|<span class="null">—</span>|
-|**2025-12-25**|**Dreamcrafter: Immersive Editing of 3D Radiance Fields Through Flexible, Generative Inputs and Outputs**|Cyrus Vachha et.al.|[2512.20129](http://arxiv.org/abs/2512.20129)|<span class="null">—</span>|
-|**2025-12-20**|**Joint Learning of Depth, Pose, and Local Radiance Field for Large Scale Monocular 3D Reconstruction**|Shahram Najam Syed et.al.|[2512.18237](http://arxiv.org/abs/2512.18237)|<span class="null">—</span>|
-|**2025-12-18**|**SDFoam: Signed-Distance Foam for explicit surface reconstruction**|Antonella Rech et.al.|[2512.16706](http://arxiv.org/abs/2512.16706)|<span class="null">—</span>|
-|**2025-12-18**|**Using Gaussian Splats to Create High-Fidelity Facial Geometry and Texture**|Haodi He et.al.|[2512.16397](http://arxiv.org/abs/2512.16397)|<span class="null">—</span>|
-|**2025-12-17**|**NAP3D: NeRF Assisted 3D-3D Pose Alignment for Autonomous Vehicles**|Gaurav Bansal et.al.|[2512.15080](http://arxiv.org/abs/2512.15080)|<span class="null">—</span>|
-|**2025-12-16**|**Broadening View Synthesis of Dynamic Scenes from Constrained Monocular Videos**|Le Jiang et.al.|[2512.14406](http://arxiv.org/abs/2512.14406)|<span class="null">—</span>|
-|**2025-12-16**|**HGS: Hybrid Gaussian Splatting with Static-Dynamic Decomposition for Compact Dynamic View Synthesis**|Kaizhe Zhang et.al.|[2512.14352](http://arxiv.org/abs/2512.14352)|<span class="null">—</span>|
-|**2025-12-16**|**AnchorHOI: Zero-shot Generation of 4D Human-Object Interaction via Anchor-based Prior Distillation**|Sisi Dai et.al.|[2512.14095](http://arxiv.org/abs/2512.14095)|<span class="null">—</span>|
-|**2025-12-14**|**Quantum Implicit Neural Representations for 3D Scene Reconstruction and Novel View Synthesis**|Yeray Cordero et.al.|[2512.12683](http://arxiv.org/abs/2512.12683)|<span class="null">—</span>|
-|**2025-12-11**|**Physically Aware 360 $^\circ$ View Generation from a Single Image using Disentangled Scene Embeddings**|Karthikeya KV et.al.|[2512.10293](http://arxiv.org/abs/2512.10293)|<span class="null">—</span>|
-|**2025-12-10**|**Log NeRF: Comparing Spaces for Learning Radiance Fields**|Sihe Chen et.al.|[2512.09375](http://arxiv.org/abs/2512.09375)|<span class="null">—</span>|
-|**2025-12-11**|**Relightable and Dynamic Gaussian Avatar Reconstruction from Monocular Video**|Seonghwa Choi et.al.|[2512.09335](http://arxiv.org/abs/2512.09335)|<span class="null">—</span>|
-|**2025-12-09**|**HybridSplat: Fast Reflection-baked Gaussian Tracing using Hybrid Splatting**|Chang Liu et.al.|[2512.08334](http://arxiv.org/abs/2512.08334)|<span class="null">—</span>|
-|**2025-12-09**|**Blur2Sharp: Human Novel Pose and View Synthesis with Generative Prior Refinement**|Chia-Hern Lai et.al.|[2512.08215](http://arxiv.org/abs/2512.08215)|<span class="null">—</span>|
-|**2025-12-09**|**From Orbit to Ground: Generative City Photogrammetry from Extreme Off-Nadir Satellite Images**|Fei Yu et.al.|[2512.07527](http://arxiv.org/abs/2512.07527)|<span class="null">—</span>|
-|**2025-12-08**|**Radiance-Field Reinforced Pretraining: Scaling Localization Models with Unlabeled Wireless Signals**|Guosheng Wang et.al.|[2512.07309](http://arxiv.org/abs/2512.07309)|<span class="null">—</span>|
-|**2025-12-10**|**AGORA: Adversarial Generation Of Real-time Animatable 3D Gaussian Head Avatars**|Ramazan Fazylov et.al.|[2512.06438](http://arxiv.org/abs/2512.06438)|<span class="null">—</span>|
-|**2025-12-04**|**Gaussian Entropy Fields: Driving Adaptive Sparsity in 3D Gaussian Optimization**|Hong Kuang et.al.|[2512.04542](http://arxiv.org/abs/2512.04542)|<span class="null">—</span>|
-|**2025-12-03**|**Radiance Meshes for Volumetric Reconstruction**|Alexander Mai et.al.|[2512.04076](http://arxiv.org/abs/2512.04076)|<span class="null">—</span>|
-|**2025-12-03**|**What Is The Best 3D Scene Representation for Robotics? From Geometric to Foundation Models**|Tianchen Deng et.al.|[2512.03422](http://arxiv.org/abs/2512.03422)|<span class="null">—</span>|
-|**2025-12-02**|**Flux4D: Flow-based Unsupervised 4D Reconstruction**|Jingkang Wang et.al.|[2512.03210](http://arxiv.org/abs/2512.03210)|<span class="null">—</span>|
-|**2025-12-02**|**PolarGuide-GSDR: 3D Gaussian Splatting Driven by Polarization Priors and Deferred Reflection for Real-World Reflective Scenes**|Derui Shan et.al.|[2512.02664](http://arxiv.org/abs/2512.02664)|<span class="null">—</span>|
-|**2025-12-01**|**SplatSuRe: Selective Super-Resolution for Multi-view Consistent 3D Gaussian Splatting**|Pranav Asthana et.al.|[2512.02172](http://arxiv.org/abs/2512.02172)|<span class="null">—</span>|
-|**2025-12-01**|**EGG-Fusion: Efficient 3D Reconstruction with Geometry-aware Gaussian Surfel on the Fly**|Xiaokun Pan et.al.|[2512.01296](http://arxiv.org/abs/2512.01296)|<span class="null">—</span>|
-|**2025-11-30**|**Dynamic-eDiTor: Training-Free Text-Driven 4D Scene Editing with Multimodal Diffusion Transformer**|Dong In Lee et.al.|[2512.00677](http://arxiv.org/abs/2512.00677)|<span class="null">—</span>|
-|**2025-11-29**|**SplatFont3D: Structure-Aware Text-to-3D Artistic Font Generation with Part-Level Style Control**|Ji Gan et.al.|[2512.00413](http://arxiv.org/abs/2512.00413)|<span class="null">—</span>|
-|**2025-11-28**|**Image Valuation in NeRF-based 3D reconstruction**|Grigorios Aris Cheimariotis et.al.|[2511.23052](http://arxiv.org/abs/2511.23052)|<span class="null">—</span>|
-|**2025-11-25**|**$Δ$ -NeRF: Incremental Refinement of Neural Radiance Fields through Residual Control and Knowledge Transfer**|Kriti Ghosh et.al.|[2511.20804](http://arxiv.org/abs/2511.20804)|<span class="null">—</span>|
-|**2025-11-24**|**Proxy-Free Gaussian Splats Deformation with Splat-Based Surface Estimation**|Jaeyeong Kim et.al.|[2511.19542](http://arxiv.org/abs/2511.19542)|<span class="null">—</span>|
-|**2025-11-24**|**MapRF: Weakly Supervised Online HD Map Construction via NeRF-Guided Self-Training**|Hongyu Lyu et.al.|[2511.19527](http://arxiv.org/abs/2511.19527)|<span class="null">—</span>|
-|**2025-11-24**|**TPG-INR: Target Prior-Guided Implicit 3D CT Reconstruction for Enhanced Sparse-view Imaging**|Qinglei Cao et.al.|[2511.18806](http://arxiv.org/abs/2511.18806)|<span class="null">—</span>|
-|**2025-11-23**|**ReCoGS: Real-time ReColoring for Gaussian Splatting scenes**|Lorenzo Rutayisire et.al.|[2511.18441](http://arxiv.org/abs/2511.18441)|<span class="null">—</span>|
-|**2025-11-23**|**AIA-UltraNeRF:Acoustic-Impedance-Aware Neural Radiance Field with Hash Encodings for Robotic Ultrasound Reconstruction and Localization**|Shuai Zhang et.al.|[2511.18293](http://arxiv.org/abs/2511.18293)|<span class="null">—</span>|
-|**2025-11-21**|**NoPe-NeRF++: Local-to-Global Optimization of NeRF with No Pose Prior**|Dongbo Shi et.al.|[2511.17322](http://arxiv.org/abs/2511.17322)|<span class="null">—</span>|
-|**2025-11-20**|**EOGS++: Earth Observation Gaussian Splatting with Internal Camera Refinement and Direct Panchromatic Rendering**|Pierrick Bournez et.al.|[2511.16542](http://arxiv.org/abs/2511.16542)|<span class="null">—</span>|
-|**2025-11-18**|**iGaussian: Real-Time Camera Pose Estimation via Feed-Forward 3D Gaussian Splatting Inversion**|Hao Wang et.al.|[2511.14149](http://arxiv.org/abs/2511.14149)|<span class="null">—</span>|
-|**2025-11-18**|**PFAvatar: Pose-Fusion 3D Personalized Avatar Reconstruction from Real-World Outfit-of-the-Day Photos**|Dianbing Xi et.al.|[2511.12935](http://arxiv.org/abs/2511.12935)|<span class="null">—</span>|
-|**2025-11-16**|**OPFormer: Object Pose Estimation leveraging foundation model with geometric encoding**|Artem Moroz et.al.|[2511.12614](http://arxiv.org/abs/2511.12614)|<span class="null">—</span>|
-|**2025-11-15**|**LiDAR-GS++:Improving LiDAR Gaussian Reconstruction via Diffusion Priors**|Qifeng Chen et.al.|[2511.12304](http://arxiv.org/abs/2511.12304)|<span class="null">—</span>|
-|**2025-11-11**|**RePose-NeRF: Robust Radiance Fields for Mesh Reconstruction under Noisy Camera Poses**|Sriram Srinivasan et.al.|[2511.08545](http://arxiv.org/abs/2511.08545)|<span class="null">—</span>|
-|**2025-11-11**|**Is It Truly Necessary to Process and Fit Minutes-Long Reference Videos for Personalized Talking Face Generation?**|Rui-Qing Sun et.al.|[2511.07940](http://arxiv.org/abs/2511.07940)|<span class="null">—</span>|
-|**2025-11-10**|**Sparse4DGS: 4D Gaussian Splatting for Sparse-Frame Dynamic Scene Reconstruction**|Changyue Shi et.al.|[2511.07122](http://arxiv.org/abs/2511.07122)|<span class="null">—</span>|
-|**2025-11-09**|**Inpaint360GS: Efficient Object-Aware 3D Inpainting via Gaussian Splatting for 360° Scenes**|Shaoxiang Wang et.al.|[2511.06457](http://arxiv.org/abs/2511.06457)|<span class="null">—</span>|
-|**2025-11-09**|**VDNeRF: Vision-only Dynamic Neural Radiance Field for Urban Scenes**|Zhengyu Zou et.al.|[2511.06408](http://arxiv.org/abs/2511.06408)|<span class="null">—</span>|
-|**2025-11-07**|**4D3R: Motion-Aware Neural Reconstruction and Rendering of Dynamic Scenes from Monocular Videos**|Mengqi Guo et.al.|[2511.05229](http://arxiv.org/abs/2511.05229)|<span class="null">—</span>|
-|**2025-11-07**|**Efficient representation of 3D spatial data for defense-related applications**|Benjamin Kahl et.al.|[2511.05109](http://arxiv.org/abs/2511.05109)|<span class="null">—</span>|
-|**2025-11-06**|**3D Gaussian Point Encoders**|Jim James et.al.|[2511.04797](http://arxiv.org/abs/2511.04797)|<span class="null">—</span>|
-|**2025-11-06**|**FastGS: Training 3D Gaussian Splatting in 100 Seconds**|Shiwei Ren et.al.|[2511.04283](http://arxiv.org/abs/2511.04283)|<span class="null">—</span>|
-|**2025-11-04**|**LiteVoxel: Low-memory Intelligent Thresholding for Efficient Voxel Rasterization**|Jee Won Lee et.al.|[2511.02510](http://arxiv.org/abs/2511.02510)|<span class="null">—</span>|
-|**2025-11-04**|**Object-Centric 3D Gaussian Splatting for Strawberry Plant Reconstruction and Phenotyping**|Jiajia Li et.al.|[2511.02207](http://arxiv.org/abs/2511.02207)|<span class="null">—</span>|
-|**2025-10-31**|**SAGS: Self-Adaptive Alias-Free Gaussian Splatting for Dynamic Surgical Endoscopic Reconstruction**|Wenfeng Huang et.al.|[2510.27318](http://arxiv.org/abs/2510.27318)|<span class="null">—</span>|
-|**2025-10-29**|**4-Doodle: Text to 3D Sketches that Move!**|Hao Chen et.al.|[2510.25319](http://arxiv.org/abs/2510.25319)|<span class="null">—</span>|
-|**2025-10-25**|**I2-NeRF: Learning Neural Radiance Fields Under Physically-Grounded Media Interactions**|Shuhong Liu et.al.|[2510.22161](http://arxiv.org/abs/2510.22161)|<span class="null">—</span>|
-|**2025-10-23**|**From Far and Near: Perceptual Evaluation of Crowd Representations Across Levels of Detail**|Xiaohan Sun et.al.|[2510.20558](http://arxiv.org/abs/2510.20558)|<span class="null">—</span>|
-|**2025-10-22**|**Extreme Views: 3DGS Filter for Novel View Synthesis from Out-of-Distribution Camera Poses**|Damian Bowness et.al.|[2510.20027](http://arxiv.org/abs/2510.20027)|<span class="null">—</span>|
-|**2025-10-22**|**AegisRF: Adversarial Perturbations Guided with Sensitivity for Protecting Intellectual Property of Neural Radiance Fields**|Woo Jae Kim et.al.|[2510.19371](http://arxiv.org/abs/2510.19371)|<span class="null">—</span>|
-|**2025-10-22**|**Advances in 4D Representation: Geometry, Motion, and Interaction**|Mingrui Zhao et.al.|[2510.19255](http://arxiv.org/abs/2510.19255)|<span class="null">—</span>|
-|**2025-11-10**|**GauSSmart: Enhanced 3D Reconstruction through 2D Foundation Models and Geometric Filtering**|Alexander Valverde et.al.|[2510.14270](http://arxiv.org/abs/2510.14270)|<span class="null">—</span>|
-|**2025-10-16**|**SimULi: Real-Time LiDAR and Camera Simulation with Unscented Transforms**|Haithem Turki et.al.|[2510.12901](http://arxiv.org/abs/2510.12901)|<span class="null">—</span>|
-|**2025-10-13**|**Perspective-aware 3D Gaussian Inpainting with Multi-view Consistency**|Yuxin Cheng et.al.|[2510.10993](http://arxiv.org/abs/2510.10993)|<span class="null">—</span>|
-|**2025-10-11**|**Opacity-Gradient Driven Density Control for Compact and Efficient Few-Shot 3D Gaussian Splatting**|Abdelrhman Elrawy et.al.|[2510.10257](http://arxiv.org/abs/2510.10257)|<span class="null">—</span>|
-|**2025-10-27**|**Gesplat: Robust Pose-Free 3D Reconstruction via Geometry-Guided Gaussian Splatting**|Jiahui Lu et.al.|[2510.10097](http://arxiv.org/abs/2510.10097)|<span class="null">—</span>|
-|**2025-10-10**|**Geometry-Aware Scene Configurations for Novel View Synthesis**|Minkwan Kim et.al.|[2510.09880](http://arxiv.org/abs/2510.09880)|<span class="null">—</span>|
-|**2025-10-10**|**Vision Language Models: A Survey of 26K Papers**|Fengming Lin et.al.|[2510.09586](http://arxiv.org/abs/2510.09586)|<span class="null">—</span>|
-|**2025-10-10**|**HERO: Hardware-Efficient RL-based Optimization Framework for NeRF Quantization**|Yipu Zhang et.al.|[2510.09010](http://arxiv.org/abs/2510.09010)|<span class="null">—</span>|
-|**2025-10-09**|**An Energy-Efficient Edge Coprocessor for Neural Rendering with Explicit Data Reuse Strategies**|Binzhe Yuan et.al.|[2510.07667](http://arxiv.org/abs/2510.07667)|<span class="null">—</span>|
-|**2025-10-03**|**ROGR: Relightable 3D Objects using Generative Relighting**|Jiapeng Tang et.al.|[2510.03163](http://arxiv.org/abs/2510.03163)|<span class="null">—</span>|
-|**2025-10-02**|**StealthAttack: Robust 3D Gaussian Splatting Poisoning via Density-Guided Illusions**|Bo-Hsu Ke et.al.|[2510.02314](http://arxiv.org/abs/2510.02314)|<span class="null">—</span>|
-|**2025-10-01**|**Multi-level Dynamic Style Transfer for NeRFs**|Zesheng Li et.al.|[2510.00592](http://arxiv.org/abs/2510.00592)|<span class="null">—</span>|
-|**2025-10-08**|**VGGT-X: When VGGT Meets Dense Novel View Synthesis**|Yang Liu et.al.|[2509.25191](http://arxiv.org/abs/2509.25191)|<span class="null">—</span>|
-|**2025-10-02**|**GEM: 3D Gaussian Splatting for Efficient and Accurate Cryo-EM Reconstruction**|Huaizhi Qu et.al.|[2509.25075](http://arxiv.org/abs/2509.25075)|<span class="null">—</span>|
-|**2025-09-28**|**From Fields to Splats: A Cross-Domain Survey of Real-Time Neural Scene Representations**|Javed Ahmad et.al.|[2509.23555](http://arxiv.org/abs/2509.23555)|<span class="null">—</span>|
-|**2025-09-30**|**FM-SIREN & FM-FINER: Nyquist-Informed Frequency Multiplier for Implicit Neural Representation with Periodic Activation**|Mohammed Alsakabi et.al.|[2509.23438](http://arxiv.org/abs/2509.23438)|<span class="null">—</span>|
+|**2026-10-31**|**Learning Timeline-Preserving Speech-to-Speech Translation**|Zhisheng Zheng et.al.|[2611.00690](http://arxiv.org/abs/2611.00690)|<span class="null">—</span>|
+|**2026-10-27**|**S3-S2ST: Semantically Supervised Streaming Speech-to-Speech Translation**|Yuxiang Zhao et.al.|[2610.36777](http://arxiv.org/abs/2610.36777)|<span class="null">—</span>|
+|**2026-10-26**|**SimPOTrans: Self-Adaptation for Offline-to-Simultaneous Speech Translation via Reinforcement Learning**|Haotian Tan et.al.|[2610.35042](http://arxiv.org/abs/2610.35042)|<span class="null">—</span>|
+|**2026-10-23**|**DIAL-S2ST: Learning Latency Control for Simultaneous Speech-to-Speech Translation**|Jeongsoo Choi et.al.|[2610.32214](http://arxiv.org/abs/2610.32214)|<span class="null">—</span>|
+|**2026-10-23**|**X-Dubbing: Speech-to-Speech Translation under Temporal and Visual Constraints**|Jeongsoo Choi et.al.|[2610.32042](http://arxiv.org/abs/2610.32042)|<span class="null">—</span>|
+|**2026-10-22**|**Spark-Audio 1.0 Technical Report**|Chenyue Zhang et.al.|[2610.31292](http://arxiv.org/abs/2610.31292)|<span class="null">—</span>|
+|**2026-10-19**|**Preference-Aware Pareto Steering for Multi-Task Speech LLMs**|Liuyuan Jiang et.al.|[2610.27200](http://arxiv.org/abs/2610.27200)|<span class="null">—</span>|
+|**2026-07-13**|**AutoTerm-SST: Adaptive Terminology Memory with Zero Session-Time Setup for Streaming Speech Translation**|Jiaxuan Luo et.al.|[2610.26865](http://arxiv.org/abs/2610.26865)|**[link](https://github.com/luojiaxuan/autoterm-sst)**|
+|**2026-10-13**|**PACT: A Pragmatic Prompting Framework for Expressive and Voice-Preserving Speech-to-Speech Translation**|Yuchen Song et.al.|[2610.18247](http://arxiv.org/abs/2610.18247)|<span class="null">—</span>|
+|**2026-10-09**|**Lossless Inference Acceleration for ASR via EAGLE-Style Speculative Decoding**|Sen Zhang et.al.|[2610.13506](http://arxiv.org/abs/2610.13506)|<span class="null">—</span>|
+|**2026-10-08**|**Local Prototype Reconstruction for Text-Compatible Speech-to-LLM Bridge Pretraining**|Xinnian Zhao et.al.|[2610.11159](http://arxiv.org/abs/2610.11159)|<span class="null">—</span>|
+|**2026-10-07**|**Dialect-Robust Speech Language Models with Synthetic Pseudo-Dialect Augmentation**|Shunsuke Mitsumori et.al.|[2610.09321](http://arxiv.org/abs/2610.09321)|<span class="null">—</span>|
+|**2026-10-06**|**DirectSpeech2LLM: A Simple End-to-End Framework to Mitigate Prompt Overfitting in Speech-LLMs**|Hemant Yadav et.al.|[2610.08085](http://arxiv.org/abs/2610.08085)|<span class="null">—</span>|
+|**2026-10-14**|**Quality-Aware Self-Correcting Speech Translation on an Edge Device**|Zubair Ajmal Farooq et.al.|[2610.07545](http://arxiv.org/abs/2610.07545)|**[link](https://github.com/surrey-nlp/speech-translation_edge_device)**|
+|**2026-10-02**|**Learning When to Commit from Partial Speech for End-to-End Simultaneous Speech Translation**|Hieu Hoang et.al.|[2610.02612](http://arxiv.org/abs/2610.02612)|<span class="null">—</span>|
+|**2026-10-12**|**Index-Translate: A Multilingual Translation Model Family -- Text, Speech, Controlled Dubbing, and Long-Document Translation**|Tianjiao Li et.al.|[2609.40181](http://arxiv.org/abs/2609.40181)|**[link](https://github.com/bilibili/Index-Translate)**|
+|**2026-10-01**|**MGhana-ST: A Low-Resource Speech Translation Dataset for Ghanaian Languages and an Analysis of Multilingual Training Trade-offs**|Frank Lawrence Nii Adoquaye Acquaye et.al.|[2609.40041](http://arxiv.org/abs/2609.40041)|<span class="null">—</span>|
+|**2026-09-27**|**TutlAit v1: a crowdsourced Moroccan Tamazight speech dataset with Arabic transcriptions and regional accent labels**|Mohamed-Amine Chadi et.al.|[2609.38219](http://arxiv.org/abs/2609.38219)|<span class="null">—</span>|
+|**2026-09-27**|**DuraS2ST: Chain-of-Thought and Reinforcement Learning for Duration-Aligned Speech-to-Speech Translation**|Yayue Deng et.al.|[2609.33742](http://arxiv.org/abs/2609.33742)|**[link](https://github.com/Mia11939/DuraS2ST)**|
+|**2026-09-25**|**A Comprehensive Study of Content Representations for Speech Synthesis**|Diego Torres et.al.|[2609.30975](http://arxiv.org/abs/2609.30975)|<span class="null">—</span>|
+|**2026-09-24**|**All In Good Time: Causality-Aware Framework for LLM-Based Simultaneous Speech-to-Speech Translation**|Amir Hussein et.al.|[2609.30416](http://arxiv.org/abs/2609.30416)|<span class="null">—</span>|
+|**2026-09-22**|**Transcribe, Translate, and Optimize: Joint Reward Learning for Speech Translation**|Yanghe Dong et.al.|[2609.26536](http://arxiv.org/abs/2609.26536)|<span class="null">—</span>|
+|**2026-09-22**|**Persistent Delivery Optimization for Streaming Speech-to-Text Translation with Revisions**|Zixiang Wan et.al.|[2609.26427](http://arxiv.org/abs/2609.26427)|**[link](https://github.com/ggiggit/PDO_S2TT)**|
+|**2026-09-16**|**Align, Integrate, and Fire: Efficient Token-Level Alignment for Zero-Shot SpeechLLMs**|Abderrahmane Issam et.al.|[2609.18516](http://arxiv.org/abs/2609.18516)|<span class="null">—</span>|
+|**2026-09-15**|**CVSS-X: A Multilingual Speech-to-Speech Translation Corpus for 28 Languages**|Lucas Rafael Stefanel Gris et.al.|[2609.13413](http://arxiv.org/abs/2609.13413)|**[link](https://github.com/ErmisAI/XVSS-X)**|
+|**2026-09-11**|**Kraken: LLM-based Speech-to-Speech Translation via Low-bitrate VQ and Dual-path Source Conditioning**|Hayato Futami et.al.|[2609.13045](http://arxiv.org/abs/2609.13045)|<span class="null">—</span>|
+|**2026-09-09**|**NOPE-HYPE: A Structured Simulation Workflow for Robust Speech-to-Text Across Diverse Acoustic Environments**|Niramay M. Patel et.al.|[2609.10058](http://arxiv.org/abs/2609.10058)|<span class="null">—</span>|
+|**2026-09-09**|**SEA-SpeechBench: A Large-Scale Multitask Benchmark for Speech Understanding Across Southeast Asia**|Jingyi Liao et.al.|[2609.09672](http://arxiv.org/abs/2609.09672)|<span class="null">—</span>|
+|**2026-09-15**|**EviSI: An Evidence-Based Evaluation Agent for Simultaneous Interpreting**|Ben Yan et.al.|[2609.08171](http://arxiv.org/abs/2609.08171)|<span class="null">—</span>|
+|**2026-09-17**|**Dynamic Lagging using Stable-Prefix Training for Simultaneous Translation**|Hieu Hoang et.al.|[2609.05799](http://arxiv.org/abs/2609.05799)|<span class="null">—</span>|
+|**2026-08-29**|**Anchoring Speech with Semantics: A Multimodal Adapter Mechanism for Automatic Speech Recognition in Low-Resource Languages**|Kuan-Tang Huang et.al.|[2608.29239](http://arxiv.org/abs/2608.29239)|<span class="null">—</span>|
+|**2026-08-28**|**Is Prosody Lost in Translation? Fine-Grained Cross-Lingual Prosody Similarity Across Languages**|Haopeng Xie et.al.|[2608.27848](http://arxiv.org/abs/2608.27848)|<span class="null">—</span>|
+|**2026-08-25**|**A Comprehensive Analysis of Arabic Natural Language Processing Research: Trends, Topic Evolution, and Research Gaps -- A Bibliometric and Topic-Based Study**|Mullosharaf K. Arabov et.al.|[2608.23421](http://arxiv.org/abs/2608.23421)|<span class="null">—</span>|
+|**2026-08-06**|**Breaking the Curse of Multilinguality in Many-to-Many Speech-to-Text Translation via a Resource-Aware Mixture of Speech Encoders**|Yexing Du et.al.|[2608.04586](http://arxiv.org/abs/2608.04586)|<span class="null">—</span>|
+|**2026-08-03**|**The Role of Disfluencies in Speech Translation**|Maike Züfle et.al.|[2608.02138](http://arxiv.org/abs/2608.02138)|<span class="null">—</span>|
+|**2026-07-24**|**MEUSLI: a Multilingual Projector for LLM-based ASR and Beyond**|Lorenzo Concina et.al.|[2607.22100](http://arxiv.org/abs/2607.22100)|<span class="null">—</span>|
+|**2026-08-30**|**SimulS2ST-Omni: Data-Efficient Streaming Speech-to-Speech Translation via Explicit Trajectory Supervision**|Rongshen He et.al.|[2607.19810](http://arxiv.org/abs/2607.19810)|<span class="null">—</span>|
+|**2026-07-20**|**When to Use Extra Context: Evidence-Grounded Terminology Adaptation for Simultaneous Speech Translation**|Zeyu Yang et.al.|[2607.17766](http://arxiv.org/abs/2607.17766)|<span class="null">—</span>|
+|**2026-07-20**|**X-Translator: A Real-Time Multilingual Speaker-Aware Speech-to-Speech Translation System**|Yuxiang Zhao et.al.|[2607.17544](http://arxiv.org/abs/2607.17544)|**[link](https://github.com/zhaoyx239/X-Translator)**|
+|**2026-07-14**|**Do LLMs Need Architectural Changes for Simultaneous Speech Translation? A Prefix-to-Prefix Data Driven Approach**|Junkun Chen et.al.|[2607.13158](http://arxiv.org/abs/2607.13158)|<span class="null">—</span>|
+|**2026-07-15**|**NAVER LABS System Re-implementation for the IWSLT 2026 Instruction-Following Task**|Anand Kamble et.al.|[2607.05623](http://arxiv.org/abs/2607.05623)|<span class="null">—</span>|
+|**2026-09-22**|**Preserving Speech-to-Text LLM Capabilities in Speech-to-Speech Generation**|Yuxuan Hu et.al.|[2606.30944](http://arxiv.org/abs/2606.30944)|<span class="null">—</span>|
+|**2026-06-24**|**STEB: A Speech-to-Speech Translation Expressiveness Benchmark for Evaluating Beyond Translation Fidelity**|Sitong Cheng et.al.|[2606.25529](http://arxiv.org/abs/2606.25529)|<span class="null">—</span>|
+|**2026-06-24**|**Does Translation-Enhanced Speech Encoder Pre-training Affect Speech LLMs?**|Tomoya Mizumoto et.al.|[2606.25444](http://arxiv.org/abs/2606.25444)|<span class="null">—</span>|
+|**2026-06-23**|**Measuring User's Mental Models of Speech Translation in Human-AI Collaboration**|HyoJung Han et.al.|[2606.24644](http://arxiv.org/abs/2606.24644)|<span class="null">—</span>|
+|**2026-06-15**|**MLLP-VRAIN UPV system for the IWSLT 2026 Simultaneous Speech Translation task**|Jorge Iranzo-Sánchez et.al.|[2606.17255](http://arxiv.org/abs/2606.17255)|<span class="null">—</span>|
+|**2026-06-16**|**Bridging the Usability Gap: Lessons from Interpreting Studies for Machine Interpreting Design**|Claudio Fantinuoli et.al.|[2606.16009](http://arxiv.org/abs/2606.16009)|<span class="null">—</span>|
+|**2026-06-13**|**Evaluating and Preserving Lexical Stress in English-to-Chinese Speech-to-Speech Translation**|Yuchen Song et.al.|[2606.15266](http://arxiv.org/abs/2606.15266)|<span class="null">—</span>|
+|**2026-08-06**|**A Practical Evaluation Method for Long-Form Simultaneous Speech-to-Speech Translation**|Yulin Xue et.al.|[2606.15059](http://arxiv.org/abs/2606.15059)|**[link](https://github.com/SakaiXue6666/Speech-to-Speech-Latency)**|
+|**2026-06-11**|**Leveraging Audio-LLMs to Filter Speech-to-Speech Training Data**|Qixu Chen et.al.|[2606.13507](http://arxiv.org/abs/2606.13507)|<span class="null">—</span>|
+|**2026-06-11**|**NaturalFlow: Reducing Disruptive Pauses for Natural Speech Flow in Simultaneous Speech-to-Speech Translation**|Dongwook Lee et.al.|[2606.13121](http://arxiv.org/abs/2606.13121)|<span class="null">—</span>|
+|**2026-06-11**|**PiDA: Phonetically-Informed Data Augmentation for Robust Vietnamese Speech Translation**|Giang Son Nguyen et.al.|[2606.12911](http://arxiv.org/abs/2606.12911)|<span class="null">—</span>|
+|**2026-06-07**|**HydraQE: OSU's Submission for the IWSLT 2026 Speech Translation Metrics Shared Task**|Kevin Krahn et.al.|[2606.08748](http://arxiv.org/abs/2606.08748)|<span class="null">—</span>|
+|**2026-06-05**|**KIT's Submission to Cross-Lingual Voice Cloning in IWSLT 2026**|Seymanur Akti et.al.|[2606.07240](http://arxiv.org/abs/2606.07240)|<span class="null">—</span>|
+|**2026-10-14**|**Ouvia: A User-centered Framework for Measuring Usability of Speech Translation in Real-World Communication Scenarios**|Giuseppe Attanasio et.al.|[2606.06177](http://arxiv.org/abs/2606.06177)|**[link](https://github.com/g8a9/ouvia)**|
+|**2026-06-04**|**Automatic Labelling of Speech Translation Errors**|Dominik Macháček et.al.|[2606.06047](http://arxiv.org/abs/2606.06047)|<span class="null">—</span>|
+|**2026-06-02**|**AlignAtt4LLM: Fast AlignAtt for Decoder-Only LLMs at IWSLT 2026 Simultaneous Speech Translation Task**|Quentin Fuxa et.al.|[2606.03967](http://arxiv.org/abs/2606.03967)|<span class="null">—</span>|
+|**2026-06-02**|**A Pocket Offline Model for Simultaneous Speech Translation as CUNI Submission to IWSLT 2026**|Aziz Sharipov Ortega et.al.|[2606.03948](http://arxiv.org/abs/2606.03948)|<span class="null">—</span>|
+|**2026-06-02**|**Benchmarking Speech-to-Speech Translation Models**|Alkis Koudounas et.al.|[2606.03241](http://arxiv.org/abs/2606.03241)|<span class="null">—</span>|
+|**2026-08-29**|**FSA-GRPO: Teaching Auditory LLMs to Use Few-Shot Demonstrations**|Haolong Zheng et.al.|[2606.02615](http://arxiv.org/abs/2606.02615)|<span class="null">—</span>|
+|**2026-05-29**|**DOA: Training-Free Decoder-Only Attention Policy for Long-Form Simultaneous Translation with SpeechLLMs**|Sara Papi et.al.|[2605.31432](http://arxiv.org/abs/2605.31432)|<span class="null">—</span>|
+|**2026-05-29**|**OpenSTBench: Beyond Semantic Evaluation for Speech Translation**|Yanjie An et.al.|[2605.30792](http://arxiv.org/abs/2605.30792)|**[link](https://github.com/sjtuayj/OpenSTBench)**|
+|**2026-08-30**|**Why We Need Speech to Evaluate Speech Translation**|Maike Züfle et.al.|[2605.28227](http://arxiv.org/abs/2605.28227)|<span class="null">—</span>|
+|**2026-10-11**|**Conditioned in Training, Dispensable at Inference: Typological Conditioning for Multilingual Speech Translation**|Yu Pan et.al.|[2605.16026](http://arxiv.org/abs/2605.16026)|<span class="null">—</span>|
+|**2026-05-14**|**Streaming Speech-to-Text Translation with a SpeechLLM**|Titouan Parcollet et.al.|[2605.14766](http://arxiv.org/abs/2605.14766)|<span class="null">—</span>|
+|**2026-04-22**|**Hierarchical Policy Optimization for Simultaneous Translation of Unbounded Speech**|Siqi Ouyang et.al.|[2604.21045](http://arxiv.org/abs/2604.21045)|**[link](https://github.com/owaski/HPO)**|
+|**2026-08-31**|**KoALa-Bench: Evaluating Large Audio Language Models on Korean Speech Understanding and Faithfulness**|Jinyoung Kim et.al.|[2604.19782](http://arxiv.org/abs/2604.19782)|<span class="null">—</span>|
+|**2026-04-21**|**Detecting Hallucinations in SpeechLLMs at Inference Time Using Attention Maps**|Jonas Waldendorf et.al.|[2604.19565](http://arxiv.org/abs/2604.19565)|<span class="null">—</span>|
+|**2026-04-19**|**MoVE: Translating Laughter and Tears via Mixture of Vocalization Experts in Speech-to-Speech Translation**|Szu-Chi Chen et.al.|[2604.17435](http://arxiv.org/abs/2604.17435)|**[link](https://github.com/47zzz/MoVE)**|
+|**2026-10-11**|**NaijaS2ST: A Multi-Accent Benchmark for Speech-to-Speech Translation in Low-Resource Nigerian Languages**|Marie Maltais et.al.|[2604.16287](http://arxiv.org/abs/2604.16287)|<span class="null">—</span>|
+|**2026-04-28**|**Ti-Audio: The First Multi-Dialectal End-to-End Speech LLM for Tibetan**|Jialing Wang et.al.|[2604.11110](http://arxiv.org/abs/2604.11110)|<span class="null">—</span>|
+|**2026-04-01**|**English to Central Kurdish Speech Translation: Corpus Creation, Evaluation, and Orthographic Standardization**|Mohammad Mohammadamini et.al.|[2604.00613](http://arxiv.org/abs/2604.00613)|<span class="null">—</span>|
+|**2026-03-31**|**FLEURS-Kobani: Extending the FLEURS Dataset for Northern Kurdish**|Daban Q. Jaff et.al.|[2603.29892](http://arxiv.org/abs/2603.29892)|<span class="null">—</span>|
+|**2026-09-17**|**Automated Gradient-Driven Parameter Sharing for Low-Resource Multilingual Speech-to-Text Translation**|Ruiyan Sun et.al.|[2603.25836](http://arxiv.org/abs/2603.25836)|<span class="null">—</span>|
+|**2026-03-11**|**SimulU: Training-free Policy for Long-form Simultaneous Speech-to-Speech Translation**|Amirbek Djanibekov et.al.|[2603.16924](http://arxiv.org/abs/2603.16924)|<span class="null">—</span>|
+|**2026-09-10**|**Streaming Translation and Transcription Through Speech-to-Text Causal Alignment**|Roman Koshkin et.al.|[2603.11578](http://arxiv.org/abs/2603.11578)|<span class="null">—</span>|
+|**2026-06-26**|**Measuring the Redundancy of Decoder Layers in SpeechLLMs**|Adel Moumen et.al.|[2603.05121](http://arxiv.org/abs/2603.05121)|<span class="null">—</span>|
 
-> Showing the latest 200 of 1916 papers, see the [archive](#archive) for all.
-
-<h2 id="gaussian-splatting">Gaussian Splatting</h2>
+<h2 id="simultaneous-translation">Simultaneous Translation</h2>
 
 | Publish Date | Title | Authors | PDF | Code |
 |:---------|:-----------------------|:---------|:------|:------|
-|**2026-10-29**|**LucidLyra: Feed-Forward Generative 3D Scene Reconstruction and Joint Understanding via Multi-Task Distillation**|Oliver Hahn et.al.|[2610.40495](http://arxiv.org/abs/2610.40495)|<span class="null">—</span>|
-|**2026-10-29**|**MLLM-GS: Multimodal Large Language Model Prior-Guided Fast Novel View Synthesis in Extreme Environments**|Zhiliang Wu et.al.|[2610.39936](http://arxiv.org/abs/2610.39936)|<span class="null">—</span>|
-|**2026-10-29**|**ACD-GS: Asymmetric Curvature-aware Densification for 3D Gaussian Splatting**|Houqiang Zhong et.al.|[2610.39399](http://arxiv.org/abs/2610.39399)|<span class="null">—</span>|
-|**2026-10-29**|**P^2-Gaussian: Prior-Driven and Projection-Guided Gaussian Splatting for Sparse-View Cone-Beam CT Reconstruction**|Jinqiu Xia et.al.|[2610.39359](http://arxiv.org/abs/2610.39359)|**[link](https://github.com/Ballbo5354/P-2-Gaussian)**|
-|**2026-10-29**|**COGS: A Diagnostic Benchmark for Attribute-Aware Object-Level 3D Gaussian Splatting Perception**|Zheng Xiao et.al.|[2610.39201](http://arxiv.org/abs/2610.39201)|<span class="null">—</span>|
-|**2026-10-28**|**GradSplat: Gradients Inside the Forward Pass for Feed-Forward 3D Gaussian Splatting**|Jingong Chen et.al.|[2610.38951](http://arxiv.org/abs/2610.38951)|**[link](https://github.com/Jingong-Chen/GradSplat)**|
-|**2026-10-28**|**BudSplat: Feed-forward 3D Gaussian Splatting under a Rendering Budget**|Muyu Xu et.al.|[2610.38278](http://arxiv.org/abs/2610.38278)|<span class="null">—</span>|
-|**2026-10-27**|**GOFish: Full Field-of-View Gaussian Splatting and Mesh Extraction**|Allen Tu et.al.|[2610.37818](http://arxiv.org/abs/2610.37818)|<span class="null">—</span>|
-|**2026-10-27**|**Honeycomb-Surfels: Compact Hexagonal Primitives for Efficient Scene Rendering and Reconstruction**|Prakhar Kaushik et.al.|[2610.37668](http://arxiv.org/abs/2610.37668)|<span class="null">—</span>|
-|**2026-10-27**|**CTBakeGS: training-free baking of photorealistic CT volume renderings into 3D Gaussian splats**|Haruki Fukuda et.al.|[2610.37406](http://arxiv.org/abs/2610.37406)|**[link](https://github.com/BocchiSlice/CTBakeGS)**|
-|**2026-10-09**|**Splat2Act: From Captured Scenes to Personalized VLA Manipulation**|Xiaomeng Ye et.al.|[2610.13945](http://arxiv.org/abs/2610.13945)|**[link](https://github.com/YanjieZe/agent-real2sim2real)**|
-|**2026-10-09**|**Make It Flow: Animating Water in 3D Gaussian Splatting Scenes**|Kjell Keune et.al.|[2610.13860](http://arxiv.org/abs/2610.13860)|<span class="null">—</span>|
-|**2026-10-09**|**SimVTA: Simulation-Grounded Video-Trajectory Alignment for Driving World Action Models**|Changhui Jing et.al.|[2610.13781](http://arxiv.org/abs/2610.13781)|**[link](https://github.com/OpenDriveLab/SimVTA)**|
-|**2026-10-09**|**Gaussian Splatting with Reflections Guided by What is Seen**|Yiming Liang et.al.|[2610.13757](http://arxiv.org/abs/2610.13757)|<span class="null">—</span>|
-|**2026-10-09**|**AutoBio+: Benchmarking Dexterous Manipulation with Dynamic Experimental Phenomena in Realistic Laboratories**|Xuanye Wu et.al.|[2610.13643](http://arxiv.org/abs/2610.13643)|<span class="null">—</span>|
-|**2026-10-09**|**Efficient Confidence-Aware Densification for 3DGS**|Manuel Hofer et.al.|[2610.13541](http://arxiv.org/abs/2610.13541)|<span class="null">—</span>|
-|**2026-10-09**|**SplatQ: Interaction-Aware Pruning of 3D Gaussian Splatting via Quadratic Selection**|Hongbin Ye et.al.|[2610.13503](http://arxiv.org/abs/2610.13503)|<span class="null">—</span>|
-|**2026-10-09**|**A Hybrid and Hierarchical Ray Tracing Method for Efficient 3D Gaussian Rendering**|Tiancheng Zhao et.al.|[2610.13498](http://arxiv.org/abs/2610.13498)|<span class="null">—</span>|
-|**2026-10-09**|**ManeuverFlow: Maneuver Hypothesis Generation with Future Evidence for Trajectory Evaluation and Refinement in End-to-End Autonomous Driving**|Yuhao Wei et.al.|[2610.13409](http://arxiv.org/abs/2610.13409)|**[link](https://github.com/wyh-autonomy/maneuverflow)**|
-|**2026-10-09**|**NovaSplat: Model-Free 6D Object Pose Estimation via 3D Gaussian Splatting Onboarding and Refinement**|Georgios Floros et.al.|[2610.13309](http://arxiv.org/abs/2610.13309)|**[link](https://github.com/POSE-Lab/novasplat)**|
+|**2026-10-26**|**SimPOTrans: Self-Adaptation for Offline-to-Simultaneous Speech Translation via Reinforcement Learning**|Haotian Tan et.al.|[2610.35042](http://arxiv.org/abs/2610.35042)|<span class="null">—</span>|
+|**2026-09-17**|**Dynamic Lagging using Stable-Prefix Training for Simultaneous Translation**|Hieu Hoang et.al.|[2609.05799](http://arxiv.org/abs/2609.05799)|<span class="null">—</span>|
+|**2026-06-11**|**NaturalFlow: Reducing Disruptive Pauses for Natural Speech Flow in Simultaneous Speech-to-Speech Translation**|Dongwook Lee et.al.|[2606.13121](http://arxiv.org/abs/2606.13121)|<span class="null">—</span>|
+|**2026-06-02**|**A Pocket Offline Model for Simultaneous Speech Translation as CUNI Submission to IWSLT 2026**|Aziz Sharipov Ortega et.al.|[2606.03948](http://arxiv.org/abs/2606.03948)|<span class="null">—</span>|
+|**2026-05-29**|**DOA: Training-Free Decoder-Only Attention Policy for Long-Form Simultaneous Translation with SpeechLLMs**|Sara Papi et.al.|[2605.31432](http://arxiv.org/abs/2605.31432)|<span class="null">—</span>|
+|**2026-04-22**|**Hierarchical Policy Optimization for Simultaneous Translation of Unbounded Speech**|Siqi Ouyang et.al.|[2604.21045](http://arxiv.org/abs/2604.21045)|**[link](https://github.com/owaski/HPO)**|
+|**2026-03-29**|**ExPosST: Explicit Positioning with Adaptive Masking for LLM-Based Simultaneous Machine Translation**|Yuzhe Shang et.al.|[2603.14903](http://arxiv.org/abs/2603.14903)|<span class="null">—</span>|
+|**2026-09-10**|**Streaming Translation and Transcription Through Speech-to-Text Causal Alignment**|Roman Koshkin et.al.|[2603.11578](http://arxiv.org/abs/2603.11578)|<span class="null">—</span>|
+|**2026-01-16**|**Redefining Machine Simultaneous Interpretation: From Incremental Translation to Human-Like Strategies**|Qianen Zhang et.al.|[2601.11002](http://arxiv.org/abs/2601.11002)|<span class="null">—</span>|
+|**2025-09-26**|**Redefining Machine Simultaneous Interpretation: From Incremental Translation to Human-Like Strategies**|Qianen Zhang et.al.|[2509.21801](http://arxiv.org/abs/2509.21801)|<span class="null">—</span>|
+|**2026-01-04**|**Self-Speculative Biased Decoding for Faster Re-Translation**|Linxiao Zeng et.al.|[2509.21740](http://arxiv.org/abs/2509.21740)|<span class="null">—</span>|
+|**2025-08-18**|**Overcoming Latency Bottlenecks in On-Device Speech Translation: A Cascaded Approach with Alignment-Based Streaming MT**|Zeeshan Ahmed et.al.|[2508.13358](http://arxiv.org/abs/2508.13358)|<span class="null">—</span>|
+|**2025-06-23**|**MLLP-VRAIN UPV system for the IWSLT 2025 Simultaneous Speech Translation Translation task**|Jorge Iranzo-Sánchez et.al.|[2506.18828](http://arxiv.org/abs/2506.18828)|<span class="null">—</span>|
+|**2025-06-20**|**Simultaneous Translation with Offline Speech and LLM Models in CUNI Submission to IWSLT 2025**|Dominik Macháček et.al.|[2506.17077](http://arxiv.org/abs/2506.17077)|<span class="null">—</span>|
+|**2025-05-29**|**BeaverTalk: Oregon State University's IWSLT 2025 Simultaneous Speech Translation System**|Matthew Raffel et.al.|[2505.24016](http://arxiv.org/abs/2505.24016)|<span class="null">—</span>|
+|**2025-05-27**|**SeqPO-SiMT: Sequential Policy Optimization for Simultaneous Machine Translation**|Ting Xu et.al.|[2505.20622](http://arxiv.org/abs/2505.20622)|<span class="null">—</span>|
+|**2025-05-04**|**Language translation, and change of accent for speech-to-speech task using diffusion model**|Abhishek Mishra et.al.|[2505.04639](http://arxiv.org/abs/2505.04639)|<span class="null">—</span>|
+|**2025-05-29**|**LLMs Can Achieve High-quality Simultaneous Machine Translation as Efficiently as Offline**|Biao Fu et.al.|[2504.09570](http://arxiv.org/abs/2504.09570)|**[link](https://github.com/biaofuxmu/east)**|
+|**2025-03-28**|**Non-Monotonic Attention-based Read/Write Policy Learning for Simultaneous Translation**|Zeeshan Ahmed et.al.|[2503.22051](http://arxiv.org/abs/2503.22051)|<span class="null">—</span>|
+|**2025-06-16**|**InfiniSST: Simultaneous Translation of Unbounded Speech with Large Language Model**|Siqi Ouyang et.al.|[2503.02969](http://arxiv.org/abs/2503.02969)|**[link](https://github.com/LeiLiLab/InfiniSST)**|
+|**2025-02-05**|**SimulPL: Aligning Human Preferences in Simultaneous Machine Translation**|Donglei Yu et.al.|[2502.00634](http://arxiv.org/abs/2502.00634)|**[link](https://github.com/EurekaForNLP/SimulPL)**|
+|**2025-01-01**|**Large Language Models Are Read/Write Policy-Makers for Simultaneous Generation**|Shoutao Guo et.al.|[2501.00868](http://arxiv.org/abs/2501.00868)|<span class="null">—</span>|
+|**2025-05-28**|**Overcoming Non-monotonicity in Transducer-based Streaming Generation**|Zhengrui Ma et.al.|[2411.17170](http://arxiv.org/abs/2411.17170)|**[link](https://github.com/ictnlp/MonoAttn-Transducer)**|
+|**2025-05-31**|**Anticipating Future with Large Language Model for Simultaneous Machine Translation**|Siqi Ouyang et.al.|[2410.22499](http://arxiv.org/abs/2410.22499)|**[link](https://github.com/owaski/TAF)**|
+|**2024-10-05**|**PsFuture: A Pseudo-Future-based Zero-Shot Adaptive Policy for Simultaneous Machine Translation**|Libo Zhao et.al.|[2410.04075](http://arxiv.org/abs/2410.04075)|<span class="null">—</span>|
+|**2024-07-18**|**Fixed and Adaptive Simultaneous Machine Translation Strategies Using Adapters**|Abderrahmane Issam et.al.|[2407.13469](http://arxiv.org/abs/2407.13469)|<span class="null">—</span>|
+|**2024-06-26**|**Navigating the Minefield of MT Beam Search in Cascaded Streaming Speech Translation**|Rastislav Rabatin et.al.|[2407.11010](http://arxiv.org/abs/2407.11010)|<span class="null">—</span>|
+|**2025-01-10**|**An Automatic Quality Metric for Evaluating Simultaneous Interpretation**|Mana Makinae et.al.|[2407.06650](http://arxiv.org/abs/2407.06650)|<span class="null">—</span>|
+|**2024-06-20**|**SimulSeamless: FBK at IWSLT 2024 Simultaneous Speech Translation**|Sara Papi et.al.|[2406.14177](http://arxiv.org/abs/2406.14177)|**[link](https://github.com/hlt-mt/FBK-fairseq)**|
+|**2024-06-25**|**LLMs Are Zero-Shot Context-Aware Simultaneous Translators**|Roman Koshkin et.al.|[2406.13476](http://arxiv.org/abs/2406.13476)|<span class="null">—</span>|
+|**2024-06-11**|**On the Hallucination in Simultaneous Machine Translation**|Meizhi Zhong et.al.|[2406.07239](http://arxiv.org/abs/2406.07239)|<span class="null">—</span>|
+|**2024-10-19**|**A Non-autoregressive Generation Framework for End-to-End Simultaneous Speech-to-Speech Translation**|Zhengrui Ma et.al.|[2406.06937](http://arxiv.org/abs/2406.06937)|**[link](https://github.com/ictnlp/NAST-S2x)**|
+|**2024-06-12**|**Agent-SiMT: Agent-assisted Simultaneous Machine Translation with Large Language Models**|Shoutao Guo et.al.|[2406.06910](http://arxiv.org/abs/2406.06910)|<span class="null">—</span>|
+|**2024-06-06**|**Decoder-only Streaming Transformer for Simultaneous Translation**|Shoutao Guo et.al.|[2406.03878](http://arxiv.org/abs/2406.03878)|<span class="null">—</span>|
+|**2024-06-05**|**StreamSpeech: Simultaneous Speech-to-Speech Translation with Multi-task Learning**|Shaolei Zhang et.al.|[2406.03049](http://arxiv.org/abs/2406.03049)|<span class="null">—</span>|
+|**2024-06-04**|**Self-Modifying State Modeling for Simultaneous Machine Translation**|Donglei Yu et.al.|[2406.02237](http://arxiv.org/abs/2406.02237)|<span class="null">—</span>|
+|**2024-10-09**|**Simultaneous Masking, Not Prompting Optimization: A Paradigm Shift in Fine-tuning LLMs for Simultaneous Translation**|Matthew Raffel et.al.|[2405.10443](http://arxiv.org/abs/2405.10443)|<span class="null">—</span>|
+|**2024-04-18**|**Simultaneous Interpretation Corpus Construction by Large Language Models in Distant Language Pair**|Yusuke Sakai et.al.|[2404.12299](http://arxiv.org/abs/2404.12299)|**[link](https://github.com/yusuke1997/LLM-SI-Corpus)**|
+|**2024-02-20**|**SiLLM: Large Language Models for Simultaneous Machine Translation**|Shoutao Guo et.al.|[2402.13036](http://arxiv.org/abs/2402.13036)|<span class="null">—</span>|
+|**2025-11-17**|**Conversational SimulMT: Efficient Simultaneous Translation with Large Language Models**|Minghan Wang et.al.|[2402.10552](http://arxiv.org/abs/2402.10552)|<span class="null">—</span>|
+|**2024-02-07**|**TransLLaMa: LLM-based Simultaneous Translation System**|Roman Koshkin et.al.|[2402.04636](http://arxiv.org/abs/2402.04636)|<span class="null">—</span>|
+|**2023-12-22**|**Language Model is a Branch Predictor for Simultaneous Machine Translation**|Aoxiong Yin et.al.|[2312.14488](http://arxiv.org/abs/2312.14488)|**[link](https://github.com/YinAoXiong/simt_branch_predictor)**|
+|**2024-07-04**|**Simul-LLM: A Framework for Exploring High-Quality Simultaneous Translation with Large Language Models**|Victor Agostinelli et.al.|[2312.04691](http://arxiv.org/abs/2312.04691)|<span class="null">—</span>|
+|**2023-12-07**|**Efficient Monotonic Multihead Attention**|Xutai Ma et.al.|[2312.04515](http://arxiv.org/abs/2312.04515)|<span class="null">—</span>|
+|**2023-11-27**|**Average Token Delay: A Duration-aware Latency Metric for Simultaneous Translation**|Yasumasa Kano et.al.|[2311.14353](http://arxiv.org/abs/2311.14353)|<span class="null">—</span>|
+|**2023-11-13**|**Context Consistency between Training and Testing in Simultaneous Machine Translation**|Meizhi Zhong et.al.|[2311.07066](http://arxiv.org/abs/2311.07066)|<span class="null">—</span>|
+|**2023-11-07**|**CBSiMT: Mitigating Hallucination in Simultaneous Machine Translation with Weighted Prefix-to-Prefix Training**|Mengge Liu et.al.|[2311.03672](http://arxiv.org/abs/2311.03672)|<span class="null">—</span>|
+|**2023-11-30**|**Unified Segment-to-Segment Framework for Simultaneous Sequence Generation**|Shaolei Zhang et.al.|[2310.17940](http://arxiv.org/abs/2310.17940)|<span class="null">—</span>|
+|**2023-10-25**|**Enhanced Simultaneous Machine Translation with Word-level Policies**|Kang Kim et.al.|[2310.16417](http://arxiv.org/abs/2310.16417)|**[link](https://github.com/xl8-ai/WordSiMT)**|
+|**2023-10-23**|**Non-autoregressive Streaming Transformer for Simultaneous Translation**|Zhengrui Ma et.al.|[2310.14883](http://arxiv.org/abs/2310.14883)|**[link](https://github.com/ictnlp/NAST)**|
+|**2023-10-23**|**Adaptive Policy with Wait- $k$ Model for Simultaneous Translation**|Libo Zhao et.al.|[2310.14853](http://arxiv.org/abs/2310.14853)|<span class="null">—</span>|
+|**2023-10-26**|**Simultaneous Machine Translation with Tailored Reference**|Shoutao Guo et.al.|[2310.13588](http://arxiv.org/abs/2310.13588)|<span class="null">—</span>|
+|**2023-09-27**|**Direct Models for Simultaneous Translation and Automatic Subtitling: FBK@IWSLT2023**|Sara Papi et.al.|[2309.15554](http://arxiv.org/abs/2309.15554)|<span class="null">—</span>|
+|**2024-05-25**|**Segmentation-Free Streaming Machine Translation**|Javier Iranzo-Sánchez et.al.|[2309.14823](http://arxiv.org/abs/2309.14823)|<span class="null">—</span>|
+|**2025-11-17**|**Simultaneous Machine Translation with Large Language Models**|Minghan Wang et.al.|[2309.06706](http://arxiv.org/abs/2309.06706)|<span class="null">—</span>|
+|**2023-09-12**|**Glancing Future for Simultaneous Machine Translation**|Shoutao Guo et.al.|[2309.06179](http://arxiv.org/abs/2309.06179)|<span class="null">—</span>|
+|**2023-07-03**|**Shiftable Context: Addressing Training-Inference Context Mismatch in Simultaneous Speech Translation**|Matthew Raffel et.al.|[2307.01377](http://arxiv.org/abs/2307.01377)|**[link](https://github.com/osu-starlab/shiftablecontext)**|
+|**2023-05-26**|**Robustness of Multi-Source MT to Transcription Errors**|Dominik Macháček et.al.|[2305.16894](http://arxiv.org/abs/2305.16894)|<span class="null">—</span>|
+|**2023-05-27**|**Learning Optimal Policy for Simultaneous Machine Translation via Binary Search**|Shoutao Guo et.al.|[2305.12774](http://arxiv.org/abs/2305.12774)|<span class="null">—</span>|
+|**2024-04-01**|**NAIST-SIC-Aligned: an Aligned English-Japanese Simultaneous Interpretation Corpus**|Jinming Zhao et.al.|[2304.11766](http://arxiv.org/abs/2304.11766)|**[link](https://github.com/mingzi151/AHC-SI)**|
+|**2023-06-24**|**Improving Autoregressive NLP Tasks via Modular Linearized Attention**|Victor Agostinelli et.al.|[2304.08453](http://arxiv.org/abs/2304.08453)|<span class="null">—</span>|
+|**2023-03-28**|**Translate the Beauty in Songs: Jointly Learning to Align Melody and Translate Lyrics**|Chengxi Li et.al.|[2303.15705](http://arxiv.org/abs/2303.15705)|<span class="null">—</span>|
+|**2023-03-21**|**LEAPT: Learning Adaptive Prefix-to-prefix Translation For Simultaneous Machine Translation**|Lei Lin et.al.|[2303.11750](http://arxiv.org/abs/2303.11750)|<span class="null">—</span>|
+|**2023-03-13**|**Rethinking the Reasonability of the Test Set for Simultaneous Machine Translation**|Mengge Liu et.al.|[2303.00969](http://arxiv.org/abs/2303.00969)|<span class="null">—</span>|
+|**2023-03-01**|**Hidden Markov Transformer for Simultaneous Machine Translation**|Shaolei Zhang et.al.|[2303.00257](http://arxiv.org/abs/2303.00257)|<span class="null">—</span>|
+|**2022-12-02**|**Improving Simultaneous Machine Translation with Monolingual Data**|Hexuan Deng et.al.|[2212.01188](http://arxiv.org/abs/2212.01188)|**[link](https://github.com/hexuandeng/Mono4SiMT)**|
+|**2023-02-09**|**Average Token Delay: A Latency Metric for Simultaneous Translation**|Yasumasa Kano et.al.|[2211.13173](http://arxiv.org/abs/2211.13173)|<span class="null">—</span>|
+|**2022-11-01**|**Information-Transport-based Policy for Simultaneous Translation**|Shaolei Zhang et.al.|[2210.12357](http://arxiv.org/abs/2210.12357)|<span class="null">—</span>|
+|**2022-10-21**|**Turning Fixed to Adaptive: Integrating Post-Evaluation into Simultaneous Machine Translation**|Shoutao Guo et.al.|[2210.11900](http://arxiv.org/abs/2210.11900)|<span class="null">—</span>|
+|**2022-10-20**|**Wait-info Policy: Balancing Source and Target at Information Level for Simultaneous Machine Translation**|Shaolei Zhang et.al.|[2210.11220](http://arxiv.org/abs/2210.11220)|<span class="null">—</span>|
+|**2022-10-18**|**Simultaneous Translation for Unsegmented Input: A Sliding Window Approach**|Sukanta Sen et.al.|[2210.09754](http://arxiv.org/abs/2210.09754)|<span class="null">—</span>|
+|**2022-06-20**|**Over-Generation Cannot Be Rewarded: Length-Adaptive Average Lagging for Simultaneous Speech Translation**|Sara Papi et.al.|[2206.05807](http://arxiv.org/abs/2206.05807)|<span class="null">—</span>|
+|**2022-04-27**|**Data-Driven Adaptive Simultaneous Machine Translation**|Guangxu Xun et.al.|[2204.12672](http://arxiv.org/abs/2204.12672)|<span class="null">—</span>|
+|**2022-04-19**|**Blockwise Streaming Transformer for Spoken Language Understanding and Simultaneous Speech Translation**|Keqi Deng et.al.|[2204.08920](http://arxiv.org/abs/2204.08920)|<span class="null">—</span>|
+|**2022-03-22**|**Modeling Dual Read/Write Paths for Simultaneous Machine Translation**|Shaolei Zhang et.al.|[2203.09163](http://arxiv.org/abs/2203.09163)|<span class="null">—</span>|
+|**2022-03-17**|**Gaussian Multi-head Attention for Simultaneous Machine Translation**|Shaolei Zhang et.al.|[2203.09072](http://arxiv.org/abs/2203.09072)|<span class="null">—</span>|
 
-<h2 id="3d-reconstruction">3D Reconstruction</h2>
-
-| Publish Date | Title | Authors | PDF | Code |
-|:---------|:-----------------------|:---------|:------|:------|
-|**2026-10-29**|**L3G-World: Real-Time Infinite World Generation with Latent 3D Gaussian Memory**|Jinhyeok Choi et.al.|[2610.40614](http://arxiv.org/abs/2610.40614)|**[link](https://github.com/cvlab-kaist/L3G-World)**|
-|**2026-10-29**|**PhysInsert: Physically Plausible Object Insertion with Geometric Priors and Bidirectional Object-Scene Interactions**|Yue Gong et.al.|[2610.40453](http://arxiv.org/abs/2610.40453)|<span class="null">—</span>|
-|**2026-10-28**|**SparseTokenGS: Gaussian-based Sparse-View CBCT Reconstruction via Reusable Token Pool**|Zihan Deng et.al.|[2610.38360](http://arxiv.org/abs/2610.38360)|**[link](https://github.com/FrankDengAI/SparseTokenGS)**|
-|**2026-10-27**|**EUReCA: End-to-End Unified CBCT Reconstruction Across Clinical Acquisitions**|Jiening Zhu et.al.|[2610.37740](http://arxiv.org/abs/2610.37740)|<span class="null">—</span>|
-|**2026-10-28**|**GPA-VGGT: Geometry-Preserving Acceleration of VGGT**|Muyeol Sung et.al.|[2610.37000](http://arxiv.org/abs/2610.37000)|<span class="null">—</span>|
-|**2026-10-27**|**LingGS: Decoupling Feed-Forward Geometry Prediction from Camera Tracking for High-Fidelity Gaussian SLAM**|Da Li et.al.|[2610.36853](http://arxiv.org/abs/2610.36853)|<span class="null">—</span>|
-|**2026-10-26**|**E0.5: From Reconstructive to Future-Predictive 3D Foundations for Robotic World-Action Modeling**|X-Era AI Lab Team et.al.|[2610.36011](http://arxiv.org/abs/2610.36011)|<span class="null">—</span>|
-|**2026-10-26**|**Does VGGT Know What It Does Not Know?**|Adityan Thirumani Srinivasan et.al.|[2610.35806](http://arxiv.org/abs/2610.35806)|<span class="null">—</span>|
-|**2026-10-26**|**PosePlaner: Denoising Any Feed-Forward Pose Predictor from Pairwise Planar Geometry**|Yihang Chen et.al.|[2610.34845](http://arxiv.org/abs/2610.34845)|<span class="null">—</span>|
-|**2026-10-25**|**Fovea-JEPA: Overcoming Geometric Blind Spots in V-JEPA for Camera Motion Recognition**|Xiangkun Shi et.al.|[2610.34033](http://arxiv.org/abs/2610.34033)|<span class="null">—</span>|
-|**2026-10-08**|**Zebra3D: Efficient Hybrid Foundation Models For Scalable 3D Reconstruction**|Utkarsh Saxena et.al.|[2610.12727](http://arxiv.org/abs/2610.12727)|<span class="null">—</span>|
-|**2026-10-08**|**Pumpire: Unified Benchmark for Metric Distance Estimation**|Siyu Chen et.al.|[2610.12423](http://arxiv.org/abs/2610.12423)|**[link](https://github.com/SpatialVision/Pumpire)**|
-|**2026-10-08**|**GenIA: Generative Reconstruction with Test-Time Input Alignment**|Stefano Esposito et.al.|[2610.12388](http://arxiv.org/abs/2610.12388)|**[link](https://github.com/facebookresearch/GenIA)**|
-|**2026-10-08**|**Pose-Free Feed-Forward 3D Inpainting via Learnable Mask Attention and Support Token Refinement**|Jingyi Pan et.al.|[2610.11857](http://arxiv.org/abs/2610.11857)|**[link](https://github.com/Rorisis/FreeInpaint)**|
-|**2026-10-08**|**Seek-and-View Reasoning for Multi-View Spatial Understanding**|Qixiang Chen et.al.|[2610.11810](http://arxiv.org/abs/2610.11810)|**[link](https://github.com/q1xiangchen/Vantage)**|
-|**2026-10-08**|**PointVGGT: Zero-Shot Multiview RGB-D Point Cloud Registration with Visual Geometry Foundation Priors**|Haobo Jiang et.al.|[2610.11612](http://arxiv.org/abs/2610.11612)|<span class="null">—</span>|
-|**2026-10-08**|**CoCam4D: Geometry-Aware Cooperative 4D Perception for Camera-Only Autonomous Driving**|Soham Pahari et.al.|[2610.11577](http://arxiv.org/abs/2610.11577)|<span class="null">—</span>|
-|**2026-10-08**|**VGGTWorld-VLA: Intent-Conditioned 3D World Evolution for Autonomous Driving**|Zhaoyang Liu et.al.|[2610.11161](http://arxiv.org/abs/2610.11161)|<span class="null">—</span>|
-|**2026-10-08**|**SatFix: Absolute Visual Localization of UAVs in Satellite Maps from a Single Oblique Image**|Jiarui Zeng et.al.|[2610.11049](http://arxiv.org/abs/2610.11049)|<span class="null">—</span>|
-|**2026-10-07**|**LVSPM: Long Sequence View Synthesis and Pose Estimation Model**|Xi Chen et.al.|[2610.10960](http://arxiv.org/abs/2610.10960)|**[link](https://github.com/Burningdust21/LVSPM)**|
-
-<h2 id="world-model">World Model</h2>
-
-| Publish Date | Title | Authors | PDF | Code |
-|:---------|:-----------------------|:---------|:------|:------|
-|**2026-10-29**|**world2vec: Mechanistic world models through latent dynamics learning**|Tobias Schmidt et.al.|[2610.40637](http://arxiv.org/abs/2610.40637)|**[link](https://github.com/mlnjsh/ai-research-radar)**|
-|**2026-10-29**|**L3G-World: Real-Time Infinite World Generation with Latent 3D Gaussian Memory**|Jinhyeok Choi et.al.|[2610.40614](http://arxiv.org/abs/2610.40614)|**[link](https://github.com/cvlab-kaist/L3G-World)**|
-|**2026-10-29**|**Fight World Model: Customizable Combat through Visual Interaction Proxies**|Jiahua Li et.al.|[2610.40607](http://arxiv.org/abs/2610.40607)|**[link](https://github.com/mlnjsh/ai-research-radar)**|
-|**2026-10-29**|**Algebraic World Model: From Exploration to Proofs**|Guancheng Pan et.al.|[2610.40503](http://arxiv.org/abs/2610.40503)|<span class="null">—</span>|
-|**2026-10-29**|**Continuous-Action World Models: Learning Cross-Embodiment Spatiotemporal Dynamics Priors**|Liangyu Li et.al.|[2610.40401](http://arxiv.org/abs/2610.40401)|<span class="null">—</span>|
-|**2026-10-29**|**HiFOR: Hierarchical Foresight with Action-Guided World Grounding for Vision-Language-Action Model**|Rongxing Ding et.al.|[2610.40373](http://arxiv.org/abs/2610.40373)|<span class="null">—</span>|
-|**2026-10-29**|**Wizard: Manipulate Any World in Real Time via Agentic Control**|Yuzhe Wu et.al.|[2610.40339](http://arxiv.org/abs/2610.40339)|<span class="null">—</span>|
-|**2026-10-29**|**Video Generation Meets Agent Harness: Agentic Video Generation, Agentic World Modeling and Recursive Self-Improvement**|Liaoyuan Fan et.al.|[2610.40191](http://arxiv.org/abs/2610.40191)|**[link](https://github.com/agentic-videogen/awesome-agentic-videogen)**|
-|**2026-10-29**|**Cheap Retrieval and Observation Credit Assignment from One Quantity: The Value of Information**|Daniel Strauss et.al.|[2610.40030](http://arxiv.org/abs/2610.40030)|<span class="null">—</span>|
-|**2026-10-29**|**GROME: GROunding Factorized MEmory into Video World Models**|Fang Yu et.al.|[2610.39812](http://arxiv.org/abs/2610.39812)|<span class="null">—</span>|
-|**2026-10-23**|**UniAction: Unified Action Conditioning for World Models**|Bowen Xue et.al.|[2610.32977](http://arxiv.org/abs/2610.32977)|**[link](https://github.com/KBRASK/UniAction)**|
-|**2026-10-23**|**Adaptive World-Models for Anomaly Recognition (AWARE): A Framework for Robot Dynamics Prediction and Introspection**|Luke Beddow et.al.|[2610.32742](http://arxiv.org/abs/2610.32742)|<span class="null">—</span>|
-|**2026-10-23**|**Conditional Neural Processes for Self-Supervised Goal Discovery in Action Imitation**|Marco Gabriele Fedozzi et.al.|[2610.32688](http://arxiv.org/abs/2610.32688)|<span class="null">—</span>|
-|**2026-10-23**|**DT-JEPA: Learning to Predict Future Representations for Decision-Making**|Changxu Ni et.al.|[2610.32657](http://arxiv.org/abs/2610.32657)|<span class="null">—</span>|
-|**2026-10-23**|**HGWM: Hierarchical Graph-Guided World Model for Zero-Shot Object Navigation via Graph Matching**|I-tak Ieong et.al.|[2610.32554](http://arxiv.org/abs/2610.32554)|<span class="null">—</span>|
-|**2026-10-23**|**When Does Dynamics Randomization Test Context Inference?**|Oleg Smirnov et.al.|[2610.32414](http://arxiv.org/abs/2610.32414)|<span class="null">—</span>|
-|**2026-10-23**|**UniWorld: A Unified World Model for Real-Time Visual World Simulation**|Xin Zhang et.al.|[2610.32381](http://arxiv.org/abs/2610.32381)|<span class="null">—</span>|
-|**2026-10-23**|**ACWM-RM: A Reference-Free Reward Model from Complementary Mismatch Preferences**|Shibo Hong et.al.|[2610.32222](http://arxiv.org/abs/2610.32222)|<span class="null">—</span>|
-|**2026-10-23**|**$Ψ$ -0.6: Adaptive Streams of Thought in a Unified Vision-Language World Model**|Khai Loong Aw et.al.|[2610.32177](http://arxiv.org/abs/2610.32177)|**[link](https://github.com/neuroailab/psi-0.6)**|
-|**2026-10-22**|**Interpreting Physics in Video Encoders using Multi-Object Interaction Videos**|Ayushi Mehrotra et.al.|[2610.31983](http://arxiv.org/abs/2610.31983)|<span class="null">—</span>|
-|**2026-10-09**|**RSI-Anything: Unlocking Recursive Self-Improvement with World Models**|Taoyong Cui et.al.|[2610.13912](http://arxiv.org/abs/2610.13912)|**[link](https://github.com/Gen-Verse/RSI-Anything)**|
-|**2026-10-09**|**Dream to Remember: Continual Steering of Generalist Robot Policies with World Models**|Bahey Tharwat et.al.|[2610.13816](http://arxiv.org/abs/2610.13816)|<span class="null">—</span>|
-|**2026-10-09**|**SimVTA: Simulation-Grounded Video-Trajectory Alignment for Driving World Action Models**|Changhui Jing et.al.|[2610.13781](http://arxiv.org/abs/2610.13781)|**[link](https://github.com/OpenDriveLab/SimVTA)**|
-|**2026-10-09**|**SmolWAM: A Latent World-Action Model for Robotic Manipulation on Edge Devices**|Timi Owolabi et.al.|[2610.13740](http://arxiv.org/abs/2610.13740)|**[link](https://github.com/iitimii/SmolWAM)**|
-|**2026-10-09**|**GLIMPSE: Global-Local Indexing with Multi-Precision Spectral Encoding for Explorable Video World Models**|Zhufeng Xu et.al.|[2610.13706](http://arxiv.org/abs/2610.13706)|<span class="null">—</span>|
-|**2026-10-09**|**Beyond Successful Robot Demonstrations: Learning from Human Interactions and Modeling Failure Dynamics**|Peiyan Tu et.al.|[2610.13522](http://arxiv.org/abs/2610.13522)|<span class="null">—</span>|
-|**2026-10-09**|**Beyond Temporal Proximity: Explanatory World Models for Credit Assignment in Reinforcement Learning**|Oriol Corcoll et.al.|[2610.13504](http://arxiv.org/abs/2610.13504)|<span class="null">—</span>|
-|**2026-10-09**|**ManeuverFlow: Maneuver Hypothesis Generation with Future Evidence for Trajectory Evaluation and Refinement in End-to-End Autonomous Driving**|Yuhao Wei et.al.|[2610.13409](http://arxiv.org/abs/2610.13409)|**[link](https://github.com/wyh-autonomy/maneuverflow)**|
-|**2026-10-09**|**Golden Anchor for Video Generation**|Jinyuan Xu et.al.|[2610.13217](http://arxiv.org/abs/2610.13217)|<span class="null">—</span>|
-
-<h2 id="vla-and-vln">VLA and VLN</h2>
+<h2 id="llm-translation">LLM Translation</h2>
 
 | Publish Date | Title | Authors | PDF | Code |
 |:---------|:-----------------------|:---------|:------|:------|
-|**2026-10-29**|**Gym-Anything for Robotics: Scaling physical simulations with digital agents**|Pranjal Aggarwal et.al.|[2610.40565](http://arxiv.org/abs/2610.40565)|<span class="null">—</span>|
-|**2026-10-29**|**BURGER: Benchmarking and Understanding Robotic Generalization via Embodied Drawing**|Xiangyu Xu et.al.|[2610.40532](http://arxiv.org/abs/2610.40532)|**[link](https://github.com/hu-zlatan/embodied-ai-radar)**|
-|**2026-10-29**|**Improving Fine-Grained Manipulation through Demonstration Expansion and Execution Design**|Jingxu Gu et.al.|[2610.40430](http://arxiv.org/abs/2610.40430)|<span class="null">—</span>|
-|**2026-10-29**|**HiFOR: Hierarchical Foresight with Action-Guided World Grounding for Vision-Language-Action Model**|Rongxing Ding et.al.|[2610.40373](http://arxiv.org/abs/2610.40373)|<span class="null">—</span>|
-|**2026-10-29**|**TouchBridge: Tactile-Conditioned Human-to-Robot Transfer for Dexterous Manipulation**|Haozhe Zhang et.al.|[2610.40349](http://arxiv.org/abs/2610.40349)|<span class="null">—</span>|
-|**2026-10-29**|**RoboSeed: Multidimensional Evaluation of Vision-Language-Action and World-Action Models: Capability, Resource Affordability, and Research Evidence**|Xin Ma et.al.|[2610.40026](http://arxiv.org/abs/2610.40026)|**[link](https://github.com/PrimitiveX/RoboSeed)**|
-|**2026-10-29**|**LOGIV: Graph-Verified Execution with Causal Local Repair for Long-Horizon Robot Tasks**|Enqiao Lu et.al.|[2610.40016](http://arxiv.org/abs/2610.40016)|<span class="null">—</span>|
-|**2026-10-29**|**How Much Should a VLA Trust Its Reasoning? Step-Level Guidance as a Measured Action-Value Function**|Dabin Seo et.al.|[2610.40002](http://arxiv.org/abs/2610.40002)|<span class="null">—</span>|
-|**2026-10-29**|**From Reasoning to Action: Consequence-Grounded Alignment for Vision-Language-Action Models**|Yixue Zhang et.al.|[2610.39543](http://arxiv.org/abs/2610.39543)|<span class="null">—</span>|
-|**2026-10-29**|**PRIME W0: Physical Priors from World Models for Embodied Manipulation**|Huabin Peng et.al.|[2610.39528](http://arxiv.org/abs/2610.39528)|<span class="null">—</span>|
-|**2026-10-09**|**Splat2Act: From Captured Scenes to Personalized VLA Manipulation**|Xiaomeng Ye et.al.|[2610.13945](http://arxiv.org/abs/2610.13945)|**[link](https://github.com/YanjieZe/agent-real2sim2real)**|
-|**2026-10-09**|**Noise Space Learning for VLA Adaptation**|Junjie Lu et.al.|[2610.13943](http://arxiv.org/abs/2610.13943)|**[link](https://github.com/169884902hzl/Towards-Practical-Embodied-Intelligence)**|
-|**2026-10-09**|**JitterVLA: A Replay Benchmark for Motion Quality in VLA-Driven Human-Robot Manipulation**|Faith Ogunwoye et.al.|[2610.13628](http://arxiv.org/abs/2610.13628)|<span class="null">—</span>|
-|**2026-10-09**|**RARA: Robust Policy Fine-Tuning through Retrieval-Anchored Representation Alignment for Robotic Manipulation**|Xuhui Kang et.al.|[2610.13578](http://arxiv.org/abs/2610.13578)|**[link](https://github.com/Shua-Kang/RARA)**|
-|**2026-10-09**|**Reflect-VLA: Internalizing Reflective Guidance via Dual-Path On-Policy Self-Distillation for Autonomous Driving**|Yuechen Luo et.al.|[2610.13453](http://arxiv.org/abs/2610.13453)|<span class="null">—</span>|
-|**2026-10-09**|**Dual-Stream Memory for Vision-Language-Action Policies**|Yang Wang et.al.|[2610.13262](http://arxiv.org/abs/2610.13262)|<span class="null">—</span>|
-|**2026-10-09**|**Beyond Actions: Learning Future Operation Targets for Vision-Language-Action Models**|Min Lin et.al.|[2610.13212](http://arxiv.org/abs/2610.13212)|<span class="null">—</span>|
-|**2026-10-09**|**GuidedNav: Shaping Vision-Language Navigation Representations through Pre-action Attention and Spatial Guidance**|Jingyu Guo et.al.|[2610.13122](http://arxiv.org/abs/2610.13122)|<span class="null">—</span>|
-|**2026-10-09**|**Forward Dynamics Models**|Zipei Ma et.al.|[2610.13117](http://arxiv.org/abs/2610.13117)|<span class="null">—</span>|
-|**2026-10-09**|**Robust Vision-Language Navigation with Awareness of Instruction-Execution Progress**|Jiagan Huang et.al.|[2610.13104](http://arxiv.org/abs/2610.13104)|<span class="null">—</span>|
+|**2026-10-24**|**Beyond Prompts: A Systematic Study of LLM-Based Machine Translation Evaluators**|Dmitry Popov et.al.|[2610.33741](http://arxiv.org/abs/2610.33741)|<span class="null">—</span>|
+|**2026-10-23**|**"Not" is Not Lost in Translation: A Causal Analysis of Negation Representations in Multilingual LLMs**|Giang Son Nguyen et.al.|[2610.32281](http://arxiv.org/abs/2610.32281)|<span class="null">—</span>|
+|**2026-10-14**|**Retrieve What Helps, Only When It Helps: Agentic Reinforcement Learning for Selective Retrieval-Augmented Machine Translation**|Shijun Li et.al.|[2610.19528](http://arxiv.org/abs/2610.19528)|<span class="null">—</span>|
+|**2026-10-26**|**Back-Translation Still Matters: Leveraging Monolingual Data for Low-Resource Machine Translation with LLMs**|Divyanshu Bathla et.al.|[2610.18818](http://arxiv.org/abs/2610.18818)|<span class="null">—</span>|
+|**2026-10-11**|**Feedback as an Interface: Controlling Form and Detail in LLM Translation Refinement**|Yiqi Liu et.al.|[2610.15661](http://arxiv.org/abs/2610.15661)|<span class="null">—</span>|
+|**2026-10-07**|**Large Language Models for Machine Translation Quality Annotation: Humans and Models Are Both Challenged**|Hala Almaghout et.al.|[2610.10918](http://arxiv.org/abs/2610.10918)|<span class="null">—</span>|
+|**2026-09-27**|**Quizzing the Translation: A Prover-Grounded Evaluation Metric for NL $\rightarrow$ FOL**|Pu Suo et.al.|[2609.33612](http://arxiv.org/abs/2609.33612)|**[link](https://github.com/pu-suo/siv-metric)**|
+|**2026-09-19**|**Diagnose, Then Repair: A Two-Stage MQM-Guided Post-Editing Framework for Domain-Specific Machine Translation**|Ji Hun Wang et.al.|[2609.22793](http://arxiv.org/abs/2609.22793)|<span class="null">—</span>|
+|**2026-09-14**|**Can We Triage LLM Translation Errors in Classical Texts Without Human References? Source Novelty, GEMBA Scoring, and Budgeted Review through Pali-to-English Translation**|Máté Metzger et.al.|[2609.14963](http://arxiv.org/abs/2609.14963)|<span class="null">—</span>|
+|**2026-09-12**|**North Small Translate: Advanced Cost-Effective Translation (Cohere CAT+)**|Tom Kocmi et.al.|[2609.13916](http://arxiv.org/abs/2609.13916)|<span class="null">—</span>|
+|**2026-09-10**|**TransClean: A Benchmark for Detecting and Extracting Clean Translations from Large Language Model Outputs**|Shenbin Qian et.al.|[2609.11399](http://arxiv.org/abs/2609.11399)|<span class="null">—</span>|
+|**2026-09-19**|**Mind the Gap: Exposing LLM Translation Blind Spots Using the AlphaMWE Multilingual Parallel Corpus**|Lifeng Han et.al.|[2609.06634](http://arxiv.org/abs/2609.06634)|<span class="null">—</span>|
+|**2026-09-01**|**The Interlingua Hypothesis: LLMs Translate via a Latent Task-agnostic Feature Space**|Jacob Brinton et.al.|[2609.00515](http://arxiv.org/abs/2609.00515)|<span class="null">—</span>|
+|**2026-08-27**|**Reasoning about In-Context Samples for Machine-Translation**|Maxime Bouthors et.al.|[2608.27036](http://arxiv.org/abs/2608.27036)|<span class="null">—</span>|
+|**2026-08-10**|**Failure-Aware Long-Form Translation: Design and Implementation of a Recoverable LLM Translation System**|Yanlin Yu et.al.|[2608.09187](http://arxiv.org/abs/2608.09187)|<span class="null">—</span>|
+|**2026-08-05**|**Analysis of Numerical Localisation in LLM Translations**|Patrizia Kaye et.al.|[2608.05232](http://arxiv.org/abs/2608.05232)|<span class="null">—</span>|
+|**2026-07-28**|**Evaluating Prompt Scope and Demonstration Similarity in Local LLM Machine Translation**|Mihael Arcan et.al.|[2607.26286](http://arxiv.org/abs/2607.26286)|<span class="null">—</span>|
+|**2026-09-22**|**MetaHOPE: A Metaphor-Oriented Evaluation Framework for Analysing MT and LLM Translation Errors**|Jiahui Liang et.al.|[2607.00848](http://arxiv.org/abs/2607.00848)|**[link](https://github.com/Jiahui84/MetaHOPE)**|
+|**2026-06-16**|**Bridging Functional Correctness and Runtime Efficiency Gaps in LLM-Based Code Translation**|Longhui Zhang et.al.|[2606.17683](http://arxiv.org/abs/2606.17683)|<span class="null">—</span>|
+|**2026-06-08**|**Emotion Profiling in LLM-Based Literary Translation: Systematic Shifts Across MT and Post-Editing**|Antonio Castaldo et.al.|[2606.10113](http://arxiv.org/abs/2606.10113)|<span class="null">—</span>|
+|**2026-06-04**|**A Komi-Yazva--Russian Parallel Corpus and Evaluation Protocol for Zero- and Few-Shot LLM Translation**|Petr Parshakov et.al.|[2606.06420](http://arxiv.org/abs/2606.06420)|<span class="null">—</span>|
+|**2026-06-04**|**Better Literary Translation: A Multi-Aspect Data Generation and LLM Training Approach**|Zhihao Lin et.al.|[2606.05924](http://arxiv.org/abs/2606.05924)|<span class="null">—</span>|
+|**2026-05-31**|**Worlds Within Words: Translating Culture in Ancient Chinese Texts with Multi-Agent Coordination**|Xiaoqi He et.al.|[2606.01276](http://arxiv.org/abs/2606.01276)|<span class="null">—</span>|
+|**2026-05-31**|**From Outliers to Errors: Auditing Pali-to-English LLM Translations with Multi-Reference Adjudication**|Máté Metzger et.al.|[2606.01136](http://arxiv.org/abs/2606.01136)|<span class="null">—</span>|
+|**2026-05-29**|**Translation Analytics for Freelancers II: Benchmarking Local LLMs for Confidential Translation Workflows**|Yuri Balashov et.al.|[2605.31452](http://arxiv.org/abs/2605.31452)|<span class="null">—</span>|
+|**2026-05-14**|**AI-assisted cultural heritage dissemination: Comparing NMT and glossary-augmented LLM translation in rock art documents**|Vicent Briva-Iglesias et.al.|[2605.14679](http://arxiv.org/abs/2605.14679)|<span class="null">—</span>|
+|**2026-05-08**|**Why do Large Language Models Fail in Low-resource Translation? Unraveling the Token Dynamics of Large Language Models for Machine Translation**|Shenbin Qian et.al.|[2605.07533](http://arxiv.org/abs/2605.07533)|<span class="null">—</span>|
+|**2026-05-05**|**Nsanku: Evaluating Zero-Shot Translation Performance of LLMs for Ghanaian Languages**|Stephen E. Moore et.al.|[2605.04208](http://arxiv.org/abs/2605.04208)|<span class="null">—</span>|
+|**2026-04-29**|**Text Style Transfer with Machine Translation for Graphic Designs**|Deergh Singh Budhauria et.al.|[2604.26361](http://arxiv.org/abs/2604.26361)|<span class="null">—</span>|
+|**2026-04-24**|**RouteLMT: Learned Sample Routing for Hybrid LLM Translation Deployment**|Yingfeng Luo et.al.|[2604.22520](http://arxiv.org/abs/2604.22520)|<span class="null">—</span>|
+|**2026-04-19**|**Jupiter-N Technical Report**|George Drayson et.al.|[2604.17429](http://arxiv.org/abs/2604.17429)|<span class="null">—</span>|
+|**2026-04-08**|**Evaluating In-Context Translation with Synchronous Context-Free Grammar Transduction**|Jackson Petty et.al.|[2604.07320](http://arxiv.org/abs/2604.07320)|<span class="null">—</span>|
+|**2026-03-17**|**Can Linguistically Related Languages Guide LLM Translation in Low-Resource Settings?**|Aishwarya Ramasethu et.al.|[2603.16660](http://arxiv.org/abs/2603.16660)|<span class="null">—</span>|
+|**2026-03-13**|**Mending the Holes: Mitigating Reward Hacking in Reinforcement Learning for Multilingual Translation**|Yifeng Liu et.al.|[2603.13045](http://arxiv.org/abs/2603.13045)|**[link](https://github.com/LeiLiLab/WALAR)**|
+|**2026-02-28**|**BLUFF: Benchmarking the Detection of False and Synthetic Content across 58 Low-Resource Languages**|Jason Lucas et.al.|[2603.00634](http://arxiv.org/abs/2603.00634)|<span class="null">—</span>|
+|**2026-04-15**|**Evaluating LLM-Based Translation of a Low-Resource Technical Language: The Medical and Philosophical Greek of Galen**|James L. Zainaldin et.al.|[2602.24119](http://arxiv.org/abs/2602.24119)|<span class="null">—</span>|
+|**2026-06-03**|**Translation Heads: Disentangling meaning from language in LLM-based machine translation**|Théo Lasnier et.al.|[2602.04613](http://arxiv.org/abs/2602.04613)|**[link](https://github.com/Blyzi/mitra)**|
+|**2026-05-18**|**PEGRL: Improving Machine Translation by Post-Editing Guided Reinforcement Learning**|Yunzhi Shen et.al.|[2602.03352](http://arxiv.org/abs/2602.03352)|**[link](https://github.com/NJUNLP/peg-rl)**|
+|**2026-09-03**|**HOMURA: Taming the Sand-Glass for Time-Constrained LLM Translation via Reinforcement Learning**|Ziang Cui et.al.|[2601.10187](http://arxiv.org/abs/2601.10187)|<span class="null">—</span>|
+|**2025-12-30**|**Comparing Approaches to Automatic Summarization in Less-Resourced Languages**|Chester Palen-Michel et.al.|[2512.24410](http://arxiv.org/abs/2512.24410)|<span class="null">—</span>|
+|**2025-12-15**|**Conveying Imagistic Thinking in Traditional Chinese Medicine Translation: A Prompt Engineering and LLM-Based Evaluation Framework**|Jiatong Han et.al.|[2512.01198](http://arxiv.org/abs/2512.01198)|<span class="null">—</span>|
+|**2025-12-09**|**Conveying Imagistic Thinking in Traditional Chinese Medicine Translation: A Prompt Engineering and LLM-Based Evaluation Framework**|Jiatong Han et.al.|[2511.23059](http://arxiv.org/abs/2511.23059)|<span class="null">—</span>|
+|**2025-11-24**|**LLMs for Low-Resource Dialect Translation Using Context-Aware Prompting: A Case Study on Sylheti**|Tabia Tanzin Prama et.al.|[2511.21761](http://arxiv.org/abs/2511.21761)|**[link](https://github.com/TabiaTanzin/LLMs-for-Low-Resource-Dialect-Translation-Using-Context-Aware-Prompting-A-Case-Study-on-Sylheti)**|
+|**2025-10-28**|**Can LLMs Translate Human Instructions into a Reinforcement Learning Agent's Internal Emergent Symbolic Representation?**|Ziqi Ma et.al.|[2510.24259](http://arxiv.org/abs/2510.24259)|<span class="null">—</span>|
+|**2025-10-28**|**Challenging Multilingual LLMs: A New Taxonomy and Benchmark for Unraveling Hallucination in Translation**|Xinwei Wu et.al.|[2510.24073](http://arxiv.org/abs/2510.24073)|<span class="null">—</span>|
+|**2025-10-18**|**ATA: A Neuro-Symbolic Approach to Implement Autonomous and Trustworthy Agents**|David Peer et.al.|[2510.16381](http://arxiv.org/abs/2510.16381)|<span class="null">—</span>|
+|**2025-11-17**|**Exposing the Cracks: Vulnerabilities of Retrieval-Augmented LLM-based Machine Translation**|Yanming Sun et.al.|[2510.00829](http://arxiv.org/abs/2510.00829)|<span class="null">—</span>|
+|**2025-09-25**|**"Be My Cheese?": Assessing Cultural Nuance in Multilingual LLM Translations**|Madison Van Doren et.al.|[2509.21577](http://arxiv.org/abs/2509.21577)|<span class="null">—</span>|
+|**2026-08-16**|**Vision Language Models Cannot Plan, but Can They Formalize?**|Muyu He et.al.|[2509.21576](http://arxiv.org/abs/2509.21576)|<span class="null">—</span>|
+|**2025-09-22**|**Specification-Aware Machine Translation and Evaluation for Purpose Alignment**|Yoko Kayano et.al.|[2509.17559](http://arxiv.org/abs/2509.17559)|<span class="null">—</span>|
+|**2025-08-12**|**TopXGen: Topic-Diverse Parallel Data Generation for Low-Resource Machine Translation**|Armel Zebaze et.al.|[2508.08680](http://arxiv.org/abs/2508.08680)|**[link](https://github.com/ArmelRandy/topxgen)**|
+|**2025-08-08**|**Testing the Limits of Machine Translation from One Book**|Jonathan Shaw et.al.|[2508.06665](http://arxiv.org/abs/2508.06665)|<span class="null">—</span>|
+|**2025-06-30**|**Towards Style Alignment in Cross-Cultural Translation**|Shreya Havaldar et.al.|[2507.00216](http://arxiv.org/abs/2507.00216)|<span class="null">—</span>|
+|**2025-06-16**|**Missing the human touch? A computational stylometry analysis of GPT-4 translations of online Chinese literature**|Xiaofang Yao et.al.|[2506.13013](http://arxiv.org/abs/2506.13013)|<span class="null">—</span>|
+|**2025-12-13**|**Translation in the Wild**|Yuri Balashov et.al.|[2505.23548](http://arxiv.org/abs/2505.23548)|<span class="null">—</span>|
+|**2025-10-14**|**Steering Large Language Models for Machine Translation Personalization**|Daniel Scalena et.al.|[2505.16612](http://arxiv.org/abs/2505.16612)|**[link](https://github.com/DanielSc4/steering-for-personalization)**|
+|**2025-05-19**|**Combining the Best of Both Worlds: A Method for Hybrid NMT and LLM Translation**|Zhanglin Wu et.al.|[2505.13554](http://arxiv.org/abs/2505.13554)|<span class="null">—</span>|
+|**2025-05-19**|**Picturized and Recited with Dialects: A Multimodal Chinese Representation Framework for Sentiment Analysis of Classical Chinese Poetry**|Xiaocong Du et.al.|[2505.13210](http://arxiv.org/abs/2505.13210)|<span class="null">—</span>|
+|**2025-04-14**|**MT-R1-Zero: Advancing LLM-based Machine Translation via R1-Zero-like Reinforcement Learning**|Zhaopeng Feng et.al.|[2504.10160](http://arxiv.org/abs/2504.10160)|**[link](https://github.com/fzp0424/MT-R1-Zero)**|
+|**2025-04-10**|**Synthetic Fluency: Hallucinations, Confabulations, and the Creation of Irish Words in LLM-Generated Translations**|Sheila Castilho et.al.|[2504.07680](http://arxiv.org/abs/2504.07680)|<span class="null">—</span>|
+|**2026-01-12**|**Bridging the Linguistic Divide: A Survey on Leveraging Large Language Models for Machine Translation**|Baban Gain et.al.|[2504.01919](http://arxiv.org/abs/2504.01919)|<span class="null">—</span>|
+|**2025-09-19**|**MT-RewardTree: A Comprehensive Framework for Advancing LLM-Based Machine Translation via Reward Modeling**|Zhaopeng Feng et.al.|[2503.12123](http://arxiv.org/abs/2503.12123)|<span class="null">—</span>|
+|**2025-03-06**|**Leveraging Domain Knowledge at Inference Time for LLM Translation: Retrieval versus Generation**|Bryan Li et.al.|[2503.05010](http://arxiv.org/abs/2503.05010)|<span class="null">—</span>|
+|**2025-03-06**|**Compositional Translation: A Novel LLM-based Approach for Low-resource Machine Translation**|Armel Zebaze et.al.|[2503.04554](http://arxiv.org/abs/2503.04554)|**[link](https://github.com/ArmelRandy/compositional-translation)**|
+|**2025-03-06**|**Lost in Literalism: How Supervised Training Shapes Translationese in LLMs**|Yafu Li et.al.|[2503.04369](http://arxiv.org/abs/2503.04369)|**[link](https://github.com/yafuly/LLM_Translationese)**|
+|**2026-01-15**|**Exploring the Translation Mechanism of Large Language Models**|Hongbin Zhang et.al.|[2502.11806](http://arxiv.org/abs/2502.11806)|<span class="null">—</span>|
+|**2025-01-27**|**A comparison of data filtering techniques for English-Polish LLM-based machine translation in the biomedical domain**|Jorge del Pozo Lérida et.al.|[2501.16533](http://arxiv.org/abs/2501.16533)|<span class="null">—</span>|
+|**2025-01-09**|**Investigating Numerical Translation with Large Language Models**|Wei Tang et.al.|[2501.04927](http://arxiv.org/abs/2501.04927)|<span class="null">—</span>|
+|**2024-12-19**|**Self-Evolution Knowledge Distillation for LLM-based Machine Translation**|Yuncheng Song et.al.|[2412.15303](http://arxiv.org/abs/2412.15303)|<span class="null">—</span>|
+|**2025-11-21**|**Fine-Grained Reward Optimization for Machine Translation using Error Severity Mappings**|Miguel Moura Ramos et.al.|[2411.05986](http://arxiv.org/abs/2411.05986)|<span class="null">—</span>|
+|**2024-11-05**|**Language Models and Cycle Consistency for Self-Reflective Machine Translation**|Jianqiao Wangni et.al.|[2411.02791](http://arxiv.org/abs/2411.02791)|<span class="null">—</span>|
+|**2025-02-25**|**How Good Are LLMs for Literary Translation, Really? Literary Translation Evaluation with Humans and LLMs**|Ran Zhang et.al.|[2410.18697](http://arxiv.org/abs/2410.18697)|<span class="null">—</span>|
+|**2024-10-22**|**Context-Aware LLM Translation System Using Conversation Summarization and Dialogue History**|Mingi Sung et.al.|[2410.16775](http://arxiv.org/abs/2410.16775)|<span class="null">—</span>|
+|**2024-10-21**|**Analyzing Context Contributions in LLM-based Machine Translation**|Emmanouil Zaranis et.al.|[2410.16246](http://arxiv.org/abs/2410.16246)|<span class="null">—</span>|
 
-[contributors-shield]: https://img.shields.io/github/contributors/Vincentqyw/cv-arxiv-daily.svg?style=for-the-badge
-[contributors-url]: https://github.com/Vincentqyw/cv-arxiv-daily/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/Vincentqyw/cv-arxiv-daily.svg?style=for-the-badge
-[forks-url]: https://github.com/Vincentqyw/cv-arxiv-daily/network/members
-[stars-shield]: https://img.shields.io/github/stars/Vincentqyw/cv-arxiv-daily.svg?style=for-the-badge
-[stars-url]: https://github.com/Vincentqyw/cv-arxiv-daily/stargazers
-[issues-shield]: https://img.shields.io/github/issues/Vincentqyw/cv-arxiv-daily.svg?style=for-the-badge
-[issues-url]: https://github.com/Vincentqyw/cv-arxiv-daily/issues
+<h2 id="evaluation-and-quality-estimation">Evaluation and Quality Estimation</h2>
+
+| Publish Date | Title | Authors | PDF | Code |
+|:---------|:-----------------------|:---------|:------|:------|
+|**2026-10-26**|**The Lay of the Land in Idiom-Translation Quality Estimation**|Malik Marmonier et.al.|[2610.35261](http://arxiv.org/abs/2610.35261)|<span class="null">—</span>|
+|**2026-10-24**|**Refined Assessment for Translation Evaluation: Rethinking Machine Translation Evaluation in the Era of Human-Level Systems**|Dmitry Popov et.al.|[2610.33749](http://arxiv.org/abs/2610.33749)|<span class="null">—</span>|
+|**2026-10-24**|**Beyond Prompts: A Systematic Study of LLM-Based Machine Translation Evaluators**|Dmitry Popov et.al.|[2610.33741](http://arxiv.org/abs/2610.33741)|<span class="null">—</span>|
+|**2026-10-12**|**PatTransBench: an ipc-stratified, multi-dimensional benchmark for patent machine translation evaluation**|Xiaowei Su et.al.|[2610.16538](http://arxiv.org/abs/2610.16538)|<span class="null">—</span>|
+|**2026-10-14**|**Quality-Aware Self-Correcting Speech Translation on an Edge Device**|Zubair Ajmal Farooq et.al.|[2610.07545](http://arxiv.org/abs/2610.07545)|**[link](https://github.com/surrey-nlp/speech-translation_edge_device)**|
+|**2026-09-22**|**The Ongiini-Eval-OW Benchmark: A Concept Paper for the Planned Benchmarking of Machine Translation and Large Language Models on Oshindonga and Oshikwanyama**|Sebastian Küpers et.al.|[2609.31727](http://arxiv.org/abs/2609.31727)|<span class="null">—</span>|
+|**2026-09-19**|**Diagnose, Then Repair: A Two-Stage MQM-Guided Post-Editing Framework for Domain-Specific Machine Translation**|Ji Hun Wang et.al.|[2609.22793](http://arxiv.org/abs/2609.22793)|<span class="null">—</span>|
+|**2026-09-18**|**Benchmarking Gender Bias in Machine Translation Evaluation Metrics across Occupations**|Orfeas Menis Mastromichalakis et.al.|[2609.21490](http://arxiv.org/abs/2609.21490)|<span class="null">—</span>|
+|**2026-09-16**|**LocQE: Principled Domain Adaptation for Localisation Quality Estimation by Leveraging Post-Edits**|Kathy Hämmerl et.al.|[2609.18720](http://arxiv.org/abs/2609.18720)|<span class="null">—</span>|
+|**2026-09-16**|**M-SQE: Multilingual Skill Quality Estimation for Enhancing Language Equality in Agentic Skill Use**|Yilun Liu et.al.|[2609.18445](http://arxiv.org/abs/2609.18445)|<span class="null">—</span>|
+|**2026-09-12**|**North Small Translate: Advanced Cost-Effective Translation (Cohere CAT+)**|Tom Kocmi et.al.|[2609.13916](http://arxiv.org/abs/2609.13916)|<span class="null">—</span>|
+|**2026-09-11**|**In the Blind: Building Pseudo-References for MT Evaluation**|Diptesh Kanojia et.al.|[2609.13611](http://arxiv.org/abs/2609.13611)|**[link](https://github.com/surrey-nlp/PseudoRef)**|
+|**2026-09-10**|**TransClean: A Benchmark for Detecting and Extracting Clean Translations from Large Language Model Outputs**|Shenbin Qian et.al.|[2609.11399](http://arxiv.org/abs/2609.11399)|<span class="null">—</span>|
+|**2026-09-29**|**Quit While You're Ahead: Quit for Efficient Candidate Generation in Machine Translation Reranking**|Guangyu Chen et.al.|[2609.00588](http://arxiv.org/abs/2609.00588)|<span class="null">—</span>|
+|**2026-08-28**|**Evaluating Multilingual Sentence Embeddings for Translation Error Detection:An English--Greek Contrastive Study**|Eleftherios Kalogeros et.al.|[2608.28776](http://arxiv.org/abs/2608.28776)|<span class="null">—</span>|
+|**2026-08-21**|**Source-Free MT Evaluation Is Not MT Evaluation**|Baban Gain et.al.|[2608.20925](http://arxiv.org/abs/2608.20925)|<span class="null">—</span>|
+|**2026-08-26**|**TranslatePsy-AfriSLM: High-Quality Data Scaling For Low-Resource Machine Translation**|Milan Gritta et.al.|[2608.18655](http://arxiv.org/abs/2608.18655)|<span class="null">—</span>|
+|**2026-09-15**|**IndicQE-APE: A Consolidated Benchmark for Quality Estimation and Automatic Post-Editing for Indic Languages**|Diptesh Kanojia et.al.|[2608.16344](http://arxiv.org/abs/2608.16344)|**[link](https://github.com/surrey-nlp/IndicQE-APE)**|
+|**2026-08-12**|**Reference-Free Post-Training of Open Large Language Models for Multilingual Machine Translation**|Chris Han et.al.|[2608.10812](http://arxiv.org/abs/2608.10812)|**[link](https://github.com/xiaomi-research/gemmax)**|
+|**2026-08-04**|**Towards End-to-End Multilingual Metaphor Processing: Integrating Detection, Translation, and Evaluation**|Jiahui Liang et.al.|[2608.04260](http://arxiv.org/abs/2608.04260)|<span class="null">—</span>|
+|**2026-08-04**|**Looking under the Wrong Lamppost: On the Limitations of Automated Translation Quality Estimation**|Serge Gladkoff et.al.|[2608.03577](http://arxiv.org/abs/2608.03577)|<span class="null">—</span>|
+|**2026-09-26**|**Rubric-as-Experts: Case-Specific MQM Rubrics for Translation Error Span Detection**|Weilu Xu et.al.|[2606.21559](http://arxiv.org/abs/2606.21559)|<span class="null">—</span>|
+|**2026-06-07**|**HydraQE: OSU's Submission for the IWSLT 2026 Speech Translation Metrics Shared Task**|Kevin Krahn et.al.|[2606.08748](http://arxiv.org/abs/2606.08748)|<span class="null">—</span>|
+|**2026-06-04**|**Automatic Labelling of Speech Translation Errors**|Dominik Macháček et.al.|[2606.06047](http://arxiv.org/abs/2606.06047)|<span class="null">—</span>|
+|**2026-05-29**|**Model-Based Quality Assessment for Massively Multilingual Parallel Data**|Abdelaziz M. A. Ibrahim et.al.|[2606.00285](http://arxiv.org/abs/2606.00285)|<span class="null">—</span>|
+|**2026-09-08**|**Unlocking Fine-Grained Translation Quality Estimation in LRMs through Mutually Boosting Implicit and Explicit Reasoning**|Renfei Dang et.al.|[2605.31378](http://arxiv.org/abs/2605.31378)|**[link](https://github.com/NJUNLP/RIEQE)**|
+|**2026-08-30**|**Why We Need Speech to Evaluate Speech Translation**|Maike Züfle et.al.|[2605.28227](http://arxiv.org/abs/2605.28227)|<span class="null">—</span>|
+|**2026-10-05**|**ROC Analysis for Evaluating Translation Quality Estimation Systems**|Evelyn Y. Garland et.al.|[2605.24721](http://arxiv.org/abs/2605.24721)|<span class="null">—</span>|
+|**2026-05-15**|**CompactQE: Interpretable Translation Quality Estimation via Small Open-Weight LLMs**|Kamil Guttmann et.al.|[2605.15763](http://arxiv.org/abs/2605.15763)|<span class="null">—</span>|
+|**2026-05-12**|**Correcting Selection Bias in Sparse User Feedback for Large Language Model Quality Estimation: A Multi-Agent Hierarchical Bayesian Approach**|Andrea Morandi et.al.|[2605.12177](http://arxiv.org/abs/2605.12177)|<span class="null">—</span>|
+|**2026-05-31**|**Dynamic Meta-Metrics: Source-Sentence Conditioned Weighting for MT Evaluation**|Luke Zhang et.al.|[2605.09098](http://arxiv.org/abs/2605.09098)|<span class="null">—</span>|
+|**2026-04-24**|**RouteLMT: Learned Sample Routing for Hybrid LLM Translation Deployment**|Yingfeng Luo et.al.|[2604.22520](http://arxiv.org/abs/2604.22520)|<span class="null">—</span>|
+|**2026-03-26**|**Toward domain-specific machine translation and quality estimation systems**|Javad Pourmostafa Roshan Sharami et.al.|[2603.24955](http://arxiv.org/abs/2603.24955)|<span class="null">—</span>|
+|**2026-03-23**|**Scalable Prompt Routing via Fine-Grained Latent Task Discovery**|Yunyi Zhang et.al.|[2603.19415](http://arxiv.org/abs/2603.19415)|<span class="null">—</span>|
+|**2026-03-15**|**Parameter-Efficient Quality Estimation via Frozen Recursive Models**|Umar Abubacar et.al.|[2603.14593](http://arxiv.org/abs/2603.14593)|**[link](https://github.com/surrey-nlp/TRMQE)**|
+|**2026-03-13**|**Mending the Holes: Mitigating Reward Hacking in Reinforcement Learning for Multilingual Translation**|Yifeng Liu et.al.|[2603.13045](http://arxiv.org/abs/2603.13045)|**[link](https://github.com/LeiLiLab/WALAR)**|
+|**2026-03-12**|**Semi-Synthetic Parallel Data for Translation Quality Estimation: A Case Study of Dataset Building for an Under-Resourced Language Pair**|Assaf Siani et.al.|[2603.11743](http://arxiv.org/abs/2603.11743)|<span class="null">—</span>|
+|**2026-03-11**|**Large Language Models as Annotators for Machine Translation Quality Estimation**|Sidi Wang et.al.|[2603.10775](http://arxiv.org/abs/2603.10775)|<span class="null">—</span>|
+|**2026-03-07**|**Domain-Specific Quality Estimation for Machine Translation in Low-Resource Scenarios**|Namrata Patil Gurav et.al.|[2603.07372](http://arxiv.org/abs/2603.07372)|<span class="null">—</span>|
+|**2026-03-04**|**Hindsight Quality Prediction Experiments in Multi-Candidate Human-Post-Edited Machine Translation**|Malik Marmonier et.al.|[2603.04083](http://arxiv.org/abs/2603.04083)|<span class="null">—</span>|
+|**2026-02-19**|**On the scaling relationship between cloze probabilities and language model next-token prediction**|Cassandra L. Jacobs et.al.|[2602.17848](http://arxiv.org/abs/2602.17848)|<span class="null">—</span>|
+|**2026-02-17**|**LuxMT Technical Report**|Nils Rehlinger et.al.|[2602.15506](http://arxiv.org/abs/2602.15506)|<span class="null">—</span>|
+|**2026-02-09**|**Beyond Scalar Scores: Reinforcement Learning for Error-Aware Quality Estimation of Machine Translation**|Archchana Sindhujan et.al.|[2602.08600](http://arxiv.org/abs/2602.08600)|<span class="null">—</span>|
+|**2026-02-06**|**MTQE.en-he: Machine Translation Quality Estimation for English-Hebrew**|Andy Rosenbaum et.al.|[2602.06546](http://arxiv.org/abs/2602.06546)|<span class="null">—</span>|
+|**2026-01-28**|**When Flores Bloomz Wrong: Cross-Direction Contamination in Machine Translation Evaluation**|David Tan et.al.|[2601.20858](http://arxiv.org/abs/2601.20858)|**[link](https://github.com/Mr-Ao-25/cross-ling-contamination)**|
+|**2026-05-27**|**PEAR: Pairwise Evaluation for Automatic Relative Scoring in Machine Translation**|Lorenzo Proietti et.al.|[2601.18006](http://arxiv.org/abs/2601.18006)|**[link](https://github.com/prosho-97/pear)**|
+|**2026-01-20**|**GeoSteer: Faithful Chain-of-Thought Steering via Latent Manifold Gradients**|Kentaro Kazama et.al.|[2601.10229](http://arxiv.org/abs/2601.10229)|<span class="null">—</span>|
+|**2026-01-09**|**A Rising Tide Lifts All Boats: MTQE Rewards for Idioms Improve General Translation Quality**|Ishika Agarwal et.al.|[2601.06307](http://arxiv.org/abs/2601.06307)|<span class="null">—</span>|
+|**2026-03-27**|**Sigmoid Head for Quality Estimation under Language Ambiguity**|Tu Anh Dinh et.al.|[2601.00680](http://arxiv.org/abs/2601.00680)|<span class="null">—</span>|
+|**2025-12-21**|**Remedy-R: Generative Reasoning for Machine Translation Evaluation without Error Annotations**|Shaomu Tan et.al.|[2512.18906](http://arxiv.org/abs/2512.18906)|**[link](https://github.com/Smu-Tan/Remedy-R)**|
+|**2025-12-19**|**UCoder: Unsupervised Code Generation by Internal Probing of Large Language Models**|Jiajun Wu et.al.|[2512.17385](http://arxiv.org/abs/2512.17385)|<span class="null">—</span>|
+|**2026-07-23**|**Minimum Bayes Risk Decoding for Error Span Detection in Reference-Free Automatic Machine Translation Evaluation**|Boxuan Lyu et.al.|[2512.07540](http://arxiv.org/abs/2512.07540)|<span class="null">—</span>|
+|**2025-11-17**|**Can QE-informed (Re)Translation lead to Error Correction?**|Govardhan Padmanabhan et.al.|[2511.13884](http://arxiv.org/abs/2511.13884)|<span class="null">—</span>|
+|**2026-04-19**|**HPLT 3.0: Very Large-Scale Multilingual Resources for LLMs and MT. Mono- and Bi-lingual Data, Multilingual Evaluation, and Pre-Trained Models**|Stephan Oepen et.al.|[2511.01066](http://arxiv.org/abs/2511.01066)|<span class="null">—</span>|
+|**2026-08-09**|**Penalizing Length: Uncovering Systematic Bias in Quality Estimation Metrics**|Yilin Zhang et.al.|[2510.22028](http://arxiv.org/abs/2510.22028)|<span class="null">—</span>|
+|**2026-07-28**|**$M^2PO$ : Multi-Perspective Multi-Pair Preference Optimization for Machine Translation**|Hao Wang et.al.|[2510.13434](http://arxiv.org/abs/2510.13434)|<span class="null">—</span>|
+|**2025-10-10**|**Quality Estimation Reranking for Document-Level Translation**|Krzysztof Mrozinski et.al.|[2510.08870](http://arxiv.org/abs/2510.08870)|<span class="null">—</span>|
+|**2025-10-08**|**GAMBIT+: A Challenge Set for Evaluating Gender Bias in Machine Translation Quality Estimation Metrics**|Giorgos Filandrianos et.al.|[2510.06841](http://arxiv.org/abs/2510.06841)|<span class="null">—</span>|
+|**2025-10-01**|**NAIPv2: Debiased Pairwise Learning for Efficient Paper Quality Estimation**|Penghai Zhao et.al.|[2509.25179](http://arxiv.org/abs/2509.25179)|<span class="null">—</span>|
+|**2026-03-17**|**SiniticMTError: A Machine Translation Dataset with Error Annotations for Sinitic Languages**|Hannah Liu et.al.|[2509.20557](http://arxiv.org/abs/2509.20557)|<span class="null">—</span>|
+|**2025-09-21**|**Extending Automatic Machine Translation Evaluation to Book-Length Documents**|Kuang-Da Wang et.al.|[2509.17249](http://arxiv.org/abs/2509.17249)|<span class="null">—</span>|
+|**2025-09-17**|**Long-context Reference-based MT Quality Estimation**|Sami Ul Haq et.al.|[2509.13980](http://arxiv.org/abs/2509.13980)|<span class="null">—</span>|
+|**2026-03-03**|**No Text Needed: Forecasting MT Quality and Inequity from Fertility and Metadata**|Jessica M. Lundin et.al.|[2509.05425](http://arxiv.org/abs/2509.05425)|<span class="null">—</span>|
+|**2025-09-24**|**Expanding the WMT24++ Benchmark with Rumantsch Grischun, Sursilvan, Sutsilvan, Surmiran, Puter, and Vallader**|Jannis Vamvas et.al.|[2509.03148](http://arxiv.org/abs/2509.03148)|<span class="null">—</span>|
+|**2025-08-24**|**Preliminary Ranking of WMT25 General Machine Translation Systems**|Tom Kocmi et.al.|[2508.14909](http://arxiv.org/abs/2508.14909)|<span class="null">—</span>|
+|**2025-08-10**|**ALOPE: Adaptive Layer Optimization for Translation Quality Estimation using Large Language Models**|Archchana Sindhujan et.al.|[2508.07484](http://arxiv.org/abs/2508.07484)|<span class="null">—</span>|
+|**2025-08-07**|**PEACH: A sentence-aligned Parallel English-Arabic Corpus for Healthcare**|Rania Al-Sabbagh et.al.|[2508.05722](http://arxiv.org/abs/2508.05722)|<span class="null">—</span>|
+|**2025-10-21**|**Uncertainty Quantification for Evaluating Machine Translation Bias**|Ieva Raminta Staliūnaitė et.al.|[2507.18338](http://arxiv.org/abs/2507.18338)|<span class="null">—</span>|
+|**2025-07-22**|**Introducing Quality Estimation to Machine Translation Post-editing Workflow: An Empirical Study on Its Usefulness**|Siqi Liu et.al.|[2507.16515](http://arxiv.org/abs/2507.16515)|<span class="null">—</span>|
+|**2026-03-04**|**Evaluating Text Style Transfer: A Nine-Language Benchmark for Text Detoxification**|Vitaly Protasov et.al.|[2507.15557](http://arxiv.org/abs/2507.15557)|<span class="null">—</span>|
+|**2025-09-19**|**Translationese-index: Using Likelihood Ratios for Graded and Generalizable Measurement of Translationese**|Yikang Liu et.al.|[2507.12260](http://arxiv.org/abs/2507.12260)|<span class="null">—</span>|
+|**2025-08-30**|**How Important is `Perfect' English for Machine Translation Prompts?**|Patrícia Schmidtová et.al.|[2507.09509](http://arxiv.org/abs/2507.09509)|<span class="null">—</span>|
+|**2025-06-25**|**Intrinsic vs. Extrinsic Evaluation of Czech Sentence Embeddings: Semantic Relevance Doesn't Help with MT Evaluation**|Petra Barančíková et.al.|[2506.20203](http://arxiv.org/abs/2506.20203)|<span class="null">—</span>|
+
+<h2 id="domain-adaptation">Domain Adaptation</h2>
+
+| Publish Date | Title | Authors | PDF | Code |
+|:---------|:-----------------------|:---------|:------|:------|
+|**2026-06-06**|**AgriGov: A Structured Multilingual Dataset Curation for Indian Government Schemes for Farmers**|Mohsina Bilal et.al.|[2606.08272](http://arxiv.org/abs/2606.08272)|<span class="null">—</span>|
+|**2024-12-23**|**Domain adapted machine translation: What does catastrophic forgetting forget and why?**|Danielle Saunders et.al.|[2412.17537](http://arxiv.org/abs/2412.17537)|<span class="null">—</span>|
+|**2023-05-09**|**Tailoring Domain Adaptation for Machine Translation Quality Estimation**|Javad Pourmostafa Roshan Sharami et.al.|[2304.08891](http://arxiv.org/abs/2304.08891)|<span class="null">—</span>|
+|**2022-10-28**|**Domain Adaptation of Machine Translation with Crowdworkers**|Makoto Morishita et.al.|[2210.15861](http://arxiv.org/abs/2210.15861)|<span class="null">—</span>|
+|**2022-10-21**|**$m^4Adapter$ : Multilingual Multi-Domain Adaptation for Machine Translation with a Meta-Adapter**|Wen Lai et.al.|[2210.11912](http://arxiv.org/abs/2210.11912)|<span class="null">—</span>|
+|**2022-10-04**|**Improving Both Domain Robustness and Domain Adaptability in Machine Translation**|Wen Lai et.al.|[2112.08288](http://arxiv.org/abs/2112.08288)|**[link](https://github.com/lavine-lmu/RMLNMT)**|
+|**2021-07-09**|**Using Machine Translation to Localize Task Oriented NLG Output**|Scott Roy et.al.|[2107.04512](http://arxiv.org/abs/2107.04512)|<span class="null">—</span>|
+|**2021-11-07**|**FGraDA: A Dataset and Benchmark for Fine-Grained Domain Adaptation in Machine Translation**|Wenhao Zhu et.al.|[2012.15717](http://arxiv.org/abs/2012.15717)|<span class="null">—</span>|
+|**2020-10-23**|**Rapid Domain Adaptation for Machine Translation with Monolingual Data**|Mahdis Mahdieh et.al.|[2010.12652](http://arxiv.org/abs/2010.12652)|<span class="null">—</span>|
+|**2020-06-06**|**A Simple Baseline to Semi-Supervised Domain Adaptation for Machine Translation**|Di Jin et.al.|[2001.08140](http://arxiv.org/abs/2001.08140)|<span class="null">—</span>|
+|**2013-03-08**|**Mining and Exploiting Domain-Specific Corpora in the PANACEA Platform**|Núria Bel et.al.|[1303.1932](http://arxiv.org/abs/1303.1932)|<span class="null">—</span>|
+
+<h2 id="multimodal-mt">Multimodal MT</h2>
+
+| Publish Date | Title | Authors | PDF | Code |
+|:---------|:-----------------------|:---------|:------|:------|
+|**2026-10-26**|**ImgMT: Wikipedia-based Dataset For Evaluating Text-in-Image Translation**|Šárka Uramová et.al.|[2610.35416](http://arxiv.org/abs/2610.35416)|<span class="null">—</span>|
+|**2026-09-25**|**Improving Visual Sensitivity of LLMs on Multimodal Machine Translation with Metric-based Loss Weighting**|Paweł Mąka et.al.|[2609.31169](http://arxiv.org/abs/2609.31169)|<span class="null">—</span>|
+|**2026-05-04**|**Low Resource Multimodal Translation of Nepali Spoken Words into Emotion-Conditioned Sign Language Avatars**|Jatin Bhusal et.al.|[2606.26107](http://arxiv.org/abs/2606.26107)|<span class="null">—</span>|
+|**2026-05-15**|**ForMaT: Dataset for Visually-Grounded Multilingual PDF Translation**|Michał Ciesiółka et.al.|[2605.15794](http://arxiv.org/abs/2605.15794)|<span class="null">—</span>|
+|**2026-10-05**|**VIDA: A Dataset for Visually Dependent Ambiguity in Multimodal Machine Translation**|Jingheng Pan et.al.|[2605.02035](http://arxiv.org/abs/2605.02035)|<span class="null">—</span>|
+|**2026-03-03**|**Scalable Multilingual Multimodal Machine Translation with Speech-Text Fusion**|Yexing Du et.al.|[2602.21646](http://arxiv.org/abs/2602.21646)|**[link](https://github.com/yxduir/LLM-SRT)**|
+|**2025-12-11**|**MultiScript30k: Leveraging Multilingual Embeddings to Extend Cross Script Parallel Data**|Christopher Driggers-Ellis et.al.|[2512.11074](http://arxiv.org/abs/2512.11074)|<span class="null">—</span>|
+|**2026-08-28**|**OmniFusion: Simultaneous Multilingual Multimodal Translations via Modular Fusion**|Sai Koneru et.al.|[2512.00234](http://arxiv.org/abs/2512.00234)|**[link](https://github.com/saikoneru/OmniFusion)**|
+|**2025-11-10**|**A Picture is Worth a Thousand (Correct) Captions: A Vision-Guided Judge-Corrector System for Multimodal Machine Translation**|Siddharth Betala et.al.|[2511.07010](http://arxiv.org/abs/2511.07010)|<span class="null">—</span>|
+|**2025-07-25**|**LLaVA-NeuMT: Selective Layer-Neuron Modulation for Efficient Multilingual Multimodal Translation**|Jingxuan Wei et.al.|[2507.18940](http://arxiv.org/abs/2507.18940)|<span class="null">—</span>|
+|**2025-10-08**|**GIIFT: Graph-guided Inductive Image-free Multimodal Machine Translation**|Jiafeng Xiong et.al.|[2507.18562](http://arxiv.org/abs/2507.18562)|<span class="null">—</span>|
+|**2025-09-21**|**CaMMT: Benchmarking Culturally Aware Multimodal Machine Translation**|Emilio Villa-Cueva et.al.|[2505.24456](http://arxiv.org/abs/2505.24456)|<span class="null">—</span>|
+|**2025-05-09**|**TopicVD: A Topic-Based Dataset of Video-Guided Multimodal Machine Translation for Documentaries**|Jinze Lv et.al.|[2505.05714](http://arxiv.org/abs/2505.05714)|**[link](https://github.com/JinzeLv/TopicVD)**|
+|**2025-04-25**|**Memory Reviving, Continuing Learning and Beyond: Evaluation of Pre-trained Encoders and Decoders for Multimodal Machine Translation**|Zhuang Yu et.al.|[2504.18012](http://arxiv.org/abs/2504.18012)|<span class="null">—</span>|
+|**2025-03-14**|**New Trends for Modern Machine Translation with Large Reasoning Models**|Sinuo Liu et.al.|[2503.10351](http://arxiv.org/abs/2503.10351)|<span class="null">—</span>|
+|**2025-11-16**|**Scaling Laws for Conditional Emergence of Multilingual Image Captioning via Generalization from Translation**|Julian Spravil et.al.|[2503.09443](http://arxiv.org/abs/2503.09443)|**[link](https://github.com/spravil/caption-via-translation)**|
+|**2025-02-27**|**Chitranuvad: Adapting Multi-Lingual LLMs for Multimodal Translation**|Shaharukh Khan et.al.|[2502.20420](http://arxiv.org/abs/2502.20420)|<span class="null">—</span>|
+|**2025-01-06**|**Make Imagination Clearer! Stable Diffusion-based Visual Imagination for Multimodal Machine Translation**|Andong Chen et.al.|[2412.12627](http://arxiv.org/abs/2412.12627)|<span class="null">—</span>|
+|**2024-09-20**|**EMMeTT: Efficient Multimodal Machine Translation Training**|Piotr Żelasko et.al.|[2409.13523](http://arxiv.org/abs/2409.13523)|<span class="null">—</span>|
+|**2024-11-04**|**Plug, Play, and Fuse: Zero-Shot Joint Decoding via Word-Level Re-ranking Across Diverse Vocabularies**|Sai Koneru et.al.|[2408.11327](http://arxiv.org/abs/2408.11327)|<span class="null">—</span>|
+|**2025-06-02**|**Optimus: Accelerating Large-Scale Multi-Modal LLM Training by Bubble Exploitation**|Weiqi Feng et.al.|[2408.03505](http://arxiv.org/abs/2408.03505)|<span class="null">—</span>|
+|**2025-03-11**|**Towards Zero-Shot Multimodal Machine Translation**|Matthieu Futeral et.al.|[2407.13579](http://arxiv.org/abs/2407.13579)|**[link](https://github.com/matthieufp/zerommt)**|
+|**2024-04-09**|**Exploring the Necessity of Visual Modality in Multimodal Machine Translation using Authentic Datasets**|Zi Long et.al.|[2404.06107](http://arxiv.org/abs/2404.06107)|<span class="null">—</span>|
+|**2024-03-05**|**Detecting Concrete Visual Tokens for Multimodal Machine Translation**|Braeden Bowen et.al.|[2403.03075](http://arxiv.org/abs/2403.03075)|<span class="null">—</span>|
+|**2024-03-05**|**Adding Multimodal Capabilities to a Text-only Translation Model**|Vipin Vijayan et.al.|[2403.03045](http://arxiv.org/abs/2403.03045)|<span class="null">—</span>|
+|**2024-03-05**|**The Case for Evaluating Multimodal Translation Models on Text Datasets**|Vipin Vijayan et.al.|[2403.03014](http://arxiv.org/abs/2403.03014)|<span class="null">—</span>|
+|**2023-12-08**|**Seamless: Multilingual Expressive and Streaming Speech Translation**|Seamless Communication et.al.|[2312.05187](http://arxiv.org/abs/2312.05187)|**[link](https://github.com/facebookresearch/seamless_communication)**|
+|**2023-10-31**|**Video-Helpful Multimodal Machine Translation**|Yihang Li et.al.|[2310.20201](http://arxiv.org/abs/2310.20201)|**[link](https://github.com/ku-nlp/video-helpful-MMT)**|
+|**2023-10-26**|**Incorporating Probing Signals into Multimodal Machine Translation via Visual Question-Answering Pairs**|Yuxin Zuo et.al.|[2310.17133](http://arxiv.org/abs/2310.17133)|**[link](https://github.com/libeineu/MMT-VQA)**|
+|**2023-10-25**|**SeamlessM4T: Massively Multilingual & Multimodal Machine Translation**|Seamless Communication et.al.|[2308.11596](http://arxiv.org/abs/2308.11596)|**[link](https://github.com/facebookresearch/seamless_communication)**|
+|**2023-06-12**|**A Survey of Vision-Language Pre-training from the Lens of Multimodal Machine Translation**|Jeremy Gwinnup et.al.|[2306.07198](http://arxiv.org/abs/2306.07198)|<span class="null">—</span>|
+|**2023-05-28**|**HaVQA: A Dataset for Visual Question Answering and Multimodal Research in Hausa Language**|Shantipriya Parida et.al.|[2305.17690](http://arxiv.org/abs/2305.17690)|<span class="null">—</span>|
+|**2023-05-25**|**Scene Graph as Pivoting: Inference-time Image-free Unsupervised Multimodal Machine Translation with Visual Scene Hallucination**|Hao Fei et.al.|[2305.12256](http://arxiv.org/abs/2305.12256)|**[link](https://github.com/scofield7419/ummt-vsh)**|
+|**2023-02-16**|**Generalization algorithm of multimodal pre-training model based on graph-text self-supervised training**| Zhangxiaobing et.al.|[2302.10315](http://arxiv.org/abs/2302.10315)|<span class="null">—</span>|
+|**2023-09-03**|**Beyond Triplet: Leveraging the Most Data for Multimodal Machine Translation**|Yaoming Zhu et.al.|[2212.10313](http://arxiv.org/abs/2212.10313)|<span class="null">—</span>|
+|**2023-05-26**|**Tackling Ambiguity with Images: Improved Multimodal Machine Translation and Contrastive Evaluation**|Matthieu Futeral et.al.|[2212.10140](http://arxiv.org/abs/2212.10140)|<span class="null">—</span>|
+|**2022-11-28**|**LVP-M3: Language-aware Visual Prompt for Multilingual Multimodal Machine Translation**|Hongcheng Guo et.al.|[2210.15461](http://arxiv.org/abs/2210.15461)|<span class="null">—</span>|
+|**2023-04-21**|**Distill the Image to Nowhere: Inversion Knowledge Distillation for Multimodal Machine Translation**|Ru Peng et.al.|[2210.04468](http://arxiv.org/abs/2210.04468)|**[link](https://github.com/pengr/IKD-mmt)**|
+|**2022-08-02**|**Silo NLP's Participation at WAT2022**|Shantipriya Parida et.al.|[2208.01296](http://arxiv.org/abs/2208.01296)|<span class="null">—</span>|
+|**2022-03-19**|**Neural Machine Translation with Phrase-Level Universal Visual Representations**|Qingkai Fang et.al.|[2203.10299](http://arxiv.org/abs/2203.10299)|<span class="null">—</span>|
+|**2022-03-17**|**On Vision Features in Multimodal Machine Translation**|Bei Li et.al.|[2203.09173](http://arxiv.org/abs/2203.09173)|**[link](https://github.com/libeineu/fairseq_mmt)**|
+|**2022-02-28**|**MSCTD: A Multimodal Sentiment Chat Translation Dataset**|Yunlong Liang et.al.|[2202.13645](http://arxiv.org/abs/2202.13645)|**[link](https://github.com/XL2248/MSCTD)**|
+|**2022-06-29**|**Supervised Visual Attention for Simultaneous Multimodal Machine Translation**|Veneta Haralampieva et.al.|[2201.09324](http://arxiv.org/abs/2201.09324)|<span class="null">—</span>|
+|**2022-05-26**|**VISA: An Ambiguous Subtitles Dataset for Visual Scene-Aware Machine Translation**|Yihang Li et.al.|[2201.08054](http://arxiv.org/abs/2201.08054)|**[link](https://github.com/ku-nlp/VISA)**|
+|**2021-09-08**|**Vision Matters When It Should: Sanity Checking Multimodal Machine Translation Models**|Jiaoda Li et.al.|[2109.03415](http://arxiv.org/abs/2109.03415)|<span class="null">—</span>|
+|**2021-07-04**|**IITP at WAT 2021: System description for English-Hindi Multimodal Translation Task**|Baban Gain et.al.|[2107.01656](http://arxiv.org/abs/2107.01656)|<span class="null">—</span>|
+|**2021-06-07**|**BERTGEN: Multi-task Generation through BERT**|Faidon Mitzalis et.al.|[2106.03484](http://arxiv.org/abs/2106.03484)|<span class="null">—</span>|
+|**2021-06-28**|**ViTA: Visual-Linguistic Translation by Aligning Object Tags**|Kshitij Gupta et.al.|[2106.00250](http://arxiv.org/abs/2106.00250)|<span class="null">—</span>|
+|**2021-05-30**|**Good for Misconceived Reasons: An Empirical Revisiting on the Need for Visual Context in Multimodal Machine Translation**|Zhiyong Wu et.al.|[2105.14462](http://arxiv.org/abs/2105.14462)|<span class="null">—</span>|
+|**2021-04-20**|**Cross-lingual Visual Pre-training for Multimodal Machine Translation**|Ozan Caglayan et.al.|[2101.10044](http://arxiv.org/abs/2101.10044)|<span class="null">—</span>|
+|**2021-01-09**|**Towards Fully Automated Manga Translation**|Ryota Hinami et.al.|[2012.14271](http://arxiv.org/abs/2012.14271)|**[link](https://github.com/mantra-inc/open-mantra-dataset)**|
+|**2020-09-04**|**Dynamic Context-guided Capsule Network for Multimodal Machine Translation**|Huan Lin et.al.|[2009.02016](http://arxiv.org/abs/2009.02016)|**[link](https://github.com/DeepLearnXMU/MM-DCCN)**|
+|**2020-03-08**|**Investigating the Decoders of Maximum Likelihood Sequence Models: A Look-ahead Approach**|Yu-Siang Wang et.al.|[2003.03716](http://arxiv.org/abs/2003.03716)|<span class="null">—</span>|
+|**2019-11-28**|**Multimodal Machine Translation through Visuals and Speech**|Umut Sulubacak et.al.|[1911.12798](http://arxiv.org/abs/1911.12798)|<span class="null">—</span>|
+|**2021-01-26**|**Adaptive Fusion Techniques for Multimodal Data**|Gaurav Sahu et.al.|[1911.03821](http://arxiv.org/abs/1911.03821)|<span class="null">—</span>|
+|**2019-11-08**|**Transformer-based Cascaded Multimodal Speech Translation**|Zixiu Wu et.al.|[1910.13215](http://arxiv.org/abs/1910.13215)|<span class="null">—</span>|
+|**2019-10-07**|**On Leveraging the Visual Modality for Neural Machine Translation**|Vikas Raunak et.al.|[1910.02754](http://arxiv.org/abs/1910.02754)|<span class="null">—</span>|
+|**2019-08-29**|**Probing Representations Learned by Multimodal Recurrent and Transformer Models**|Jindřich Libovický et.al.|[1908.11125](http://arxiv.org/abs/1908.11125)|<span class="null">—</span>|
+|**2019-08-18**|**Predicting Actions to Help Predict Translations**|Zixiu Wu et.al.|[1908.01665](http://arxiv.org/abs/1908.01665)|<span class="null">—</span>|
+|**2019-07-21**|**Hindi Visual Genome: A Dataset for Multimodal English-to-Hindi Machine Translation**|Shantipriya Parida et.al.|[1907.08948](http://arxiv.org/abs/1907.08948)|<span class="null">—</span>|
+|**2019-06-18**|**Distilling Translations with Visual Awareness**|Julia Ive et.al.|[1906.07701](http://arxiv.org/abs/1906.07701)|<span class="null">—</span>|
+|**2019-06-22**|**Debiasing Word Embeddings Improves Multimodal Machine Translation**|Tosho Hirasawa et.al.|[1905.10464](http://arxiv.org/abs/1905.10464)|<span class="null">—</span>|
+|**2019-04-17**|**Cross-lingual Visual Verb Sense Disambiguation**|Spandana Gella et.al.|[1904.05092](http://arxiv.org/abs/1904.05092)|<span class="null">—</span>|
+|**2019-04-01**|**Multimodal Machine Translation with Embedding Prediction**|Tosho Hirasawa et.al.|[1904.00639](http://arxiv.org/abs/1904.00639)|<span class="null">—</span>|
+|**2019-06-02**|**Probing the Need for Visual Context in Multimodal Machine Translation**|Ozan Caglayan et.al.|[1903.08678](http://arxiv.org/abs/1903.08678)|<span class="null">—</span>|
+|**2018-11-12**|**Input Combination Strategies for Multi-Source Transformer Decoder**|Jindřich Libovický et.al.|[1811.04716](http://arxiv.org/abs/1811.04716)|<span class="null">—</span>|
+|**2018-11-12**|**CUNI System for the WMT18 Multimodal Translation Task**|Jindřich Helcl et.al.|[1811.04697](http://arxiv.org/abs/1811.04697)|<span class="null">—</span>|
+|**2018-10-15**|**UMONS Submission for WMT18 Multimodal Translation Task**|Jean-Benoit Delbrouck et.al.|[1810.06233](http://arxiv.org/abs/1810.06233)|<span class="null">—</span>|
+|**2018-09-01**|**LIUM-CVC Submissions for WMT18 Multimodal Translation Task**|Ozan Caglayan et.al.|[1809.00151](http://arxiv.org/abs/1809.00151)|<span class="null">—</span>|
+|**2018-09-03**|**The MeMAD Submission to the WMT18 Multimodal Translation Task**|Stig-Arne Grönroos et.al.|[1808.10802](http://arxiv.org/abs/1808.10802)|<span class="null">—</span>|
+|**2018-08-31**|**Ensemble Sequence Level Training for Multimodal MT: OSU-Baidu WMT18 Multimodal Machine Translation System Report**|Renjie Zheng et.al.|[1808.10592](http://arxiv.org/abs/1808.10592)|<span class="null">—</span>|
+
+[contributors-shield]: https://img.shields.io/github/contributors/asutosh-karya/mt-arxiv-daily.svg?style=for-the-badge
+[contributors-url]: https://github.com/asutosh-karya/mt-arxiv-daily/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/asutosh-karya/mt-arxiv-daily.svg?style=for-the-badge
+[forks-url]: https://github.com/asutosh-karya/mt-arxiv-daily/network/members
+[stars-shield]: https://img.shields.io/github/stars/asutosh-karya/mt-arxiv-daily.svg?style=for-the-badge
+[stars-url]: https://github.com/asutosh-karya/mt-arxiv-daily/stargazers
+[issues-shield]: https://img.shields.io/github/issues/asutosh-karya/mt-arxiv-daily.svg?style=for-the-badge
+[issues-url]: https://github.com/asutosh-karya/mt-arxiv-daily/issues
 

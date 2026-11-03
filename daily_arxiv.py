@@ -39,7 +39,7 @@ def load_config(config_file:str) -> dict:
                 if idx != len(filters) - 1:
                     ret += OR
             return ret
-        # optional arxiv categories (eg. cs.CV), per keyword or for all keywords
+        # optional arxiv categories (eg. cs.CL), per keyword or for all keywords
         default_categories = config.get('categories', [])
         categories = dict()
         for k,v in config['keywords'].items():
@@ -222,7 +222,19 @@ def get_paper_texts(arxiv_ids:list) -> dict:
             logging.exception(f'Failed to fetch abstracts of {batch[0]}..{batch[-1]}')
     return texts
 
-def get_daily_papers(topic,query="slam", max_results=2, categories=None):
+def load_json(filename:str) -> dict:
+    '''
+    json object from filename, {} when the file is missing or empty
+    '''
+    if not os.path.exists(filename) or os.path.getsize(filename) == 0:
+        return {}
+    with open(filename, "r") as f:
+        content = f.read()
+        if not content:
+            return {}
+        return json.loads(content)
+
+def get_daily_papers(topic,query="nmt", max_results=2, categories=None):
     """
     @param topic: str
     @param query: str
@@ -232,7 +244,6 @@ def get_daily_papers(topic,query="slam", max_results=2, categories=None):
     """
     # output
     content = dict()
-    content_to_web = dict()
     search_engine = arxiv.Search(
         query = query,
         max_results = max_results,
@@ -275,21 +286,9 @@ def get_daily_papers(topic,query="slam", max_results=2, categories=None):
 
         content[paper_key] = "|**{}**|**{}**|{} et.al.|[{}]({})|{}|\n".format(
                update_time,paper_title,paper_first_author,paper_key,paper_url,format_code_link(code_url))
-        content_to_web[paper_key] = "- {}, **{}**, {} et.al., Paper: [{}]({})".format(
-               update_time,paper_title,paper_first_author,paper_url,paper_url)
-        if code_url:
-            content_to_web[paper_key] += ", Code: **[{}]({})**".format(code_url,code_url)
-
-        # TODO: select useful comments
-        comments = None
-        if comments != None:
-            content_to_web[paper_key] += f", {comments}\n"
-        else:
-            content_to_web[paper_key] += f"\n"
 
     data = {topic:content}
-    data_web = {topic:content_to_web}
-    return data,data_web
+    return data
 
 def update_paper_links(filename, code_check_days = 180, max_code_checks = 300, code_checks_path = None):
     '''
@@ -309,14 +308,7 @@ def update_paper_links(filename, code_check_days = 180, max_code_checks = 300, c
         arxiv_id = re.sub(r'v\d+', '', arxiv_id)
         return date,title,authors,arxiv_id,code
 
-    with open(filename,"r") as f:
-        content = f.read()
-        if not content:
-            m = {}
-        else:
-            m = json.loads(content)
-
-    json_data = m.copy()
+    json_data = load_json(filename)
 
     code_checks = dict()
     if code_checks_path and os.path.exists(code_checks_path):
@@ -375,14 +367,7 @@ def update_json_file(filename,data_dict):
     '''
     daily update json file using data_dict
     '''
-    with open(filename,"r") as f:
-        content = f.read()
-        if not content:
-            m = {}
-        else:
-            m = json.loads(content)
-
-    json_data = m.copy()
+    json_data = load_json(filename)
 
     # update papers in each keywords
     for data in data_dict:
@@ -527,7 +512,9 @@ def json_to_md(filename,md_filename,
                show_badge = True,
                use_b2t = True,
                max_papers = None,
-               archive_dir = None):
+               archive_dir = None,
+               user_name = '',
+               repo_name = ''):
     """
     @param filename: str
     @param md_filename: str
@@ -540,12 +527,7 @@ def json_to_md(filename,md_filename,
     DateNow = str(DateNow)
     DateNow = DateNow.replace('-','.')
 
-    with open(filename,"r") as f:
-        content = f.read()
-        if not content:
-            data = {}
-        else:
-            data = json.loads(content)
+    data = load_json(filename)
 
     archive = None
     if archive_dir != None:
@@ -582,8 +564,6 @@ def json_to_md(filename,md_filename,
                 f.write('<a href="#archive" class="archive">Archive</a>\n')
             f.write('</nav>\n\n')
         elif use_title == True:
-            #f.write(("<p align="center"><h1 align="center"><br><ins>CV-ARXIV-DAILY"
-            #         "</ins><br>Automatically Update CV Papers Daily</h1></p>\n"))
             f.write("## Updated on " + DateNow + "\n")
             f.write(f"> Usage instructions: [here]({usage_link}#usage)\n\n")
         else:
@@ -635,38 +615,31 @@ def json_to_md(filename,md_filename,
                 top_info = top_info.replace(' ','-').replace('.','')
                 f.write(f"<p align=right>(<a href={top_info.lower()}>back to top</a>)</p>\n\n")
 
-        if show_badge == True:
-            # we don't like long string, break it!
+        if show_badge == True and user_name and repo_name:
+            repo = f"{user_name}/{repo_name}"
             f.write((f"[contributors-shield]: https://img.shields.io/github/"
-                     f"contributors/Vincentqyw/cv-arxiv-daily.svg?style=for-the-badge\n"))
-            f.write((f"[contributors-url]: https://github.com/Vincentqyw/"
-                     f"cv-arxiv-daily/graphs/contributors\n"))
-            f.write((f"[forks-shield]: https://img.shields.io/github/forks/Vincentqyw/"
-                     f"cv-arxiv-daily.svg?style=for-the-badge\n"))
-            f.write((f"[forks-url]: https://github.com/Vincentqyw/"
-                     f"cv-arxiv-daily/network/members\n"))
-            f.write((f"[stars-shield]: https://img.shields.io/github/stars/Vincentqyw/"
-                     f"cv-arxiv-daily.svg?style=for-the-badge\n"))
-            f.write((f"[stars-url]: https://github.com/Vincentqyw/"
-                     f"cv-arxiv-daily/stargazers\n"))
-            f.write((f"[issues-shield]: https://img.shields.io/github/issues/Vincentqyw/"
-                     f"cv-arxiv-daily.svg?style=for-the-badge\n"))
-            f.write((f"[issues-url]: https://github.com/Vincentqyw/"
-                     f"cv-arxiv-daily/issues\n\n"))
+                     f"contributors/{repo}.svg?style=for-the-badge\n"))
+            f.write((f"[contributors-url]: https://github.com/{repo}/graphs/contributors\n"))
+            f.write((f"[forks-shield]: https://img.shields.io/github/forks/{repo}.svg?style=for-the-badge\n"))
+            f.write((f"[forks-url]: https://github.com/{repo}/network/members\n"))
+            f.write((f"[stars-shield]: https://img.shields.io/github/stars/{repo}.svg?style=for-the-badge\n"))
+            f.write((f"[stars-url]: https://github.com/{repo}/stargazers\n"))
+            f.write((f"[issues-shield]: https://img.shields.io/github/issues/{repo}.svg?style=for-the-badge\n"))
+            f.write((f"[issues-url]: https://github.com/{repo}/issues\n\n"))
 
     logging.info(f"{task} finished")
 
 def demo(**config):
     # TODO: use config
     data_collector = []
-    data_collector_web= []
 
     keywords = config['kv']
     max_results = config['max_results']
     publish_readme = config['publish_readme']
     publish_gitpage = config['publish_gitpage']
-    publish_wechat = config['publish_wechat']
     show_badge = config['show_badge']
+    user_name = config.get('user_name', '')
+    repo_name = config.get('repo_name', '')
     max_papers = config.get('max_papers_in_readme', None)
     code_check_args = {
         'code_check_days': config.get('code_check_days', 180),
@@ -685,15 +658,14 @@ def demo(**config):
             logging.info(f"Keyword: {topic}")
             # one failing query (arxiv is flaky) should not block the other keywords
             try:
-                data, data_web = get_daily_papers(topic, query = keyword,
-                                                max_results = max_results,
-                                                categories = config['kc'][topic])
+                data = get_daily_papers(topic, query = keyword,
+                                        max_results = max_results,
+                                        categories = config['kc'][topic])
             except Exception:
                 logging.exception(f"Failed to get papers of keyword: {topic}")
                 continue
             num_papers += len(data[topic])
             data_collector.append(data)
-            data_collector_web.append(data_web)
             print("\n")
         logging.info(f"GET daily papers end")
         if num_papers == 0:
@@ -712,7 +684,8 @@ def demo(**config):
         # json data to markdown
         json_to_md(json_file,md_file, task ='Update Readme', \
             show_badge = show_badge, max_papers = max_papers, \
-            archive_dir = config.get('archive_dir', None))
+            archive_dir = config.get('archive_dir', None), \
+            user_name = user_name, repo_name = repo_name)
 
     # 2. update docs/index.md file (to gitpage)
     if publish_gitpage:
@@ -726,19 +699,8 @@ def demo(**config):
         json_to_md(json_file, md_file, task ='Update GitPage', \
             to_web = True, show_badge = show_badge, \
             use_tc=False, use_b2t=False, max_papers = max_papers, \
-            archive_dir = config.get('archive_dir', None))
-
-    # 3. Update docs/wechat.md file
-    if publish_wechat:
-        json_file = config['json_wechat_path']
-        md_file   = config['md_wechat_path']
-        # TODO: duplicated update paper links!!!
-        if config['update_paper_links']:
-            update_paper_links(json_file, **code_check_args)
-        else:
-            update_json_file(json_file, data_collector_web)
-        json_to_md(json_file, md_file, task ='Update Wechat', \
-            to_web=False, use_title= False, show_badge = show_badge)
+            archive_dir = config.get('archive_dir', None), \
+            user_name = user_name, repo_name = repo_name)
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
@@ -750,6 +712,8 @@ if __name__ == "__main__":
                         help='with --update_paper_links: only papers within these days, <= 0 for all (overrides config)')
     parser.add_argument('--max_code_checks', type=int, default=None,
                         help='with --update_paper_links: max papers to look up (overrides config)')
+    parser.add_argument('--max_results', type=int, default=None,
+                        help='max papers fetched per keyword (overrides config)')
     args = parser.parse_args()
     config = load_config(args.config_path)
     config = {**config, 'update_paper_links':args.update_paper_links}
@@ -757,4 +721,6 @@ if __name__ == "__main__":
         config['code_check_days'] = args.code_check_days
     if args.max_code_checks is not None:
         config['max_code_checks'] = args.max_code_checks
+    if args.max_results is not None:
+        config['max_results'] = args.max_results
     demo(**config)
