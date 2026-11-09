@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<p class="updated"><span class="dot"></span>Updated on 2026.11.03</p>
+<p class="updated"><span class="dot"></span>Updated on 2026.11.09</p>
 
 <nav class="toc">
 <a href="#neural-mt">Neural MT</a>
@@ -62,7 +62,7 @@ layout: default
 |**2026-09-22**|**MetaHOPE: A Metaphor-Oriented Evaluation Framework for Analysing MT and LLM Translation Errors**|Jiahui Liang et.al.|[2607.00848](http://arxiv.org/abs/2607.00848)|**[link](https://github.com/Jiahui84/MetaHOPE)**|
 |**2026-06-27**|**Structure-Preserving Document Translation via Multi-Stage LLM Pipeline: A Case Study in Marathi**|Manasi Waghe et.al.|[2606.28796](http://arxiv.org/abs/2606.28796)|<span class="null">—</span>|
 |**2026-07-25**|**Neural Machine Translation for Low-Resource Tangkhul--English**|Chormi Zimik Vashai et.al.|[2606.25365](http://arxiv.org/abs/2606.25365)|<span class="null">—</span>|
-|**2026-10-29**|**QuechuaTok: Morphological Boundary Accuracy as a Necessary Metric for Tokenizer Evaluation in Agglutinative Low-Resource Languages**|Maria Contreras et.al.|[2606.23943](http://arxiv.org/abs/2606.23943)|<span class="null">—</span>|
+|**2026-10-29**|**QuechuaTok: Morphological Boundary Accuracy as a Necessary Metric for Tokenizer Evaluation in Agglutinative Low-Resource Languages**|Maria Contreras et.al.|[2606.23943](http://arxiv.org/abs/2606.23943)|**[link](https://github.com/mcontrerasmalpar-pixel/QuechuaTok)**|
 |**2026-06-11**|**Layer-Resolved Optimal Transport for Hallucination Detection in NMT and Abstractive Summarization**|Mariia Onyshchuk et.al.|[2606.13216](http://arxiv.org/abs/2606.13216)|<span class="null">—</span>|
 |**2026-06-11**|**PiDA: Phonetically-Informed Data Augmentation for Robust Vietnamese Speech Translation**|Giang Son Nguyen et.al.|[2606.12911](http://arxiv.org/abs/2606.12911)|<span class="null">—</span>|
 |**2026-06-10**|**Lius: Translation Model Based Instructional Lingustic Using Continual Instruction Tuning In Kupang Malay**|Joanito Agili Lopo et.al.|[2606.11786](http://arxiv.org/abs/2606.11786)|<span class="null">—</span>|
