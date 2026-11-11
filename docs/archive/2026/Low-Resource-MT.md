@@ -1,8 +1,9 @@
 ## Low-Resource MT (2026)
-> 29 papers, [archive 2026](./README.md)
+> 30 papers, [archive 2026](./README.md)
 
 | Publish Date | Title | Authors | PDF | Code |
 |:---------|:-----------------------|:---------|:------|:------|
+|**2026-11-08**|**Out of Parameters, Saved by Syntax: UD-PrMPT for Parser Augmented Low Resource Machine Translation**|Emma Thronson et.al.|[2611.11597](http://arxiv.org/abs/2611.11597)|<span class="null">—</span>|
 |**2026-10-29**|**Mobilizing the Archive: Bitext Extraction at Scale from Archival Documents for Extremely Low-resource Languages**|Chutong Meng et.al.|[2610.40233](http://arxiv.org/abs/2610.40233)|<span class="null">—</span>|
 |**2026-10-17**|**GLOSS-MT: Controllable Low-Resource Machine Translation with an Editable Dictionary**|Mich-Seth Owusu et.al.|[2610.24730](http://arxiv.org/abs/2610.24730)|**[link](https://github.com/GhanaOpenAI/gloss-mt)**|
 |**2026-10-26**|**Back-Translation Still Matters: Leveraging Monolingual Data for Low-Resource Machine Translation with LLMs**|Divyanshu Bathla et.al.|[2610.18818](http://arxiv.org/abs/2610.18818)|<span class="null">—</span>|
