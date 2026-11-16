@@ -3,7 +3,7 @@
 
 | Publish Date | Title | Authors | PDF | Code |
 |:---------|:-----------------------|:---------|:------|:------|
-|**2026-10-21**|**Climbing the Ladder: Automating Data Pipelines and Reproducing Baselines in Low-Resource Settings**|Donato Meoli et.al.|[2610.30374](http://arxiv.org/abs/2610.30374)|<span class="null">—</span>|
+|**2026-10-21**|**Climbing the Ladder: Automating Data Pipelines and Reproducing Baselines in Low-Resource Settings**|Donato Meoli et.al.|[2610.30374](http://arxiv.org/abs/2610.30374)|**[link](https://github.com/dmeoli/SicilianNMT)**|
 |**2026-09-23**|**COILD: An Indic-Centric Parallel Corpus and Benchmark for Machine Translation Across Indian Languages**|Kshetrimayum Boynao Singh et.al.|[2609.28826](http://arxiv.org/abs/2609.28826)|<span class="null">—</span>|
 |**2026-08-24**|**Statistical Machine Translation Systems of English-Pnar Language Pair : Some Insights of the Emperical Study**|Edawanbiang Dhar Surmila Thokchom et.al.|[2608.23120](http://arxiv.org/abs/2608.23120)|<span class="null">—</span>|
 |**2026-08-12**|**Reference-Free Post-Training of Open Large Language Models for Multilingual Machine Translation**|Chris Han et.al.|[2608.10812](http://arxiv.org/abs/2608.10812)|**[link](https://github.com/xiaomi-research/gemmax)**|
