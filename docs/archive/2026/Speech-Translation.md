@@ -1,8 +1,9 @@
 ## Speech Translation (2026)
-> 81 papers, [archive 2026](./README.md)
+> 82 papers, [archive 2026](./README.md)
 
 | Publish Date | Title | Authors | PDF | Code |
 |:---------|:-----------------------|:---------|:------|:------|
+|**2026-11-18**|**Machine interpreting competitiveness: a discourse-sensitive comparison of meaning and target-language quality in English-Chinese simultaneous interpreting**|Yuanyuan Ding et.al.|[2611.19802](http://arxiv.org/abs/2611.19802)|<span class="null">—</span>|
 |**2026-11-10**|**Walrus Technical Report**|Alkis Koudounas et.al.|[2611.13689](http://arxiv.org/abs/2611.13689)|<span class="null">—</span>|
 |**2026-11-09**|**Text Grouping Changes Completion-Time Comparisons in Long-Form Simultaneous Speech Translation**|Hieu Minh Truong et.al.|[2611.12501](http://arxiv.org/abs/2611.12501)|<span class="null">—</span>|
 |**2026-11-04**|**CRESiST: Self-Enhancing Explorative Policy Learning for Simultaneous Speech Translation**|Chenyang Le et.al.|[2611.06501](http://arxiv.org/abs/2611.06501)|<span class="null">—</span>|

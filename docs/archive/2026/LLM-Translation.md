@@ -1,8 +1,9 @@
 ## LLM Translation (2026)
-> 44 papers, [archive 2026](./README.md)
+> 45 papers, [archive 2026](./README.md)
 
 | Publish Date | Title | Authors | PDF | Code |
 |:---------|:-----------------------|:---------|:------|:------|
+|**2026-11-14**|**Do Rule-Based Tools Help LLMs Translate Endangered Uralic Languages in the Prompt or over MCP?**|Iaroslav Chelombitko et.al.|[2611.19439](http://arxiv.org/abs/2611.19439)|<span class="null">—</span>|
 |**2026-11-07**|**Pole or Vector? Encoders Capture Bangla Compound Verbs, but LLMs Read Them Literally**|Md. Asaduzzaman Shuvo et.al.|[2611.10909](http://arxiv.org/abs/2611.10909)|**[link](https://github.com/ashuvo25/Pole_OR_Vector)**|
 |**2026-11-06**|**Are These Programmers Ripe Enough to Eat? Evaluating How LLMs Handle Lexical Knowledge Conflicts in Translation**|Dongxu Wu et.al.|[2611.09785](http://arxiv.org/abs/2611.09785)|<span class="null">—</span>|
 |**2026-10-24**|**Beyond Prompts: A Systematic Study of LLM-Based Machine Translation Evaluators**|Dmitry Popov et.al.|[2610.33741](http://arxiv.org/abs/2610.33741)|<span class="null">—</span>|
