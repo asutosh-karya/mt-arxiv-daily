@@ -8,7 +8,7 @@
 |**2026-11-09**|**Text Grouping Changes Completion-Time Comparisons in Long-Form Simultaneous Speech Translation**|Hieu Minh Truong et.al.|[2611.12501](http://arxiv.org/abs/2611.12501)|<span class="null">—</span>|
 |**2026-11-04**|**CRESiST: Self-Enhancing Explorative Policy Learning for Simultaneous Speech Translation**|Chenyang Le et.al.|[2611.06501](http://arxiv.org/abs/2611.06501)|<span class="null">—</span>|
 |**2026-11-04**|**Holistic Parallel Supervision for Expressive Speech to Speech Translation**|Hao Zhang et.al.|[2611.06010](http://arxiv.org/abs/2611.06010)|<span class="null">—</span>|
-|**2026-10-31**|**Learning Timeline-Preserving Speech-to-Speech Translation**|Zhisheng Zheng et.al.|[2611.00690](http://arxiv.org/abs/2611.00690)|<span class="null">—</span>|
+|**2026-10-31**|**Learning Timeline-Preserving Speech-to-Speech Translation**|Zhisheng Zheng et.al.|[2611.00690](http://arxiv.org/abs/2611.00690)|**[link](https://github.com/zszheng147/TransDubber)**|
 |**2026-11-12**|**S3-S2ST: Semantically Supervised Streaming Speech-to-Speech Translation**|Yuxiang Zhao et.al.|[2610.36777](http://arxiv.org/abs/2610.36777)|**[link](https://github.com/QwenAudio/S3-S2ST)**|
 |**2026-10-26**|**SimPOTrans: Self-Adaptation for Offline-to-Simultaneous Speech Translation via Reinforcement Learning**|Haotian Tan et.al.|[2610.35042](http://arxiv.org/abs/2610.35042)|<span class="null">—</span>|
 |**2026-10-23**|**DIAL-S2ST: Learning Latency Control for Simultaneous Speech-to-Speech Translation**|Jeongsoo Choi et.al.|[2610.32214](http://arxiv.org/abs/2610.32214)|<span class="null">—</span>|

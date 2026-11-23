@@ -1,4 +1,4 @@
-## Updated on 2026.11.21
+## Updated on 2026.11.23
 > Usage instructions: [here](./docs/README.md#usage)
 
 <details>
@@ -43,7 +43,7 @@
 |**2026-09-03**|**Enhanced English-Sanskrit Translation using Multilingual NMT Approach**|Sahinur Rahman Laskar et.al.|[2611.18605](http://arxiv.org/abs/2611.18605)|null|
 |**2026-10-28**|**Cross Lingual Abstractive Summarization for Marathi**|Asang Dani et.al.|[2610.38267](http://arxiv.org/abs/2610.38267)|null|
 |**2026-10-23**|**EDWARD-NMT: Elastic Dimensions With Adaptive Routing and Dual-consistency for Neural Machine Translation**|Edward Nguyen et.al.|[2610.32115](http://arxiv.org/abs/2610.32115)|null|
-|**2026-10-21**|**Climbing the Ladder: Automating Data Pipelines and Reproducing Baselines in Low-Resource Settings**|Donato Meoli et.al.|[2610.30374](http://arxiv.org/abs/2610.30374)|null|
+|**2026-10-21**|**Climbing the Ladder: Automating Data Pipelines and Reproducing Baselines in Low-Resource Settings**|Donato Meoli et.al.|[2610.30374](http://arxiv.org/abs/2610.30374)|**[link](https://github.com/dmeoli/SicilianNMT)**|
 |**2026-10-15**|**Unfragmenting Nawatl NMT: Single-Variant Specialization for Masewalkopa**|Luis A. Mercado-Campos et.al.|[2610.22110](http://arxiv.org/abs/2610.22110)|null|
 |**2026-10-08**|**Fact over Fiction: Detection of Pathological Hallucinations in Sinhala-to-English Neural Machine Translation**|Navam Obeysekara et.al.|[2610.11389](http://arxiv.org/abs/2610.11389)|null|
 |**2026-10-04**|**Investigating Model Compression for Neural Machine Translation in the Biomedical Domain**|Maria Zafar et.al.|[2610.07032](http://arxiv.org/abs/2610.07032)|null|
@@ -119,7 +119,7 @@
 |**2026-03-18**|**From Binary to Bilingual: How the National Weather Service is Using Artificial Intelligence to Develop a Comprehensive Translation Program**|Joseph E. Trujillo-Falcon et.al.|[2510.14369](http://arxiv.org/abs/2510.14369)|null|
 |**2025-10-10**|**Quality Estimation Reranking for Document-Level Translation**|Krzysztof Mrozinski et.al.|[2510.08870](http://arxiv.org/abs/2510.08870)|null|
 
-<p align=right>(<a href=#updated-on-20261121>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20261123>back to top</a>)</p>
 
 ## Multilingual MT
 
@@ -127,7 +127,7 @@
 |---|---|---|---|---|
 |**2026-11-18**|**Compression Effects on Low-Resource Multilingual Translation**|Abbas Sani et.al.|[2611.24043](http://arxiv.org/abs/2611.24043)|**[link](https://github.com/avvas200/efficient-multilingual-nmt-pilot)**|
 |**2026-09-03**|**Enhanced English-Sanskrit Translation using Multilingual NMT Approach**|Sahinur Rahman Laskar et.al.|[2611.18605](http://arxiv.org/abs/2611.18605)|null|
-|**2026-10-21**|**Climbing the Ladder: Automating Data Pipelines and Reproducing Baselines in Low-Resource Settings**|Donato Meoli et.al.|[2610.30374](http://arxiv.org/abs/2610.30374)|null|
+|**2026-10-21**|**Climbing the Ladder: Automating Data Pipelines and Reproducing Baselines in Low-Resource Settings**|Donato Meoli et.al.|[2610.30374](http://arxiv.org/abs/2610.30374)|**[link](https://github.com/dmeoli/SicilianNMT)**|
 |**2026-09-23**|**COILD: An Indic-Centric Parallel Corpus and Benchmark for Machine Translation Across Indian Languages**|Kshetrimayum Boynao Singh et.al.|[2609.28826](http://arxiv.org/abs/2609.28826)|null|
 |**2026-08-24**|**Statistical Machine Translation Systems of English-Pnar Language Pair : Some Insights of the Emperical Study**|Edawanbiang Dhar Surmila Thokchom et.al.|[2608.23120](http://arxiv.org/abs/2608.23120)|null|
 |**2026-08-12**|**Reference-Free Post-Training of Open Large Language Models for Multilingual Machine Translation**|Chris Han et.al.|[2608.10812](http://arxiv.org/abs/2608.10812)|**[link](https://github.com/xiaomi-research/gemmax)**|
@@ -207,7 +207,7 @@
 |**2023-10-22**|**Condensing Multilingual Knowledge with Lightweight Language-Specific Modules**|Haoran Xu et.al.|[2305.13993](http://arxiv.org/abs/2305.13993)|null|
 |**2023-10-24**|**Mitigating Data Imbalance and Representation Degeneration in Multilingual Machine Translation**|Wen Lai et.al.|[2305.12786](http://arxiv.org/abs/2305.12786)|**[link](https://github.com/lavine-lmu/Bi-ACL)**|
 
-<p align=right>(<a href=#updated-on-20261121>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20261123>back to top</a>)</p>
 
 ## Low-Resource MT
 
@@ -294,7 +294,7 @@
 |**2023-11-09**|**Unsupervised Translation Quality Estimation Exploiting Synthetic Data and Pre-trained Multilingual Encoder**|Yuto Kuroda et.al.|[2311.05117](http://arxiv.org/abs/2311.05117)|null|
 |**2023-11-04**|**Narrowing the Gap between Zero- and Few-shot Machine Translation by Matching Styles**|Weiting Tan et.al.|[2311.02310](http://arxiv.org/abs/2311.02310)|null|
 
-<p align=right>(<a href=#updated-on-20261121>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20261123>back to top</a>)</p>
 
 ## Document-Level MT
 
@@ -380,7 +380,7 @@
 |**2022-07-05**|**BlonDe: An Automatic Evaluation Metric for Document-level Machine Translation**|Yuchen Eleanor Jiang et.al.|[2103.11878](http://arxiv.org/abs/2103.11878)|**[link](https://github.com/christian3141/blonde)**|
 |**2021-02-11**|**Towards Personalised and Document-level Machine Translation of Dialogue**|Sebastian T. Vincent et.al.|[2102.10979](http://arxiv.org/abs/2102.10979)|null|
 
-<p align=right>(<a href=#updated-on-20261121>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20261123>back to top</a>)</p>
 
 ## Speech Translation
 
@@ -391,7 +391,7 @@
 |**2026-11-09**|**Text Grouping Changes Completion-Time Comparisons in Long-Form Simultaneous Speech Translation**|Hieu Minh Truong et.al.|[2611.12501](http://arxiv.org/abs/2611.12501)|null|
 |**2026-11-04**|**CRESiST: Self-Enhancing Explorative Policy Learning for Simultaneous Speech Translation**|Chenyang Le et.al.|[2611.06501](http://arxiv.org/abs/2611.06501)|null|
 |**2026-11-04**|**Holistic Parallel Supervision for Expressive Speech to Speech Translation**|Hao Zhang et.al.|[2611.06010](http://arxiv.org/abs/2611.06010)|null|
-|**2026-10-31**|**Learning Timeline-Preserving Speech-to-Speech Translation**|Zhisheng Zheng et.al.|[2611.00690](http://arxiv.org/abs/2611.00690)|null|
+|**2026-10-31**|**Learning Timeline-Preserving Speech-to-Speech Translation**|Zhisheng Zheng et.al.|[2611.00690](http://arxiv.org/abs/2611.00690)|**[link](https://github.com/zszheng147/TransDubber)**|
 |**2026-11-12**|**S3-S2ST: Semantically Supervised Streaming Speech-to-Speech Translation**|Yuxiang Zhao et.al.|[2610.36777](http://arxiv.org/abs/2610.36777)|**[link](https://github.com/QwenAudio/S3-S2ST)**|
 |**2026-10-26**|**SimPOTrans: Self-Adaptation for Offline-to-Simultaneous Speech Translation via Reinforcement Learning**|Haotian Tan et.al.|[2610.35042](http://arxiv.org/abs/2610.35042)|null|
 |**2026-10-23**|**DIAL-S2ST: Learning Latency Control for Simultaneous Speech-to-Speech Translation**|Jeongsoo Choi et.al.|[2610.32214](http://arxiv.org/abs/2610.32214)|null|
@@ -469,7 +469,7 @@
 |**2026-09-10**|**Streaming Translation and Transcription Through Speech-to-Text Causal Alignment**|Roman Koshkin et.al.|[2603.11578](http://arxiv.org/abs/2603.11578)|null|
 |**2026-06-26**|**Measuring the Redundancy of Decoder Layers in SpeechLLMs**|Adel Moumen et.al.|[2603.05121](http://arxiv.org/abs/2603.05121)|null|
 
-<p align=right>(<a href=#updated-on-20261121>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20261123>back to top</a>)</p>
 
 ## Simultaneous Translation
 
@@ -552,7 +552,7 @@
 |**2022-03-22**|**Modeling Dual Read/Write Paths for Simultaneous Machine Translation**|Shaolei Zhang et.al.|[2203.09163](http://arxiv.org/abs/2203.09163)|null|
 |**2022-03-17**|**Gaussian Multi-head Attention for Simultaneous Machine Translation**|Shaolei Zhang et.al.|[2203.09072](http://arxiv.org/abs/2203.09072)|null|
 
-<p align=right>(<a href=#updated-on-20261121>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20261123>back to top</a>)</p>
 
 ## LLM Translation
 
@@ -636,7 +636,7 @@
 |**2024-10-22**|**Context-Aware LLM Translation System Using Conversation Summarization and Dialogue History**|Mingi Sung et.al.|[2410.16775](http://arxiv.org/abs/2410.16775)|null|
 |**2024-10-21**|**Analyzing Context Contributions in LLM-based Machine Translation**|Emmanouil Zaranis et.al.|[2410.16246](http://arxiv.org/abs/2410.16246)|null|
 
-<p align=right>(<a href=#updated-on-20261121>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20261123>back to top</a>)</p>
 
 ## Evaluation and Quality Estimation
 
@@ -716,7 +716,7 @@
 |**2025-08-30**|**How Important is `Perfect' English for Machine Translation Prompts?**|Patrícia Schmidtová et.al.|[2507.09509](http://arxiv.org/abs/2507.09509)|null|
 |**2025-06-25**|**Intrinsic vs. Extrinsic Evaluation of Czech Sentence Embeddings: Semantic Relevance Doesn't Help with MT Evaluation**|Petra Barančíková et.al.|[2506.20203](http://arxiv.org/abs/2506.20203)|null|
 
-<p align=right>(<a href=#updated-on-20261121>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20261123>back to top</a>)</p>
 
 ## Domain Adaptation
 
@@ -734,7 +734,7 @@
 |**2020-06-06**|**A Simple Baseline to Semi-Supervised Domain Adaptation for Machine Translation**|Di Jin et.al.|[2001.08140](http://arxiv.org/abs/2001.08140)|null|
 |**2013-03-08**|**Mining and Exploiting Domain-Specific Corpora in the PANACEA Platform**|Núria Bel et.al.|[1303.1932](http://arxiv.org/abs/1303.1932)|null|
 
-<p align=right>(<a href=#updated-on-20261121>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20261123>back to top</a>)</p>
 
 ## Multimodal MT
 
@@ -812,7 +812,7 @@
 |**2018-09-03**|**The MeMAD Submission to the WMT18 Multimodal Translation Task**|Stig-Arne Grönroos et.al.|[1808.10802](http://arxiv.org/abs/1808.10802)|null|
 |**2018-08-31**|**Ensemble Sequence Level Training for Multimodal MT: OSU-Baidu WMT18 Multimodal Machine Translation System Report**|Renjie Zheng et.al.|[1808.10592](http://arxiv.org/abs/1808.10592)|null|
 
-<p align=right>(<a href=#updated-on-20261121>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20261123>back to top</a>)</p>
 
 [contributors-shield]: https://img.shields.io/github/contributors/asutosh-karya/mt-arxiv-daily.svg?style=for-the-badge
 [contributors-url]: https://github.com/asutosh-karya/mt-arxiv-daily/graphs/contributors
