@@ -1,8 +1,10 @@
 ## LLM Translation (2026)
-> 45 papers, [archive 2026](./README.md)
+> 47 papers, [archive 2026](./README.md)
 
 | Publish Date | Title | Authors | PDF | Code |
 |:---------|:-----------------------|:---------|:------|:------|
+|**2026-11-24**|**Lost in Translation, Not in Confidence: Benchmarking and Calibrating Multilingual Decision Models**|Mingzhe Du et.al.|[2611.33307](http://arxiv.org/abs/2611.33307)|<span class="null">—</span>|
+|**2026-11-23**|**Hard to Translate, Harder to Detect: Human Analysis Remains Essential in AI Meme Translation**|Olga Zamaraeva et.al.|[2611.30710](http://arxiv.org/abs/2611.30710)|**[link](https://github.com/olzama/hard-to-find)**|
 |**2026-11-14**|**Do Rule-Based Tools Help LLMs Translate Endangered Uralic Languages in the Prompt or over MCP?**|Iaroslav Chelombitko et.al.|[2611.19439](http://arxiv.org/abs/2611.19439)|<span class="null">—</span>|
 |**2026-11-07**|**Pole or Vector? Encoders Capture Bangla Compound Verbs, but LLMs Read Them Literally**|Md. Asaduzzaman Shuvo et.al.|[2611.10909](http://arxiv.org/abs/2611.10909)|**[link](https://github.com/ashuvo25/Pole_OR_Vector)**|
 |**2026-11-06**|**Are These Programmers Ripe Enough to Eat? Evaluating How LLMs Handle Lexical Knowledge Conflicts in Translation**|Dongxu Wu et.al.|[2611.09785](http://arxiv.org/abs/2611.09785)|<span class="null">—</span>|

@@ -1,8 +1,9 @@
 ## Evaluation and Quality Estimation (2026)
-> 56 papers, [archive 2026](./README.md)
+> 57 papers, [archive 2026](./README.md)
 
 | Publish Date | Title | Authors | PDF | Code |
 |:---------|:-----------------------|:---------|:------|:------|
+|**2026-10-17**|**DAGGER: Deployment-Free Quality Estimation for Generative AI Workflows**|Dimitrios Liakopoulos et.al.|[2611.31252](http://arxiv.org/abs/2611.31252)|<span class="null">—</span>|
 |**2026-10-26**|**The Lay of the Land in Idiom-Translation Quality Estimation**|Malik Marmonier et.al.|[2610.35261](http://arxiv.org/abs/2610.35261)|<span class="null">—</span>|
 |**2026-10-24**|**Refined Assessment for Translation Evaluation: Rethinking Machine Translation Evaluation in the Era of Human-Level Systems**|Dmitry Popov et.al.|[2610.33749](http://arxiv.org/abs/2610.33749)|<span class="null">—</span>|
 |**2026-10-24**|**Beyond Prompts: A Systematic Study of LLM-Based Machine Translation Evaluators**|Dmitry Popov et.al.|[2610.33741](http://arxiv.org/abs/2610.33741)|<span class="null">—</span>|

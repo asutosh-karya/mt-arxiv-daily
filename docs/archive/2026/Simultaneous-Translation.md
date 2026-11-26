@@ -1,8 +1,9 @@
 ## Simultaneous Translation (2026)
-> 10 papers, [archive 2026](./README.md)
+> 11 papers, [archive 2026](./README.md)
 
 | Publish Date | Title | Authors | PDF | Code |
 |:---------|:-----------------------|:---------|:------|:------|
+|**2026-11-04**|**SnakeTranslate: Weakly Supervised Policy Learning from Offline Parallel Text for Simultaneous Translation**|Yu Pu et.al.|[2611.28055](http://arxiv.org/abs/2611.28055)|<span class="null">—</span>|
 |**2026-10-26**|**SimPOTrans: Self-Adaptation for Offline-to-Simultaneous Speech Translation via Reinforcement Learning**|Haotian Tan et.al.|[2610.35042](http://arxiv.org/abs/2610.35042)|<span class="null">—</span>|
 |**2026-09-17**|**Dynamic Lagging using Stable-Prefix Training for Simultaneous Translation**|Hieu Hoang et.al.|[2609.05799](http://arxiv.org/abs/2609.05799)|<span class="null">—</span>|
 |**2026-06-11**|**NaturalFlow: Reducing Disruptive Pauses for Natural Speech Flow in Simultaneous Speech-to-Speech Translation**|Dongwook Lee et.al.|[2606.13121](http://arxiv.org/abs/2606.13121)|<span class="null">—</span>|

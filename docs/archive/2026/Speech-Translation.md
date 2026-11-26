@@ -1,15 +1,18 @@
 ## Speech Translation (2026)
-> 82 papers, [archive 2026](./README.md)
+> 85 papers, [archive 2026](./README.md)
 
 | Publish Date | Title | Authors | PDF | Code |
 |:---------|:-----------------------|:---------|:------|:------|
+|**2026-11-24**|**Is Prosody Encoded in the Neural Audio Codec Mimi?**|Nicolas Ballier et.al.|[2611.32795](http://arxiv.org/abs/2611.32795)|<span class="null">—</span>|
+|**2026-11-24**|**S $2$ SCORE: A Textless Unified Evaluation Metric for Speech-to-Speech Translation Systems**|Lalaram Arya et.al.|[2611.29557](http://arxiv.org/abs/2611.29557)|<span class="null">—</span>|
+|**2026-11-20**|**Granary-v2: Scalable Multilingual Speech Data Curation for Predictable and Controllable Model Outputs**|Nithin Rao Koluguri et.al.|[2611.28248](http://arxiv.org/abs/2611.28248)|<span class="null">—</span>|
 |**2026-11-18**|**Machine interpreting competitiveness: a discourse-sensitive comparison of meaning and target-language quality in English-Chinese simultaneous interpreting**|Yuanyuan Ding et.al.|[2611.19802](http://arxiv.org/abs/2611.19802)|<span class="null">—</span>|
 |**2026-11-10**|**Walrus Technical Report**|Alkis Koudounas et.al.|[2611.13689](http://arxiv.org/abs/2611.13689)|<span class="null">—</span>|
 |**2026-11-09**|**Text Grouping Changes Completion-Time Comparisons in Long-Form Simultaneous Speech Translation**|Hieu Minh Truong et.al.|[2611.12501](http://arxiv.org/abs/2611.12501)|<span class="null">—</span>|
 |**2026-11-04**|**CRESiST: Self-Enhancing Explorative Policy Learning for Simultaneous Speech Translation**|Chenyang Le et.al.|[2611.06501](http://arxiv.org/abs/2611.06501)|<span class="null">—</span>|
 |**2026-11-04**|**Holistic Parallel Supervision for Expressive Speech to Speech Translation**|Hao Zhang et.al.|[2611.06010](http://arxiv.org/abs/2611.06010)|<span class="null">—</span>|
-|**2026-10-31**|**Learning Timeline-Preserving Speech-to-Speech Translation**|Zhisheng Zheng et.al.|[2611.00690](http://arxiv.org/abs/2611.00690)|**[link](https://github.com/zszheng147/TransDubber)**|
-|**2026-11-12**|**S3-S2ST: Semantically Supervised Streaming Speech-to-Speech Translation**|Yuxiang Zhao et.al.|[2610.36777](http://arxiv.org/abs/2610.36777)|**[link](https://github.com/QwenAudio/S3-S2ST)**|
+|**2026-10-31**|**Learning Timeline-Preserving Speech-to-Speech Translation**|Zhisheng Zheng et.al.|[2611.00690](http://arxiv.org/abs/2611.00690)|<span class="null">—</span>|
+|**2026-11-24**|**S3-S2ST: Semantically Supervised Streaming Speech-to-Speech Translation**|Yuxiang Zhao et.al.|[2610.36777](http://arxiv.org/abs/2610.36777)|**[link](https://github.com/QwenAudio/S3-S2ST)**|
 |**2026-10-26**|**SimPOTrans: Self-Adaptation for Offline-to-Simultaneous Speech Translation via Reinforcement Learning**|Haotian Tan et.al.|[2610.35042](http://arxiv.org/abs/2610.35042)|<span class="null">—</span>|
 |**2026-10-23**|**DIAL-S2ST: Learning Latency Control for Simultaneous Speech-to-Speech Translation**|Jeongsoo Choi et.al.|[2610.32214](http://arxiv.org/abs/2610.32214)|<span class="null">—</span>|
 |**2026-10-23**|**X-Dubbing: Speech-to-Speech Translation under Temporal and Visual Constraints**|Jeongsoo Choi et.al.|[2610.32042](http://arxiv.org/abs/2610.32042)|<span class="null">—</span>|

@@ -7,7 +7,7 @@
 |**2026-09-03**|**Enhanced English-Sanskrit Translation using Multilingual NMT Approach**|Sahinur Rahman Laskar et.al.|[2611.18605](http://arxiv.org/abs/2611.18605)|<span class="null">—</span>|
 |**2026-10-28**|**Cross Lingual Abstractive Summarization for Marathi**|Asang Dani et.al.|[2610.38267](http://arxiv.org/abs/2610.38267)|<span class="null">—</span>|
 |**2026-10-23**|**EDWARD-NMT: Elastic Dimensions With Adaptive Routing and Dual-consistency for Neural Machine Translation**|Edward Nguyen et.al.|[2610.32115](http://arxiv.org/abs/2610.32115)|<span class="null">—</span>|
-|**2026-10-21**|**Climbing the Ladder: Automating Data Pipelines and Reproducing Baselines in Low-Resource Settings**|Donato Meoli et.al.|[2610.30374](http://arxiv.org/abs/2610.30374)|**[link](https://github.com/dmeoli/SicilianNMT)**|
+|**2026-10-21**|**Climbing the Ladder: Automating Data Pipelines and Reproducing Baselines in Low-Resource Settings**|Donato Meoli et.al.|[2610.30374](http://arxiv.org/abs/2610.30374)|<span class="null">—</span>|
 |**2026-10-15**|**Unfragmenting Nawatl NMT: Single-Variant Specialization for Masewalkopa**|Luis A. Mercado-Campos et.al.|[2610.22110](http://arxiv.org/abs/2610.22110)|<span class="null">—</span>|
 |**2026-10-08**|**Fact over Fiction: Detection of Pathological Hallucinations in Sinhala-to-English Neural Machine Translation**|Navam Obeysekara et.al.|[2610.11389](http://arxiv.org/abs/2610.11389)|<span class="null">—</span>|
 |**2026-10-04**|**Investigating Model Compression for Neural Machine Translation in the Biomedical Domain**|Maria Zafar et.al.|[2610.07032](http://arxiv.org/abs/2610.07032)|<span class="null">—</span>|
